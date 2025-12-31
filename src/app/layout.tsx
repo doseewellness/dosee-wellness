@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import '../styles/globals.css'
+import GoogleAnalytics from '../components/GoogleAnalytics'
 
 export const metadata: Metadata = {
   title: 'DoSee Wellness | 日本茶ウェルネス - 忙しい毎日をやさしく整える',
@@ -55,7 +56,10 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://doseewellness.com" />
       </head>
-      <body>{children}</body>
+      <body>
+        <GoogleAnalytics />  {/* 追加 */}
+        {children}
+      </body>
     </html>
   )
 }
