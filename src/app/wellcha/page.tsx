@@ -7,8 +7,83 @@ import CustomCursor from '../../components/CustomCursor'
 import '../../styles/pages.css'
 
 export default function WellChaPage() {
+  // 構造化データ - 商品情報（抹茶ラテ）
+  const matchaProductJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'WellCha 抹茶ラテ',
+    description: '日本茶の力で心・からだ・肌を整える抹茶ラテ。カフェインとテアニンのバランスで静かな集中力をサポート。',
+    brand: {
+      '@type': 'Brand',
+      name: 'DoSee Wellness',
+    },
+    offers: {
+      '@type': 'Offer',
+      url: 'https://shop.doseewellness.com/products/matcha-latte',
+      priceCurrency: 'JPY',
+      availability: 'https://schema.org/InStock',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      reviewCount: '1',
+    },
+  }
+
+  // 構造化データ - 商品情報（ほうじ茶ラテ）
+  const hojichaProductJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'WellCha ほうじ茶ラテ',
+    description: '心・からだ・呼吸をほどく、新しいほうじ茶習慣。やさしい温もりと深いリラックスをもたらす一杯。',
+    brand: {
+      '@type': 'Brand',
+      name: 'DoSee Wellness',
+    },
+    offers: {
+      '@type': 'Offer',
+      url: 'https://shop.doseewellness.com/products/hojicha-latte',
+      priceCurrency: 'JPY',
+      availability: 'https://schema.org/InStock',
+    },
+  }
+
+  // 構造化データ - パンくずリスト
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'ホーム',
+        item: 'https://doseewellness.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'WellCha',
+        item: 'https://doseewellness.com/wellcha',
+      },
+    ],
+  }
+
   return (
     <div className="page-container">
+      {/* 構造化データの埋め込み */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(matchaProductJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(hojichaProductJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      
       <CustomCursor />
       <Navigation isScrolled={true} />
       

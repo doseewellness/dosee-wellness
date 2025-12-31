@@ -21,8 +21,50 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // 構造化データ - 組織情報
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'DoSee Wellness',
+    url: 'https://doseewellness.com',
+    logo: 'https://doseewellness.com/logo.png',
+    description: '忙しい毎日をやさしく整える日本茶ベースのウェルネスブランド',
+    sameAs: [
+      'https://www.instagram.com/isamisushi.yvr',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'info@dosee-wellness.com',
+      contactType: 'Customer Service',
+    },
+  }
+
+  // 構造化データ - パンくずリスト
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'ホーム',
+        item: 'https://doseewellness.com',
+      },
+    ],
+  }
+
   return (
     <div className="app">
+      {/* 構造化データの埋め込み */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      
       <CustomCursor />
       <ParticlesCanvas />
       <Navigation isScrolled={isScrolled} />
