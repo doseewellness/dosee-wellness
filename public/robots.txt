@@ -1,0 +1,16 @@
+# robots.txt for DoSee Wellness
+# https://doseewellness.com/robots.txt
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Block admin or sensitive paths (if any)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Sitemap location
+Sitemap: https://doseewellness.com/sitemap.xml
+
+# Crawl-delay (optional, adjust if needed)
+# Crawl-delay: 10
