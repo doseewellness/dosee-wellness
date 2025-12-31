@@ -1,0 +1,152 @@
+[
+  {
+    "id": "matcha-latte",
+    "name": "Matcha Latte",
+    "line": "WellCha",
+    "slug": "matcha-latte",
+    "price": 3980,
+    "currency": "JPY",
+    "description": "落ち着いた集中と、飲むスキンケアを一杯に。",
+    "longDescription": "日本茶の力で心・からだ・肌を整える。カテキンとテアニンのバランスで、焦らない・荒れない「落ち着いた集中力」をサポート。",
+    "benefits": [
+      {
+        "title": "落ち着いた集中力",
+        "description": "カテキンとテアニンの組み合わせで、焦らない・荒れない「落ち着いた集中力」をサポート。テアニンは脳に働きかけ、コーヒーとは違う静かに冴える集中状態をつくると言われています。"
+      },
+      {
+        "title": "飲むスキンケア",
+        "description": "抗酸化成分とビタミンが透明感とツヤを守り、まるで「飲むスキンケア」のような毎日を。ビタミンC・E、カテキンなどが、日々のダメージから肌を守り、内側からコンディションを整えます。"
+      },
+      {
+        "title": "深いリラックス",
+        "description": "ビタミン・抗酸化成分が、日々のコンディションや腸内環境、心の緊張をクリアに。テアニンは副交感神経にも働きかけるため、寝る前の一杯や、1日の終わりのリセットタイムにもぴったりです。"
+      }
+    ],
+    "ingredients": [
+      "有機抹茶",
+      "有機ココナッツミルクパウダー",
+      "天然甘味料（ステビア）",
+      "ビタミンC",
+      "ビタミンE"
+    ],
+    "howToUse": [
+      "お湯またはミルク150-200mlに小さじ1-2杯を溶かす",
+      "朝のコーヒーの代わりに",
+      "仕事・勉強前のウォームアップに",
+      "夜のリラックスタイムのお供に"
+    ],
+    "nutritionFacts": {
+      "servingSize": "5g",
+      "calories": 18,
+      "protein": "0.5g",
+      "fat": "0.2g",
+      "carbohydrates": "3.5g",
+      "caffeine": "20-30mg"
+    },
+    "shopifyUrl": "https://shop.doseewellness.com/products/matcha-latte",
+    "images": {
+      "hero": "/images/products/matcha-latte/hero.jpg",
+      "thumbnail": "/images/products/matcha-latte/thumb.jpg"
+    },
+    "category": "wellcha",
+    "tags": ["matcha", "latte", "wellness", "focus", "skincare"],
+    "inStock": true,
+    "rating": 5.0,
+    "reviewCount": 1
+  },
+  {
+    "id": "hojicha-latte",
+    "name": "Hojicha Latte",
+    "line": "WellCha",
+    "slug": "hojicha-latte",
+    "price": 3980,
+    "currency": "JPY",
+    "description": "心・からだ・呼吸をほどく、新しいほうじ茶習慣。",
+    "longDescription": "香ばしくてやさしい、飲むウェルネス。カフェインが控えめで、子どもから大人まで飲みやすく、心とからだをゆるめたいときにぴったりのお茶です。",
+    "benefits": [
+      {
+        "title": "自然のやさしい力",
+        "description": "茶葉本来のミネラルとポリフェノールが、日々のコンディションをやさしくサポート。カフェインは控えめなのに、頭がぼんやりしすぎない「ちょうどいい目覚め」を手伝ってくれます。"
+      },
+      {
+        "title": "負担のない温もり",
+        "description": "焙煎によって生まれる香ばしさと、からだにしみ込むような温かさが特徴。冷えを感じやすい方や、「お腹にやさしい温かいもの」が欲しいタイミングにぴったりです。"
+      },
+      {
+        "title": "深いリラックス",
+        "description": "ほうじ茶は、リラックスに関わるテアニンを含みつつ、カフェイン量が抑えられているのが大きな魅力。寝る前の一杯や、スマホを置いて深呼吸したい夜の時間に寄り添ってくれます。"
+      }
+    ],
+    "ingredients": [
+      "有機ほうじ茶",
+      "有機ココナッツミルクパウダー",
+      "天然甘味料（ステビア）",
+      "ミネラル配合"
+    ],
+    "howToUse": [
+      "お湯またはミルク150-200mlに小さじ1-2杯を溶かす",
+      "朝、コーヒーの前に一杯",
+      "仕事や家事がひと区切りついたタイミングに",
+      "夜ごはんのあと、寝るまでのリラックスタイムに"
+    ],
+    "nutritionFacts": {
+      "servingSize": "5g",
+      "calories": 16,
+      "protein": "0.4g",
+      "fat": "0.2g",
+      "carbohydrates": "3.2g",
+      "caffeine": "10-15mg"
+    },
+    "shopifyUrl": "https://shop.doseewellness.com/products/hojicha-latte",
+    "images": {
+      "hero": "/images/products/hojicha-latte/hero.jpg",
+      "thumbnail": "/images/products/hojicha-latte/thumb.jpg"
+    },
+    "category": "wellcha",
+    "tags": ["hojicha", "latte", "wellness", "relax", "warmth"],
+    "inStock": true,
+    "rating": 4.8,
+    "reviewCount": 0
+  },
+  {
+    "id": "ginger-shot",
+    "name": "7-Day Ginger Shot",
+    "line": "DoSee",
+    "slug": "ginger-shot",
+    "price": 2980,
+    "currency": "JPY",
+    "description": "キュッと一杯で、からだと気分をオンにする。",
+    "longDescription": "ジンジャーの温かさと、柑橘のすっきり感を組み合わせたショット。朝いちばんの目覚ましとして、または午後のリセットとして。糖分やカフェインに頼りすぎず、からだ本来のリズムをやさしく後押しします。",
+    "benefits": [
+      {
+        "title": "1日を前向きにスタート",
+        "description": "朝の一杯で、からだと気分をやさしく前に進める。"
+      },
+      {
+        "title": "続けやすい習慣",
+        "description": "「飲まなきゃいけない」ではなく、「飲んであげたい」と思える量と味わい。"
+      }
+    ],
+    "ingredients": [
+      "有機ジンジャーエキス",
+      "有機レモン果汁",
+      "有機ターメリック",
+      "天然甘味料"
+    ],
+    "howToUse": [
+      "朝、歯磨きのあとにキュッと一杯",
+      "または午後のだるさをリセットしたいタイミングで",
+      "一週間続けることで、からだの「軽さ」を実感"
+    ],
+    "shopifyUrl": "",
+    "images": {
+      "hero": "/images/products/ginger-shot/hero.jpg",
+      "thumbnail": "/images/products/ginger-shot/thumb.jpg"
+    },
+    "category": "dosee",
+    "tags": ["ginger", "shot", "wellness", "energy", "boost"],
+    "inStock": false,
+    "comingSoon": true,
+    "expectedLaunch": "2025 Q2"
+  }
+]

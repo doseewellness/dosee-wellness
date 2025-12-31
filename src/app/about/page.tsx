@@ -7,8 +7,80 @@ import CustomCursor from '../../components/CustomCursor'
 import '../../styles/pages.css'
 
 export default function AboutPage() {
+  // 構造化データ - 会社情報
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: '株式会社 DoSee Wellness',
+    alternateName: 'DoSee Wellness',
+    url: 'https://doseewellness.com',
+    logo: 'https://doseewellness.com/logo.png',
+    description: '忙しい現代でも続けられるウェルネスをテーマにした日本発のブランド。「整えなきゃ」という義務感ではなく、自分を大切にしたいという気持ちから始まる、無理のないウェルネス習慣を提供します。',
+    foundingDate: '2024',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'info@dosee-wellness.com',
+      contactType: 'Customer Service',
+      availableLanguage: ['Japanese', 'English'],
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'JP',
+      addressRegion: '東京都',
+    },
+    sameAs: [
+      'https://www.instagram.com/isamisushi.yvr',
+    ],
+    areaServed: {
+      '@type': 'Country',
+      name: 'Japan',
+    },
+    brand: [
+      {
+        '@type': 'Brand',
+        name: 'WellCha',
+        description: '日本茶ベースのウェルネスライン',
+      },
+      {
+        '@type': 'Brand',
+        name: 'DoSee',
+        description: 'ショット系ウェルネスライン',
+      },
+    ],
+  }
+
+  // 構造化データ - パンくずリスト
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'ホーム',
+        item: 'https://doseewellness.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'About',
+        item: 'https://doseewellness.com/about',
+      },
+    ],
+  }
+
   return (
     <div className="page-container">
+      {/* 構造化データの埋め込み */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <CustomCursor />
       <Navigation isScrolled={true} />
       
@@ -28,13 +100,24 @@ export default function AboutPage() {
           <div className="text-content">
             <p>
               DoSee Wellness は、「忙しい現代でも続けられるウェルネス」をテーマにした、
-              日本発のブランドです。日本の茶文化、発酵や薬膳の知恵、そして日々の生活者としての実感をもとに、
-              心・からだ・肌をやさしく整える一杯をデザインしています。
+              日本発のブランドです。
             </p>
             <p>
-              私たちが大切にしているのは、瞬間的な刺激ではなく、
-              穏やかで持続可能なコンディションづくりです。カフェインとテアニンのバランス、
-              抗酸化成分やビタミンなど、素材に含まれるちからを尊重しながら、飲みやすさ・続けやすさを追求しています。
+              私たちは、日本茶ベースの <strong>WellCha</strong> と、
+              ショット系ウェルネスの <strong>DoSee</strong> という2つのラインを通じて、
+              こころ・からだ・肌をやさしく整える習慣を提案しています。
+            </p>
+            <p>
+              日本の茶文化、発酵や薬膳の知恵、そして日々の生活者としての実感をもとに、
+              「続けやすさ」と「心地よさ」のバランスを大切にしながら、
+              商品をデザインしています。
+            </p>
+            <p>
+              大切にしているのは、瞬間的な刺激ではなく、
+              穏やかで持続可能なコンディションづくり。
+              カフェインとテアニンのバランス、抗酸化成分やビタミンなど、
+              素材に含まれるちからを尊重しながら、
+              毎日無理なく続けられる形を追求しています。
             </p>
             <p>
               カナダをはじめとした海外での展開も視野に入れつつ、
@@ -74,11 +157,11 @@ export default function AboutPage() {
           <div className="company-info">
             <div className="info-row">
               <span className="info-label">会社名</span>
-              <span className="info-value">DoSee Wellness株式会社</span>
+              <span className="info-value">株式会社 DoSee Wellness</span>
             </div>
             <div className="info-row">
               <span className="info-label">設立</span>
-              <span className="info-value">2024年</span>
+              <span className="info-value">2026年</span>
             </div>
             <div className="info-row">
               <span className="info-label">所在地</span>
@@ -86,7 +169,7 @@ export default function AboutPage() {
             </div>
             <div className="info-row">
               <span className="info-label">事業内容</span>
-              <span className="info-value">ウェルネス食品の企画・製造・販売</span>
+              <span className="info-value">ウェルネス企画・製造・販売</span>
             </div>
             <div className="info-row">
               <span className="info-label">お問い合わせ</span>

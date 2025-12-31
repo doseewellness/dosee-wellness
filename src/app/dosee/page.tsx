@@ -4,11 +4,70 @@ import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import CustomCursor from '../../components/CustomCursor'
+import productsData from '../../data/products.json'
 import '../../styles/pages.css'
 
 export default function DoSeePage() {
+  // 商品データを取得
+  const gingerShot = productsData.find(p => p.id === 'ginger-shot')
+
+  // 構造化データ - 商品情報（ジンジャーショット）
+  const gingerShotJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: gingerShot?.name || 'DoSee 7-Day Ginger Shot',
+    description: gingerShot?.longDescription || '1日を前向きにする、小さな一杯。負担なく続けられるショット系ウェルネスライン。',
+    brand: {
+      '@type': 'Brand',
+      name: 'DoSee Wellness',
+    },
+    category: 'Health & Wellness > Supplements',
+    offers: {
+      '@type': 'Offer',
+      url: 'https://doseewellness.com/dosee',
+      priceCurrency: 'JPY',
+      price: gingerShot?.price || '2980',
+      availability: 'https://schema.org/PreOrder',
+      availabilityStarts: '2025-06-01',
+      seller: {
+        '@type': 'Organization',
+        name: 'DoSee Wellness',
+      },
+    },
+  }
+
+  // 構造化データ - パンくずリスト
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'ホーム',
+        item: 'https://doseewellness.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'DoSee',
+        item: 'https://doseewellness.com/dosee',
+      },
+    ],
+  }
+
   return (
     <div className="page-container">
+      {/* 構造化データの埋め込み */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(gingerShotJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <CustomCursor />
       <Navigation isScrolled={true} />
       

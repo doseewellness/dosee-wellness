@@ -1,15 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['images.unsplash.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
+    ],
     formats: ['image/avif', 'image/webp'],
   },
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
   
-  // 本番ビルドの最適化
-  swcMinify: true,
+  // Turbopack設定（警告を消すため）
+  turbopack: {
+    root: process.cwd(),
+  },
   
   // リダイレクト設定
   async redirects() {

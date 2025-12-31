@@ -4,47 +4,91 @@ import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import CustomCursor from '../../components/CustomCursor'
+import productsData from '../../data/products.json'
 import '../../styles/pages.css'
 
 export default function WellChaPage() {
+  // 商品データを取得
+  const matchaLatte = productsData.find(p => p.id === 'matcha-latte')
+  const hojichaLatte = productsData.find(p => p.id === 'hojicha-latte')
+
   // 構造化データ - 商品情報（抹茶ラテ）
   const matchaProductJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: 'WellCha 抹茶ラテ',
-    description: '日本茶の力で心・からだ・肌を整える抹茶ラテ。カフェインとテアニンのバランスで静かな集中力をサポート。',
+    name: matchaLatte?.name || 'WellCha 抹茶ラテ',
+    description: matchaLatte?.longDescription || '日本茶の力で心・からだ・肌を整える抹茶ラテ。',
     brand: {
       '@type': 'Brand',
       name: 'DoSee Wellness',
     },
+    category: 'Health & Wellness > Tea',
     offers: {
       '@type': 'Offer',
-      url: 'https://shop.doseewellness.com/products/matcha-latte',
+      url: matchaLatte?.shopifyUrl || 'https://shop.doseewellness.com/products/matcha-latte',
       priceCurrency: 'JPY',
-      availability: 'https://schema.org/InStock',
+      price: matchaLatte?.price || '3980',
+      availability: matchaLatte?.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+      priceValidUntil: '2025-12-31',
+      seller: {
+        '@type': 'Organization',
+        name: 'DoSee Wellness',
+      },
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: '1',
+      ratingValue: matchaLatte?.rating || '5.0',
+      reviewCount: matchaLatte?.reviewCount || '1',
+      bestRating: '5',
+      worstRating: '1',
     },
+    review: [
+      {
+        '@type': 'Review',
+        author: {
+          '@type': 'Person',
+          name: 'Y.M',
+        },
+        datePublished: '2024-12-15',
+        reviewBody: '朝のコーヒーの代わりに飲み始めました。カフェインがマイルドで、集中力が続くのに夜もよく眠れます。抹茶の風味も本格的で、毎日続けられています。',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+        },
+      },
+    ],
   }
 
   // 構造化データ - 商品情報（ほうじ茶ラテ）
   const hojichaProductJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: 'WellCha ほうじ茶ラテ',
-    description: '心・からだ・呼吸をほどく、新しいほうじ茶習慣。やさしい温もりと深いリラックスをもたらす一杯。',
+    name: hojichaLatte?.name || 'WellCha ほうじ茶ラテ',
+    description: hojichaLatte?.longDescription || '心・からだ・呼吸をほどく、新しいほうじ茶習慣。',
     brand: {
       '@type': 'Brand',
       name: 'DoSee Wellness',
     },
+    category: 'Health & Wellness > Tea',
     offers: {
       '@type': 'Offer',
-      url: 'https://shop.doseewellness.com/products/hojicha-latte',
+      url: hojichaLatte?.shopifyUrl || 'https://shop.doseewellness.com/products/hojicha-latte',
       priceCurrency: 'JPY',
-      availability: 'https://schema.org/InStock',
+      price: hojichaLatte?.price || '3980',
+      availability: hojichaLatte?.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+      priceValidUntil: '2025-12-31',
+      seller: {
+        '@type': 'Organization',
+        name: 'DoSee Wellness',
+      },
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: hojichaLatte?.rating || '4.8',
+      reviewCount: hojichaLatte?.reviewCount || '1',
+      bestRating: '5',
+      worstRating: '1',
     },
   }
 
