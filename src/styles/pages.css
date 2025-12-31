@@ -1,0 +1,511 @@
+.page-container {
+  min-height: 100vh;
+  background: #fafaf9;
+}
+
+.product-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 60px 80px;
+  overflow: hidden;
+}
+
+.product-hero-content {
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.product-category {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.product-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+
+.product-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #333;
+  backdrop-filter: blur(10px);
+}
+
+.tag-green {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.tag-orange {
+  background: rgba(249, 115, 22, 0.1);
+  border-color: rgba(249, 115, 22, 0.2);
+}
+
+.tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.content-section {
+  padding: 80px 60px;
+  background: white;
+}
+
+.section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-section h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+
+.text-content {
+  max-width: 800px;
+  margin-bottom: 3rem;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.text-content strong {
+  color: #2c5f2d;
+  font-weight: 500;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 3rem 0;
+}
+
+.benefit-card {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #2c5f2d;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.benefit-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+.how-to-box {
+  background: rgba(44, 95, 45, 0.05);
+  border: 1px solid rgba(44, 95, 45, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 2rem 0;
+}
+
+.how-to-box h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c5f2d;
+  margin-bottom: 1rem;
+}
+
+.how-to-box ul {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.how-to-box li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.how-to-box p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.cta-box {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.shop-button {
+  display: inline-block;
+  padding: 16px 48px;
+  background: #2c5f2d;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(44, 95, 45, 0.3);
+}
+
+.shop-button:hover {
+  background: #1e4620;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(44, 95, 45, 0.4);
+}
+
+.concept-card {
+  background: rgba(251, 146, 60, 0.08);
+  border: 2px dashed rgba(251, 146, 60, 0.3);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 2rem 0;
+}
+
+.concept-card h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ea580c;
+  margin-bottom: 1rem;
+}
+
+.concept-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+.status-card {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.status-badge {
+  display: inline-block;
+  background: #1a1a1a;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.status-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ritual-steps {
+  display: grid;
+  gap: 20px;
+  margin: 2rem 0;
+}
+
+.ritual-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 15px;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #2c5f2d;
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.ritual-step p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+}
+
+.philosophy-card {
+  background: rgba(44, 95, 45, 0.05);
+  border-left: 4px solid #2c5f2d;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 3rem 0;
+}
+
+.philosophy-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.philosophy-card p:last-child {
+  margin-bottom: 0;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 12px 32px;
+  background: white;
+  color: #2c5f2d;
+  text-decoration: none;
+  border: 2px solid #2c5f2d;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.back-button:hover {
+  background: #2c5f2d;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.static-page-hero {
+  background: linear-gradient(135deg, rgba(44, 95, 45, 0.05) 0%, rgba(76, 129, 77, 0.05) 100%);
+  padding: 160px 60px 80px;
+  text-align: center;
+}
+
+.static-page-content h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.static-page-section {
+  padding: 80px 60px;
+  background: white;
+}
+
+.legal-content h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #2c5f2d;
+  margin: 3rem 0 1rem;
+}
+
+.legal-content h2:first-of-type {
+  margin-top: 0;
+}
+
+.legal-content p, .legal-content li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.legal-content ul, .legal-content ol {
+  margin: 1rem 0 1rem 2rem;
+}
+
+.legal-content li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info {
+  background: rgba(44, 95, 45, 0.05);
+  border-left: 4px solid #2c5f2d;
+  padding: 20px;
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+  color: #2c5f2d;
+  text-decoration: underline;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 2rem 0;
+}
+
+.value-card {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+}
+
+.value-card h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #2c5f2d;
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+.company-info {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 15px;
+  padding: 40px;
+  margin: 2rem 0;
+}
+
+.info-row {
+  display: flex;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #2c5f2d;
+  min-width: 150px;
+  flex-shrink: 0;
+}
+
+.info-value {
+  color: #555;
+}
+
+.info-value a {
+  color: #2c5f2d;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .product-hero {
+    padding: 100px 30px 60px;
+    min-height: 60vh;
+  }
+  
+  .product-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .product-subtitle {
+    font-size: 1rem;
+  }
+  
+  .content-section {
+    padding: 60px 30px;
+  }
+  
+  .content-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .product-tags {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .static-page-hero {
+    padding: 120px 30px 60px;
+  }
+  
+  .static-page-content h1 {
+    font-size: 2rem;
+  }
+  
+  .values-grid, .company-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-row {
+    flex-direction: column;
+  }
+  
+  .info-label {
+    margin-bottom: 0.5rem;
+  }
+}

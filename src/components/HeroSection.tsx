@@ -1,0 +1,56 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+
+const HeroSection = () => {
+  const [chars, setChars] = useState<string[]>([])
+
+  useEffect(() => {
+    const text = 'Busy days, gently reset.'
+    setTimeout(() => {
+      setChars(text.split(''))
+    }, 500)
+  }, [])
+
+  return (
+    <section className="hero">
+      <div className="hero-bg" />
+      <div className="hero-content">
+        <p className="hero-label">DOSEE WELLNESS</p>
+        <h1>
+          {chars.map((char, i) => (
+            <span
+              key={i}
+              className="split-char"
+              style={{ animationDelay: `${i * 0.05}s` }}
+            >
+              {char}
+            </span>
+          ))}
+        </h1>
+        <p className="subtitle">
+          DoSee Wellness は、忙しい毎日の中で「こころ・からだ・肌」を<br />
+          やさしく整える一杯を届けるウェルネスブランドです。
+        </p>
+        
+        <div className="hero-badges">
+          <span className="badge badge-mind">
+            <span className="badge-dot"></span>
+            Mind — 静かな集中と落ち着き
+          </span>
+          <span className="badge badge-body">
+            <span className="badge-dot"></span>
+            Body — 日々のコンディションケア
+          </span>
+          <span className="badge badge-skin">
+            <span className="badge-dot"></span>
+            Skin — 内側から満ちる透明感
+          </span>
+        </div>
+      </div>
+      <div className="scroll-indicator">SCROLL</div>
+    </section>
+  )
+}
+
+export default HeroSection
