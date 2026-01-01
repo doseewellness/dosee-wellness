@@ -29,7 +29,7 @@ export default function AboutPage() {
       addressRegion: '東京都',
     },
     sameAs: [
-      'https://www.instagram.com/isamisushi.yvr',
+      'https://www.instagram.com/wellcha_matcha',
     ],
     areaServed: {
       '@type': 'Country',

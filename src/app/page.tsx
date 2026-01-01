@@ -30,7 +30,7 @@ export default function Home() {
     logo: 'https://doseewellness.com/logo.png',
     description: '忙しい毎日をやさしく整える日本茶ベースのウェルネスブランド',
     sameAs: [
-      'https://www.instagram.com/isamisushi.yvr',
+      'https://www.instagram.com/wellcha_matcha',
     ],
     contactPoint: {
       '@type': 'ContactPoint',

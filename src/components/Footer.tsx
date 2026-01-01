@@ -23,8 +23,7 @@ const Footer = () => {
         
         <div className="footer-section">
           <h3>Follow</h3>
-          <a href="https://www.instagram.com/isamisushi.yvr" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+          <a href="https://www.instagram.com/wellcha_matcha" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
       </div>
       

@@ -1,18 +1,20 @@
 import { Metadata } from 'next'
+import { pageMetadata, siteConfig } from '../../lib/constants/metadata'
 
 export const metadata: Metadata = {
-  title: 'WellCha - 抹茶・ほうじ茶ラテ | DoSee Wellness',
-  description: '日本茶の力で心・からだ・肌を整える。WellChaの抹茶ラテとほうじ茶ラテ。カフェインとテアニンのバランスで静かな集中力をサポート。',
-  keywords: ['抹茶ラテ', 'ほうじ茶ラテ', 'WellCha', '日本茶', 'ウェルネス', 'テアニン', 'リラックス'],
+  title: pageMetadata.wellcha.title,
+  description: pageMetadata.wellcha.description,
+  keywords: pageMetadata.wellcha.keywords,
   openGraph: {
-    title: 'WellCha - 日本茶のやさしさで毎日をしなやかに整える',
-    description: '抹茶とほうじ茶の自然なエネルギーで、忙しい日々に落ち着きと集中を。',
-    url: 'https://doseewellness.com/wellcha',
+    title: pageMetadata.wellcha.title,
+    description: pageMetadata.wellcha.description,
+    url: `${siteConfig.url}/wellcha`,
     images: [
       {
-        url: 'https://doseewellness.com/wellcha-og.jpg',
+        url: `${siteConfig.url}/wellcha-og.jpg`,
         width: 1200,
         height: 630,
+        alt: 'WellCha - 抹茶・ほうじ茶ラテ',
       },
     ],
   },
