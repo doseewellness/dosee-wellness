@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import { pageMetadata, siteConfig } from '../../lib/constants/metadata'
-import '../styles/globals.css'
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
