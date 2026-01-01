@@ -2,56 +2,20 @@ import { Metadata } from 'next'
 import { pageMetadata, siteConfig } from '../../lib/constants/metadata'
 
 export const metadata: Metadata = {
-  title: pageMetadata.home.title,
-  description: pageMetadata.home.description,
-  keywords: pageMetadata.home.keywords,
+  title: pageMetadata.about.title,
+  description: pageMetadata.about.description,
+  keywords: pageMetadata.about.keywords,
   openGraph: {
-    title: pageMetadata.home.title,
-    description: pageMetadata.home.description,
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    locale: 'ja_JP',
-    type: 'website',
-    images: [
-      {
-        url: `${siteConfig.url}/og-image.jpg`,
-        width: 1200,
-        height: 630,
-        alt: 'DoSee Wellness',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: pageMetadata.home.title,
-    description: pageMetadata.home.description,
-    images: [`${siteConfig.url}/og-image.jpg`],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+    title: pageMetadata.about.title,
+    description: pageMetadata.about.description,
+    url: `${siteConfig.url}/about`,
   },
 }
 
-export default function RootLayout({
+export default function AboutLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <html lang="ja">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href={siteConfig.url} />
-      </head>
-      <body>{children}</body>
-    </html>
-  )
+  return <>{children}</>
 }
