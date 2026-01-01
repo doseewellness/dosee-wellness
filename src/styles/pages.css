@@ -744,3 +744,174 @@
     font-size: 0.95rem;
   }
 }
+/* 特定商取引法ページ用の追加スタイル */
+
+.static-page-hero {
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 60px 80px;
+  background: linear-gradient(135deg, rgba(44, 95, 45, 0.05) 0%, rgba(76, 129, 77, 0.05) 100%);
+}
+
+.static-page-content {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.static-page-section {
+  padding: 80px 60px;
+  background: white;
+}
+
+.legal-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.legal-content h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #2c5f2d;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(44, 95, 45, 0.2);
+}
+
+.legal-content h2:first-child {
+  margin-top: 0;
+}
+
+.legal-content h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.legal-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.legal-content ul,
+.legal-content ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.legal-content li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+.legal-content a {
+  color: #2c5f2d;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.legal-content a:hover {
+  color: #1e4620;
+}
+
+/* 会社情報の行スタイル */
+.info-row {
+  display: flex;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.info-label {
+  flex: 0 0 180px;
+  font-weight: 600;
+  color: #2c5f2d;
+  font-size: 0.95rem;
+}
+
+.info-value {
+  flex: 1;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.info-value a {
+  color: #2c5f2d;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.info-value a:hover {
+  color: #1e4620;
+  text-decoration: underline;
+}
+
+/* 会社情報グリッド（Aboutページ用） */
+.company-info {
+  margin: 2rem 0;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 3rem 0;
+}
+
+.value-card {
+  background: rgba(44, 95, 45, 0.05);
+  border-left: 4px solid #2c5f2d;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.value-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c5f2d;
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .static-page-hero {
+    padding: 100px 30px 60px;
+    min-height: 30vh;
+  }
+  
+  .static-page-section {
+    padding: 60px 30px;
+  }
+  
+  .legal-content h2 {
+    font-size: 1.6rem;
+  }
+  
+  .legal-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .info-row {
+    flex-direction: column;
+  }
+  
+  .info-label {
+    flex: none;
+    margin-bottom: 0.5rem;
+  }
+}
