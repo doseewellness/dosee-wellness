@@ -6,7 +6,7 @@ const HeroSection = () => {
   const [chars, setChars] = useState<string[]>([])
 
   useEffect(() => {
-    const text = 'Balance, Redified'
+    const text = 'DoSee Wellness'
     setTimeout(() => {
       setChars(text.split(''))
     }, 500)
@@ -16,7 +16,6 @@ const HeroSection = () => {
     <section className="hero">
       <div className="hero-bg" />
       <div className="hero-content">
-        <p className="hero-label">DOSEE WELLNESS</p>
         <h1>
           {chars.map((char, i) => (
             <span
@@ -28,7 +27,10 @@ const HeroSection = () => {
             </span>
           ))}
         </h1>
-        <p className="subtitle">
+        <p className="subtitle1">
+          Balance Redfine
+        </p>
+        <p className="subtitle2">
           DoSee Wellness は、忙しい毎日の中で<br />
           「こころ・からだ・肌」、自然に整っていく時間を<br />
           やさしく支えるウェルネスブランドです。
