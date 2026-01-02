@@ -35,13 +35,13 @@ export default function ContactPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <a 
-                href="mailto:info@dosee-wellness.com"
+                href="mailto:doseewellness.com"
                 className="text-green-700 hover:text-green-800 transition-colors"
               >
                 📧 info@dosee-wellness.com
               </a>
               <a 
-                href="https://www.instagram.com/isamisushi.yvr"
+                href="https://www.instagram.com/wellcha_matcha"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-green-700 hover:text-green-800 transition-colors"
