@@ -7,6 +7,26 @@ export const metadata: Metadata = {
   title: pageMetadata.home.title,
   description: pageMetadata.home.description,
   keywords: pageMetadata.home.keywords,
+  
+  // ファビコン設定
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/icon.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '512x512',
+        url: '/icon.png',
+      },
+    ],
+  },
+  
   openGraph: {
     title: pageMetadata.home.title,
     description: pageMetadata.home.description,
@@ -16,7 +36,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: `${siteConfig.url}/images/og/home-og.jpg`, // ← 変更
+        url: `${siteConfig.url}/images/og/home-og.jpg`,
         width: 1200,
         height: 630,
         alt: 'DoSee Wellness - Busy days, gently reset.',
@@ -27,7 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: pageMetadata.home.title,
     description: pageMetadata.home.description,
-    images: [`${siteConfig.url}/images/og/home-og.jpg`], // ← 変更
+    images: [`${siteConfig.url}/images/og/home-og.jpg`],
   },
   robots: {
     index: true,
@@ -50,7 +70,6 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
-        <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href={siteConfig.url} />
       </head>
       <body>
