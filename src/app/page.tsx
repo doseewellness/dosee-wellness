@@ -8,6 +8,7 @@ import Navigation from '../components/Navigation'
 import HeroSection from '../components/HeroSection'
 import InteractiveSection from '../components/InteractiveSection'
 import Footer from '../components/Footer'
+import { getProductUrl } from '../lib/constants/shop'
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -20,6 +21,12 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // 購入ボタンのクリックハンドラー
+  const handlePurchaseClick = (productKey: 'matchaLatte' | 'hojichaLatte') => {
+    const url = getProductUrl(productKey)
+    window.open(url, '_blank', 'noopener,noreferrer')
+  }
 
   // 構造化データ - 組織情報
   const organizationJsonLd = {
@@ -137,6 +144,7 @@ export default function Home() {
         </div>
 
         <div className="products-grid-v2">
+          {/* WellCha Card - Background links to /wellcha, Buttons open Shopify in new tab */}
           <Link href="/wellcha" className="product-card-v2-link">
             <div className="product-card-v2 product-card-wellcha-v2">
               <div 
@@ -151,14 +159,39 @@ export default function Home() {
                   抹茶とほうじ茶の自然なエネルギーで、<br />
                   忙しい日々に落ち着きと集中を。
                 </p>
-                <div className="product-tags-v2">
-                  <span className="product-tag-v2">Matcha Latte</span>
-                  <span className="product-tag-v2">Hojicha Latte</span>
+                
+                {/* Purchase Buttons Area - Uses buttons instead of <a> tags to avoid nesting */}
+                <div 
+                  className="product-actions"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <span className="action-label">購入はこちら:</span>
+                  <div className="product-tags-v2">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        handlePurchaseClick('matchaLatte')
+                      }}
+                      className="product-tag-v2 product-tag-button"
+                    >
+                      Matcha Latte
+                    </button>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        handlePurchaseClick('hojichaLatte')
+                      }}
+                      className="product-tag-v2 product-tag-button"
+                    >
+                      Hojicha Latte
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </Link>
 
+          {/* DoSee Card - Background links to /dosee */}
           <Link href="/dosee" className="product-card-v2-link">
             <div className="product-card-v2 product-card-dosee-v2">
               <div 

@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: `${siteConfig.url}/og-image.jpg`,
+        url: `${siteConfig.url}/images/og/home-og.jpg`, // ← 変更
         width: 1200,
         height: 630,
-        alt: 'DoSee Wellness',
+        alt: 'DoSee Wellness - Busy days, gently reset.',
       },
     ],
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: pageMetadata.home.title,
     description: pageMetadata.home.description,
-    images: [`${siteConfig.url}/og-image.jpg`],
+    images: [`${siteConfig.url}/images/og/home-og.jpg`], // ← 変更
   },
   robots: {
     index: true,

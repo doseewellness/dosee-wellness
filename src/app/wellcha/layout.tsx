@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: `${siteConfig.url}/wellcha`,
     images: [
       {
-        url: `${siteConfig.url}/wellcha-og.jpg`,
+        url: `${siteConfig.url}/images/og/wellcha-og.jpg`, // ← ここだけ変更
         width: 1200,
         height: 630,
         alt: 'WellCha - 抹茶・ほうじ茶ラテ',

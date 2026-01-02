@@ -5,6 +5,7 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import CustomCursor from '../../components/CustomCursor'
 import productsData from '../../data/products.json'
+import { getProductUrl } from '../../lib/constants/shop'
 import '../../styles/pages.css'
 
 export default function WellChaPage() {
@@ -235,9 +236,9 @@ export default function WellChaPage() {
 
           <div className="cta-box">
             <a 
-              href="https://shop.doseewellness.com/products/matcha-latte"
+              href={getProductUrl('matchaLatte')}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="shop-button"
             >
               抹茶ラテを購入する
@@ -314,9 +315,9 @@ export default function WellChaPage() {
 
           <div className="cta-box">
             <a 
-              href="https://shop.doseewellness.com/products/hojicha-latte"
+              href={getProductUrl('hojichaLatte')}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="shop-button"
             >
               ほうじ茶ラテを購入する
