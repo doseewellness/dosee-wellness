@@ -81,14 +81,14 @@ export default function Home() {
       <InteractiveSection id="philosophy" className="text-center">
         <p className="section-label">OUR PHILOSOPHY</p>
         <h2>
-          Wellness that fits into<br />
-          <span className="highlight">busy lives.</span>
+          Balance, redfined.<br />
+          <span className="highlight">整う余白を、日常に。</span>
         </h2>
         <p className="section-description">
-          DoSee Wellness は、「時間がないからこそ整えたい人」のためのブランドです。<br />
-          むずかしいルールやストイックさではなく、日々の一杯を通じて<br />
-          「こころ・からだ・肌」を少しずつ整えていく。<br />
-          そんな、無理のないウェルネス習慣をデザインしています。
+          無理なルールも、頑張る習慣もいらない。<br />
+          日常の中の、ほんのひとつの余白が、<br />
+          心・からだ・肌を<br />
+          静かに、確かに、整えていきます。
         </p>
 
         <div className="philosophy-cards">
@@ -96,24 +96,27 @@ export default function Home() {
             <div className="philosophy-icon">🧠</div>
             <h3>Mind — こころ</h3>
             <p>
-              カフェインとテアニンのバランスで、<br />
-              張りつめた思考をほぐし、静かな集中へ。
+              思考の緊張をほどき、<br />
+              静けさの中で、<br />
+              自然な集中へ。
             </p>
           </div>
           <div className="philosophy-card">
             <div className="philosophy-icon">💪</div>
             <h3>Body — からだ</h3>
             <p>
-              ビタミンやポリフェノールなど、<br />
-              日々のコンディションを支える成分をやさしく一杯に。
+              深い呼吸のように、<br />
+              からだのリズムを、<br />
+              やさしく整える。
             </p>
           </div>
           <div className="philosophy-card">
             <div className="philosophy-icon">✨</div>
             <h3>Skin — 肌</h3>
             <p>
-              抗酸化成分やビタミンCを含む素材で、<br />
-              内側から満ちるような透明感をイメージしたブレンド設計。
+              うるおいが満ちて、<br />
+              素肌が本来の<br />
+              やわらかさへ。
             </p>
           </div>
         </div>
@@ -219,14 +222,18 @@ export default function Home() {
       <InteractiveSection id="about" className="text-center about-section">
         <p className="section-label">ABOUT DOSEE WELLNESS</p>
         <h2>
-          A small, gentle ritual<br />
-          <span className="highlight">for every day.</span>
+          Wellness, <br />
+          designed to fit into everyday life.
         </h2>
         <p className="section-description">
-          DoSee Wellness は、「がんばるために整える」のではなく、<br />
-          忙しい日々の中でも自分を大切にするための、小さな一杯を届けることを目指しています。<br />
-          ライフスタイルや好みに合わせて、抹茶・ほうじ茶・ジンジャーなど、<br />
-          いくつかのラインを展開しながら、「続けやすさ」と「心地よさ」のバランスを大切にしています。
+          DoSee Wellness は、<br />
+          整えるために頑張る」のではなく、<br />
+          忙しい日常の中で、自然に整っていくことを<br />
+          大切にしたウェルネスブランドです<br />
+          時間がない日も、余裕がない日も。<br />
+          ほんのひととき、<br />
+          自分に立ち戻るための、<br />
+          小さく、やさしい習慣を届けます。
         </p>
 
         <div className="about-keywords">
@@ -236,22 +243,24 @@ export default function Home() {
           </div>
           <div className="keyword-card">
             <h3>Everyday</h3>
-            <p>忙しい日でも、<br />さっと取り入れられる形で届けます。</p>
+            <p>忙しい日でも、<br />さっと取り入れられる形で。</p>
           </div>
           <div className="keyword-card">
             <h3>Gentle</h3>
-            <p>からだとこころに、<br />やさしく寄りそう味わいと設計。</p>
+            <p>からだと心に、<br />やさしく寄りそって。</p>
           </div>
         </div>
 
         <div className="about-message">
           <p>
             「整えなきゃ」と力むのではなく、<br />
-            ふっと一息ついたときにそばにいてくれる一杯を。
+            ふと一息つきたいときに、そっと寄り添う存在でありたい。
           </p>
           <p>
-            DoSee Wellness をお選びいただく時間が、あなたの日常に<br />
-            静かな余白と、前向きなエネルギーをもたらしますように。
+            DoSee Wellness を選ぶ時間が、<br />
+            あなたの日常に、<br />
+            静かな余白と、前向きなエネルギーを<br />
+            やさしくもたらしますように。
           </p>
         </div>
       </InteractiveSection>

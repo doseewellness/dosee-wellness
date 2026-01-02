@@ -29,8 +29,9 @@ const HeroSection = () => {
           ))}
         </h1>
         <p className="subtitle">
-          DoSee Wellness は、忙しい毎日の中で「こころ・からだ・肌」を<br />
-          やさしく整える一杯を届けるウェルネスブランドです。
+          DoSee Wellness は、忙しい毎日の中で<br />
+          「こころ・からだ・肌」、自然に整っていく時間を<br />
+          やさしく支えるウェルネスブランドです。
         </p>
         
         <div className="hero-badges">
