@@ -61,6 +61,13 @@ export const pageMetadata = {
     description: 'DoSee Wellness株式会社の特定商取引法に基づく表記。事業者情報、販売価格、支払方法、配送・返品について記載しています。',
     keywords: ['特定商取引法', '事業者情報', '返品条件'],
   },
+  // 既存のpageMetadataオブジェクトに以下を追加
+
+  contact: {
+    title: 'お問い合わせ | DoSee Wellness',
+    description: 'DoSee Wellness へのお問い合わせはこちらから。商品・注文・取引に関するご質問など、お気軽にご連絡ください。',
+    keywords: ['お問い合わせ', 'コンタクト', 'DoSee Wellness', '問い合わせフォーム', '取引相談'],
+  },
 }
 
 // OGP画像のパス
