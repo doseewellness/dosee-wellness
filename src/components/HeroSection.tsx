@@ -6,7 +6,7 @@ const HeroSection = () => {
   const [chars, setChars] = useState<string[]>([])
 
   useEffect(() => {
-    const text = 'Busy days, gently reset.'
+    const text = 'Balance, Redified'
     setTimeout(() => {
       setChars(text.split(''))
     }, 500)
