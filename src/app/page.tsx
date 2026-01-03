@@ -81,7 +81,6 @@ export default function Home() {
       <InteractiveSection id="philosophy" className="text-center">
         <p className="section-label">OUR PHILOSOPHY</p>
         <h2>
-          Balance, redfined.<br />
           <span className="highlight">整う余白を、日常に。</span>
         </h2>
         <p className="section-description">

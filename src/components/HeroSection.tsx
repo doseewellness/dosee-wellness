@@ -27,9 +27,10 @@ const HeroSection = () => {
             </span>
           ))}
         </h1>
-        <p className="subtitle1">
-          Balance Redfine
-        </p>
+         
+        <p className="highlight"></p> Balance, Redfined<br />
+        整う余白を、日常に。
+       
         <p className="subtitle2">
           DoSee Wellness は、忙しい毎日の中で<br />
           「こころ・からだ・肌」、自然に整っていく時間を<br />
