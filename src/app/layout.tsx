@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import { pageMetadata, siteConfig } from '../lib/constants/metadata'
 import '../styles/globals.css'
 import GoogleAnalytics from '../components/GoogleAnalytics'
-import './globals.css';
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,

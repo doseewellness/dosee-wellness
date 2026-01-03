@@ -1,17 +1,61 @@
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================
+   Root Variables
+   ========================================== */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* ==========================================
+   Base Styles
+   ========================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html,
 body {
-  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
-  background: #0a0a0a;
-  color: #333;
+  max-width: 100vw;
   overflow-x: hidden;
-  cursor: none;
 }
 
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  cursor: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* ==========================================
+   Custom Cursor
+   ========================================== */
 .custom-cursor {
   width: 20px;
   height: 20px;
@@ -38,6 +82,9 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* ==========================================
+   Particles Canvas
+   ========================================== */
 .particles-canvas {
   position: fixed;
   top: 0;
@@ -48,6 +95,9 @@ body {
   pointer-events: none;
 }
 
+/* ==========================================
+   Navigation - Clean Dropdown Version
+   ========================================== */
 .nav {
   position: fixed;
   top: 0;
@@ -73,6 +123,7 @@ body {
   color: white;
   transition: color 0.5s;
   text-decoration: none;
+  z-index: 1001;
 }
 
 .nav.scrolled .logo {
@@ -81,8 +132,8 @@ body {
 
 .nav ul {
   list-style: none;
-  display: flex;
-  gap: 40px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav a {
@@ -98,6 +149,173 @@ body {
   color: #333;
 }
 
+/* デスクトップメニュー */
+.desktop-menu {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .desktop-menu {
+    display: flex !important;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+/* ハンバーガーボタン */
+.hamburger-button {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+  gap: 6px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .hamburger-button {
+    display: none !important;
+  }
+}
+
+.hamburger-line {
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.nav.scrolled .hamburger-line {
+  background-color: #2c5f2d;
+}
+
+.hamburger-line.open:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* モバイルドロップダウンメニュー - コンパクト版 */
+.mobile-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);  /* 透明度UP */
+  backdrop-filter: blur(25px) saturate(180%);  /* ぼかし強化 */
+  -webkit-backdrop-filter: blur(25px) saturate(180%);  /* Safari対応 */
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+  opacity: 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-top: none;
+}
+
+.mobile-dropdown.open {
+  max-height: 280px;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .mobile-dropdown {
+    display: none !important;
+  }
+}
+
+.mobile-dropdown ul {
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.mobile-dropdown li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.mobile-dropdown a {
+  display: block;
+  padding: 0.85rem 1.5rem;
+  color: rgba(44, 62, 80, 0.95);  /* テキストを少し濃く */
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;  /* フォントを少し太く */
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease;
+  background: transparent;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);  /* テキストに影 */
+}
+
+.mobile-dropdown a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #2c5f2d;
+  padding-left: 2rem;
+}
+
+.mobile-dropdown a:active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.mobile-dropdown .shop-link {
+  color: #2c5f2d;
+  font-weight: 600;
+}
+
+.mobile-dropdown .shop-link:hover {
+  background: rgba(44, 95, 45, 0.15);
+}
+
+/* 背景オーバーレイ - より薄く */
+.menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15);  /* さらに薄く */
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(2px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* モバイルレスポンシブ調整 */
+@media (max-width: 768px) {
+  .nav {
+    padding: 20px 30px;
+  }
+  
+  .nav.scrolled {
+    padding: 15px 30px;
+  }
+}
+
+/* ==========================================
+   Hero Section
+   ========================================== */
 .hero {
   height: 100vh;
   position: relative;
@@ -219,6 +437,51 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ==========================================
+   Sections
+   ========================================== */
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 60px;
+  position: relative;
+  background: #f8f7f3;
+}
+
+.section-content {
+  max-width: 1400px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 3.5rem;
+  font-weight: 200;
+  margin-bottom: 3rem;
+  letter-spacing: 0.08em;
+  line-height: 1.7;
+}
+
+.section p {
+  font-size: 1.3rem;
+  line-height: 2.2;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.highlight {
+  color: #2c5f2d;
+  font-weight: 400;
+}
+
 .section-label {
   font-size: 0.7rem;
   letter-spacing: 0.3em;
@@ -235,6 +498,21 @@ body {
   margin: 2rem auto !important;
 }
 
+.interactive-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+              rgba(44, 95, 45, 0.15) 0%, 
+              transparent 50%);
+  pointer-events: none;
+}
+
+/* ==========================================
+   Philosophy Cards
+   ========================================== */
 .philosophy-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -295,6 +573,9 @@ body {
   color: #666;
 }
 
+/* ==========================================
+   Products Section
+   ========================================== */
 .products-header {
   margin-bottom: 3rem;
 }
@@ -469,6 +750,26 @@ body {
   z-index: 11;
 }
 
+.product-actions {
+  margin-top: 20px;
+}
+
+.action-label {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.product-tag-button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+/* ==========================================
+   About Section
+   ========================================== */
 .about-section {
   background: linear-gradient(to bottom, #f8f7f3, #fff);
 }
@@ -519,76 +820,9 @@ body {
   margin-bottom: 0;
 }
 
-.scroll-indicator {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-size: 0.85rem;
-  letter-spacing: 0.2em;
-  animation: bounce 2s ease infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(-15px); }
-}
-
-.section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 120px 60px;
-  position: relative;
-  background: #f8f7f3;
-}
-
-.section-content {
-  max-width: 1400px;
-  width: 100%;
-  position: relative;
-  z-index: 10;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.section h2 {
-  font-size: 3.5rem;
-  font-weight: 200;
-  margin-bottom: 3rem;
-  letter-spacing: 0.08em;
-  line-height: 1.7;
-}
-
-.section p {
-  font-size: 1.3rem;
-  line-height: 2.2;
-  color: #666;
-  margin-bottom: 1.5rem;
-  font-weight: 300;
-}
-
-.highlight {
-  color: #2c5f2d;
-  font-weight: 400;
-}
-
-.interactive-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-              rgba(44, 95, 45, 0.15) 0%, 
-              transparent 50%);
-  pointer-events: none;
-}
-
+/* ==========================================
+   Parallax Section
+   ========================================== */
 .parallax-section {
   min-height: 80vh;
   background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600') center/cover fixed;
@@ -615,6 +849,28 @@ body {
   text-align: center;
 }
 
+/* ==========================================
+   Scroll Indicator
+   ========================================== */
+.scroll-indicator {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-15px); }
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
 footer {
   background: #1a1a1a;
   color: #999;
@@ -661,6 +917,9 @@ footer {
   font-size: 0.9rem;
 }
 
+/* ==========================================
+   Mobile Responsive Styles
+   ========================================== */
 @media (max-width: 768px) {
   body { cursor: auto; }
   .custom-cursor, .cursor-follower { display: none; }
@@ -710,6 +969,5 @@ footer {
   
   .footer-content { grid-template-columns: 1fr; }
   .nav { padding: 20px 30px; }
-  .nav ul { gap: 20px; font-size: 0.85rem; }
   .section { padding: 80px 30px; }
 }
