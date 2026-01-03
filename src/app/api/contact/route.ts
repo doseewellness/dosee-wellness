@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
 
     // メール送信
     const data = await resend.emails.send({
-      from: 'DoSee Wellness <noreply@send.doseewellness.com>',
+      from: 'DoSee Wellness <noreply@doseewellness.com>',
       to: ['doseewellness@gmail.com'], // 受信先メールアドレス
       replyTo: email,
       subject: `【お問い合わせ】${subjectText} - ${name}様より`,
