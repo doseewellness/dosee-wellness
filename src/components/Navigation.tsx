@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from "next/image";
 import { SHOP_URLS } from '../lib/constants/shop'
 
 interface NavigationProps {
@@ -40,8 +41,14 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
   return (
     <>
       <nav className={`nav ${isScrolled ? 'scrolled' : ''}`}>
-        <Link href="/" className="logo" onClick={closeMenu}>
-          Dosee Wellness
+        <Link href="/" className="logo" onClick={closeMenu} aria-label="DoSee Wellness">
+          <Image
+            src="/images/logo/logo-dosee-wellness.png"
+            alt="DoSee Wellness"
+            width={180}
+            height={60}
+            priority
+          />
         </Link>
 
         {/* デスクトップメニュー */}

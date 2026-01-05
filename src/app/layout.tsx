@@ -1,7 +1,14 @@
 import { Metadata } from 'next'
+import { Playfair_Display } from 'next/font/google'
 import { pageMetadata, siteConfig } from '../lib/constants/metadata'
 import '../styles/globals.css'
 import GoogleAnalytics from '../components/GoogleAnalytics'
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['600', '700', '800'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
@@ -72,7 +79,7 @@ export default function RootLayout({
       <head>
         <link rel="canonical" href={siteConfig.url} />
       </head>
-      <body>
+      <body className={playfair.className}>
         <GoogleAnalytics />
         {children}
       </body>
