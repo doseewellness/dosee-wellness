@@ -331,7 +331,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(44, 95, 45, 0.8) 0%, rgba(76, 129, 77, 0.6) 100%),
+  background: linear-gradient(135deg, rgba(44, 95, 45, 0.6) 0%, rgba(76, 129, 77, 0.35) 100%),
               url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600') center/cover;
   animation: slowZoom 20s ease-in-out infinite alternate;
 }
@@ -384,12 +384,12 @@ a {
 
   -webkit-mask-image: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.85),
     rgba(0,0,0,0)
   );
   mask-image: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.85),
     rgba(0,0,0,0)
   );
 
@@ -416,6 +416,14 @@ a {
     opacity: 1;
     transform: translateY(0) rotateX(0);
   }
+}
+
+.hero .highlight {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 200;
+  letter-spacing: 0.25em;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .hero .subtitle {
@@ -624,6 +632,7 @@ a {
    ========================================== */
 .products-header {
   margin-bottom: 3rem;
+  color: #1a1a1a;
 }
 
 .products-header h2 {
@@ -817,7 +826,31 @@ a {
    About Section
    ========================================== */
 .about-section {
-  background: linear-gradient(to bottom, #f8f7f3, #fff);
+  position: relative;
+  /* いまのグラデを「下地」として残す（画像が読み込めない場合の保険） */
+  
+
+  /* 和紙画像 */
+  background-image: url('/images/washi-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.02);
+}
+
+/* 文字の可読性を担保する薄い白レイヤー（重要） */
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.20); /* ←ここで明るさ調整 */
+  pointer-events: none;
+}
+
+/* Aboutセクション内の中身をレイヤー上に出す */
+.about-section .section-content {
+  position: relative;
+  z-index: 1;
 }
 
 .about-keywords {
@@ -864,6 +897,10 @@ a {
 
 .about-message p:last-child {
   margin-bottom: 0;
+}
+
+.about-section h2 {
+  color: #111; /* or #000 */
 }
 
 /* ==========================================
@@ -1016,4 +1053,74 @@ footer {
   .footer-content { grid-template-columns: 1fr; }
   .nav { padding: 20px 30px; }
   .section { padding: 80px 30px; }
+}
+
+/* =========================
+   Poetry section
+   ========================= */
+.poetry-section {
+  padding-block: clamp(120px, 14vh, 220px);
+  padding-inline: clamp(24px, 5vw, 80px);
+}
+
+@media (min-width: 1024px) {
+  .poetry-section {
+    padding: 180px 80px;
+  }
+}
+
+/* 中央基準のコンテナ */
+.poetry-inner {
+  max-width: clamp(900px, 72vw, 1200px);
+  margin: 0 auto;
+  position: relative;
+}
+
+/* 共通スタイル */
+.poetry-inner p {
+  font-size: 1.25rem;
+  line-height: 1.9;
+  margin: 0;
+  opacity: 0.95;
+  text-align: center;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* 上の段落：中央より少し左 */
+.poetry-inner p:first-child {
+  transform: translateX(clamp(-40px, -6vw, -100px));
+}
+
+/* 下の段落：中央より少し右 */
+.poetry-inner p:last-child {
+  transform: translateX(clamp(40px, 6vw, 100px));
+}
+
+/* モバイル：両方とも普通に左寄せ */
+@media (max-width: 768px) {
+  .poetry-inner p {
+    text-align: center;
+  }
+
+  .poetry-inner p:first-child {
+    transform: translateX(clamp(-10px, -2.5vw, -24px));
+  }
+
+  .poetry-inner p:last-child {
+    transform: translateX(clamp(10px, 2.5vw, 24px));
+  }
+}
+
+/* 背景の薄暗レイヤー */
+.poetry-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+.about-section h2 {
+  color: #111; /* or #000 */
 }

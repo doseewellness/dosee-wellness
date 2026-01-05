@@ -10,6 +10,8 @@ const playfair = Playfair_Display({
   display: 'swap',
 })
 
+
+
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
   description: pageMetadata.home.description,

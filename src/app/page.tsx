@@ -9,6 +9,7 @@ import HeroSection from '../components/HeroSection'
 import InteractiveSection from '../components/InteractiveSection'
 import Footer from '../components/Footer'
 import { getProductUrl } from '../lib/constants/shop'
+import { shipporiMincho } from './fonts'
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -149,9 +150,9 @@ export default function Home() {
           {/* WellCha Card - Background links to /wellcha, Buttons open Shopify in new tab */}
           <Link href="/wellcha" className="product-card-v2-link">
             <div className="product-card-v2 product-card-wellcha-v2">
-              <div 
-                className="product-card-bg" 
-                style={{backgroundImage: 'url(https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=1200)'}}
+              <div
+                className="product-card-bg"
+                style={{ backgroundImage: "url('/images/wellcha-bg.jpg')" }}
               />
               <div className="product-card-overlay" />
               <div className="product-card-v2-content">
@@ -196,9 +197,9 @@ export default function Home() {
           {/* DoSee Card - Background links to /dosee */}
           <Link href="/dosee" className="product-card-v2-link">
             <div className="product-card-v2 product-card-dosee-v2">
-              <div 
-                className="product-card-bg" 
-                style={{backgroundImage: 'url(https://images.unsplash.com/photo-1582026963556-2863b2d6b2c6?w=1200)'}}
+              <div
+                className="product-card-bg"
+                style={{ backgroundImage: "url('/images/dosee-bg.jpg')" }}
               />
               <div className="product-card-overlay" />
               <div className="product-card-v2-content">
@@ -250,19 +251,24 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="about-message">
-          <p>
+      </InteractiveSection>
+
+      <section className="poetry-section">
+        <div className={`poetry-inner ${shipporiMincho.className}`}>
+          <p className="poetry-left">
             「整えなきゃ」と力むのではなく、<br />
-            ふと一息つきたいときに、そっと寄り添う存在でありたい。
+            ふと一息つきたいときに、<br />
+            そっと寄り添う存在でありたい。
           </p>
-          <p>
+
+          <p className="poetry-right">
             DoSee Wellness を選ぶ時間が、<br />
             あなたの日常に、<br />
             静かな余白と、前向きなエネルギーを<br />
             やさしくもたらしますように。
           </p>
         </div>
-      </InteractiveSection>
+      </section>
 
       <Footer />
     </div>
