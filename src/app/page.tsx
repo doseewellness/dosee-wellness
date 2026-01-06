@@ -79,46 +79,68 @@ export default function Home() {
       
       <HeroSection />
 
-      <InteractiveSection id="philosophy" className="text-center">
-        <p className="section-label">OUR PHILOSOPHY</p>
-        <h2>
-          <span className="highlight">整う余白を、日常に。</span>
-        </h2>
-        <p className="section-description">
-          無理なルールも、頑張る習慣もいらない。<br />
-          日常の中の、ほんのひとつの余白が、<br />
-          心・からだ・肌を<br />
-          静かに、確かに、整えていきます。
-        </p>
+      <InteractiveSection id="philosophy" className="philosophy-section">
+        <div className="philosophy-layout">
 
-        <div className="philosophy-cards">
-          <div className="philosophy-card">
-            <div className="philosophy-icon">🧠</div>
-            <h3>Mind — こころ</h3>
-            <p>
-              思考の緊張をほどき、<br />
-              静けさの中で、<br />
-              自然な集中へ。
-            </p>
+          {/* LEFT: text（ここはほぼそのまま） */}
+          <div className="philosophy-copy">
+            <p className="section-label">OUR PHILOSOPHY</p>
+
+            <h2 className="philosophy-title">
+              整う余白を、日常に。
+            </h2>
+
+            <div className="philosophy-lead">
+              <p>無理なルールも、頑張る習慣もいらない。</p>
+              <p>日常の中の、ほんのひとつの余白が、</p>
+              <p>心・からだ・肌を</p>
+              <p>静かに、確かに、整えていきます。</p>
+            </div>
           </div>
-          <div className="philosophy-card">
-            <div className="philosophy-icon">💪</div>
-            <h3>Body — からだ</h3>
-            <p>
-              深い呼吸のように、<br />
-              からだのリズムを、<br />
-              やさしく整える。
-            </p>
+
+          {/* RIGHT: circles（← ここを差し替える） */}
+          <div className="philosophy-visual">
+            <div className="philosophy-circles">
+
+              {/* Mind */}
+              <div className="circle-wrap circle-mind">
+                <button type="button" className="circle">
+                  <span>Mind</span>
+                </button>
+                <div className="circle-caption">
+                  <p>思考の緊張をほどき、</p>
+                  <p>静けさの中で、</p>
+                  <p>自然な集中へ。</p>
+                </div>
+              </div>
+
+              {/* Body */}
+              <div className="circle-wrap circle-body">
+                <button type="button" className="circle">
+                  <span>Body</span>
+                </button>
+                <div className="circle-caption">
+                  <p>深い呼吸のように、</p>
+                  <p>からだのリズムを、</p>
+                  <p>やさしく整える。</p>
+                </div>
+              </div>
+
+              {/* Skin */}
+              <div className="circle-wrap circle-skin">
+                <button type="button" className="circle">
+                  <span>Skin</span>
+                </button>
+                <div className="circle-caption">
+                  <p>うるおいが満ちて、</p>
+                  <p>素肌が本来の</p>
+                  <p>やわらかさへ。</p>
+                </div>
+              </div>
+
+            </div>
           </div>
-          <div className="philosophy-card">
-            <div className="philosophy-icon">✨</div>
-            <h3>Skin — 肌</h3>
-            <p>
-              うるおいが満ちて、<br />
-              素肌が本来の<br />
-              やわらかさへ。
-            </p>
-          </div>
+
         </div>
       </InteractiveSection>
 

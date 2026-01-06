@@ -1,45 +1,57 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
-const CustomCursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 })
-  const [followerPosition, setFollowerPosition] = useState({ x: 0, y: 0 })
+export default function CustomCursor() {
+  const cursorRef = useRef<HTMLDivElement>(null)
+  const followerRef = useRef<HTMLDivElement>(null)
+
+  // 生のマウス位置
+  const mouseRef = useRef({ x: 0, y: 0 })
+  // フォロワーが追従していく位置（補間）
+  const followerPosRef = useRef({ x: 0, y: 0 })
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY })
+    const onMouseMove = (e: MouseEvent) => {
+      mouseRef.current.x = e.clientX
+      mouseRef.current.y = e.clientY
+
+      // カーソル本体は即追従
+      if (cursorRef.current) {
+        cursorRef.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
+      }
     }
 
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
+    window.addEventListener('mousemove', onMouseMove)
 
-  useEffect(() => {
-    let animationFrameId: number
+    let rafId = 0
     const animate = () => {
-      setFollowerPosition(prev => ({
-        x: prev.x + (position.x - prev.x) * 0.1,
-        y: prev.y + (position.y - prev.y) * 0.1
-      }))
-      animationFrameId = requestAnimationFrame(animate)
+      const target = mouseRef.current
+      const pos = followerPosRef.current
+
+      // 追従スムージング
+      pos.x += (target.x - pos.x) * 0.12
+      pos.y += (target.y - pos.y) * 0.12
+
+      if (followerRef.current) {
+        followerRef.current.style.transform = `translate(${pos.x}px, ${pos.y}px)`
+      }
+
+      rafId = window.requestAnimationFrame(animate)
     }
-    animate()
-    return () => cancelAnimationFrame(animationFrameId)
-  }, [position])
+
+    rafId = window.requestAnimationFrame(animate)
+
+    return () => {
+      window.removeEventListener('mousemove', onMouseMove)
+      window.cancelAnimationFrame(rafId)
+    }
+  }, [])
 
   return (
     <>
-      <div 
-        className="custom-cursor" 
-        style={{ left: position.x, top: position.y }} 
-      />
-      <div 
-        className="cursor-follower" 
-        style={{ left: followerPosition.x, top: followerPosition.y }} 
-      />
+      <div ref={cursorRef} className="custom-cursor" />
+      <div ref={followerRef} className="cursor-follower" />
     </>
   )
 }
-
-export default CustomCursor

@@ -564,67 +564,318 @@ a {
   pointer-events: none;
 }
 
-/* ==========================================
-   Philosophy Cards
-   ========================================== */
-.philosophy-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-  margin: 4rem 0;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
+/* =========================
+   Philosophy (new layout) - BEST
+   ========================= */
 
-.philosophy-card {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
-  padding: 40px 30px;
-  text-align: center;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+/* InteractiveSection の .section を前提に「Philosophyだけ上書き」 */
+.section.philosophy-section {
   position: relative;
-  overflow: hidden;
+
+  /* ▼ 和紙背景を追加 */
+  background:
+    linear-gradient(
+      rgba(248, 247, 243, 0.78),
+      rgba(248, 247, 243, 0.78)
+    ),
+    url("/images/bg/washi-light.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+
+  align-items: stretch;
+  min-height: auto;
+  padding-block: clamp(90px, 10vh, 160px);
+  padding-inline: clamp(24px, 5vw, 80px);
 }
 
-.philosophy-card::before {
-  content: '';
+/* レイアウト本体 */
+.philosophy-layout {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: clamp(28px, 6vw, 96px);
+}
+
+/* LEFT: copy */
+.philosophy-copy {
+  text-align: left;
+}
+
+/* label（既存 .section-label を使ってるなら無理に触らなくてOK） */
+.philosophy-copy .section-label {
+  margin-bottom: 1.2rem;
+}
+
+/* title: 既存の .section h2 に引っ張られないようにクラスで管理 */
+.philosophy-title {
+  font-size: clamp(1.7rem, 3.4vw, 4.1rem);
+  font-weight: 200;
+  letter-spacing: 0.08em;
+  line-height: 1.15;
+  margin: 0 0 1.4rem;
+  color: #111;
+  white-space: nowrap;
+}
+
+/* lead wrapper */
+.philosophy-lead {
+  font-size: clamp(1.0rem, 1.2vw, 1.2rem);
+  line-height: 1.5;
+  letter-spacing: -0.10em;
+  color: #444;
+
+  /* divなので margin:0 は効くけど、段落の余白は別で管理する */
+  margin: 0;
+  max-width: 38ch;
+  text-align: center; 
+}
+
+/* each line (p) */
+.philosophy-lead p {
+  margin: 0;                 /* デフォの段落余白を消す */
+}
+
+/* 行と行の間（詩の余白） */
+.philosophy-lead p + p {
+  margin-top: 0.0em;   /* ← ここが“詰まり感”の要 */
+}
+
+/* =========================
+   Philosophy RIGHT (circles + hover caption) - BASE
+   ========================= */
+
+/* RIGHT: circles */
+.philosophy-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(6%);
+}
+
+/* 円のキャンバス（比率固定） */
+.philosophy-circles {
+  position: relative;
+  width: clamp(320px, 34vw, 540px);
+  aspect-ratio: 1 / 1;
+}
+
+/* wrapper = 位置決め担当（absoluteはここへ） */
+.circle-wrap {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #2c5f2d, #4c814d);
-  transform: scaleX(0);
-  transition: transform 0.4s;
+  width: 56%;
+  aspect-ratio: 1 / 1;
+  z-index: 1;
 }
 
-.philosophy-card:hover::before {
-  transform: scaleX(1);
+/* それぞれの配置（今の“完璧”な配置を維持） */
+.circle-wrap.circle-mind {
+  top: -3%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
 }
 
-.philosophy-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(44, 95, 45, 0.15);
+.circle-wrap.circle-body {
+  bottom: 0%;
+  left: -5%;
+  z-index: 2;
 }
 
-.philosophy-icon {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
+.circle-wrap.circle-skin {
+  bottom: 0%;
+  right: -5%;
+  z-index: 1;
 }
 
-.philosophy-card h3 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #2c5f2d;
-  margin-bottom: 1rem;
+/* button.circle = 見た目担当（absoluteを外す！） */
+.circle {
+  position: relative;            /* ←擬似要素の基準 */
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+
+  cursor: default;
+  border: none;
+  padding: 0;
+  background: none;              /* 念のため */
+  appearance: none;
+  -webkit-appearance: none;
+
+  /* ガラスっぽい透け */
+  background: radial-gradient(
+    circle at 30% 25%,
+    rgba(255,255,255,0.55) 0%,
+    rgba(255,255,255,0.22) 45%,
+    rgba(255,255,255,0.12) 100%
+  );
+
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+
+  /* 立体感（外側の影 + 内側のハイライト） */
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -10px 30px rgba(0, 0, 0, 0.06);
+
+  isolation: isolate;
+
+  /* hoverアニメの土台 */
+  transition: transform 260ms ease, filter 260ms ease;
 }
 
-.philosophy-card p {
+/* 金属リング（ゴールド） */
+.circle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: clamp(5px, 0.7vw, 10px);
+
+  background: conic-gradient(
+    from 220deg,
+    #8c6a1c,
+    #f3d27b,
+    #b8892b,
+    #fff2c9,
+    #b8892b,
+    #f3d27b,
+    #8c6a1c
+  );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.08));
+}
+
+/* リング上のハイライト（光沢） */
+.circle::after {
+  content: "";
+  position: absolute;
+  inset: 10%;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(255,255,255,0.45),
+    rgba(255,255,255,0) 60%
+  );
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.7;
+}
+
+/* 円の文字 */
+.circle span {
+  position: relative;   /* 擬似要素より前に出す */
+  z-index: 2;
+
+  font-size: clamp(2.1rem, 3.3vw, 4rem);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: #111;
+  font-family: "Playfair Display", "Cormorant Garamond", "Georgia", serif;
+}
+
+/* hover: 少しだけおしゃれに浮かす */
+.circle-wrap:hover {
+  z-index: 10; /* ←ホバーしたやつを最前面へ */
+}
+
+.circle-wrap:hover .circle {
+  transform: translateY(-6px) scale(1.01);
+  filter: drop-shadow(0 18px 28px rgba(0,0,0,0.10));
+}
+
+/* =========================
+   Caption (hover text)
+   ========================= */
+
+/* 詩の吹き出し（初期は非表示） */
+.circle-caption {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 14px);
+  transform: translateX(-50%);
+
+  width: max-content;
+  max-width: 22ch;
+
+  padding: 12px 14px;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.10);
+
+  opacity: 0;
+  visibility: hidden;
+  transform-origin: top center;
+  transition: opacity 220ms ease, transform 220ms ease, visibility 0s linear 220ms;
+}
+
+/* hoverで表示 */
+.circle-wrap:hover .circle-caption {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+/* caption内テキスト */
+.circle-caption p {
+  margin: 0;
   font-size: 0.95rem;
-  line-height: 1.7;
-  color: #666;
+  line-height: 1.55;
+  color: #222;
+  text-align: center;
+}
+
+.circle-caption p + p {
+  margin-top: 0.28em;
+}
+
+
+/* MOBILE（タブレットは後回しでOKって話だったのでここだけ） */
+@media (max-width: 768px) {
+  .section.philosophy-section {
+    padding-block: clamp(70px, 9vh, 120px);
+  }
+
+  .philosophy-layout {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .philosophy-copy {
+    text-align: center;
+  }
+
+  .philosophy-lead {
+    margin: 0 auto;
+    max-width: 42ch;
+  }
+
+  .philosophy-circles {
+    width: min(420px, 92vw);
+  }
 }
 
 /* ==========================================
@@ -831,7 +1082,7 @@ a {
   
 
   /* 和紙画像 */
-  background-image: url('/images/washi-bg.jpg');
+  background-image: url('/images/bg/washi-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
