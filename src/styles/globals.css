@@ -1167,7 +1167,7 @@ a {
   color: #fff;
 }
 
-/* 背景：Heroと同じ “divに貼る” */
+/* 背景： */
 .parallax-bg {
   position: absolute;
   inset: 0;
@@ -1191,9 +1191,9 @@ a {
 }
 
 .parallax-title {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(1.8rem, 3.6vw, 3.2rem);
   font-weight: 200;
-  margin: 0 0 1.2rem;
+  margin: 0 0 1.1rem;
   line-height: 1.25;
 }
 
