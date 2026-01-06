@@ -1159,35 +1159,55 @@ a {
    ========================================== */
 .parallax-section {
   min-height: 80vh;
-  background:
-    url("/images/bg/tea-field-parallax.jpg")
-    center / cover no-repeat fixed;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  color: white;
+  overflow: hidden;
+  color: #fff;
 }
 
-.parallax-section::before {
-  content: '';
+/* 背景：Heroと同じ “divに貼る” */
+.parallax-bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
+  background: url("/images/bg/tea-field-parallax.jpg") center/cover no-repeat;
+  transform: translateZ(0);
+}
+
+/* 暗幕 */
+.parallax-overlay {
+  position: absolute;
+  inset: 0;
   background: rgba(0, 0, 0, 0.4);
 }
 
-.parallax-section > div {
+/* 中身 */
+.parallax-content {
   position: relative;
   z-index: 2;
   text-align: center;
+  padding: 0 24px;
 }
+
+.parallax-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 200;
+  margin: 0 0 1.2rem;
+  line-height: 1.25;
+}
+
+.parallax-lead {
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* iPhone対策：上を見せたい＋切れを誤魔化す */
 @media (max-width: 768px) {
-  .parallax-section {
-    background-attachment: scroll;
+  .parallax-bg {
     background-position: center top;
+    transform: scale(1.08);
   }
 }
 

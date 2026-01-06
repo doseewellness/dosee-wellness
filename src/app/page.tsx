@@ -145,11 +145,14 @@ export default function Home() {
       </InteractiveSection>
 
       <div className="parallax-section">
-        <div>
-          <h2 style={{ fontSize: '3.5rem', fontWeight: 200, marginBottom: '2rem' }}>
+        <div className="parallax-bg" aria-hidden="true" />
+        <div className="parallax-overlay" aria-hidden="true" />
+
+        <div className="parallax-content">
+          <h2 className="parallax-title">
             日本茶の静けさを、<br />そのまま一杯に。
           </h2>
-          <p style={{ fontSize: '1.2rem', opacity: 0.9 }}>
+          <p className="parallax-lead">
             茶畑で育った茶葉の力を、忙しい毎日でも続けられるラテのかたちに。
           </p>
         </div>
