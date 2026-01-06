@@ -1184,6 +1184,12 @@ a {
   z-index: 2;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+}
 
 /* ==========================================
    Scroll Indicator
