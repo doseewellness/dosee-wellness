@@ -174,7 +174,7 @@ export default function Home() {
             <div className="product-card-v2 product-card-wellcha-v2">
               <div
                 className="product-card-bg"
-                style={{ backgroundImage: "url('/images/wellcha-bg.jpg')" }}
+                style={{ backgroundImage: "url('/images/bg/wellcha-bg.jpg')" }}
               />
               <div className="product-card-overlay" />
               <div className="product-card-v2-content">
@@ -221,7 +221,7 @@ export default function Home() {
             <div className="product-card-v2 product-card-dosee-v2">
               <div
                 className="product-card-bg"
-                style={{ backgroundImage: "url('/images/dosee-bg.jpg')" }}
+                style={{ backgroundImage: "url('/images/bg/dosee-bg.jpg')" }}
               />
               <div className="product-card-overlay" />
               <div className="product-card-v2-content">
