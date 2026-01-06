@@ -153,7 +153,8 @@ export default function Home() {
             日本茶の静けさを、<br />そのまま一杯に。
           </h2>
           <p className="parallax-lead">
-            茶畑で育った茶葉の力を、忙しい毎日でも続けられるラテのかたちに。
+            茶畑で育った茶葉の力を、<br className="sp-br" />
+            忙しい毎日でも続けられるラテのかたちに。
           </p>
         </div>
       </div>

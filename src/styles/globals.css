@@ -1201,6 +1201,11 @@ a {
   font-size: clamp(1rem, 1.4vw, 1.2rem);
   opacity: 0.9;
   margin: 0;
+
+  max-width: 42ch;        /* ← 行の長さを制御 */
+  margin-inline: auto;   /* ← 中央寄せ */
+  text-align: center;    /* ← 常に中央 */
+  line-height: 1.8;
 }
 
 /* iPhone対策：上を見せたい＋切れを誤魔化す */
@@ -1209,7 +1214,13 @@ a {
     background-position: center top;
     transform: scale(1.08);
   }
+
+  
+  .sp-br { display: inline; }
+
 }
+
+
 
 /* ==========================================
    Scroll Indicator
