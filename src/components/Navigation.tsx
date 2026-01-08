@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import Image from "next/image";
+import Image from 'next/image'
 import { SHOP_URLS } from '../lib/constants/shop'
 
 interface NavigationProps {
@@ -16,11 +16,17 @@ type MenuItem =
 export default function Navigation({ isScrolled = false }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  // ★ Instagram（必要なら後で差し替え）
+  const INSTAGRAM_URL = 'https://www.instagram.com/wellcha_matcha?igsh=ZDBqcGx5ZjZncXZ6' // ここをDoSeeのIGに変更
+
+  // ★ 英語サイト（後で /en に作る想定。運用が決まったら差し替え）
+  const EN_URL = '/en'
+
   const menuItems: MenuItem[] = [
     { label: 'Philosophy', href: '#philosophy', type: 'anchor' },
     { label: 'Products', href: '#products', type: 'anchor' },
     { label: 'About', href: '#about', type: 'anchor' },
-    { label: 'Contact', href: '/contact', type: 'route' }, // ← ここが重要
+    { label: 'Contact', href: '/contact', type: 'route' },
   ]
 
   const handleAnchorClick = (
@@ -29,19 +35,41 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
   ) => {
     e.preventDefault()
     const target = document.querySelector(href)
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' })
-    }
+    if (target) target.scrollIntoView({ behavior: 'smooth' })
     setIsMenuOpen(false)
   }
 
   const closeMenu = () => setIsMenuOpen(false)
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const toggleMenu = () => setIsMenuOpen((v) => !v)
+
+  // ★ メニューOPEN中はスクロールを止める（iPhoneで超重要）
+  useEffect(() => {
+    if (!isMenuOpen) return
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = prevOverflow
+    }
+  }, [isMenuOpen])
 
   return (
     <>
       <nav className={`nav ${isScrolled ? 'scrolled' : ''}`}>
-        <Link href="/" className="logo" onClick={closeMenu} aria-label="DoSee Wellness">
+        {/* モバイル用：左にハンバーガー */}
+        <button
+          className="hamburger-button hamburger-left"
+          onClick={toggleMenu}
+          aria-label="メニュー"
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu-overlay"
+        >
+          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`} />
+          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`} />
+          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`} />
+        </button>
+
+        {/* ロゴ（中央に来る） */}
+        <Link href="/" className="logo logo-center" onClick={closeMenu} aria-label="DoSee Wellness">
           <Image
             src="/images/logo/logo-dosee-wellness.png"
             alt="DoSee Wellness"
@@ -51,15 +79,15 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
           />
         </Link>
 
-        {/* デスクトップメニュー */}
+        {/* 右側の空白（中央寄せ用ダミー） */}
+        <div className="nav-right-spacer" aria-hidden="true" />
+
+        {/* デスクトップメニュー（現状維持） */}
         <ul className="desktop-menu">
           {menuItems.map((item) => (
             <li key={item.href}>
               {item.type === 'anchor' ? (
-                <a
-                  href={item.href}
-                  onClick={(e) => handleAnchorClick(e, item.href)}
-                >
+                <a href={item.href} onClick={(e) => handleAnchorClick(e, item.href)}>
                   {item.label}
                 </a>
               ) : (
@@ -82,33 +110,44 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
             </a>
           </li>
         </ul>
+      </nav>
 
-        {/* ハンバーガーボタン */}
-        <button
-          className="hamburger-button"
-          onClick={toggleMenu}
-          aria-label="メニュー"
-        >
-          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`} />
-          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`} />
-          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`} />
-        </button>
+      {/* ===== モバイル：フルスクリーンメニュー（白背景） ===== */}
+      <div
+        id="mobile-menu-overlay"
+        className={`menu-overlay ${isMenuOpen ? 'open' : ''}`}
+        aria-hidden={!isMenuOpen}
+      >
+        {/* 背景クリックで閉じる（Shopify風の挙動） */}
+        <div className="menu-overlay-backdrop" onClick={closeMenu} />
 
-        {/* モバイルメニュー */}
-        <div className={`mobile-dropdown ${isMenuOpen ? 'open' : ''}`}>
-          {/* 葉っぱ装飾（背面） */}
-          <div className="mobile-menu-ornament" aria-hidden="true">
-            <img src="/images/ornaments/dosee-nav-ornament-leaf.svg" alt="" />
+        <div className="menu-panel" role="dialog" aria-modal="true">
+          {/* 上：ロゴ（小さめ）＋ × */}
+          <div className="menu-header">
+            <button className="menu-close" onClick={closeMenu} aria-label="Close menu">
+              ×
+            </button>
+
+            <Link href="/" className="menu-logo" onClick={closeMenu} aria-label="DoSee Wellness">
+              <Image
+                src="/images/logo/logo-dosee-wellness.png"
+                alt="DoSee Wellness"
+                width={140}
+                height={48}
+                priority
+              />
+            </Link>
+
+            {/* 右側のスペース合わせ（Shopifyの検索/カートっぽい余白） */}
+            <div className="menu-header-spacer" aria-hidden="true" />
           </div>
 
-          <ul>
+          {/* 中：メニュー */}
+          <ul className="menu-links">
             {menuItems.map((item) => (
               <li key={item.href}>
                 {item.type === 'anchor' ? (
-                  <a
-                    href={item.href}
-                    onClick={(e) => handleAnchorClick(e, item.href)}
-                  >
+                  <a href={item.href} onClick={(e) => handleAnchorClick(e, item.href)}>
                     {item.label}
                   </a>
                 ) : (
@@ -124,20 +163,30 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
                 href={SHOP_URLS.base}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shop-link"
                 onClick={closeMenu}
               >
                 Shop
               </a>
             </li>
           </ul>
-        </div>
-      </nav>
 
-      {/* 背景オーバーレイ */}
-      {isMenuOpen && (
-        <div className="menu-backdrop" onClick={closeMenu} />
-      )}
+          {/* 下：Instagram / Language(EN) */}
+          <div className="menu-footer">
+            <a
+              className="menu-footer-link"
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
+
+            <a className="menu-footer-link" href={EN_URL}>
+              EN
+            </a>
+          </div>
+        </div>
+      </div>
     </>
   )
 }

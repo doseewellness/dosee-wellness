@@ -346,7 +346,126 @@ a {
     padding: 15px 30px;
   }
 }
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.18s ease, visibility 0.18s ease;
+}
 
+.menu-overlay.open {
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-overlay-backdrop {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+}
+
+/* 白いパネル本体 */
+.menu-panel {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  color: #111;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  /* 任意：Shopifyっぽい“出てくる感” */
+  transform: translateY(-6px);
+  transition: transform 0.18s ease;
+}
+
+.menu-overlay.open .menu-panel {
+  transform: translateY(0);
+}
+
+/* 上部（ロゴ＋×） */
+.menu-header {
+  display: grid;
+  grid-template-columns: 56px 1fr 56px;
+  align-items: center;
+  height: 84px;
+  padding: calc(10px + env(safe-area-inset-top)) 16px 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.menu-close {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  font-size: 34px;
+  line-height: 1;
+  color: #111;
+  cursor: pointer;
+}
+
+.menu-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-header-spacer {
+  width: 44px;
+  height: 44px;
+}
+
+.menu-links {
+  list-style: none;
+  margin: 0;
+  padding: 18px 0;
+}
+
+.menu-links li {
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.menu-links li:last-child {
+  border-bottom: none;
+}
+
+.menu-links a {
+  display: block;
+  padding: 18px 20px;
+  text-decoration: none;
+  color: #111;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.menu-links a:active {
+  background: rgba(0,0,0,0.04);
+}
+
+.menu-footer {
+  padding: 18px 20px calc(34px + env(safe-area-inset-bottom));
+  display: flex;
+  gap: 18px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.menu-footer-link {
+  text-decoration: none;
+  color: #111;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .menu-overlay {
+    display: none !important;
+  }
+}
 
 /* ==========================================
    Hero Section
