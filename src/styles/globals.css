@@ -219,14 +219,12 @@ a {
   overflow: hidden;
   background: transparent;
   backdrop-filter: none;
-  -webkit-backdrop-filter: blur(25px) saturate(180%);  /* Safari対応 */
+  -webkit-backdrop-filter: none;
   transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
   opacity: 0;
   box-shadow: none;
   border: none;
   border-top: none;
-  position: absolute;
-  overflow: hidden; /* 既存：開閉のため */
 }
 
 .mobile-dropdown.open {
@@ -316,20 +314,20 @@ a {
   pointer-events: none; /* クリックを奪わない */
 
   opacity: 0; /* 開始 0% */
-  transition: opacity 0.35s ease; /* 0.45秒 */
+  transition: opacity 0.50s ease; /* 0.45秒 */
 }
 
 .mobile-dropdown.open .mobile-menu-ornament {
-  opacity: 0.75; /* 最終 15% */
+  opacity: 0.35; /* 最終 15% */
 }
 
 .mobile-menu-ornament img {
   position: absolute;
-  right: -15vw;        /* まずは“はみ出さない”で安全運用 */
+  right: -25vw;        /* まずは“はみ出さない”で安全運用 */
   top: 50%;
-  transform: translateY(-50%);
-  width: 120vw;     /* 右側の余白を埋める感じ */
-  max-width: 340x;
+  transform: translateY(-50%) rotate(-3deg);
+  width: 135vw;     /* 右側の余白を埋める感じ */
+  max-width: 600px;
   height: auto;
 }
 
@@ -348,6 +346,7 @@ a {
     padding: 15px 30px;
   }
 }
+
 
 /* ==========================================
    Hero Section
