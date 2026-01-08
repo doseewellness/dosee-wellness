@@ -96,6 +96,11 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
 
         {/* モバイルメニュー */}
         <div className={`mobile-dropdown ${isMenuOpen ? 'open' : ''}`}>
+          {/* 葉っぱ装飾（背面） */}
+          <div className="mobile-menu-ornament" aria-hidden="true">
+            <img src="/images/ornaments/dosee-nav-ornament-leaf.svg" alt="" />
+          </div>
+
           <ul>
             {menuItems.map((item) => (
               <li key={item.href}>
