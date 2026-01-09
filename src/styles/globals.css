@@ -1040,6 +1040,7 @@ a {
 .products-header {
   margin-bottom: 3rem;
   color: #1a1a1a;
+  text-align: center;
 }
 
 .products-header h2 {
@@ -1232,12 +1233,13 @@ a {
 /* ==========================================
    About Section
    ========================================== */
+/* ==========================================
+   About Section
+   ========================================== */
 .about-section {
   position: relative;
-  /* いまのグラデを「下地」として残す（画像が読み込めない場合の保険） */
-  
 
-  /* 和紙画像 */
+  /* 和紙背景 */
   background-image: url('/images/bg/washi-bg.jpg');
   background-size: cover;
   background-position: center;
@@ -1245,70 +1247,68 @@ a {
   box-shadow: inset 0 1px 0 rgba(0,0,0,0.02);
 }
 
-/* 文字の可読性を担保する薄い白レイヤー（重要） */
+/* 薄い白レイヤー（可読性） */
 .about-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.20); /* ←ここで明るさ調整 */
+  background: rgba(255, 255, 255, 0.20);
   pointer-events: none;
 }
 
-
-/* Aboutセクション内の中身をレイヤー上に出す */
+/* 中身を前面に */
 .about-section .section-content {
   position: relative;
   z-index: 1;
 }
 
+/* Aboutだけ共通.section(100vh/flex)を無効化 */
+.section.about-section {
+  min-height: auto !important;
+  height: auto !important;
+  display: block !important;
+  padding: 120px 60px 60px !important; /* 下だけ短め */
+}
+
+/* 3キーワード（カード無し） */
 .about-keywords {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin: 3rem auto;
-  max-width: 1000px;
-}
-
-.keyword-card {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+  margin: 3rem auto 2rem;
+  gap: 2.5rem;
   text-align: center;
-  padding: 30px 20px;
 }
 
-.keyword-card h3 {
-  font-size: 1.3rem;
-  font-weight: 500;
+.about-keyword h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
   color: #2c5f2d;
-  margin-bottom: 1rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
 }
 
-.keyword-card p {
+.about-keyword p {
   font-size: 0.95rem;
-  line-height: 1.7;
+  line-height: 1.8;
   color: #666;
 }
 
-.about-message {
-  max-width: 800px;
-  margin: 4rem auto 0;
-  padding: 40px;
-  background: rgba(44, 95, 45, 0.05);
-  border-radius: 20px;
-  border-left: 4px solid #2c5f2d;
-}
+/* モバイル */
+@media (max-width: 768px) {
+  .section.about-section {
+    padding: 72px 20px 48px !important; /* 余白をスマホ向けに */
+  }
 
-.about-message p {
-  font-size: 1.1rem;
-  line-height: 1.9;
-  color: #555;
-  margin-bottom: 1.5rem;
-}
-
-.about-message p:last-child {
-  margin-bottom: 0;
+  .about-keywords {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    gap: 1.8rem;
+  }
 }
 
 .about-section h2 {
-  color: #111; /* or #000 */
+  color: #111;
 }
 
 /* ==========================================

@@ -246,7 +246,8 @@ export default function Home() {
       </InteractiveSection>
 
       <InteractiveSection id="about" className="text-center about-section">
-        <p className="section-label">ABOUT DOSEE WELLNESS</p>
+        <p className="section-label">ABOUT<br />
+        DOSEE WELLNESS</p>
         <h2>
           Wellness, <br />
           designed to fit into everyday life.
@@ -263,15 +264,15 @@ export default function Home() {
         </p>
 
         <div className="about-keywords">
-          <div className="keyword-card">
+          <div className="about-keyword">
             <h3>Effortless</h3>
             <p>難しいルールではなく、<br />続けやすい習慣として。</p>
           </div>
-          <div className="keyword-card">
+          <div className="about-keyword">
             <h3>Everyday</h3>
             <p>忙しい日でも、<br />さっと取り入れられる形で。</p>
           </div>
-          <div className="keyword-card">
+          <div className="about-keyword">
             <h3>Gentle</h3>
             <p>からだと心に、<br />やさしく寄りそって。</p>
           </div>
