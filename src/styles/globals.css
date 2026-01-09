@@ -1270,6 +1270,12 @@ a {
   padding: 120px 60px 60px !important; /* 下だけ短め */
 }
 
+/* About メイン文章（スマホで最大化） */
+.about-section .section-description {
+  font-size: 1.20rem !important;
+  line-height: 2.0 !important;
+}
+
 /* 3キーワード（カード無し） */
 .about-keywords {
   display: grid;
@@ -1281,7 +1287,7 @@ a {
 }
 
 .about-keyword h3 {
-  font-size: 1.4rem;
+  font-size: 2.0rem;
   font-weight: 400;
   color: #2c5f2d;
   letter-spacing: 0.08em;
