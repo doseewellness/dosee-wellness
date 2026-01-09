@@ -184,7 +184,7 @@ export default function Home() {
               <div className="product-card-v2-content">
                 <span className="product-badge-v2">WellCha</span>
                 <h3>日本茶のやさしさで、<br />毎日をしなやかに整える。</h3>
-                <p>
+                <p className="product-description-highlight">
                   抹茶とほうじ茶の自然なエネルギーで、<br />
                   忙しい日々に落ち着きと集中を。
                 </p>
@@ -232,8 +232,8 @@ export default function Home() {
                 <span className="product-badge-v2 product-badge-orange-v2">DoSee</span>
                 <h3>1日を前向きにする、<br />小さな一杯。</h3>
                 <p>
-                  負担なく続けられるショット系ウェルネスライン。<br />
-                  さっと飲めて、からだと気分をやさしく前に。
+                  ショット系ウェルネスライン。<br />
+                  からだと気分をやさしく前に。
                 </p>
                 <div className="product-tags-v2">
                   <span className="product-tag-v2 product-tag-orange-v2">7-Day Ginger Shot</span>
@@ -265,15 +265,15 @@ export default function Home() {
 
         <div className="about-keywords">
           <div className="about-keyword">
-            <h3>Effortless</h3>
+            <h3>No pressure*</h3>
             <p>難しいルールではなく、<br />続けやすい習慣として。</p>
           </div>
           <div className="about-keyword">
-            <h3>Everyday</h3>
+            <h3>Routine*</h3>
             <p>忙しい日でも、<br />さっと取り入れられる形で。</p>
           </div>
           <div className="about-keyword">
-            <h3>Gentle</h3>
+            <h3>With Care*</h3>
             <p>からだと心に、<br />やさしく寄りそって。</p>
           </div>
         </div>

@@ -1076,6 +1076,11 @@ a {
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
 }
 
+.product-description-highlight {
+  color: #2c5f2d;        /* DoSeeのグリーン */
+  opacity: 0.95;         /* 強すぎ防止 */
+}
+
 .product-card-bg {
   position: absolute;
   top: 0;
@@ -1230,9 +1235,6 @@ a {
   font-family: inherit;
 }
 
-/* ==========================================
-   About Section
-   ========================================== */
 /* ==========================================
    About Section
    ========================================== */
