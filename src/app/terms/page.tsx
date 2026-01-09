@@ -26,7 +26,7 @@ export default function TermsPage() {
         <div className="section-wrapper legal-content">
           <h2>第1条（適用）</h2>
           <p>
-            本規約は、DoSee Wellness株式会社（以下「当社」）が提供するウェブサイト及びオンラインストア
+            本規約は、DoSee Wellness（以下「当社」）が提供するウェブサイト及びオンラインストア
             （以下「本サービス」）の利用に関する条件を定めるものです。
             ユーザーの皆様には、本規約に同意の上、本サービスをご利用いただきます。
           </p>

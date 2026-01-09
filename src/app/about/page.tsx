@@ -141,7 +141,7 @@ export default function AboutPage() {
           <div className="company-info">
             <div className="info-row">
               <span className="info-label">会社名</span>
-              <span className="info-value">株式会社 DoSee Wellness</span>
+              <span className="info-value">DoSee Wellness</span>
             </div>
             <div className="info-row">
               <span className="info-label">設立</span>
