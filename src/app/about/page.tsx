@@ -137,22 +137,6 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <h2>Our Values</h2>
-          <div className="values-grid">
-            <div className="value-card">
-              <h3>Effortless</h3>
-              <p>難しいルールではなく、続けやすい習慣として。</p>
-            </div>
-            <div className="value-card">
-              <h3>Everyday</h3>
-              <p>忙しい日でも、さっと取り入れられる形で届けます。</p>
-            </div>
-            <div className="value-card">
-              <h3>Gentle</h3>
-              <p>からだとこころに、やさしく寄りそう味わいと設計。</p>
-            </div>
-          </div>
-
           <h2>Company Information</h2>
           <div className="company-info">
             <div className="info-row">

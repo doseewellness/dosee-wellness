@@ -447,12 +447,14 @@ a {
 }
 
 .menu-footer {
-  padding: 18px 20px calc(34px + env(safe-area-inset-bottom));
-  display: flex;
-  gap: 18px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
   border-top: 1px solid rgba(0,0,0,0.08);
+  padding: 18px 20px calc(22px + env(safe-area-inset-bottom));
 }
-
 .menu-footer-link {
   text-decoration: none;
   color: #111;
