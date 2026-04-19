@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import CustomCursor from '../components/CustomCursor'
 import ParticlesCanvas from '../components/ParticlesCanvas'
 import Navigation from '../components/Navigation'
@@ -10,9 +11,11 @@ import InteractiveSection from '../components/InteractiveSection'
 import Footer from '../components/Footer'
 import { getProductUrl } from '../lib/constants/shop'
 import { shipporiMincho } from './fonts'
+import { SHOPIFY_URLS } from '../lib/constants/shopifyUrls'
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +24,34 @@ export default function Home() {
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+
+  useEffect(() => {
+    const hash = window.location.hash
+    if (!hash) return
+
+    const tryScroll = () => {
+      const el = document.querySelector(hash)
+      if (!el) return false
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      return true
+    }
+
+    // まず即トライ
+    if (tryScroll()) return
+
+    // 次に数フレーム待って再トライ（Turbopack/SSRで描画が間に合わない時の保険）
+    let raf1 = requestAnimationFrame(() => {
+      if (tryScroll()) return
+      let raf2 = requestAnimationFrame(() => {
+        tryScroll()
+      })
+      // @ts-ignore
+      raf1 = raf2
+    })
+
+    return () => cancelAnimationFrame(raf1)
   }, [])
 
   // 購入ボタンのクリックハンドラー
@@ -37,9 +68,7 @@ export default function Home() {
     url: 'https://doseewellness.com',
     logo: 'https://doseewellness.com/logo.png',
     description: '忙しい毎日をやさしく整える日本茶ベースのウェルネスブランド',
-    sameAs: [
-      'https://www.instagram.com/wellcha_matcha',
-    ],
+    sameAs: ['https://www.instagram.com/wellcha_matcha'],
     contactPoint: {
       '@type': 'ContactPoint',
       email: 'info@dosee-wellness.com',
@@ -72,23 +101,20 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      
+
       <CustomCursor />
       <ParticlesCanvas />
       <Navigation isScrolled={isScrolled} />
-      
+
       <HeroSection />
 
       <InteractiveSection id="philosophy" className="philosophy-section">
         <div className="philosophy-layout">
-
           {/* LEFT: text（ここはほぼそのまま） */}
           <div className="philosophy-copy">
             <p className="section-label">OUR PHILOSOPHY</p>
 
-            <h2 className="philosophy-title">
-              整う余白を、日常に。
-            </h2>
+            <h2 className="philosophy-title">整う余白を、日常に。</h2>
 
             <div className="philosophy-lead">
               <p>無理なルールも、頑張る習慣もいらない。</p>
@@ -98,10 +124,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* RIGHT: circles（← ここを差し替える） */}
+          {/* RIGHT: circles */}
           <div className="philosophy-visual">
             <div className="philosophy-circles">
-
               {/* Mind */}
               <div className="circle-wrap circle-mind">
                 <button type="button" className="circle">
@@ -137,10 +162,8 @@ export default function Home() {
                   <p>やわらかさへ。</p>
                 </div>
               </div>
-
             </div>
           </div>
-
         </div>
       </InteractiveSection>
 
@@ -173,8 +196,16 @@ export default function Home() {
         </div>
 
         <div className="products-grid-v2">
-          {/* WellCha Card - Background links to /wellcha, Buttons open Shopify in new tab */}
-          <Link href="/wellcha" className="product-card-v2-link">
+          {/* ✅ WellCha Card（外側Linkを廃止：a入れ子を根絶） */}
+          <div
+            className="product-card-v2-link"
+            role="link"
+            tabIndex={0}
+            onClick={() => router.push('/wellcha')}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') router.push('/wellcha')
+            }}
+          >
             <div className="product-card-v2 product-card-wellcha-v2">
               <div
                 className="product-card-bg"
@@ -183,44 +214,50 @@ export default function Home() {
               <div className="product-card-overlay" />
               <div className="product-card-v2-content">
                 <span className="product-badge-v2">WellCha</span>
-                <h3>日本茶のやさしさで、<br />毎日をしなやかに整える。</h3>
+                <h3>
+                  日本茶のやさしさで、<br />
+                  毎日をしなやかに整える。
+                </h3>
                 <p className="product-description-highlight">
                   抹茶とほうじ茶の自然なエネルギーで、<br />
                   忙しい日々に落ち着きと集中を。
                 </p>
-                
-                {/* Purchase Buttons Area - Uses buttons instead of <a> tags to avoid nesting */}
-                <div 
+
+                {/* クリック伝播を止めて、カード遷移と競合させない */}
+                <div
                   className="product-actions"
                   onClick={(e) => e.stopPropagation()}
+                  onKeyDown={(e) => e.stopPropagation()}
                 >
                   <span className="action-label">購入はこちら:</span>
+
                   <div className="product-tags-v2">
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        handlePurchaseClick('matchaLatte')
-                      }}
+                    <a
+                      href="https://shop.doseewellness.com/products/matcha-latte"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="product-tag-v2 product-tag-button"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       Matcha Latte
-                    </button>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        handlePurchaseClick('hojichaLatte')
-                      }}
+                    </a>
+
+                    <a
+                      href="https://shop.doseewellness.com/products/hojicha-latte"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="product-tag-v2 product-tag-button"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       Hojicha Latte
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-          </Link>
+          </div>
 
-          {/* DoSee Card - Background links to /dosee */}
+          {/* DoSee Card - Background links to /dosee（中に<a>が無いのでLinkのままでOK） */}
           <Link href="/dosee" className="product-card-v2-link">
             <div className="product-card-v2 product-card-dosee-v2">
               <div
@@ -230,7 +267,10 @@ export default function Home() {
               <div className="product-card-overlay" />
               <div className="product-card-v2-content">
                 <span className="product-badge-v2 product-badge-orange-v2">DoSee</span>
-                <h3>1日を前向きにする、<br />小さな一杯。</h3>
+                <h3>
+                  1日を前向きにする、<br />
+                  小さな一杯。
+                </h3>
                 <p>
                   ショット系ウェルネスライン。<br />
                   からだと気分をやさしく前に。
@@ -246,8 +286,11 @@ export default function Home() {
       </InteractiveSection>
 
       <InteractiveSection id="about" className="text-center about-section">
-        <p className="section-label">ABOUT<br />
-        DOSEE WELLNESS</p>
+        <p className="section-label">
+          ABOUT
+          <br />
+          DOSEE WELLNESS
+        </p>
         <h2>
           Wellness, <br />
           designed to fit into everyday life.
@@ -266,18 +309,26 @@ export default function Home() {
         <div className="about-keywords">
           <div className="about-keyword">
             <h3>No pressure*</h3>
-            <p>難しいルールではなく、<br />続けやすい習慣として。</p>
+            <p>
+              難しいルールではなく、<br />
+              続けやすい習慣として。
+            </p>
           </div>
           <div className="about-keyword">
             <h3>Routine*</h3>
-            <p>忙しい日でも、<br />さっと取り入れられる形で。</p>
+            <p>
+              忙しい日でも、<br />
+              さっと取り入れられる形で。
+            </p>
           </div>
           <div className="about-keyword">
             <h3>With Care*</h3>
-            <p>からだと心に、<br />やさしく寄りそって。</p>
+            <p>
+              からだと心に、<br />
+              やさしく寄りそって。
+            </p>
           </div>
         </div>
-
       </InteractiveSection>
 
       <section className="poetry-section">

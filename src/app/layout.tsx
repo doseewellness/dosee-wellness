@@ -1,8 +1,11 @@
 import { Metadata } from 'next'
-import { Playfair_Display } from 'next/font/google'
+import { Playfair_Display, Geist } from 'next/font/google'
 import { pageMetadata, siteConfig } from '../lib/constants/metadata'
 import '../styles/globals.css'
 import GoogleAnalytics from '../components/GoogleAnalytics'
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -77,7 +80,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={cn("font-sans", geist.variable)}>
       <head>
         <link rel="canonical" href={siteConfig.url} />
       </head>

@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname, useRouter } from 'next/navigation'
 import { SHOP_URLS } from '../lib/constants/shop'
 
 interface NavigationProps {
@@ -15,11 +16,11 @@ type MenuItem =
 
 export default function Navigation({ isScrolled = false }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const router = useRouter()
 
-  // ★ Instagram（必要なら後で差し替え）
-  const INSTAGRAM_URL = 'https://www.instagram.com/wellcha_matcha?igsh=ZDBqcGx5ZjZncXZ6' // ここをDoSeeのIGに変更
-
-  // ★ 英語サイト（後で /en に作る想定。運用が決まったら差し替え）
+  const INSTAGRAM_URL =
+    'https://www.instagram.com/wellcha_matcha?igsh=ZDBqcGx5ZjZncXZ6'
   const EN_URL = '/en'
 
   const menuItems: MenuItem[] = [
@@ -29,20 +30,36 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
     { label: 'Contact', href: '/contact', type: 'route' },
   ]
 
-  const handleAnchorClick = (
+  const closeMenu = () => setIsMenuOpen(false)
+  const toggleMenu = () => setIsMenuOpen((v) => !v)
+
+  /**
+   * アンカー挙動：
+   * - Home("/") にいるなら、その場で scrollIntoView
+   * - それ以外のページなら "/#xxx" に遷移（Home側が確実にスクロール処理）
+   */
+  const handleAnchorClick = async (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
   ) => {
     e.preventDefault()
-    const target = document.querySelector(href)
-    if (target) target.scrollIntoView({ behavior: 'smooth' })
-    setIsMenuOpen(false)
+
+    const isHome = pathname === '/'
+    if (isHome) {
+      const target = document.querySelector(href)
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+      closeMenu()
+      return
+    }
+
+    // 他ページ → Homeにハッシュ付きで遷移
+    closeMenu()
+    router.push(`/${href}`)
   }
 
-  const closeMenu = () => setIsMenuOpen(false)
-  const toggleMenu = () => setIsMenuOpen((v) => !v)
-
-  // ★ メニューOPEN中はスクロールを止める（iPhoneで超重要）
+  // メニューOPEN中はスクロールを止める（iPhone対策）
   useEffect(() => {
     if (!isMenuOpen) return
     const prevOverflow = document.body.style.overflow
@@ -55,7 +72,6 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
   return (
     <>
       <nav className={`nav ${isScrolled ? 'scrolled' : ''}`}>
-        {/* モバイル用：左にハンバーガー */}
         <button
           className="hamburger-button hamburger-left"
           onClick={toggleMenu}
@@ -68,8 +84,12 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
           <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`} />
         </button>
 
-        {/* ロゴ（中央に来る） */}
-        <Link href="/" className="logo logo-center" onClick={closeMenu} aria-label="DoSee Wellness">
+        <Link
+          href="/"
+          className="logo logo-center"
+          onClick={closeMenu}
+          aria-label="DoSee Wellness"
+        >
           <Image
             src="/images/logo/logo-dosee-wellness.png"
             alt="DoSee Wellness"
@@ -79,10 +99,8 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
           />
         </Link>
 
-        {/* 右側の空白（中央寄せ用ダミー） */}
         <div className="nav-right-spacer" aria-hidden="true" />
 
-        {/* デスクトップメニュー（現状維持） */}
         <ul className="desktop-menu">
           {menuItems.map((item) => (
             <li key={item.href}>
@@ -112,17 +130,15 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
         </ul>
       </nav>
 
-      {/* ===== モバイル：フルスクリーンメニュー（白背景） ===== */}
+      {/* ===== モバイル：フルスクリーンメニュー ===== */}
       <div
         id="mobile-menu-overlay"
         className={`menu-overlay ${isMenuOpen ? 'open' : ''}`}
         aria-hidden={!isMenuOpen}
       >
-        {/* 背景クリックで閉じる（Shopify風の挙動） */}
         <div className="menu-overlay-backdrop" onClick={closeMenu} />
 
         <div className="menu-panel" role="dialog" aria-modal="true">
-          {/* 上：ロゴ（小さめ）＋ × */}
           <div className="menu-header">
             <button className="menu-close" onClick={closeMenu} aria-label="Close menu">
               ×
@@ -138,11 +154,9 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
               />
             </Link>
 
-            {/* 右側のスペース合わせ（Shopifyの検索/カートっぽい余白） */}
             <div className="menu-header-spacer" aria-hidden="true" />
           </div>
 
-          {/* 中：メニュー */}
           <ul className="menu-links">
             {menuItems.map((item) => (
               <li key={item.href}>
@@ -170,7 +184,6 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
             </li>
           </ul>
 
-          {/* 下：Instagram / Language(EN) */}
           <div className="menu-footer">
             <a
               className="menu-footer-link"

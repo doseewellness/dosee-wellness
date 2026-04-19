@@ -10,8 +10,8 @@ import '../../styles/pages.css'
 
 export default function WellChaPage() {
   // 商品データを取得
-  const matchaLatte = productsData.find(p => p.id === 'matcha-latte')
-  const hojichaLatte = productsData.find(p => p.id === 'hojicha-latte')
+  const matchaLatte = productsData.find((p) => p.id === 'matcha-latte')
+  const hojichaLatte = productsData.find((p) => p.id === 'hojicha-latte')
 
   // 構造化データ - 商品情報（抹茶ラテ）
   const matchaProductJsonLd = {
@@ -19,10 +19,7 @@ export default function WellChaPage() {
     '@type': 'Product',
     name: matchaLatte?.name || 'WellCha 抹茶ラテ',
     description: matchaLatte?.longDescription || '日本茶の力で心・からだ・肌を整える抹茶ラテ。',
-    brand: {
-      '@type': 'Brand',
-      name: 'DoSee Wellness',
-    },
+    brand: { '@type': 'Brand', name: 'DoSee Wellness' },
     category: 'Health & Wellness > Tea',
     offers: {
       '@type': 'Offer',
@@ -31,10 +28,7 @@ export default function WellChaPage() {
       price: matchaLatte?.price || '3980',
       availability: matchaLatte?.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
       priceValidUntil: '2025-12-31',
-      seller: {
-        '@type': 'Organization',
-        name: 'DoSee Wellness',
-      },
+      seller: { '@type': 'Organization', name: 'DoSee Wellness' },
     },
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -46,17 +40,11 @@ export default function WellChaPage() {
     review: [
       {
         '@type': 'Review',
-        author: {
-          '@type': 'Person',
-          name: 'Y.M',
-        },
+        author: { '@type': 'Person', name: 'Y.M' },
         datePublished: '2024-12-15',
-        reviewBody: '朝のコーヒーの代わりに飲み始めました。カフェインがマイルドで、集中力が続くのに夜もよく眠れます。抹茶の風味も本格的で、毎日続けられています。',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-        },
+        reviewBody:
+          '朝のコーヒーの代わりに飲み始めました。カフェインがマイルドで、集中力が続くのに夜もよく眠れます。抹茶の風味も本格的で、毎日続けられています。',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
       },
     ],
   }
@@ -67,10 +55,7 @@ export default function WellChaPage() {
     '@type': 'Product',
     name: hojichaLatte?.name || 'WellCha ほうじ茶ラテ',
     description: hojichaLatte?.longDescription || '心・からだ・呼吸をほどく、新しいほうじ茶習慣。',
-    brand: {
-      '@type': 'Brand',
-      name: 'DoSee Wellness',
-    },
+    brand: { '@type': 'Brand', name: 'DoSee Wellness' },
     category: 'Health & Wellness > Tea',
     offers: {
       '@type': 'Offer',
@@ -79,10 +64,7 @@ export default function WellChaPage() {
       price: hojichaLatte?.price || '3980',
       availability: hojichaLatte?.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
       priceValidUntil: '2025-12-31',
-      seller: {
-        '@type': 'Organization',
-        name: 'DoSee Wellness',
-      },
+      seller: { '@type': 'Organization', name: 'DoSee Wellness' },
     },
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -98,235 +80,53 @@ export default function WellChaPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'ホーム',
-        item: 'https://doseewellness.com',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'WellCha',
-        item: 'https://doseewellness.com/wellcha',
-      },
+      { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://doseewellness.com' },
+      { '@type': 'ListItem', position: 2, name: 'WellCha', item: 'https://doseewellness.com/wellcha' },
     ],
   }
 
   return (
     <div className="page-container">
-      {/* 構造化データの埋め込み */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(matchaProductJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(hojichaProductJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      
+      {/* 構造化データ */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(matchaProductJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hojichaProductJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+
       <CustomCursor />
       <Navigation isScrolled={true} />
-      
-      <section className="product-hero">
-        <div className="hero-bg" style={{
-          background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%)'
-        }} />
-        <div className="product-hero-content">
-          <p className="product-category">BRAND / WELLCHA</p>
-          <h1>日本茶のやさしさで、<br />毎日をしなやかに整える。</h1>
-          <p className="product-subtitle">
+
+      {/* 1) WellChaの紹介（新Hero） */}
+      <section className="wellcha-hero">
+        <div
+          className="wellcha-hero-bg"
+          style={{ backgroundImage: "url('/images/wellcha/hero-bg.png')" }}
+          aria-hidden="true"
+        />
+        <div className="wellcha-hero-overlay" aria-hidden="true" />
+
+        <div className="wellcha-hero-inner">
+          <h1 className="wellcha-hero-title">
+            日本茶のやさしさで、
+            <br />
+            毎日をしなやかに整える。
+          </h1>
+
+          <p className="wellcha-hero-subtitle">
             忙しい毎日の中で、「心・からだ・肌」をまとめて整える一杯を。
-            WellCha の抹茶とほうじ茶が、集中・美容・リラックスの三方向から
-            あなたを支えます。
+            <br />
+            WellCha の抹茶とほうじ茶が、集中・美容・リラックスの三方向からあなたを支えます。
           </p>
-          
-          <div className="product-tags">
-            <span className="tag tag-green">
-              <span className="tag-dot" style={{backgroundColor: '#10b981'}}></span>
-              Matcha — 集中・美容・リラックス
-            </span>
-            <span className="tag">
-              <span className="tag-dot" style={{backgroundColor: '#f59e0b'}}></span>
-              Hojicha — 温もりと深いリラックス
-            </span>
-          </div>
         </div>
       </section>
 
-      <section className="content-section">
-        <div className="section-wrapper">
-          <p className="section-label">STORY</p>
-          <h2>現代人のコンディションを整える、<br />新しい抹茶習慣。</h2>
-          
-          <div className="text-content">
-            <p>
-              抹茶は、何百年も続く日本の茶文化から生まれた、
-              いわば <strong>"飲むウェルネス"</strong>。
-            </p>
-            <p>
-              DoSee Wellness は、その抹茶を
-              <strong>「忙しい現代でも続けられるかたち」</strong>
-              にデザインしました。
-            </p>
-            <p>
-              ここでは、抹茶がもたらす
-              <strong>3つのちから – 集中・肌ケア・リラックス</strong>
-              を、わかりやすくご紹介します。
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* 2) 抹茶LP（既存：4枚背景） */}
+      <WellChaImageLP />
 
-      <section className="content-section" id="matcha" style={{backgroundColor: '#fafaf9'}}>
-        <div className="section-wrapper">
-          <p className="section-label" style={{color: '#059669'}}>MATCHA LATTE</p>
-          <h2>落ち着いた集中と、<br />飲むスキンケアを一杯に。</h2>
+      {/* 3) ほうじ茶LP（画像の縦長デザイン風に置き換え） */}
+      <HojichaImageLP productUrl={getProductUrl('hojichaLatte')} />
 
-          <div className="benefits-grid">
-            <div className="benefit-card">
-              <h3>落ち着いた集中力</h3>
-              <p>
-                カテキンとテアニンの組み合わせで、焦らない・荒れない
-                「落ち着いた集中力」をサポート。
-                テアニンは脳に働きかけ、コーヒーとは違う
-                <strong>静かに冴える集中状態</strong>
-                をつくると言われています。
-              </p>
-            </div>
-            
-            <div className="benefit-card">
-              <h3>飲むスキンケア</h3>
-              <p>
-                抗酸化成分とビタミンが透明感とツヤを守り、
-                まるで<strong>"飲むスキンケア"</strong>のような毎日を。
-                ビタミンC・E、カテキンなどが、日々のダメージから肌を守り、
-                内側からコンディションを整えます。
-              </p>
-            </div>
-            
-            <div className="benefit-card">
-              <h3>深いリラックス</h3>
-              <p>
-                ビタミン・抗酸化成分が、日々のコンディションや腸内環境、
-                心の緊張をクリアに。
-                テアニンは副交感神経にも働きかけるため、
-                <strong>寝る前の一杯</strong>や、
-                1日の終わりのリセットタイムにもぴったりです。
-              </p>
-            </div>
-          </div>
-
-          <div className="how-to-box">
-            <h3>あなたの1日に、どう取り入れる？</h3>
-            <ul>
-              <li>・朝のコーヒーの代わりに。</li>
-              <li>・仕事・勉強前のウォームアップに。</li>
-              <li>・夜のリラックスタイムのお供に。</li>
-            </ul>
-            <p>
-              DoSee Wellness の抹茶は、お湯だけでも、ミルクでラテにしても、
-              すっと溶けて、やさしい味わい。
-            </p>
-          </div>
-
-          <div className="cta-box">
-            <a 
-              href={getProductUrl('matchaLatte')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shop-button"
-            >
-              抹茶ラテを購入する
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="content-section" id="hojicha">
-        <div className="section-wrapper">
-          <p className="section-label" style={{color: '#d97706'}}>HOJICHA LATTE</p>
-          <h2>心・からだ・呼吸をほどく、<br />新しいほうじ茶習慣。</h2>
-
-          <div className="text-content">
-            <p>
-              忙しい毎日の中で、心・からだ・呼吸をゆっくりほどいてくれる一杯を。
-              DoSee Wellness のほうじ茶が、やさしい温もりと深いリラックスで、
-              あなたをそっと包みます。
-            </p>
-            <p>
-              ほうじ茶は、緑茶をじっくり焙じて生まれる、
-              香ばしくてやさしい <strong>"飲むウェルネス"</strong>。
-            </p>
-            <p>
-              カフェインが抑えめで、子どもから大人まで飲みやすく、
-              心とからだをゆるめたいときにぴったりのお茶です。
-            </p>
-          </div>
-
-          <div className="benefits-grid">
-            <div className="benefit-card">
-              <h3>自然のやさしい力</h3>
-              <p>
-                茶葉本来のミネラルとポリフェノールが、
-                日々のコンディションをやさしくサポート。
-                カフェインは控えめなのに、頭がぼんやりしすぎない
-                <strong>"ちょうどいい目覚め"</strong>
-                を手伝ってくれます。
-              </p>
-            </div>
-            
-            <div className="benefit-card">
-              <h3>負担のない温もり</h3>
-              <p>
-                焙煎によって生まれる香ばしさと、
-                からだにしみ込むような温かさが特徴。
-                冷えを感じやすい方や、
-                「お腹にやさしい温かいもの」が欲しいタイミングにぴったりです。
-              </p>
-            </div>
-            
-            <div className="benefit-card">
-              <h3>深いリラックス</h3>
-              <p>
-                ほうじ茶は、リラックスに関わるテアニンを含みつつ、
-                カフェイン量が抑えられているのが大きな魅力。
-                寝る前の一杯や、スマホを置いて深呼吸したい夜の時間に寄り添ってくれます。
-              </p>
-            </div>
-          </div>
-
-          <div className="how-to-box">
-            <h3>あなたの1日に、どう取り入れる？</h3>
-            <ul>
-              <li>・朝、コーヒーの前に一杯。</li>
-              <li>・仕事や家事がひと区切りついたタイミングに。</li>
-              <li>・夜ごはんのあと、寝るまでのリラックスタイムに。</li>
-            </ul>
-            <p>
-              DoSee Wellness のほうじ茶は、お湯だけでも、ミルクでラテにしても、
-              香ばしさとやさしい甘みがふわっと広がります。
-            </p>
-          </div>
-
-          <div className="cta-box">
-            <a 
-              href={getProductUrl('hojichaLatte')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shop-button"
-            >
-              ほうじ茶ラテを購入する
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="content-section" style={{paddingTop: '2rem', paddingBottom: '4rem'}}>
+      {/* 戻る */}
+      <section className="content-section" style={{ paddingTop: '2rem', paddingBottom: '4rem' }}>
         <div className="section-wrapper text-center">
           <Link href="/" className="back-button">
             ← トップページに戻る
@@ -336,5 +136,236 @@ export default function WellChaPage() {
 
       <Footer />
     </div>
+  )
+}
+
+function WellChaImageLP() {
+  return (
+    <section className="wellcha-lp">
+      <div className="lp">
+        {/* 1) HERO */}
+        <section className="lpSection" style={{ ['--bg' as any]: "url('/images/wellcha/matcha-hero.png')" }}>
+          <div className="lpInner">
+            <h2 className="lpBrand">
+              DOSEE
+              <br />
+              WELLNESS
+            </h2>
+            <p className="lpHeroCopy">
+              忙しい毎日に、
+              <br />
+              “まとめて整える”
+              <br />
+              一杯を
+            </p>
+          </div>
+        </section>
+
+        {/* 2) INTRO */}
+        <section className="lpSection" style={{ ['--bg' as any]: "url('/images/wellcha/matcha-intro.png')" }}>
+          <div className="lpInner">
+            <p className="lpLead">
+              {`忙しい毎日の中で、
+心・からだ・肌をまとめて整える一杯を。
+
+DoSee Wellness の抹茶は、
+集中・美容・リラックスの三方向からあなたを支えます。
+
+現代人のコンディションを整える、新しい抹茶習慣。
+何百年も続く日本の茶文化から生まれた、いわば“飲むウェルネス”。
+
+DoSee Wellness は、その抹茶を
+「忙しい現代でも続けられるかたち」にデザインしました。`}
+            </p>
+          </div>
+        </section>
+
+        {/* 3) FEATURES */}
+        <section className="lpSection lpFeatures" style={{ ['--bg' as any]: "url('/images/wellcha/matcha-features.png')" }}>
+          <div className="lpInner">
+            <div className="lpFeatureGrid">
+              <div className="lpFeature">
+                <h3 className="lpFeatureTitle">🍃 落ち着いた集中力</h3>
+                <p className="lpFeatureText">{`カテキン × テアニン
+焦らず、静かに続く集中力`}</p>
+                <div className="lpNote">※コーヒーとは違う、穏やかな覚醒感。</div>
+              </div>
+
+              <div className="lpFeature">
+                <h3 className="lpFeatureTitle">✨ 飲むスキンケア</h3>
+                <p className="lpFeatureText">{`抗酸化 × ビタミン
+内側から、透明感とツヤ`}</p>
+                <div className="lpNote">※毎日のコンディションケアに。</div>
+              </div>
+
+              <div className="lpFeature">
+                <h3 className="lpFeatureTitle">🌙 深いリラックス</h3>
+                <p className="lpFeatureText">{`テアニンのリラックス作用、
+心と体を、リラックスモードへ`}</p>
+                <div className="lpNote">※1日の終わりの一杯に。</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 4) CTA */}
+        <section className="lpSection lpCta" style={{ ['--bg' as any]: "url('/images/wellcha/matcha-cta.png')" }}>
+          <div className="lpInner">
+            <div className="lpCtaWrap">
+              <p className="lpCtaLeft">
+                今日の一杯を、
+                <br />
+                抹茶に変えてみませんか？
+              </p>
+              <p className="lpCtaRight">
+                {`ほんの一杯の習慣が、
+集中力・コンディション・気分を、
+静かに変えていきます。
+
+DoSee Wellness の抹茶で、
+あなたらしい「整う時間」を
+はじめましょう。`}
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  )
+}
+
+/**
+ * ほうじ茶：画像LP（あなたの添付デザイン風）
+ * 画像はあなたが用意する前提で、パスだけ仮置きしてあります。
+ */
+function HojichaImageLP({ productUrl }: { productUrl: string }) {
+  return (
+    <section className="hojicha-lp" id="hojicha">
+      <div className="lp lp--hojicha">
+        {/* 1) HERO：タイトル＋サブコピー（暗め背景） */}
+        <section className="lpSection lpSection--hojichaHero" style={{ ['--bg' as any]: "url('/images/wellcha/hojicha-hero.png')" }}>
+          <div className="lpInner lpInner--center">
+            <h2 className="lpTitleJp">新しいほうじ茶習慣</h2>
+            <p className="lpSub">
+              現代の忙しさの中で、心とからだをゆるめる
+              <br />
+              ほうじ茶の魅力を体験してください。
+            </p>
+          </div>
+        </section>
+
+        {/* 2) MESSAGE：ラテ写真＋文章（半透明レイヤー） */}
+        <section className="lpSection lpSection--hojichaMessage" style={{ ['--bg' as any]: "url('/images/wellcha/hojicha-message.png')" }}>
+          <div className="lpInner">
+            <div className="hojichaMessageCard">
+              <p className="hojichaMessageText">
+                忙しい毎日の中で、
+                <br />
+                心・からだ・呼吸を
+                <br />
+                ゆっくりほどいてくれる一杯を。
+                <br />
+                <br />
+                DoSee Wellness のほうじ茶が
+                <br />
+                優しい温もりと深いリラックスで、
+                <br />
+                あなたを包みます。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 3) HABIT：説明＋チェックリスト（茶器背景） */}
+        <section className="lpSection lpSection--hojichaHabit" style={{ ['--bg' as any]: "url('/images/wellcha/hojicha-habit.png')" }}>
+          <div className="lpInner hojichaHabitInner">
+            <div className="hojichaHabitLeft">
+              <h3 className="hojichaBlockTitle">新しいほうじ茶習慣</h3>
+              <p className="hojichaBlockLead">
+                ほうじ茶は緑茶をじっくり焙じて生まれる
+                <br />
+                “飲むウェルネス”。
+                <br />
+                香ばしくて飲みやすく、カフェイン控えめ。
+                <br />
+                <br />
+                そして DoSee Wellness は、
+                <br />
+                「忙しくても毎日続けられる形」へと
+                <br />
+                再デザインしました。
+              </p>
+            </div>
+
+            <div className="hojichaHabitRight">
+              <ul className="hojichaChecklist" aria-label="おすすめの飲むタイミング">
+                <li>朝、コーヒーの前に</li>
+                <li>昼のひと休み</li>
+                <li>夜ごはんのあと、寝る前のリラックスタイムに</li>
+                <li>ラテでやさしい香ばしさが ふわっと広がります</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* 4) BENEFITS：3カラム（粉＋スプーン背景） */}
+        <section className="lpSection lpSection--hojichaBenefits" style={{ ['--bg' as any]: "url('/images/wellcha/hojicha-benefits.png')" }}>
+          <div className="lpInner">
+            <div className="hojichaBenefitsGrid">
+              <div className="hojichaBenefit">
+                <h4 className="hojichaBenefitTitle">自然のやさしい力</h4>
+                <p className="hojichaBenefitText">
+                  ミネラルとポリフェノールが
+                  <br />
+                  毎日のコンディションをサポート。
+                  <br />
+                  “ちょうどいい目覚め”に。
+                </p>
+              </div>
+
+              <div className="hojichaBenefit">
+                <h4 className="hojichaBenefitTitle">負担のない温もり</h4>
+                <p className="hojichaBenefitText">
+                  焙煎の香ばしさと、
+                  <br />
+                  内側から広がる温かさ。
+                  <br />
+                  冷えや胃腸ケアにも。
+                </p>
+              </div>
+
+              <div className="hojichaBenefit">
+                <h4 className="hojichaBenefitTitle">深いリラックス</h4>
+                <p className="hojichaBenefitText">
+                  テアニン＋カフェイン控えめ。
+                  <br />
+                  夜の深呼吸タイムにぴったり。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 5) CTA：白背景＋メッセージ（画像の最後の白い締めに寄せる） */}
+        <section className="hojichaFinalCta" aria-label="購入導線">
+          <div className="hojichaFinalCtaInner">
+            <h3 className="hojichaFinalTitle">Join us on your wellness journey today!</h3>
+            <p className="hojichaFinalSub">
+              今すぐ、ウェルネスの一歩を。
+              <br />
+              今日から、よりよい毎日へ。
+            </p>
+
+            <div className="hojichaFinalActions">
+              <a href={productUrl} target="_blank" rel="noopener noreferrer" className="shop-button shop-button--hojicha">
+                ほうじ茶ラテを購入する
+              </a>
+            </div>
+
+            <div className="hojichaFinalBrand">DoSee Wellness</div>
+          </div>
+        </section>
+      </div>
+    </section>
   )
 }
