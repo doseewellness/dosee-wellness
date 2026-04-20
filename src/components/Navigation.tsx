@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
-import { SHOP_URLS } from '../lib/constants/shop'
 
 interface NavigationProps {
   isScrolled?: boolean
@@ -117,15 +116,9 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
           ))}
 
           <li>
-            <a
-              href={SHOP_URLS.base}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shop-link"
-              onClick={closeMenu}
-            >
+            <Link href="/shop" className="shop-link" onClick={closeMenu}>
               Shop
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -173,14 +166,9 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
             ))}
 
             <li>
-              <a
-                href={SHOP_URLS.base}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={closeMenu}
-              >
+              <Link href="/shop" onClick={closeMenu}>
                 Shop
-              </a>
+              </Link>
             </li>
           </ul>
 

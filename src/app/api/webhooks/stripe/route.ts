@@ -1,0 +1,127 @@
+import { NextRequest, NextResponse } from "next/server";
+import Stripe from "stripe";
+import { stripe } from "@/lib/stripe/server";
+import { createAdminClient } from "@/lib/supabase/admin";
+import type { OrderStatus } from "@/types/database";
+
+export async function POST(req: NextRequest) {
+  const body = await req.text();
+  const sig = req.headers.get("stripe-signature");
+
+  if (!sig) {
+    return NextResponse.json({ error: "署名がありません" }, { status: 400 });
+  }
+
+  if (!process.env.STRIPE_WEBHOOK_SECRET) {
+    console.error("STRIPE_WEBHOOK_SECRET is not set");
+    return NextResponse.json({ error: "設定エラー" }, { status: 500 });
+  }
+
+  let event: Stripe.Event;
+  try {
+    event = stripe.webhooks.constructEvent(
+      body,
+      sig,
+      process.env.STRIPE_WEBHOOK_SECRET
+    );
+  } catch (err) {
+    console.error("[Webhook] 署名検証失敗:", err);
+    return NextResponse.json({ error: "署名検証失敗" }, { status: 400 });
+  }
+
+  // 支払い完了イベントのみ処理
+  if (event.type === "checkout.session.completed") {
+    await handleCheckoutSessionCompleted(event.data.object as Stripe.Checkout.Session);
+  }
+
+  return NextResponse.json({ received: true });
+}
+
+async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) {
+  const supabase = createAdminClient();
+
+  // メタデータからカートアイテムを復元
+  const cartItemsRaw = session.metadata?.cart_items;
+  const shippingAmount = Number(session.metadata?.shipping_amount ?? 0);
+
+  if (!cartItemsRaw) {
+    console.error("[Webhook] cart_items metadata が見つかりません", session.id);
+    return;
+  }
+
+  type CartMetaItem = {
+    product_id: string;
+    product_name: string;
+    product_image_url: string;
+    price: number;
+    quantity: number;
+  };
+
+  let cartItems: CartMetaItem[];
+  try {
+    cartItems = JSON.parse(cartItemsRaw);
+  } catch {
+    console.error("[Webhook] cart_items のパース失敗", cartItemsRaw);
+    return;
+  }
+
+  const totalAmount = session.amount_total ?? 0;
+  const customerEmail =
+    session.customer_details?.email ??
+    (typeof session.customer_email === "string" ? session.customer_email : "");
+
+  // 冪等性: 同じセッションが二重処理されないようにチェック
+  const { data: existing } = await supabase
+    .from("orders")
+    .select("id")
+    .eq("stripe_session_id", session.id)
+    .single();
+
+  if (existing) {
+    console.log("[Webhook] 注文は既に存在します:", session.id);
+    return;
+  }
+
+  // ordersテーブルにINSERT
+  const { data: order, error: orderError } = await supabase
+    .from("orders")
+    .insert({
+      stripe_session_id: session.id,
+      stripe_payment_intent_id:
+        typeof session.payment_intent === "string"
+          ? session.payment_intent
+          : null,
+      customer_email: customerEmail,
+      status: "paid" as OrderStatus,
+      total_amount: totalAmount,
+      shipping_amount: shippingAmount,
+    })
+    .select("id")
+    .single();
+
+  if (orderError || !order) {
+    console.error("[Webhook] orders INSERT 失敗:", orderError);
+    return;
+  }
+
+  // order_itemsテーブルにINSERT
+  const orderItems = cartItems.map((item) => ({
+    order_id: order.id,
+    product_id: item.product_id,
+    product_name: item.product_name,
+    product_image_url: item.product_image_url,
+    price: item.price,
+    quantity: item.quantity,
+  }));
+
+  const { error: itemsError } = await supabase
+    .from("order_items")
+    .insert(orderItems);
+
+  if (itemsError) {
+    console.error("[Webhook] order_items INSERT 失敗:", itemsError);
+    return;
+  }
+
+  console.log("[Webhook] 注文保存完了:", order.id, "| session:", session.id);
+}

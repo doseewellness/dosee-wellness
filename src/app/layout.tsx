@@ -4,6 +4,7 @@ import { pageMetadata, siteConfig } from '../lib/constants/metadata'
 import '../styles/globals.css'
 import GoogleAnalytics from '../components/GoogleAnalytics'
 import { cn } from "@/lib/utils";
+import CartSheet from '@/components/cart/CartSheet';
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -87,6 +88,7 @@ export default function RootLayout({
       <body className={playfair.className}>
         <GoogleAnalytics />
         {children}
+        <CartSheet />
       </body>
     </html>
   )
