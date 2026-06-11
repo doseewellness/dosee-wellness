@@ -37,7 +37,12 @@ export async function getProductById(id: string): Promise<Product | null> {
     .eq("id", id)
     .single();
 
-  if (error) return null;
+  if (error) {
+    // 行なし(PGRST116)は通常の「商品が無い」→ null。
+    // それ以外（接続不可など）は投げてファサード側でモックにフォールバックさせる。
+    if (error.code === "PGRST116") return null;
+    throw new Error(error.message);
+  }
   return toProduct(data);
 }
 

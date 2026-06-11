@@ -13,7 +13,14 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "カートが空です" }, { status: 400 });
     }
 
-    const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3001";
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+
+    // Stripeは画像に絶対URLを要求するため、相対パスをappUrl基準で絶対化する。
+    const toAbsoluteUrl = (src: string): string | null => {
+      if (!src) return null;
+      if (/^https?:\/\//.test(src)) return src;
+      return `${appUrl}${src.startsWith("/") ? "" : "/"}${src}`;
+    };
 
     const subtotal = items.reduce(
       (sum, item) => sum + item.product.price * item.quantity,
@@ -22,19 +29,22 @@ export async function POST(req: NextRequest) {
     const shipping = subtotal >= SHIPPING_THRESHOLD ? 0 : SHIPPING_FEE;
 
     // 商品の line_items を構築
-    const productLineItems = items.map((item) => ({
-      price_data: {
-        currency: "jpy" as const,
-        product_data: {
-          name: item.product.name,
-          description: item.product.description.slice(0, 255),
-          images: [item.product.image],
-          metadata: { product_id: item.product.id },
+    const productLineItems = items.map((item) => {
+      const imageUrl = toAbsoluteUrl(item.product.image);
+      return {
+        price_data: {
+          currency: "jpy" as const,
+          product_data: {
+            name: item.product.name,
+            description: item.product.description.slice(0, 255),
+            ...(imageUrl ? { images: [imageUrl] } : {}),
+            metadata: { product_id: item.product.id },
+          },
+          unit_amount: item.product.price,
         },
-        unit_amount: item.product.price,
-      },
-      quantity: item.quantity,
-    }));
+        quantity: item.quantity,
+      };
+    });
 
     // 送料を別行で追加
     const shippingLineItem =
