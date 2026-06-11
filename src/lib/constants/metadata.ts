@@ -7,7 +7,7 @@ export const siteConfig = {
   url: 'https://doseewellness.com',
   ogImage: 'https://doseewellness.com/og-image.jpg',
   links: {
-    instagram: 'https://www.instagram.com/wellcha_matcha',
+    instagram: 'https://www.instagram.com/wellchamatcha',
     email: 'info@dosee-wellness.com',
   },
 }
@@ -91,6 +91,6 @@ export const organizationSchema = {
     availableLanguage: ['Japanese', 'English'],
   },
   sameAs: [
-    'https://www.instagram.com/wellcha_matcha',
+    'https://www.instagram.com/wellchamatcha',
   ],
 }

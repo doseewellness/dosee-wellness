@@ -30,7 +30,7 @@ export default function AboutPage() {
       streetAddress: '道玄坂1丁目10番8号 渋谷道玄坂東急ビル2F-C',
     },
     sameAs: [
-      'https://www.instagram.com/wellcha_matcha',
+      'https://www.instagram.com/wellchamatcha',
     ],
     areaServed: {
       '@type': 'Country',

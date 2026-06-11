@@ -60,7 +60,7 @@ export default function Home() {
     url: 'https://doseewellness.com',
     logo: 'https://doseewellness.com/logo.png',
     description: '忙しい毎日をやさしく整える日本茶ベースのウェルネスブランド',
-    sameAs: ['https://www.instagram.com/wellcha_matcha'],
+    sameAs: ['https://www.instagram.com/wellchamatcha'],
     contactPoint: {
       '@type': 'ContactPoint',
       email: 'info@dosee-wellness.com',

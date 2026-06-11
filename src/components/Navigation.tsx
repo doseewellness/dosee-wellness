@@ -18,8 +18,7 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
   const pathname = usePathname()
   const router = useRouter()
 
-  const INSTAGRAM_URL =
-    'https://www.instagram.com/wellcha_matcha?igsh=ZDBqcGx5ZjZncXZ6'
+  const INSTAGRAM_URL = 'https://www.instagram.com/wellchamatcha'
   const EN_URL = '/en'
 
   const menuItems: MenuItem[] = [

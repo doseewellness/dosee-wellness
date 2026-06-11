@@ -41,7 +41,7 @@ export default function ContactPage() {
                 📧 info@dosee-wellness.com
               </a>
               <a 
-                href="https://www.instagram.com/wellcha_matcha"
+                href="https://www.instagram.com/wellchamatcha"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-green-700 hover:text-green-800 transition-colors"
