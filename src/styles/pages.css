@@ -1319,6 +1319,10 @@
   white-space: pre-line;
 }
 
+.wellcha-lp .lpCtaAction{
+  margin-top: clamp(22px, 3.5vw, 36px);
+}
+
 @media (max-width: 720px){
   .wellcha-lp .lpFeatureGrid{
     grid-template-columns: 1fr;

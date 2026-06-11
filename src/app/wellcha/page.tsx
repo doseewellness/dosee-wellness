@@ -118,7 +118,7 @@ export default function WellChaPage() {
       </section>
 
       {/* 2) 抹茶LP（既存：4枚背景） */}
-      <WellChaImageLP />
+      <WellChaImageLP productUrl={getPurchaseUrl('matchaLatte')} />
 
       {/* 3) ほうじ茶LP（画像の縦長デザイン風に置き換え） */}
       <HojichaImageLP productUrl={getPurchaseUrl('hojichaLatte')} />
@@ -137,7 +137,7 @@ export default function WellChaPage() {
   )
 }
 
-function WellChaImageLP() {
+function WellChaImageLP({ productUrl }: { productUrl: string }) {
   return (
     <section className="wellcha-lp">
       <div className="lp">
@@ -224,6 +224,16 @@ DoSee Wellness の抹茶で、
 あなたらしい「整う時間」を
 はじめましょう。`}
               </p>
+            </div>
+
+            <div className="lpCtaAction">
+              <a
+                href={productUrl}
+                {...(USE_SHOPIFY ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                className="shop-button"
+              >
+                抹茶ラテを購入する
+              </a>
             </div>
           </div>
         </section>
