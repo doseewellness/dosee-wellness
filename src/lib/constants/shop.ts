@@ -30,6 +30,9 @@ export const SHOP_URLS = {
  */
 export const USE_SHOPIFY = false
 
+/** 商品キー（matchaLatte / hojichaLatte） */
+export type ProductKey = keyof typeof SHOP_URLS.products
+
 /**
  * Shopify商品キー → 内部ショップのスラッグ（/shop/[id]）対応表。
  */

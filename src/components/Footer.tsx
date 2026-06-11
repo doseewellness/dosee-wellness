@@ -18,6 +18,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Company</h3>
           <Link href="/about">会社概要</Link>
+          <Link href="/blog">読みもの</Link>
           <a href="mailto:doseewellness@gmail.com">お問い合わせ</a>
         </div>
         
