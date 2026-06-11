@@ -5,11 +5,37 @@ import { Star, ArrowLeft, Shield, Truck } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { getProductById } from "@/lib/data";
+import productsData from "@/data/products.json";
 import AddToCartButton from "@/components/products/AddToCartButton";
 
 interface ProductDetailPageProps {
   params: Promise<{ id: string }>;
 }
+
+type RichProduct = {
+  id: string;
+  longDescription?: string;
+  benefits?: { title: string; description: string }[];
+  ingredients?: string[];
+  howToUse?: string[];
+  nutritionFacts?: {
+    servingSize?: string;
+    calories?: number;
+    protein?: string;
+    fat?: string;
+    carbohydrates?: string;
+    caffeine?: string;
+  };
+};
+
+const NUTRITION_LABELS: { key: keyof NonNullable<RichProduct["nutritionFacts"]>; label: string }[] = [
+  { key: "servingSize", label: "1食あたり" },
+  { key: "calories", label: "カロリー" },
+  { key: "protein", label: "たんぱく質" },
+  { key: "fat", label: "脂質" },
+  { key: "carbohydrates", label: "炭水化物" },
+  { key: "caffeine", label: "カフェイン" },
+];
 
 export const dynamic = "force-dynamic";
 
@@ -20,6 +46,12 @@ export default async function ProductDetailPage({
   const product = await getProductById(id);
 
   if (!product) notFound();
+
+  const rich = (productsData as RichProduct[]).find((p) => p.id === id);
+  const nutrition = rich?.nutritionFacts;
+  const nutritionRows = nutrition
+    ? NUTRITION_LABELS.filter(({ key }) => nutrition[key] != null)
+    : [];
 
   const discountPercent = product.originalPrice
     ? Math.round((1 - product.price / product.originalPrice) * 100)
@@ -98,7 +130,7 @@ export default async function ProductDetailPage({
           </div>
 
           <p className="text-muted-foreground leading-relaxed mb-8">
-            {product.description}
+            {rich?.longDescription ?? product.description}
           </p>
 
           {/* CTA */}
@@ -119,6 +151,72 @@ export default async function ProductDetailPage({
           </div>
         </div>
       </div>
+
+      {/* 詳細情報 */}
+      {rich && (
+        <div className="mt-16 max-w-3xl mx-auto flex flex-col gap-12">
+          {rich.benefits && rich.benefits.length > 0 && (
+            <section>
+              <h2 className="text-xl font-bold mb-6">この商品の特徴</h2>
+              <div className="grid gap-5 sm:grid-cols-3">
+                {rich.benefits.map((b) => (
+                  <div
+                    key={b.title}
+                    className="rounded-xl border border-border/60 bg-muted/30 p-5"
+                  >
+                    <h3 className="font-medium text-emerald-700 mb-2">{b.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {b.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {rich.howToUse && rich.howToUse.length > 0 && (
+            <section>
+              <h2 className="text-xl font-bold mb-4">お召し上がり方</h2>
+              <ul className="flex flex-col gap-2">
+                {rich.howToUse.map((step) => (
+                  <li key={step} className="flex gap-3 text-sm text-muted-foreground">
+                    <span className="text-emerald-600 shrink-0">・</span>
+                    <span className="leading-relaxed">{step}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {rich.ingredients && rich.ingredients.length > 0 && (
+            <section>
+              <h2 className="text-xl font-bold mb-4">原材料</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {rich.ingredients.join("、")}
+              </p>
+            </section>
+          )}
+
+          {nutritionRows.length > 0 && (
+            <section>
+              <h2 className="text-xl font-bold mb-4">栄養成分表示</h2>
+              <dl className="rounded-xl border border-border/60 overflow-hidden">
+                {nutritionRows.map(({ key, label }, i) => (
+                  <div
+                    key={key}
+                    className={`flex justify-between px-4 py-3 text-sm ${
+                      i % 2 === 0 ? "bg-muted/30" : ""
+                    }`}
+                  >
+                    <dt className="text-muted-foreground">{label}</dt>
+                    <dd className="font-medium">{String(nutrition?.[key])}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          )}
+        </div>
+      )}
     </main>
   );
 }
