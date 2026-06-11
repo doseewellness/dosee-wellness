@@ -10,6 +10,22 @@ const isSupabaseConfigured =
   process.env.NEXT_PUBLIC_SUPABASE_URL &&
   process.env.NEXT_PUBLIC_SUPABASE_URL !== "your_supabase_project_url";
 
+// Supabaseが到達不能（プロジェクト削除/一時停止など）だと接続タイムアウトまで
+// 数秒ブロックしてしまうため、短いタイムアウトで打ち切って即モックへ倒す。
+const SUPABASE_TIMEOUT_MS = 1500;
+
+function withTimeout<T>(promise: Promise<T>, label: string): Promise<T> {
+  return Promise.race([
+    promise,
+    new Promise<never>((_, reject) =>
+      setTimeout(
+        () => reject(new Error(`${label} が ${SUPABASE_TIMEOUT_MS}ms でタイムアウト`)),
+        SUPABASE_TIMEOUT_MS
+      )
+    ),
+  ]);
+}
+
 function warnFallback(fn: string, err: unknown) {
   console.warn(
     `[data] Supabase ${fn} に失敗したためモックにフォールバック:`,
@@ -21,7 +37,7 @@ export async function getProducts(): Promise<Product[]> {
   if (isSupabaseConfigured) {
     try {
       const { getProducts } = await import("@/lib/supabase/products");
-      return await getProducts();
+      return await withTimeout(getProducts(), "getProducts");
     } catch (err) {
       warnFallback("getProducts", err);
     }
@@ -34,7 +50,7 @@ export async function getProductById(id: string): Promise<Product | null> {
   if (isSupabaseConfigured) {
     try {
       const { getProductById } = await import("@/lib/supabase/products");
-      return await getProductById(id);
+      return await withTimeout(getProductById(id), "getProductById");
     } catch (err) {
       warnFallback("getProductById", err);
     }
@@ -47,7 +63,7 @@ export async function getProductsByCategory(category: string): Promise<Product[]
   if (isSupabaseConfigured) {
     try {
       const { getProductsByCategory } = await import("@/lib/supabase/products");
-      return await getProductsByCategory(category);
+      return await withTimeout(getProductsByCategory(category), "getProductsByCategory");
     } catch (err) {
       warnFallback("getProductsByCategory", err);
     }
@@ -60,7 +76,7 @@ export async function getCategories() {
   if (isSupabaseConfigured) {
     try {
       const { getCategories } = await import("@/lib/supabase/products");
-      return await getCategories();
+      return await withTimeout(getCategories(), "getCategories");
     } catch (err) {
       warnFallback("getCategories", err);
     }
