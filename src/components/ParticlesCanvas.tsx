@@ -17,6 +17,9 @@ const ParticlesCanvas = () => {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
+    const canvasEl: HTMLCanvasElement = canvas
+    const context: CanvasRenderingContext2D = ctx
+
     class Particle {
       x: number
       y: number
@@ -25,8 +28,8 @@ const ParticlesCanvas = () => {
       radius: number
 
       constructor() {
-        this.x = Math.random() * canvas.width
-        this.y = Math.random() * canvas.height
+        this.x = Math.random() * canvasEl.width
+        this.y = Math.random() * canvasEl.height
         this.vx = (Math.random() - 0.5) * 0.5
         this.vy = (Math.random() - 0.5) * 0.5
         this.radius = Math.random() * 2 + 1
@@ -49,15 +52,15 @@ const ParticlesCanvas = () => {
         this.vx *= 0.99
         this.vy *= 0.99
 
-        if (this.x < 0 || this.x > canvas.width) this.vx *= -1
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1
+        if (this.x < 0 || this.x > canvasEl.width) this.vx *= -1
+        if (this.y < 0 || this.y > canvasEl.height) this.vy *= -1
       }
 
       draw() {
-        ctx.beginPath()
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.6)'
-        ctx.fill()
+        context.beginPath()
+        context.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
+        context.fillStyle = 'rgba(255, 255, 255, 0.6)'
+        context.fill()
       }
     }
 

@@ -45,8 +45,8 @@
     },
     "shopifyUrl": "https://shop.doseewellness.com/products/matcha-latte",
     "images": {
-      "hero": "/images/products/matcha-latte/hero.jpg",
-      "thumbnail": "/images/products/matcha-latte/thumb.jpg"
+      "hero": "/images/wellcha/matcha-hero.png",
+      "thumbnail": "/images/wellcha/matcha-hero.png"
     },
     "category": "wellcha",
     "tags": ["matcha", "latte", "wellness", "focus", "skincare"],
@@ -99,8 +99,8 @@
     },
     "shopifyUrl": "https://shop.doseewellness.com/products/hojicha-latte",
     "images": {
-      "hero": "/images/products/hojicha-latte/hero.jpg",
-      "thumbnail": "/images/products/hojicha-latte/thumb.jpg"
+      "hero": "/images/wellcha/hojicha-hero.png",
+      "thumbnail": "/images/wellcha/hojicha-hero.png"
     },
     "category": "wellcha",
     "tags": ["hojicha", "latte", "wellness", "relax", "warmth"],

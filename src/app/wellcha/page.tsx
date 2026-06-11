@@ -5,7 +5,7 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import CustomCursor from '../../components/CustomCursor'
 import productsData from '../../data/products.json'
-import { getProductUrl } from '../../lib/constants/shop'
+import { getPurchaseUrl, USE_SHOPIFY } from '../../lib/constants/shop'
 import '../../styles/pages.css'
 
 export default function WellChaPage() {
@@ -23,7 +23,7 @@ export default function WellChaPage() {
     category: 'Health & Wellness > Tea',
     offers: {
       '@type': 'Offer',
-      url: matchaLatte?.shopifyUrl || 'https://shop.doseewellness.com/products/matcha-latte',
+      url: 'https://doseewellness.com/shop/matcha-latte',
       priceCurrency: 'JPY',
       price: matchaLatte?.price || '3980',
       availability: matchaLatte?.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
@@ -59,7 +59,7 @@ export default function WellChaPage() {
     category: 'Health & Wellness > Tea',
     offers: {
       '@type': 'Offer',
-      url: hojichaLatte?.shopifyUrl || 'https://shop.doseewellness.com/products/hojicha-latte',
+      url: 'https://doseewellness.com/shop/hojicha-latte',
       priceCurrency: 'JPY',
       price: hojichaLatte?.price || '3980',
       availability: hojichaLatte?.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
@@ -123,7 +123,7 @@ export default function WellChaPage() {
       <WellChaImageLP />
 
       {/* 3) ほうじ茶LP（画像の縦長デザイン風に置き換え） */}
-      <HojichaImageLP productUrl={getProductUrl('hojichaLatte')} />
+      <HojichaImageLP productUrl={getPurchaseUrl('hojichaLatte')} />
 
       {/* 戻る */}
       <section className="content-section" style={{ paddingTop: '2rem', paddingBottom: '4rem' }}>
@@ -357,7 +357,11 @@ function HojichaImageLP({ productUrl }: { productUrl: string }) {
             </p>
 
             <div className="hojichaFinalActions">
-              <a href={productUrl} target="_blank" rel="noopener noreferrer" className="shop-button shop-button--hojicha">
+              <a
+                href={productUrl}
+                {...(USE_SHOPIFY ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                className="shop-button shop-button--hojicha"
+              >
                 ほうじ茶ラテを購入する
               </a>
             </div>

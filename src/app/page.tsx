@@ -9,9 +9,8 @@ import Navigation from '../components/Navigation'
 import HeroSection from '../components/HeroSection'
 import InteractiveSection from '../components/InteractiveSection'
 import Footer from '../components/Footer'
-import { getProductUrl } from '../lib/constants/shop'
+import { getPurchaseUrl, USE_SHOPIFY } from '../lib/constants/shop'
 import { shipporiMincho } from './fonts'
-import { SHOPIFY_URLS } from '../lib/constants/shopifyUrls'
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -53,12 +52,6 @@ export default function Home() {
 
     return () => cancelAnimationFrame(raf1)
   }, [])
-
-  // 購入ボタンのクリックハンドラー
-  const handlePurchaseClick = (productKey: 'matchaLatte' | 'hojichaLatte') => {
-    const url = getProductUrl(productKey)
-    window.open(url, '_blank', 'noopener,noreferrer')
-  }
 
   // 構造化データ - 組織情報
   const organizationJsonLd = {
@@ -233,9 +226,8 @@ export default function Home() {
 
                   <div className="product-tags-v2">
                     <a
-                      href="https://shop.doseewellness.com/products/matcha-latte"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={getPurchaseUrl('matchaLatte')}
+                      {...(USE_SHOPIFY ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                       className="product-tag-v2 product-tag-button"
                       onClick={(e) => e.stopPropagation()}
                     >
@@ -243,9 +235,8 @@ export default function Home() {
                     </a>
 
                     <a
-                      href="https://shop.doseewellness.com/products/hojicha-latte"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={getPurchaseUrl('hojichaLatte')}
+                      {...(USE_SHOPIFY ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                       className="product-tag-v2 product-tag-button"
                       onClick={(e) => e.stopPropagation()}
                     >

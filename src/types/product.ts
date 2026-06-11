@@ -1,9 +1,4 @@
-export type ProductCategory =
-  | "supplements"
-  | "fitness"
-  | "beauty"
-  | "nutrition"
-  | "mindfulness";
+export type ProductCategory = "wellcha" | "dosee";
 
 export interface Product {
   id: string;
