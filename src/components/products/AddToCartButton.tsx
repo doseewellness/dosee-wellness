@@ -55,8 +55,8 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
         size="lg"
         className={`gap-2 transition-all duration-300 ${
           added
-            ? "bg-emerald-500 hover:bg-emerald-500 text-white"
-            : "bg-emerald-600 hover:bg-emerald-700 text-white"
+            ? "bg-brand-dark hover:bg-brand-dark text-white"
+            : "bg-brand hover:bg-brand-dark text-white"
         }`}
         disabled={!product.inStock}
         onClick={handleAdd}

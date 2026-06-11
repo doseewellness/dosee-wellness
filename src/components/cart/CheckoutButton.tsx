@@ -35,7 +35,7 @@ export default function CheckoutButton() {
     <div className="space-y-2">
       <Button
         size="lg"
-        className="w-full bg-emerald-600 hover:bg-emerald-700 text-white gap-2 disabled:opacity-70"
+        className="w-full bg-brand hover:bg-brand-dark text-white gap-2 disabled:opacity-70"
         onClick={handleCheckout}
         disabled={loading || items.length === 0}
       >

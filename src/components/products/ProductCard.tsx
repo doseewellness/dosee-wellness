@@ -41,7 +41,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
           />
           {product.badge && (
-            <Badge className="absolute top-3 left-3 bg-emerald-600 hover:bg-emerald-700 text-white text-xs">
+            <Badge className="absolute top-3 left-3 bg-brand hover:bg-brand-dark text-white text-xs">
               {product.badge}
             </Badge>
           )}
@@ -59,7 +59,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       </Link>
       <CardContent className="p-4">
         <Link href={`/shop/${product.id}`}>
-          <h3 className="font-medium text-sm leading-snug mb-1 hover:text-emerald-600 transition-colors line-clamp-2">
+          <h3 className="font-medium text-sm leading-snug mb-1 hover:text-brand transition-colors line-clamp-2">
             {product.name}
           </h3>
         </Link>
@@ -84,8 +84,8 @@ export default function ProductCard({ product }: ProductCardProps) {
         <Button
           className={`w-full gap-2 text-sm transition-all duration-300 ${
             added
-              ? "bg-emerald-500 hover:bg-emerald-500 text-white"
-              : "bg-emerald-600 hover:bg-emerald-700 text-white"
+              ? "bg-brand-dark hover:bg-brand-dark text-white"
+              : "bg-brand hover:bg-brand-dark text-white"
           }`}
           disabled={!product.inStock}
           onClick={handleAddToCart}

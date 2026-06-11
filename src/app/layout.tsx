@@ -5,6 +5,7 @@ import '../styles/globals.css'
 import GoogleAnalytics from '../components/GoogleAnalytics'
 import { cn } from "@/lib/utils";
 import CartSheet from '@/components/cart/CartSheet';
+import CustomCursor from '@/components/CustomCursor';
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -87,6 +88,7 @@ export default function RootLayout({
       </head>
       <body className={playfair.className}>
         <GoogleAnalytics />
+        <CustomCursor />
         {children}
         <CartSheet />
       </body>

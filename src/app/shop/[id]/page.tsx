@@ -79,7 +79,7 @@ export default async function ProductDetailPage({
             sizes="(max-width: 768px) 100vw, 50vw"
           />
           {product.badge && (
-            <Badge className="absolute top-4 left-4 bg-emerald-600 text-white">
+            <Badge className="absolute top-4 left-4 bg-brand text-white">
               {product.badge}
             </Badge>
           )}
@@ -92,7 +92,7 @@ export default async function ProductDetailPage({
 
         {/* Details */}
         <div className="flex flex-col">
-          <p className="text-sm text-emerald-600 font-medium mb-2 uppercase tracking-wide">
+          <p className="text-sm text-brand font-medium mb-2 uppercase tracking-wide">
             {product.category}
           </p>
           <h1 className="text-3xl font-bold mb-3">{product.name}</h1>
@@ -141,11 +141,11 @@ export default async function ProductDetailPage({
           {/* Trust badges */}
           <div className="flex flex-col gap-3 bg-muted/40 rounded-xl p-4">
             <div className="flex items-center gap-3 text-sm">
-              <Truck className="h-4 w-4 text-emerald-600 shrink-0" />
+              <Truck className="h-4 w-4 text-brand shrink-0" />
               <span>¥5,000以上のご購入で送料無料</span>
             </div>
             <div className="flex items-center gap-3 text-sm">
-              <Shield className="h-4 w-4 text-emerald-600 shrink-0" />
+              <Shield className="h-4 w-4 text-brand shrink-0" />
               <span>30日間返金保証</span>
             </div>
           </div>
@@ -164,7 +164,7 @@ export default async function ProductDetailPage({
                     key={b.title}
                     className="rounded-xl border border-border/60 bg-muted/30 p-5"
                   >
-                    <h3 className="font-medium text-emerald-700 mb-2">{b.title}</h3>
+                    <h3 className="font-medium text-brand-dark mb-2">{b.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {b.description}
                     </p>
@@ -180,7 +180,7 @@ export default async function ProductDetailPage({
               <ul className="flex flex-col gap-2">
                 {rich.howToUse.map((step) => (
                   <li key={step} className="flex gap-3 text-sm text-muted-foreground">
-                    <span className="text-emerald-600 shrink-0">・</span>
+                    <span className="text-brand shrink-0">・</span>
                     <span className="leading-relaxed">{step}</span>
                   </li>
                 ))}

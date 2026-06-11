@@ -10,7 +10,7 @@ export default async function ShopPage() {
   return (
     <main className="container mx-auto px-4 py-12">
       <div className="mb-10">
-        <p className="text-sm tracking-widest text-emerald-700 uppercase mb-2">Products</p>
+        <p className="text-sm tracking-widest text-brand-dark uppercase mb-2">Products</p>
         <h1 className="text-3xl font-bold mb-1">商品一覧</h1>
         <p className="text-sm text-gray-500">{products.length}件の商品</p>
       </div>

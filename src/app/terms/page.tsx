@@ -3,13 +3,11 @@
 import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
-import CustomCursor from '../../components/CustomCursor'
 import '../../styles/pages.css'
 
 export default function TermsPage() {
   return (
     <div className="page-container">
-      <CustomCursor />
       <Navigation isScrolled={true} />
       
       <section className="static-page-hero">

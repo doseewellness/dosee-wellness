@@ -14,7 +14,7 @@ export default function CheckoutCancelPage() {
       <div className="flex flex-col sm:flex-row gap-3 w-full">
         <Link
           href="/cart"
-          className="flex-1 inline-flex items-center justify-center gap-2 h-9 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium transition-colors"
+          className="flex-1 inline-flex items-center justify-center gap-2 h-9 px-4 rounded-lg bg-brand hover:bg-brand-dark text-white text-sm font-medium transition-colors"
         >
           <ShoppingCart className="h-4 w-4" />
           カートに戻る

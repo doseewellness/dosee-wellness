@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
-import CustomCursor from '../../components/CustomCursor'
 import productsData from '../../data/products.json'
 import { getPurchaseUrl, USE_SHOPIFY } from '../../lib/constants/shop'
 import '../../styles/pages.css'
@@ -92,7 +91,6 @@ export default function WellChaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hojichaProductJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-      <CustomCursor />
       <Navigation isScrolled={true} />
 
       {/* 1) WellChaの紹介（新Hero） */}

@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
-import CustomCursor from '../../components/CustomCursor'
 import faqData from '../../data/faq.json'
 import '../../styles/pages.css'
 
@@ -94,7 +93,6 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }}
       />
 
-      <CustomCursor />
       <Navigation isScrolled={true} />
 
       <section className="static-page-hero">

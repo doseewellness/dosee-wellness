@@ -28,10 +28,10 @@ export default function CartSheet() {
       <SheetContent side="right" showCloseButton={false} className="w-full sm:max-w-md p-0 flex flex-col">
         <SheetHeader className="px-6 py-4 border-b">
           <SheetTitle className="flex items-center gap-2 text-base font-semibold">
-            <ShoppingBag className="h-5 w-5 text-emerald-600" />
+            <ShoppingBag className="h-5 w-5 text-brand" />
             カート
             {totalItems > 0 && (
-              <span className="ml-1 bg-emerald-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+              <span className="ml-1 bg-brand text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                 {totalItems}
               </span>
             )}
@@ -45,7 +45,7 @@ export default function CartSheet() {
             <Link
               href="/shop"
               onClick={closeCart}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium transition-colors mt-2"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand hover:bg-brand-dark text-white text-sm font-medium transition-colors mt-2"
             >
               商品を見る
               <ArrowRight className="h-4 w-4" />
@@ -55,13 +55,13 @@ export default function CartSheet() {
           <>
             {/* 送料無料バー */}
             {remainingForFreeShipping > 0 && (
-              <div className="px-6 py-3 bg-emerald-50 border-b">
-                <p className="text-xs text-emerald-700">
+              <div className="px-6 py-3 bg-brand-soft border-b">
+                <p className="text-xs text-brand-dark">
                   あと <span className="font-bold">¥{remainingForFreeShipping.toLocaleString()}</span> で送料無料！
                 </p>
-                <div className="mt-1.5 h-1.5 rounded-full bg-emerald-200 overflow-hidden">
+                <div className="mt-1.5 h-1.5 rounded-full bg-brand/20 overflow-hidden">
                   <div
-                    className="h-full bg-emerald-500 rounded-full transition-all duration-500"
+                    className="h-full bg-brand rounded-full transition-all duration-500"
                     style={{
                       width: `${Math.min((totalPrice / shippingThreshold) * 100, 100)}%`,
                     }}
@@ -70,8 +70,8 @@ export default function CartSheet() {
               </div>
             )}
             {remainingForFreeShipping <= 0 && (
-              <div className="px-6 py-2.5 bg-emerald-50 border-b">
-                <p className="text-xs text-emerald-700 font-medium">送料無料が適用されています</p>
+              <div className="px-6 py-2.5 bg-brand-soft border-b">
+                <p className="text-xs text-brand-dark font-medium">送料無料が適用されています</p>
               </div>
             )}
 

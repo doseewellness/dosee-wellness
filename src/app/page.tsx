@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import CustomCursor from '../components/CustomCursor'
 import ParticlesCanvas from '../components/ParticlesCanvas'
 import Navigation from '../components/Navigation'
 import HeroSection from '../components/HeroSection'
@@ -95,7 +94,6 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <CustomCursor />
       <ParticlesCanvas />
       <Navigation isScrolled={isScrolled} />
 

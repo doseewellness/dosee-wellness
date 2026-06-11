@@ -27,7 +27,7 @@ export default function CartPageClient() {
         </p>
         <Link
           href="/shop"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand hover:bg-brand-dark text-white text-sm font-medium transition-colors"
         >
           <ArrowLeft className="h-4 w-4" />
           商品一覧へ
@@ -72,7 +72,7 @@ export default function CartPageClient() {
                 <div className="flex-1 min-w-0">
                   <div className="flex justify-between gap-2 mb-1">
                     <Link href={`/products/${product.id}`}>
-                      <p className="text-sm font-medium leading-snug hover:text-emerald-600 transition-colors line-clamp-2">
+                      <p className="text-sm font-medium leading-snug hover:text-brand transition-colors line-clamp-2">
                         {product.name}
                       </p>
                     </Link>
@@ -138,13 +138,13 @@ export default function CartPageClient() {
 
             {/* 送料無料バー */}
             {shipping > 0 && (
-              <div className="mb-4 p-3 bg-emerald-50 rounded-lg">
-                <p className="text-xs text-emerald-700 mb-1.5">
+              <div className="mb-4 p-3 bg-brand-soft rounded-lg">
+                <p className="text-xs text-brand-dark mb-1.5">
                   あと <span className="font-bold">¥{(shippingThreshold - totalPrice).toLocaleString()}</span> で送料無料
                 </p>
-                <div className="h-1.5 rounded-full bg-emerald-200 overflow-hidden">
+                <div className="h-1.5 rounded-full bg-brand/20 overflow-hidden">
                   <div
-                    className="h-full bg-emerald-500 rounded-full transition-all"
+                    className="h-full bg-brand rounded-full transition-all"
                     style={{ width: `${Math.min((totalPrice / shippingThreshold) * 100, 100)}%` }}
                   />
                 </div>
@@ -158,7 +158,7 @@ export default function CartPageClient() {
               </div>
               <div className="flex justify-between text-muted-foreground">
                 <span>送料</span>
-                <span className={shipping === 0 ? "text-emerald-600 font-medium" : ""}>
+                <span className={shipping === 0 ? "text-brand font-medium" : ""}>
                   {shipping === 0 ? "無料" : `¥${shipping.toLocaleString()}`}
                 </span>
               </div>

@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
-import CustomCursor from '../../components/CustomCursor'
 import productsData from '../../data/products.json'
 import '../../styles/pages.css'
 
@@ -68,7 +67,6 @@ export default function DoSeePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <CustomCursor />
       <Navigation isScrolled={true} />
       
       <section className="product-hero">
