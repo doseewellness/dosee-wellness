@@ -1601,3 +1601,80 @@
     min-height: 520px;
   }
 }
+
+/* ==========================================
+   About / 会社概要 — ブランド統一スタイル
+   （.about-page でスコープし他の静的ページに影響させない）
+   ========================================== */
+.about-page .static-page-hero {
+  background: linear-gradient(135deg, rgba(44, 95, 45, 0.10) 0%, rgba(238, 243, 238, 0.55) 100%);
+  border-bottom: 1px solid rgba(44, 95, 45, 0.08);
+}
+
+.about-page .product-category {
+  color: #2c5f2d;
+}
+
+.about-page .static-page-content h1 {
+  color: #234a24;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.about-page .subtitle {
+  margin-top: 1.25rem;
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+  color: #5b6b5b;
+}
+
+.about-page .static-page-section h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(24px, 3.2vw, 32px);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #2c5f2d;
+  margin: 3.5rem 0 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(44, 95, 45, 0.18);
+}
+
+.about-page .static-page-section h2:first-child {
+  margin-top: 0;
+}
+
+.about-page .company-info {
+  background: #fafaf9;
+  border: 1px solid rgba(44, 95, 45, 0.12);
+  border-radius: 16px;
+  padding: clamp(20px, 3vw, 36px);
+  box-shadow: 0 8px 28px rgba(44, 95, 45, 0.06);
+}
+
+.about-page .company-info .info-row {
+  align-items: baseline;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid rgba(44, 95, 45, 0.08);
+}
+
+.about-page .company-info .info-row:last-child {
+  border-bottom: none;
+}
+
+.about-page .company-info .info-value a {
+  color: #2c5f2d;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.about-page .company-info .info-value a:hover {
+  color: #1e4620;
+}
+
+@media (max-width: 768px) {
+  .about-page .company-info .info-row {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+}

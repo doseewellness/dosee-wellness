@@ -10,15 +10,15 @@ export default function AboutPage() {
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: '株式会社 DoSee Wellness',
+    name: '株式会社DoSee Group',
     alternateName: 'DoSee Wellness',
     url: 'https://doseewellness.com',
     logo: 'https://doseewellness.com/logo.png',
     description: '忙しい現代でも続けられるウェルネスをテーマにした日本発のブランド。「整えなきゃ」という義務感ではなく、自分を大切にしたいという気持ちから始まる、無理のないウェルネス習慣を提供します。',
-    foundingDate: '2024',
+    foundingDate: '2026-04',
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'info@dosee-wellness.com',
+      email: 'info@doseegroup.com',
       contactType: 'Customer Service',
       availableLanguage: ['Japanese', 'English'],
     },
@@ -26,6 +26,8 @@ export default function AboutPage() {
       '@type': 'PostalAddress',
       addressCountry: 'JP',
       addressRegion: '東京都',
+      addressLocality: '渋谷区',
+      streetAddress: '道玄坂1丁目10番8号 渋谷道玄坂東急ビル2F-C',
     },
     sameAs: [
       'https://www.instagram.com/wellcha_matcha',
@@ -69,7 +71,7 @@ export default function AboutPage() {
   }
 
   return (
-    <div className="page-container">
+    <div className="page-container about-page">
       {/* 構造化データの埋め込み */}
       <script
         type="application/ld+json"
@@ -139,15 +141,19 @@ export default function AboutPage() {
           <div className="company-info">
             <div className="info-row">
               <span className="info-label">会社名</span>
-              <span className="info-value">DoSee Wellness</span>
+              <span className="info-value">株式会社DoSee Group</span>
             </div>
             <div className="info-row">
               <span className="info-label">設立</span>
-              <span className="info-value">2026年</span>
+              <span className="info-value">2026年4月</span>
             </div>
             <div className="info-row">
               <span className="info-label">所在地</span>
-              <span className="info-value">東京都</span>
+              <span className="info-value">
+                東京都渋谷区道玄坂1丁目10番8号
+                <br />
+                渋谷道玄坂東急ビル2F-C
+              </span>
             </div>
             <div className="info-row">
               <span className="info-label">事業内容</span>
@@ -156,7 +162,7 @@ export default function AboutPage() {
             <div className="info-row">
               <span className="info-label">お問い合わせ</span>
               <span className="info-value">
-                <a href="mailto:info@dosee-wellness.com">info@dosee-wellness.com</a>
+                <a href="mailto:info@doseegroup.com">info@doseegroup.com</a>
               </span>
             </div>
           </div>
