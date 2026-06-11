@@ -9,11 +9,15 @@ import HeroSection from '../components/HeroSection'
 import InteractiveSection from '../components/InteractiveSection'
 import Footer from '../components/Footer'
 import { getPurchaseUrl, USE_SHOPIFY } from '../lib/constants/shop'
+import { getAllPosts } from '../lib/blog/posts'
 import { shipporiMincho } from './fonts'
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
   const router = useRouter()
+  const latestPosts = getAllPosts().slice(0, 3)
+  const formatDate = (iso: string) =>
+    new Date(iso).toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })
 
   useEffect(() => {
     const handleScroll = () => {
@@ -334,6 +338,39 @@ export default function Home() {
             静かな余白と、前向きなエネルギーを<br />
             やさしくもたらしますように。
           </p>
+        </div>
+      </section>
+
+      <section className="home-note-section">
+        <div className="home-note-header">
+          <p className="section-label">DOSEE WELLNESS NOTE</p>
+          <h2>読みもの</h2>
+          <p className="home-note-description">
+            日本茶の文化と、続けやすいウェルネスのヒントを。
+          </p>
+        </div>
+
+        <div className="home-note-grid">
+          {latestPosts.map((post) => (
+            <Link key={post.slug} href={`/blog/${post.slug}`} className="home-note-card">
+              <div
+                className="home-note-card-image"
+                style={{ backgroundImage: `url('${post.heroImage}')` }}
+                aria-hidden="true"
+              />
+              <div className="home-note-card-body">
+                <span className="home-note-tag">{post.category}</span>
+                <h3>{post.title}</h3>
+                <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <div className="home-note-cta">
+          <Link href="/blog" className="home-note-more">
+            読みものをもっと見る →
+          </Link>
         </div>
       </section>
 

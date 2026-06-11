@@ -24,6 +24,7 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
   const menuItems: MenuItem[] = [
     { label: 'Philosophy', href: '#philosophy', type: 'anchor' },
     { label: 'Products', href: '#products', type: 'anchor' },
+    { label: 'Note', href: '/blog', type: 'route' },
     { label: 'About', href: '#about', type: 'anchor' },
     { label: 'Contact', href: '/contact', type: 'route' },
   ]
