@@ -1,9 +1,18 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import Link from 'next/link'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
-import { usePathname, useRouter } from 'next/navigation'
+import { useTranslations, useLocale } from 'next-intl'
+import { Link, usePathname, useRouter } from '@/i18n/navigation'
+import { routing, localeNames, type Locale } from '@/i18n/routing'
+
+const localeShort: Record<Locale, string> = {
+  ja: 'JA',
+  en: 'EN',
+  zh: '中文',
+  fr: 'FR',
+  es: 'ES',
+}
 
 interface NavigationProps {
   isScrolled?: boolean
@@ -15,22 +24,31 @@ type MenuItem =
 
 export default function Navigation({ isScrolled = false }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isLangOpen, setIsLangOpen] = useState(false)
+  const langRef = useRef<HTMLLIElement>(null)
+  const t = useTranslations('nav')
   const pathname = usePathname()
   const router = useRouter()
+  const locale = useLocale() as Locale
 
   const INSTAGRAM_URL = 'https://www.instagram.com/wellchamatcha'
-  const EN_URL = '/en'
 
   const menuItems: MenuItem[] = [
-    { label: 'Philosophy', href: '#philosophy', type: 'anchor' },
-    { label: 'Products', href: '#products', type: 'anchor' },
-    { label: 'Note', href: '/blog', type: 'route' },
-    { label: 'About', href: '#about', type: 'anchor' },
-    { label: 'Contact', href: '/contact', type: 'route' },
+    { label: t('philosophy'), href: '#philosophy', type: 'anchor' },
+    { label: t('products'), href: '#products', type: 'anchor' },
+    { label: t('note'), href: '/blog', type: 'route' },
+    { label: t('about'), href: '#about', type: 'anchor' },
+    { label: t('contact'), href: '/contact', type: 'route' },
   ]
 
   const closeMenu = () => setIsMenuOpen(false)
   const toggleMenu = () => setIsMenuOpen((v) => !v)
+
+  const switchLocale = (next: Locale) => {
+    router.replace(pathname, { locale: next })
+    closeMenu()
+    setIsLangOpen(false)
+  }
 
   /**
    * アンカー挙動：
@@ -68,13 +86,32 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
     }
   }, [isMenuOpen])
 
+  // 言語ドロップダウン：外側クリック / Escで閉じる
+  useEffect(() => {
+    if (!isLangOpen) return
+    const onPointerDown = (e: PointerEvent) => {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setIsLangOpen(false)
+      }
+    }
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsLangOpen(false)
+    }
+    document.addEventListener('pointerdown', onPointerDown)
+    document.addEventListener('keydown', onKeyDown)
+    return () => {
+      document.removeEventListener('pointerdown', onPointerDown)
+      document.removeEventListener('keydown', onKeyDown)
+    }
+  }, [isLangOpen])
+
   return (
     <>
       <nav className={`nav ${isScrolled ? 'scrolled' : ''}`}>
         <button
           className="hamburger-button hamburger-left"
           onClick={toggleMenu}
-          aria-label="メニュー"
+          aria-label={t('menuLabel')}
           aria-expanded={isMenuOpen}
           aria-controls="mobile-menu-overlay"
         >
@@ -117,8 +154,42 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
 
           <li>
             <Link href="/shop" className="shop-link" onClick={closeMenu}>
-              Shop
+              {t('shop')}
             </Link>
+          </li>
+
+          <li className="lang-dropdown" ref={langRef}>
+            <button
+              type="button"
+              className="lang-trigger"
+              onClick={() => setIsLangOpen((v) => !v)}
+              aria-haspopup="listbox"
+              aria-expanded={isLangOpen}
+              aria-label={localeNames[locale]}
+            >
+              <span className="lang-globe" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M3 12h18M12 3c2.5 2.5 2.5 15.5 0 18M12 3c-2.5 2.5-2.5 15.5 0 18" />
+                </svg>
+              </span>
+              <span className="lang-code">{localeShort[locale]}</span>
+              <span className={`lang-caret ${isLangOpen ? 'open' : ''}`} aria-hidden="true" />
+            </button>
+
+            <ul className={`lang-menu ${isLangOpen ? 'open' : ''}`} role="listbox">
+              {routing.locales.map((loc) => (
+                <li key={loc} role="option" aria-selected={loc === locale}>
+                  <button
+                    type="button"
+                    className={`lang-menu-option ${loc === locale ? 'active' : ''}`}
+                    onClick={() => switchLocale(loc)}
+                  >
+                    {localeNames[loc]}
+                  </button>
+                </li>
+              ))}
+            </ul>
           </li>
         </ul>
       </nav>
@@ -133,7 +204,7 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
 
         <div className="menu-panel" role="dialog" aria-modal="true">
           <div className="menu-header">
-            <button className="menu-close" onClick={closeMenu} aria-label="Close menu">
+            <button className="menu-close" onClick={closeMenu} aria-label={t('closeLabel')}>
               ×
             </button>
 
@@ -167,7 +238,7 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
 
             <li>
               <Link href="/shop" onClick={closeMenu}>
-                Shop
+                {t('shop')}
               </Link>
             </li>
           </ul>
@@ -179,12 +250,22 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Instagram
+              {t('instagram')}
             </a>
 
-            <a className="menu-footer-link" href={EN_URL}>
-              EN
-            </a>
+            <div className="menu-lang-switch">
+              {routing.locales.map((loc) => (
+                <button
+                  key={loc}
+                  type="button"
+                  className={`menu-lang-option ${loc === locale ? 'active' : ''}`}
+                  onClick={() => switchLocale(loc)}
+                  aria-current={loc === locale}
+                >
+                  {localeNames[loc]}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

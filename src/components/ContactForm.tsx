@@ -4,20 +4,27 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
+import { useTranslations } from 'next-intl';
 
-// バリデーションスキーマ
-const contactSchema = z.object({
-  name: z.string().min(1, '氏名を入力してください'),
-  email: z.string().email('有効なメールアドレスを入力してください'),
-  subject: z.string().min(1, '件名を選択してください'),
-  message: z.string().min(10, 'メッセージは10文字以上で入力してください'),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+type ContactFormData = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
 
 export default function ContactForm() {
+  const t = useTranslations('contactPage');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  // バリデーションスキーマ（翻訳メッセージを使用するため関数内で定義）
+  const contactSchema = z.object({
+    name: z.string().min(1, t('form.validation.nameRequired')),
+    email: z.string().email(t('form.validation.emailInvalid')),
+    subject: z.string().min(1, t('form.validation.subjectRequired')),
+    message: z.string().min(10, t('form.validation.messageMinLength')),
+  });
 
   const {
     register,
@@ -47,8 +54,8 @@ export default function ContactForm() {
 
       setSubmitStatus('success');
       reset();
-      
-      // 3秒後にメッセージをクリア
+
+      // 5秒後にメッセージをクリア
       setTimeout(() => {
         setSubmitStatus('idle');
       }, 5000);
@@ -65,7 +72,7 @@ export default function ContactForm() {
       {/* 氏名 */}
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-stone-700 mb-2">
-          氏名 <span className="text-red-500">*</span>
+          {t('form.name.label')} <span className="text-red-500">*</span>
         </label>
         <input
           id="name"
@@ -74,7 +81,7 @@ export default function ContactForm() {
           className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all ${
             errors.name ? 'border-red-500' : 'border-stone-300'
           }`}
-          placeholder="山田 太郎"
+          placeholder={t('form.name.placeholder')}
         />
         {errors.name && (
           <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>
@@ -84,7 +91,7 @@ export default function ContactForm() {
       {/* メールアドレス */}
       <div>
         <label htmlFor="email" className="block text-sm font-medium text-stone-700 mb-2">
-          メールアドレス <span className="text-red-500">*</span>
+          {t('form.email.label')} <span className="text-red-500">*</span>
         </label>
         <input
           id="email"
@@ -93,7 +100,7 @@ export default function ContactForm() {
           className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all ${
             errors.email ? 'border-red-500' : 'border-stone-300'
           }`}
-          placeholder="example@email.com"
+          placeholder={t('form.email.placeholder')}
         />
         {errors.email && (
           <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
@@ -103,7 +110,7 @@ export default function ContactForm() {
       {/* 件名 */}
       <div>
         <label htmlFor="subject" className="block text-sm font-medium text-stone-700 mb-2">
-          お問い合わせ内容 <span className="text-red-500">*</span>
+          {t('form.subject.label')} <span className="text-red-500">*</span>
         </label>
         <select
           id="subject"
@@ -112,12 +119,12 @@ export default function ContactForm() {
             errors.subject ? 'border-red-500' : 'border-stone-300'
           }`}
         >
-          <option value="">選択してください</option>
-          <option value="product">商品について</option>
-          <option value="order">注文・配送について</option>
-          <option value="wholesale">卸・取引について</option>
-          <option value="media">メディア掲載・取材について</option>
-          <option value="other">その他</option>
+          <option value="">{t('form.subject.placeholder')}</option>
+          <option value="product">{t('form.subject.options.product')}</option>
+          <option value="order">{t('form.subject.options.order')}</option>
+          <option value="wholesale">{t('form.subject.options.wholesale')}</option>
+          <option value="media">{t('form.subject.options.media')}</option>
+          <option value="other">{t('form.subject.options.other')}</option>
         </select>
         {errors.subject && (
           <p className="mt-1 text-sm text-red-500">{errors.subject.message}</p>
@@ -127,7 +134,7 @@ export default function ContactForm() {
       {/* メッセージ */}
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-stone-700 mb-2">
-          メッセージ <span className="text-red-500">*</span>
+          {t('form.message.label')} <span className="text-red-500">*</span>
         </label>
         <textarea
           id="message"
@@ -136,7 +143,7 @@ export default function ContactForm() {
           className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all resize-none ${
             errors.message ? 'border-red-500' : 'border-stone-300'
           }`}
-          placeholder="お問い合わせ内容をご記入ください"
+          placeholder={t('form.message.placeholder')}
         />
         {errors.message && (
           <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
@@ -154,7 +161,7 @@ export default function ContactForm() {
               : 'bg-green-700 hover:bg-green-800 hover:shadow-lg'
           }`}
         >
-          {isSubmitting ? '送信中...' : '送信する'}
+          {isSubmitting ? t('form.submitButton.sending') : t('form.submitButton.idle')}
         </button>
       </div>
 
@@ -162,8 +169,7 @@ export default function ContactForm() {
       {submitStatus === 'success' && (
         <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
           <p className="text-green-800 text-center">
-            ✓ お問い合わせを受け付けました。<br />
-            担当者より折り返しご連絡いたします。
+            {t('form.successMessage')}
           </p>
         </div>
       )}
@@ -171,19 +177,20 @@ export default function ContactForm() {
       {submitStatus === 'error' && (
         <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
           <p className="text-red-800 text-center">
-            ✗ 送信に失敗しました。<br />
-            時間をおいて再度お試しいただくか、メールにて直接ご連絡ください。
+            {t('form.errorMessage')}
           </p>
         </div>
       )}
 
       {/* プライバシーポリシー */}
       <p className="text-xs text-stone-500 text-center">
-        送信することで、
-        <a href="/privacy" className="text-green-700 hover:underline">
-          プライバシーポリシー
-        </a>
-        に同意したものとみなされます。
+        {t.rich('form.privacyNotice', {
+          link: (chunks) => (
+            <a href="/privacy" className="text-green-700 hover:underline">
+              {chunks}
+            </a>
+          ),
+        })}
       </p>
     </form>
   );

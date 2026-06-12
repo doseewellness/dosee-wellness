@@ -1,0 +1,538 @@
+{
+  "nav": {
+    "philosophy": "Filosofía",
+    "products": "Productos",
+    "note": "Notas",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "shop": "Tienda",
+    "menuLabel": "Menú",
+    "closeLabel": "Cerrar menú",
+    "instagram": "Instagram"
+  },
+  "footer": {
+    "brand": "Dosee Wellness",
+    "tagline": "Una taza diaria para calmar\nla mente, el cuerpo y la piel.",
+    "productsTitle": "Productos",
+    "wellcha": "WellCha",
+    "dosee": "DoSee",
+    "companyTitle": "Empresa",
+    "about": "Sobre nosotros",
+    "note": "Diario",
+    "contact": "Contacto",
+    "followTitle": "Síguenos",
+    "instagram": "Instagram",
+    "copyright": "© 2025 Dosee Wellness. All rights reserved.",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de servicio"
+  },
+  "home": {
+    "hero": {
+      "highlight": "Balance, Redefined",
+      "subtitle": "Un pequeño espacio para recargar energías, cada día.",
+      "subtitle2": "DoSee Wellness es una marca de bienestar que acompaña suavemente\nesos momentos en que la mente, el cuerpo y la piel\nse equilibran de forma natural, incluso en los días más agitados.",
+      "badgeMind": "Mind — Concentración serena y calma",
+      "badgeBody": "Body — Cuidado diario del bienestar",
+      "badgeSkin": "Skin — Luminosidad que nace desde adentro",
+      "scroll": "SCROLL"
+    },
+    "philosophy": {
+      "label": "OUR PHILOSOPHY",
+      "title": "Un pequeño espacio para recargar energías, cada día.",
+      "lead": "Sin reglas estrictas ni hábitos forzados.\nSolo una pequeña pausa en tu jornada,\nque equilibra tranquila y fielmente\ntu mente, cuerpo y piel."
+    },
+    "circles": {
+      "mind": "Disolviendo la tensión del pensamiento,\nencontrando la concentración natural\ndentro de la quietud.",
+      "body": "Como una respiración profunda,\nsintonizando suavemente\nel ritmo de tu cuerpo.",
+      "skin": "Nutrida de hidratación,\nla piel recupera\nsu suavidad natural."
+    },
+    "parallax": {
+      "title": "La serenidad del té japonés,\nen una sola taza.",
+      "lead": "El poder de las hojas cultivadas en los campos de té,\nen un latte que puedes mantener, incluso en los días más ocupados."
+    },
+    "products": {
+      "label": "PRODUCT LINES",
+      "title": "DoSee Wellness Lineup",
+      "wellchaName": "WellCha",
+      "doseeName": "DoSee",
+      "description": "WellCha, basado en té japonés,\ny DoSee, nuestros wellness shots.\nCuidado suave para la mente y el cuerpo, en una forma que se adapta incluso a los días más ocupados.",
+      "wellchaTitle": "Armoniza cada día con gracia,\na través de la delicadeza del té japonés.",
+      "wellchaHighlight": "La energía natural del matcha y el hojicha\naporta calma y concentración a los días agitados.",
+      "actionLabel": "Comprar aquí:",
+      "matcha": "Matcha Latte",
+      "hojicha": "Hojicha Latte",
+      "doseeTitle": "Una pequeña taza\npara elevar tu día.",
+      "doseeDescription": "Nuestra línea de wellness shots.\nImpulsando suavemente el cuerpo y el ánimo.",
+      "doseeTag": "7-Day Ginger Shot",
+      "comingSoon": "Coming soon"
+    },
+    "about": {
+      "label": "ABOUT\nDOSEE WELLNESS",
+      "title": "Wellness,\ndesigned to fit into everyday life.",
+      "description": "DoSee Wellness es una marca construida\nno para esforzarse en estar bien,\nsino para encontrar el equilibrio de forma natural\nen medio de una vida cotidiana agitada.\nEn los días sin tiempo, en los días sin energía,\nofrecemos pequeños hábitos suaves\npara un breve momento\nde reconexión contigo mismo.",
+      "keyword1Title": "No pressure*",
+      "keyword1Body": "No como una regla difícil,\nsino como un hábito fácil de mantener.",
+      "keyword2Title": "Routine*",
+      "keyword2Body": "En una forma que puedes incorporar\nrápidamente, incluso en los días más ocupados.",
+      "keyword3Title": "With Care*",
+      "keyword3Body": "Acercándose con gentileza\nal cuerpo y a la mente."
+    },
+    "poetry": {
+      "left": "No con el esfuerzo de «arreglarse»,\nsino acercándose en silencio\ncuando anhelas detenerte y respirar.",
+      "right": "Que el tiempo que dedicas a DoSee Wellness\ntraiga a tu cotidianidad\nun espacio de quietud\ny una energía suave y positiva."
+    },
+    "note": {
+      "label": "DOSEE WELLNESS NOTE",
+      "title": "Diario",
+      "description": "Sobre la cultura del té japonés y hábitos de bienestar fáciles de mantener.",
+      "more": "Leer más del diario →"
+    }
+  },
+  "aboutPage": {
+    "heroCategory": "ABOUT US",
+    "heroTitle": "Sobre DoSee Wellness",
+    "heroSubtitle": "Bienestar que se integra en tu día a día, de forma natural.",
+    "ourStoryHeading": "Our Story",
+    "storyP1": "DoSee Wellness es una marca de bienestar japonesa creada en torno a una idea: que cuidarte debe sentirse fácil, no agotador.",
+    "storyP2Pre": "A través de nuestras dos líneas — el té japonés en forma de latte ",
+    "storyP2Mid": " y los wellness shots concentrados de ",
+    "storyP2Post": " — proponemos rituales diarios suaves para tu mente, cuerpo y piel.",
+    "storyP3": "Arraigados en la cultura del té japonés, la sabiduría de la fermentación y las tradiciones de la cocina medicinal, diseñamos cada producto con dos cosas en mente: lo fácil que es mantenerlo y lo bien que se siente usarlo.",
+    "storyP4": "Lo que más nos importa no es un estímulo rápido, sino una sensación de equilibrio tranquila y sostenible. Respetamos el poder natural de cada ingrediente — la interacción entre cafeína y teanina, los antioxidantes, las vitaminas — y lo transformamos en algo que puedas tomar cada día.",
+    "storyP5": "Con miras a mercados internacionales como Canadá, aspiramos a combinar la atención silenciosa al detalle que define la artesanía japonesa con un lenguaje de diseño que resuena en todas las culturas.",
+    "ourMissionHeading": "Our Mission",
+    "missionP1": "Nuestra misión es hacer que el bienestar se sienta como algo que quieres hacer, no algo que debes hacer. No por obligación, sino por genuino cuidado de ti mismo.",
+    "missionP2": "Una taza de té a la vez, esperamos apoyar un poco más de calma en tu mente, tu cuerpo y tu piel. Un ritual diario suave, sin presión alguna.",
+    "companyInfoHeading": "Company Information",
+    "companyNameLabel": "Empresa",
+    "companyNameValue": "DoSee Group Inc.",
+    "foundedLabel": "Fundación",
+    "foundedValue": "Abril de 2026",
+    "addressLabel": "Dirección",
+    "addressValue": "Shibuya Dogenzaka Tokyu Bldg. 2F-C\n1-10-8 Dogenzaka, Shibuya, Tokyo, Japan",
+    "businessLabel": "Actividad",
+    "businessValue": "Planificación, fabricación y venta de productos de bienestar",
+    "contactLabel": "Contacto",
+    "backButton": "← Volver al inicio"
+  },
+  "contactPage": {
+    "eyebrow": "CONTACT",
+    "heading": "Contáctanos",
+    "subheading": "¿Tienes alguna pregunta o consulta sobre DoSee Wellness? Completa el formulario a continuación y te responderemos a la brevedad.",
+    "otherContact": {
+      "heading": "Otras formas de contactarnos",
+      "instagram": "Instagram"
+    },
+    "faqPromo": {
+      "text": "También puedes encontrar tu respuesta en nuestras preguntas frecuentes",
+      "link": "Ver FAQ →"
+    },
+    "form": {
+      "name": {
+        "label": "Nombre completo",
+        "placeholder": "Ana García"
+      },
+      "email": {
+        "label": "Correo electrónico",
+        "placeholder": "ejemplo@correo.com"
+      },
+      "subject": {
+        "label": "Tema",
+        "placeholder": "Selecciona un tema",
+        "options": {
+          "product": "Sobre nuestros productos",
+          "order": "Pedidos y envíos",
+          "wholesale": "Mayoreo y alianzas",
+          "media": "Medios y prensa",
+          "other": "Otro"
+        }
+      },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Cuéntanos en qué podemos ayudarte"
+      },
+      "submitButton": {
+        "idle": "Enviar mensaje",
+        "sending": "Enviando..."
+      },
+      "successMessage": "✓ Tu mensaje ha sido recibido.\nNos pondremos en contacto contigo a la brevedad.",
+      "errorMessage": "✗ Algo salió mal.\nPor favor intenta de nuevo más tarde o contáctanos directamente por correo electrónico.",
+      "privacyNotice": "Al enviar este formulario, aceptas nuestra <link>Política de privacidad</link>.",
+      "validation": {
+        "nameRequired": "Por favor ingresa tu nombre",
+        "emailInvalid": "Por favor ingresa un correo electrónico válido",
+        "subjectRequired": "Por favor selecciona un tema",
+        "messageMinLength": "El mensaje debe tener al menos 10 caracteres"
+      }
+    }
+  },
+  "doseePage": {
+    "hero": {
+      "category": "BRAND / DOSEE",
+      "title": "Un pequeño shot\npara empezar bien tu día.",
+      "subtitle": "DoSee es una línea de wellness en formato shot, diseñada para encajar incluso en los días más ocupados. Para quienes quieren cuidarse pero no tienen tiempo ni energía para complicarse — un sorbo rápido que impulsa suavemente el cuerpo y el ánimo.",
+      "tag1": "Ginger & Botanical Wellness",
+      "tag2": "Daily small ritual",
+      "tag3": "Shot style, easy to keep"
+    },
+    "story": {
+      "label": "STORY",
+      "heading": "Entre querer sentirse mejor\ny nunca poder mantenerlo.",
+      "body": "Hay suplementos y productos de salud de sobra — y aun así, la mayoría terminan olvidados. DoSee nació de una mirada honesta a ese problema: la dificultad de seguir adelante.\nEn medio de una vida agitada, no quieres dejar tu cuerpo en un segundo plano. Pero tampoco puedes comprometerte con algo complicado todos los días. DoSee fue creado para encontrarte exactamente donde estás — una línea de wellness en formato shot construida sobre la simplicidad.\nCada botella concentra lo que necesitas, pero no se trata de beberla y olvidarse. Se trata de esa pequeña y silenciosa sensación al final del día: «Hoy hice algo por mí»."
+    },
+    "gingerShot": {
+      "label": "7-DAY GINGER SHOT",
+      "heading": "Un shot rápido para\nactivar tu cuerpo y tu ánimo.",
+      "body": "Una mezcla brillante de jengibre cálido y cítrico refrescante. Perfecto como impulso matutino o reinicio vespertino. Diseñado para apoyar suavemente el ritmo natural de tu cuerpo — sin depender del azúcar ni la cafeína.",
+      "concept": {
+        "title": "CONCEPT",
+        "body": "No buscamos algo que sientas obligado a beber — queremos que sea algo que genuinamente desees tomar. Una manera fácil y agradable de cuidarte, sin presión alguna."
+      },
+      "scenes": {
+        "heading": "Ideal para momentos como estos",
+        "item1": "· Comenzar la mañana con intención y una actitud positiva",
+        "item2": "· Reducir el consumo de café o bebidas energéticas",
+        "item3": "· Después de una comida abundante, o como reinicio al inicio de una nueva semana"
+      },
+      "status": {
+        "badge": "COMING SOON",
+        "body": "El 7-Day Ginger Shot está actualmente en desarrollo — estamos perfeccionando la receta, los sabores y la línea. Compartiremos actualizaciones aquí y en nuestro sitio oficial en cuanto se confirme la fecha de lanzamiento."
+      }
+    },
+    "ritual": {
+      "label": "FUTURE RITUAL",
+      "heading": "Tu reinicio diario,\nhecho increíblemente sencillo.",
+      "body": "Los detalles finales pueden cambiar, pero la visión del ginger shot de DoSee es simple:\n«Tómalo del refrigerador y bébelo.»\nAsí de fácil.",
+      "step1": "Por la mañana, un shot rápido después de lavarte los dientes.",
+      "step2": "O cuando llegue ese bajón de media tarde y necesites un reinicio.",
+      "step3": "Mantenlo durante una semana y quizás empieces a notar una sensación más ligera en tu cuerpo.",
+      "philosophy": {
+        "lead": "Los shots de DoSee están pensados para el hábito, no para la fuerza de voluntad.",
+        "body": "Incluso en los días más ocupados, queremos que conserves un pequeño acto de autocuidado. Estamos comprometidos a encontrar la forma más simple y sostenible que lo haga posible — y seguiremos buscándola."
+      }
+    },
+    "backButton": "← Volver al inicio"
+  },
+  "faqPage": {
+    "hero": {
+      "eyebrow": "SUPPORT",
+      "heading": "Preguntas frecuentes",
+      "subtitle": "Encuentra respuestas a las preguntas más comunes\nsobre los productos y servicios de DoSee Wellness."
+    },
+    "categories": {
+      "all": "Todas",
+      "wellcha": "WellCha",
+      "dosee": "DoSee",
+      "general": "General"
+    },
+    "items": {
+      "wellcha-1": {
+        "q": "¿Cómo debo tomar WellCha?",
+        "a": "Disuelve el polvo en agua caliente o leche tibia y disfrútalo como alternativa al café matutino, antes de trabajar o estudiar, o como ritual nocturno de relajación. Recomendamos 1–2 cucharaditas por cada 150–200 ml de agua caliente, o disuelto en 150–200 ml de leche tibia."
+      },
+      "wellcha-2": {
+        "q": "¿Cuál es la diferencia entre Matcha Latte y Hojicha Latte?",
+        "a": "Matcha Latte está elaborado con té verde en polvo y contiene una cantidad moderada de cafeína, conocido por apoyar la concentración y aportar antioxidantes. Hojicha Latte está hecho de té verde tostado, tiene menor contenido de cafeína, un aroma tostado y es ideal para momentos de relajación."
+      },
+      "wellcha-3": {
+        "q": "¿Cuánta cafeína contiene WellCha?",
+        "a": "Matcha Latte contiene aproximadamente 20–30 mg de cafeína por porción (alrededor de un tercio de un café típico). Hojicha Latte contiene aproximadamente 10–15 mg por porción. El equilibrio natural con la L-teanina favorece una concentración tranquila y sostenida — diferente al estímulo del café."
+      },
+      "wellcha-4": {
+        "q": "¿Puedo tomar WellCha durante el embarazo o la lactancia?",
+        "a": "WellCha contiene cafeína. Si estás embarazada o en período de lactancia, consulta a tu médico antes de consumirlo y disfrútalo solo con moderación. Como orientación general, se recomienda que la ingesta de cafeína durante el embarazo no supere los 200 mg por día. Hojicha Latte tiene menor contenido de cafeína."
+      },
+      "wellcha-5": {
+        "q": "¿Cuántas porciones al día se recomiendan?",
+        "a": "Sugerimos 1–2 porciones al día como referencia. Matcha Latte es ideal por las mañanas o para sesiones de concentración vespertinas, mientras que Hojicha Latte es perfecto para la relajación nocturna o antes de dormir."
+      },
+      "wellcha-6": {
+        "q": "¿Cómo debo almacenar WellCha y cuál es su vida útil?",
+        "a": "Sin abrir, el producto puede almacenarse durante un año a partir de la fecha de fabricación. Una vez abierto, mantenlo alejado de la luz solar directa en un lugar fresco y seco, y procura consumirlo en 1–2 meses. Recomendamos guardarlo en un recipiente hermético para protegerlo de la humedad."
+      },
+      "wellcha-7": {
+        "q": "¿WellCha contiene alérgenos?",
+        "a": "El producto contiene ingredientes derivados de la leche (leche de coco en polvo). Para información sobre otros alérgenos, consulta la lista de ingredientes en la página del producto. Si tienes alguna alergia, revisa todos los ingredientes cuidadosamente antes de comprar."
+      },
+      "wellcha-8": {
+        "q": "¿Los niños pueden tomar WellCha?",
+        "a": "Debido a que WellCha contiene cafeína, no lo recomendamos para niños pequeños. Para niños mayores de 10 años que no sean sensibles a la cafeína, comenzar con una pequeña cantidad puede ser adecuado. Hojicha Latte tiene menor contenido de cafeína y puede ser una opción más suave."
+      },
+      "dosee-1": {
+        "q": "¿Cuándo estará disponible DoSee (Ginger Shot)?",
+        "a": "DoSee está actualmente en desarrollo. Estamos finalizando la receta y los sabores, y anunciaremos la fecha de lanzamiento en nuestro sitio web oficial y redes sociales en cuanto esté confirmada."
+      },
+      "dosee-2": {
+        "q": "¿Cómo puedo recibir una notificación cuando DoSee esté disponible?",
+        "a": "Suscríbete a nuestro boletín en el sitio web oficial para recibir anuncios de nuevos productos en cuanto se publiquen. También compartimos las últimas novedades en Instagram y Twitter."
+      },
+      "dosee-3": {
+        "q": "¿Para qué sirve el Ginger Shot?",
+        "a": "DoSee combina la calidez del jengibre con la nota brillante y refrescante del cítrico. Está diseñado como un suave impulso para el ritmo natural de tu cuerpo — ideal como activador matutino, reinicio vespertino o cuando necesitas un impulso rápido."
+      },
+      "dosee-4": {
+        "q": "¿Cuál es la diferencia entre WellCha y DoSee?",
+        "a": "WellCha es un latte de té japonés diseñado como un hábito de bienestar cotidiano para saborear con calma. DoSee es un formato shot pensado para esos momentos en que deseas un impulso rápido y positivo para tu cuerpo y ánimo. Elige el que mejor se adapte a tu rutina y preferencias."
+      },
+      "general-1": {
+        "q": "¿Dónde puedo comprar los productos de DoSee Wellness?",
+        "a": "Los productos están disponibles en nuestra tienda oficial de Shopify en shop.doseewellness.com. Actualmente vendemos solo en línea."
+      },
+      "general-2": {
+        "q": "¿Hay gastos de envío?",
+        "a": "Los costos de envío varían según la dirección de entrega y el total del pedido. Consulta la página del producto o tu carrito de compras para más detalles. Ocasionalmente ofrecemos promociones de envío gratuito en pedidos que superen un importe determinado."
+      },
+      "general-3": {
+        "q": "¿Puedo devolver o cambiar un producto?",
+        "a": "Si tu producto llega defectuoso o es diferente a lo que pediste, contáctanos dentro de los 7 días posteriores a la recepción. Gestionaremos el cambio o reembolso a nuestra cuenta. Las devoluciones por preferencia del cliente se aceptan únicamente para artículos sin abrir y sin usar (el costo de envío de devolución corre por cuenta del cliente)."
+      },
+      "general-4": {
+        "q": "¿Qué métodos de pago se aceptan?",
+        "a": "Aceptamos tarjetas de crédito (Visa, Mastercard, American Express, JCB), Apple Pay, Google Pay y Shop Pay."
+      },
+      "general-5": {
+        "q": "¿Cuánto tarda la entrega?",
+        "a": "Los pedidos se entregan en un plazo de 3–5 días hábiles a partir de la fecha de compra (algunas regiones pueden tardar más). Puedes hacer seguimiento del estado de tu entrega con el número de rastreo proporcionado."
+      },
+      "general-6": {
+        "q": "¿Realizan envíos internacionales?",
+        "a": "Actualmente solo realizamos envíos dentro de Japón. Estamos considerando una expansión internacional en el futuro y publicaremos actualizaciones cuando estén disponibles."
+      },
+      "general-7": {
+        "q": "¿Está disponible el servicio de suscripción?",
+        "a": "Por el momento solo ofrecemos compras únicas, pero estamos explorando una opción de suscripción. Suscríbete a nuestro boletín para ser notificado cuando el servicio esté disponible."
+      },
+      "general-8": {
+        "q": "¿Cuál es el concepto de DoSee Wellness?",
+        "a": "Nuestra misión es ofrecer una pequeña y significativa taza que te ayude a cuidarte en medio de una vida agitada — no por obligación, sino por genuina amabilidad hacia ti mismo. Fusionamos la tradición de la cultura del té japonés con las necesidades del bienestar moderno, valorando tanto la facilidad del hábito como el confort cotidiano."
+      },
+      "general-9": {
+        "q": "¿Cómo puedo ponerme en contacto?",
+        "a": "Puedes escribirnos a info@dosee-wellness.com. Normalmente respondemos en un plazo de 1–2 días hábiles."
+      }
+    },
+    "contact": {
+      "heading": "¿Aún tienes preguntas?",
+      "body": "Si no encuentras lo que buscas,\nno dudes en ponerte en contacto con nosotros.",
+      "cta": "Contáctanos"
+    },
+    "backToTop": "← Volver al inicio"
+  },
+  "legal": {
+    "referenceNotice": "Esta página es una traducción de referencia. La versión en japonés es el texto oficial y vinculante.",
+    "backToTop": "← Volver al inicio",
+    "privacy": {
+      "title": "Política de privacidad",
+      "lastUpdated": "Última actualización: 2025年1月1日",
+      "section1Title": "1. Recopilación de información personal",
+      "section1Intro": "DoSee Wellness株式会社 (en adelante «la Empresa») recopila información personal para los siguientes fines:",
+      "section1Item1": "Envío de productos y prestación de servicios",
+      "section1Item2": "Atención a consultas de los clientes",
+      "section1Item3": "Comunicación de nuevos productos y servicios",
+      "section1Item4": "Comunicación de encuestas y campañas",
+      "section2Title": "2. Fines del uso de la información personal",
+      "section2Intro": "La Empresa utiliza la información personal obtenida de los clientes para los siguientes fines:",
+      "section2Item1": "Provisión de productos y servicios; cumplimiento de contratos",
+      "section2Item2": "Atención a consultas y asesoramiento de los clientes",
+      "section2Item3": "Suministro de información sobre productos y servicios; actividades de marketing",
+      "section2Item4": "Servicio posventa y encuestas de satisfacción",
+      "section2Item5": "Elaboración de datos estadísticos (en un formato que no identifica a las personas)",
+      "section3Title": "3. Divulgación de información personal a terceros",
+      "section3Intro": "La Empresa no proporcionará la información personal de los clientes a terceros, excepto en los siguientes casos:",
+      "section3Item1": "Cuando el cliente haya dado su consentimiento",
+      "section3Item2": "Cuando lo exija la ley",
+      "section3Item3": "Cuando sea necesario para proteger la vida, el cuerpo o la propiedad de una persona",
+      "section3Item4": "Cuando se proporcione a subcontratistas en la medida necesaria para la prestación del servicio, como empresas de mensajería",
+      "section4Title": "4. Gestión de la información personal",
+      "section4Body": "La Empresa mantiene la información personal de los clientes exacta y actualizada, y adopta las medidas necesarias — incluyendo el mantenimiento de sistemas de seguridad, el establecimiento de marcos de gestión y la formación exhaustiva de los empleados — para prevenir el acceso no autorizado, la pérdida, el daño, la falsificación o la filtración de información personal, gestionando dicha información con estricto cuidado.",
+      "section5Title": "5. Uso de cookies",
+      "section5Body": "Nuestro sitio web utiliza cookies para ofrecer mejores servicios. Las cookies nos permiten identificar tu navegador, pero no pueden identificarte personalmente. Si no deseas que se utilicen cookies, puedes desactivarlas en la configuración de tu navegador.",
+      "section6Title": "6. Derechos del cliente",
+      "section6Intro": "Los clientes tienen los siguientes derechos con respecto a la información personal en poder de la Empresa:",
+      "section6Item1": "Derecho a solicitar la divulgación",
+      "section6Item2": "Derecho a solicitar la corrección, adición o eliminación",
+      "section6Item3": "Derecho a solicitar la suspensión del uso o la supresión",
+      "section6Item4": "Derecho a solicitar el cese de la transferencia a terceros",
+      "section6Outro": "Para ejercer cualquiera de estos derechos, comunícate con nosotros a través del contacto indicado a continuación.",
+      "section7Title": "7. Cambios en la política de privacidad",
+      "section7Body": "La Empresa cumple con las leyes y demás normas relativas a la información personal, y se esfuerza por revisar y mejorar esta Política periódicamente. Cualquier revisión se publicará en este sitio web.",
+      "section8Title": "8. Consultas",
+      "section8Intro": "Para consultas sobre el tratamiento de información personal, comunícate con nosotros en:"
+    },
+    "terms": {
+      "title": "Términos de servicio",
+      "lastUpdated": "Última actualización: 2025年1月1日",
+      "article1Title": "Artículo 1 (Aplicación)",
+      "article1Body": "Estos Términos rigen las condiciones de uso del sitio web y la tienda en línea (en adelante «el Servicio») proporcionados por DoSee Wellness (en adelante «la Empresa»). Los usuarios aceptan estos Términos antes de utilizar el Servicio.",
+      "article2Title": "Artículo 2 (Registro de usuarios)",
+      "article2P1": "Quienes deseen utilizar el Servicio deben solicitar el registro por el método prescrito por la Empresa, tras aceptar estos Términos. El registro se completa con la aprobación de la Empresa.",
+      "article2P2Intro": "La Empresa podrá rechazar una solicitud de registro si determina que alguna de las siguientes circunstancias se aplica al solicitante, sin obligación alguna de divulgar el motivo:",
+      "article2P2Item1": "Se proporcionó información falsa en la solicitud de registro",
+      "article2P2Item2": "La solicitud proviene de una persona que ha incumplido estos Términos con anterioridad",
+      "article2P2Item3": "La Empresa considera el registro inapropiado por cualquier otro motivo",
+      "article3Title": "Artículo 3 (Compra y entrega de productos)",
+      "article3P1": "Los usuarios pueden adquirir los productos de la Empresa a través del Servicio.",
+      "article3P2": "Los productos son entregados por transportistas designados por la Empresa. Los gastos de envío varían según el destino de entrega y el importe del pedido.",
+      "article3P3": "La propiedad del producto se transfiere de la Empresa al usuario cuando el pago del producto se completa y el producto es entregado al usuario.",
+      "article4Title": "Artículo 4 (Devoluciones e intercambios)",
+      "article4P1": "Si un producto es defectuoso o se entrega un producto diferente al pedido, comunícate con nosotros dentro de los 7 días posteriores a la recepción. Gestionaremos el cambio o reembolso a nuestra cuenta.",
+      "article4P2": "Las devoluciones e intercambios por preferencia del cliente se aceptan dentro de los 7 días posteriores a la entrega, únicamente para productos sin abrir y sin usar. En estos casos, el cliente corre con los gastos de envío de devolución.",
+      "article4P3": "Debido a la naturaleza de los productos alimenticios, no se aceptan devoluciones ni intercambios tras la apertura.",
+      "article5Title": "Artículo 5 (Conductas prohibidas)",
+      "article5Intro": "Los usuarios no deben incurrir en ninguna de las siguientes conductas al utilizar el Servicio:",
+      "article5Item1": "Conductas que infrinjan leyes o la moral y el orden público",
+      "article5Item2": "Conductas relacionadas con actividades delictivas",
+      "article5Item3": "Conductas que infrinjan derechos de propiedad intelectual, derechos de imagen, privacidad, honor u otros derechos o intereses de la Empresa, otros usuarios del Servicio o terceros",
+      "article5Item4": "Conductas que impongan una carga excesiva sobre la red o el sistema del Servicio",
+      "article5Item5": "Conductas que puedan interferir con la operación del Servicio",
+      "article5Item6": "Acceso no autorizado o intentos del mismo",
+      "article5Item7": "Recopilación o acumulación de información personal de otros usuarios",
+      "article5Item8": "Uso del Servicio con fines indebidos",
+      "article5Item9": "Conductas que causen desventaja, daño o malestar a otros usuarios del Servicio o terceros",
+      "article5Item10": "Proveer directa o indirectamente beneficios a fuerzas antisociales en relación con los servicios de la Empresa",
+      "article5Item11": "Cualquier otra conducta que la Empresa considere inapropiada",
+      "article6Title": "Artículo 6 (Suspensión del Servicio)",
+      "article6P1Intro": "La Empresa podrá suspender o interrumpir la totalidad o parte del Servicio sin previo aviso a los usuarios si determina que alguna de las siguientes circunstancias se aplica:",
+      "article6P1Item1": "Al realizar mantenimiento o actualizaciones de los sistemas informáticos del Servicio",
+      "article6P1Item2": "Cuando la prestación del Servicio se vuelva imposible debido a causas de fuerza mayor como terremotos, rayos, incendios, cortes de luz o desastres naturales",
+      "article6P1Item3": "Cuando los equipos o las líneas de comunicación se interrumpan debido a un accidente",
+      "article6P1Item4": "Cuando la Empresa determine que la prestación del Servicio es difícil por cualquier otro motivo",
+      "article6P2": "La Empresa no asume ninguna responsabilidad por cualquier desventaja o daño sufrido por usuarios o terceros como resultado de la suspensión o interrupción del Servicio.",
+      "article7Title": "Artículo 7 (Exención de responsabilidad)",
+      "article7P1": "La Empresa no asume ninguna responsabilidad por las transacciones, comunicaciones o disputas que surjan entre usuarios y otros usuarios o terceros en relación con el Servicio.",
+      "article7P2": "La Empresa no asume ninguna responsabilidad por los daños sufridos por los usuarios derivados del Servicio. No obstante, esta exención no aplica cuando el contrato entre la Empresa y el usuario constituya un contrato de consumo conforme a la Ley de Contratos con Consumidores.",
+      "article8Title": "Artículo 8 (Cambios en el Servicio)",
+      "article8Body": "La Empresa podrá modificar el contenido del Servicio o discontinuarlo sin previo aviso a los usuarios, y no asume ninguna responsabilidad por los daños a los usuarios que pudieran derivarse de ello.",
+      "article9Title": "Artículo 9 (Cambios en los Términos)",
+      "article9Body": "La Empresa podrá modificar estos Términos en cualquier momento sin previo aviso a los usuarios cuando lo considere necesario. Los Términos revisados entran en vigor desde el momento en que se publican en este sitio web.",
+      "article10Title": "Artículo 10 (Ley aplicable y jurisdicción)",
+      "article10P1": "Estos Términos se interpretarán conforme a la legislación japonesa.",
+      "article10P2": "En caso de surgir una disputa en relación con el Servicio, el tribunal competente en la ubicación de la sede principal de la Empresa tendrá jurisdicción exclusiva acordada.",
+      "contactTitle": "Consultas",
+      "contactIntro": "Para consultas sobre estos Términos, comunícate con nosotros en:"
+    },
+    "commerce": {
+      "title": "Aviso conforme a la Ley de Transacciones Comerciales Específicas",
+      "lastUpdated": "Última actualización: 2026年1月1日",
+      "sellerHeading": "Vendedor",
+      "sellerLabel": "Vendedor",
+      "managerLabel": "Responsable",
+      "managerValue": "Representative Director",
+      "addressHeading": "Dirección",
+      "addressLabel": "Sede principal",
+      "addressNote": "* La dirección detallada se divulgará sin demora a solicitud.",
+      "contactHeading": "Contacto",
+      "emailLabel": "Correo electrónico",
+      "contactNote": "* No aceptamos consultas por teléfono. Por favor, contáctanos por correo electrónico.",
+      "pricesHeading": "Precios de venta",
+      "pricesNote": "Los precios de cada producto se muestran en las páginas de producto correspondientes. Todos los precios incluyen el impuesto al consumo.",
+      "additionalFeesHeading": "Cargos adicionales al precio del producto",
+      "shippingSubheading": "Envío",
+      "shippingNote": "Los gastos de envío varían según la región de entrega. Los detalles se muestran al realizar el pedido.",
+      "shippingItem1": "Tarifa única a nivel nacional: ¥800",
+      "shippingItem2": "Envío gratuito en pedidos de ¥5,000 o más",
+      "paymentFeeSubheading": "Comisión de procesamiento de pago",
+      "paymentFeeNote": "No se cobra comisión por pagos con tarjeta de crédito.",
+      "paymentMethodHeading": "Métodos de pago",
+      "paymentMethodIntro": "Están disponibles los siguientes métodos de pago:",
+      "paymentItem1": "Tarjetas de crédito (Visa, Mastercard, American Express, JCB)",
+      "paymentItem2": "Apple Pay",
+      "paymentItem3": "Google Pay",
+      "paymentItem4": "Shop Pay",
+      "paymentNote": "* Los pagos se procesan a través de Shopify Payments; la información de la tarjeta no es almacenada por la Empresa.",
+      "paymentTimingHeading": "Momento del pago",
+      "paymentTimingBody": "El pago sigue la fecha de cargo de cada compañía de tarjeta de crédito. El pago se completa en el momento en que se realiza el pedido.",
+      "deliveryHeading": "Plazo de entrega del producto",
+      "deliveryBody": "Los pedidos se envían normalmente dentro de los 3–7 días hábiles posteriores a la confirmación del pedido. Pueden producirse retrasos según las condiciones de entrega. Se enviará un número de seguimiento por correo electrónico al realizar el envío.",
+      "returnsHeading": "Devoluciones e intercambios",
+      "defectSubheading": "Productos defectuosos o enviados incorrectamente",
+      "defectNote": "Comunícate con nosotros por correo electrónico dentro de los 7 días posteriores a la recepción del producto. Gestionaremos el cambio o reembolso a nuestra cuenta.",
+      "defectItem1": "El producto tiene un defecto",
+      "defectItem2": "Se entregó un producto diferente al pedido",
+      "defectItem3": "El producto fue dañado durante el transporte",
+      "customerReturnSubheading": "Devoluciones a petición del cliente",
+      "customerReturnIntro": "Se aceptan devoluciones cuando se cumplen todas las siguientes condiciones:",
+      "customerReturnItem1": "Dentro de los 7 días posteriores a la recepción del producto",
+      "customerReturnItem2": "Producto sin abrir y sin usar",
+      "customerReturnItem3": "Etiqueta y embalaje del producto intactos",
+      "customerReturnNote": "Los gastos de envío de devolución corren por cuenta del cliente. Debido a la naturaleza de los productos alimenticios, no se aceptan devoluciones ni intercambios tras la apertura.",
+      "noReturnSubheading": "Productos no retornables",
+      "noReturnItem1": "Productos abiertos o usados",
+      "noReturnItem2": "Productos deteriorados o dañados por responsabilidad del cliente",
+      "noReturnItem3": "Productos para los que han transcurrido más de 8 días desde la entrega",
+      "refundHeading": "Reembolsos",
+      "refundBody": "Los reembolsos se procesan al método de pago original dentro de los 5–10 días hábiles posteriores a la confirmación de la devolución.",
+      "specialConditionsHeading": "Condiciones especiales de venta o prestación",
+      "specialConditionsBody": "Ninguna.",
+      "privacyHeading": "Tratamiento de la información personal",
+      "privacyBodyPrefix": "La información personal de los clientes se gestiona con estricto cuidado de acuerdo con nuestra ",
+      "privacyPolicyLinkText": "Política de privacidad",
+      "privacyBodySuffix": "."
+    }
+  },
+  "shopPage": {
+    "eyebrow": "Products",
+    "heading": "Todos los productos",
+    "productCount": "{count} productos",
+    "empty": "No hay productos disponibles."
+  },
+  "wellchaPage": {
+    "hero": {
+      "title": "La delicadeza del té japonés,\npara equilibrar tu día a día.",
+      "subtitle": "Una taza para nutrir tu mente, cuerpo y piel — todo a la vez.\nEl matcha y el hojicha de WellCha te apoyan en la concentración, la belleza y la relajación desde tres frentes."
+    },
+    "backButton": "← Volver al inicio",
+    "matcha": {
+      "heroCopy": "Para tus días agitados,\nuna taza que lo\ncuida todo.",
+      "introLead": "En el ajetreo de la vida cotidiana,\nuna taza para cuidar tu mente, cuerpo y piel — todo a la vez.\n\nEl matcha de DoSee Wellness\nte apoya en la concentración, la belleza y la relajación desde tres frentes.\n\nUn nuevo ritual de matcha para el bienestar moderno.\nNacido de siglos de cultura del té japonés — una taza de bienestar que puedes beber.\n\nDoSee Wellness ha reinventado el matcha\nen una forma que puedes mantener, incluso en tus días más ocupados.",
+      "feature1": {
+        "title": "🍃 Concentración Serena y Sostenida",
+        "text": "Catequinas × Teanina\nConcentración constante y tranquila",
+        "note": "※ Una alerta suave — diferente al café."
+      },
+      "feature2": {
+        "title": "✨ Cuidado de la Piel que Bebes",
+        "text": "Antioxidantes × Vitaminas\nLuminosidad y resplandor, desde adentro",
+        "note": "※ Para tu rutina diaria de cuidado de la piel."
+      },
+      "feature3": {
+        "title": "🌙 Relajación Profunda",
+        "text": "El efecto calmante de la teanina,\nguiando la mente y el cuerpo hacia el descanso",
+        "note": "※ Una taza perfecta para cerrar el día."
+      },
+      "ctaLeft": "¿Por qué no cambias\nla taza de hoy por matcha?",
+      "ctaRight": "Un pequeño hábito diario\ntransforma silenciosamente tu concentración, energía y ánimo.\n\nCon el matcha de DoSee Wellness,\ncomienza tu propio\n«momento de equilibrio».",
+      "ctaButton": "Comprar Matcha Latte"
+    },
+    "hojicha": {
+      "heroTitle": "Un nuevo ritual de hojicha",
+      "heroSub": "En medio de una vida agitada, deja que tu mente y cuerpo se relajen.\nDescubre el encanto tranquilo del hojicha.",
+      "messageText": "En el ajetreo de cada día,\nuna taza que desenreda suavemente\ntu mente, cuerpo y respiración.\n\nEl hojicha de DoSee Wellness\nte envuelve en una calidez suave\ny una calma profunda y serena.",
+      "habitTitle": "Un nuevo ritual de hojicha",
+      "habitLead": "El hojicha nace del tostado lento del té verde —\nuna taza de bienestar bebible.\nTostado, fácil de tomar y bajo en cafeína.\n\nDoSee Wellness lo ha rediseñado\nen una forma que puedes mantener,\nincluso en tus días más ocupados.",
+      "checklistAriaLabel": "Momentos recomendados para disfrutarlo",
+      "checklist": {
+        "morning": "Antes de tu café matutino",
+        "noon": "Una pausa a media jornada",
+        "night": "Después de cenar, como relajante ritual antes de dormir",
+        "latte": "Como latte — su aroma suave y tostado se despliega delicadamente"
+      },
+      "benefit1": {
+        "title": "La Suave Fuerza de la Naturaleza",
+        "text": "Minerales y polifenoles\napoyando tu bienestar diario.\nEl despertar justo."
+      },
+      "benefit2": {
+        "title": "Calidez sin Pesadez",
+        "text": "El aroma tostado y\nuna calidez que irradia desde adentro.\nSuave para el cuerpo."
+      },
+      "benefit3": {
+        "title": "Relajación Profunda",
+        "text": "Teanina + cafeína naturalmente baja.\nTu momento ideal de relajación nocturna."
+      },
+      "ctaAriaLabel": "Comprar",
+      "finalCtaTitle": "Join us on your wellness journey today!",
+      "finalCtaSub": "Da tu primer paso hacia el bienestar, ahora mismo.\nHacia días mejores, a partir de hoy.",
+      "ctaButton": "Comprar Hojicha Latte"
+    }
+  }
+}

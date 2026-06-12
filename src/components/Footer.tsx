@@ -1,38 +1,42 @@
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
+import { multiline } from './MultiLine'
 
 const Footer = () => {
+  const t = useTranslations('footer')
+
   return (
     <footer>
       <div className="footer-content">
         <div className="footer-section">
-          <h3>Dosee Wellness</h3>
-          <p>こころ・からだ・肌を整える、<br />日々の一杯を。</p>
+          <h3>{t('brand')}</h3>
+          <p>{multiline(t('tagline'))}</p>
         </div>
-        
+
         <div className="footer-section">
-          <h3>Products</h3>
-          <Link href="/wellcha">WellCha</Link>
-          <Link href="/dosee">DoSee</Link>
+          <h3>{t('productsTitle')}</h3>
+          <Link href="/wellcha">{t('wellcha')}</Link>
+          <Link href="/dosee">{t('dosee')}</Link>
         </div>
-        
+
         <div className="footer-section">
-          <h3>Company</h3>
-          <Link href="/about">会社概要</Link>
-          <Link href="/blog">読みもの</Link>
-          <a href="mailto:doseewellness@gmail.com">お問い合わせ</a>
+          <h3>{t('companyTitle')}</h3>
+          <Link href="/about">{t('about')}</Link>
+          <Link href="/blog">{t('note')}</Link>
+          <a href="mailto:doseewellness@gmail.com">{t('contact')}</a>
         </div>
-        
+
         <div className="footer-section">
-          <h3>Follow</h3>
-          <a href="https://www.instagram.com/wellchamatcha" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <h3>{t('followTitle')}</h3>
+          <a href="https://www.instagram.com/wellchamatcha" target="_blank" rel="noopener noreferrer">{t('instagram')}</a>
         </div>
       </div>
-      
+
       <div className="footer-bottom">
         <p>
-          &copy; 2025 Dosee Wellness. All rights reserved. | {' '}
-          <Link href="/privacy" style={{color: 'inherit', textDecoration: 'underline'}}>Privacy Policy</Link> | {' '}
-          <Link href="/terms" style={{color: 'inherit', textDecoration: 'underline'}}>Terms of Service</Link>
+          {t('copyright')} | {' '}
+          <Link href="/privacy" style={{color: 'inherit', textDecoration: 'underline'}}>{t('privacy')}</Link> | {' '}
+          <Link href="/terms" style={{color: 'inherit', textDecoration: 'underline'}}>{t('terms')}</Link>
         </p>
       </div>
     </footer>

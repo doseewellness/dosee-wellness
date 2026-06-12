@@ -1,10 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
+import { multiline } from './MultiLine'
 
 const HeroSection = () => {
   const [chars, setChars] = useState<string[]>([])
   const text = 'DoSee Wellness'
+  const t = useTranslations('home.hero')
 
   useEffect(() => {
     setTimeout(() => {
@@ -47,32 +50,30 @@ const HeroSection = () => {
         </div>
 
         {/* ※ここ、元コードは <p className="highlight"></p> Balance... になってて崩れるので整形 */}
-        <p className="highlight">Balance, Redefined</p>
-        <p className="subtitle">整う余白を、日常に。</p>
+        <p className="highlight">{t('highlight')}</p>
+        <p className="subtitle">{t('subtitle')}</p>
 
         <p className="subtitle2">
-          DoSee Wellness は、忙しい毎日の中で<br />
-          「こころ・からだ・肌」、自然に整っていく時間を<br />
-          やさしく支えるウェルネスブランドです。
+          {multiline(t('subtitle2'))}
         </p>
 
         <div className="hero-badges">
           <span className="badge badge-mind">
             <span className="badge-dot"></span>
-            Mind — 静かな集中と落ち着き
+            {t('badgeMind')}
           </span>
           <span className="badge badge-body">
             <span className="badge-dot"></span>
-            Body — 日々のコンディションケア
+            {t('badgeBody')}
           </span>
           <span className="badge badge-skin">
             <span className="badge-dot"></span>
-            Skin — 内側から満ちる透明感
+            {t('badgeSkin')}
           </span>
         </div>
       </div>
 
-      <div className="scroll-indicator">SCROLL</div>
+      <div className="scroll-indicator">{t('scroll')}</div>
     </section>
   )
 }

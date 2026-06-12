@@ -1,0 +1,538 @@
+{
+  "nav": {
+    "philosophy": "理念",
+    "products": "产品",
+    "note": "文章",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "shop": "商店",
+    "menuLabel": "菜单",
+    "closeLabel": "关闭菜单",
+    "instagram": "Instagram"
+  },
+  "footer": {
+    "brand": "Dosee Wellness",
+    "tagline": "呵护身心与肌肤，\n从每日一杯开始。",
+    "productsTitle": "Products",
+    "wellcha": "WellCha",
+    "dosee": "DoSee",
+    "companyTitle": "Company",
+    "about": "关于我们",
+    "note": "阅读文章",
+    "contact": "联系我们",
+    "followTitle": "Follow",
+    "instagram": "Instagram",
+    "copyright": "© 2025 Dosee Wellness. All rights reserved.",
+    "privacy": "隐私政策",
+    "terms": "服务条款"
+  },
+  "home": {
+    "hero": {
+      "highlight": "Balance, Redefined",
+      "subtitle": "为日常留一片舒缓的空间。",
+      "subtitle2": "DoSee Wellness 是一个温柔守护的健康品牌，\n在忙碌的每一天里，\n让身心与肌肤自然而然地得到舒缓与平衡。",
+      "badgeMind": "Mind — 宁静的专注与平和",
+      "badgeBody": "Body — 日常身体状态的呵护",
+      "badgeSkin": "Skin — 由内而外焕发的通透感",
+      "scroll": "SCROLL"
+    },
+    "philosophy": {
+      "label": "OUR PHILOSOPHY",
+      "title": "为日常留一片舒缓的空间。",
+      "lead": "无需严苛的规则，也无需刻意坚持的习惯。\n只是日常中那一小片喘息的空间，\n静静地、确实地\n滋养着心灵、身体与肌肤。"
+    },
+    "circles": {
+      "mind": "解开思绪的紧绷，\n在宁静之中，\n回归自然的专注。",
+      "body": "如同深呼吸一般，\n轻柔地调整\n身体的节律。",
+      "skin": "水润充盈，\n素颜重现\n本来的柔软光泽。"
+    },
+    "parallax": {
+      "title": "日本茶的宁静，\n就在这一杯之中。",
+      "lead": "茶园孕育的茶叶之力，\n化作忙碌日常中也能坚持的拿铁形式。"
+    },
+    "products": {
+      "label": "PRODUCT LINES",
+      "title": "DoSee Wellness Lineup",
+      "wellchaName": "WellCha",
+      "doseeName": "DoSee",
+      "description": "以日本茶为基础的 WellCha，\n以及浓缩健康的 DoSee 系列。\n以便于坚持的形式，守护忙碌日常中的身心。",
+      "wellchaTitle": "借日本茶的温柔，\n让每天更从容。",
+      "wellchaHighlight": "抹茶与焙茶的天然能量，\n为忙碌的日子带来平静与专注。",
+      "actionLabel": "立即购买：",
+      "matcha": "Matcha Latte",
+      "hojicha": "Hojicha Latte",
+      "doseeTitle": "让每一天都积极向前的\n小小一杯。",
+      "doseeDescription": "浓缩型健康系列。\n轻柔地推动身体与心情向前。",
+      "doseeTag": "7-Day Ginger Shot",
+      "comingSoon": "Coming soon"
+    },
+    "about": {
+      "label": "ABOUT\nDOSEE WELLNESS",
+      "title": "Wellness,\ndesigned to fit into everyday life.",
+      "description": "DoSee Wellness 是一个\n不追求「努力调整」，\n而是让身体在忙碌日常中\n自然得到舒缓的健康品牌。\n无论是没有时间的日子，还是没有余裕的日子，\n都为你送上片刻\n回归自我的\n细小而温柔的习惯。",
+      "keyword1Title": "No pressure*",
+      "keyword1Body": "不是难以坚持的规则，\n而是轻松延续的日常习惯。",
+      "keyword2Title": "Routine*",
+      "keyword3Title": "With Care*",
+      "keyword2Body": "即便在忙碌的日子里，\n也能随手融入生活。",
+      "keyword3Body": "温柔地贴近\n身体与内心。"
+    },
+    "poetry": {
+      "left": "不是用力「整理好自己」，\n而是在想喘口气的时候，\n悄悄陪伴在你身边。",
+      "right": "愿你选择 DoSee Wellness 的每一刻，\n都为你的日常\n带来宁静的余白与\n温柔向前的能量。"
+    },
+    "note": {
+      "label": "DOSEE WELLNESS NOTE",
+      "title": "阅读文章",
+      "description": "关于日本茶文化，以及易于坚持的健康生活小贴士。",
+      "more": "查看更多文章 →"
+    }
+  },
+  "aboutPage": {
+    "heroCategory": "ABOUT US",
+    "heroTitle": "关于 DoSee Wellness",
+    "heroSubtitle": "即使在忙碌的日常中也能坚持的健康生活。",
+    "ourStoryHeading": "Our Story",
+    "storyP1": "DoSee Wellness 是一个以「即使在忙碌的现代生活中也能坚持的健康方式」为主题、诞生于日本的品牌。",
+    "storyP2Pre": "我们通过以日本茶为基础的 ",
+    "storyP2Mid": " 与浓缩型健康产品 ",
+    "storyP2Post": " 两条产品线，为您提供温柔滋养身心与肌肤的日常习惯。",
+    "storyP3": "以日本茶文化、发酵与药膳的智慧，以及对日常生活的真实感受为基础，我们在「易于坚持」与「舒适愉悦」之间寻求平衡，精心设计每一款产品。",
+    "storyP4": "我们所珍视的，不是瞬间的刺激，而是温和且可持续的身体状态。在尊重咖啡因与茶氨酸的平衡、抗氧化成分及维生素等素材本身力量的同时，追求每天都能无负担坚持的形式。",
+    "storyP5": "在放眼加拿大等海外市场的同时，我们也致力于将「日本式的细腻用心」与「具有全球共鸣的设计」融为一体。",
+    "ourMissionHeading": "Our Mission",
+    "missionP1": "我们的使命，是传递一种不以「必须调整好自己」的义务感为出发点，而是源于「想好好爱护自己」这份心意的健康习惯。",
+    "missionP2": "通过一杯茶，让身心与肌肤一点点地得到舒缓。我们支持这样从容、无压力的日常仪式。",
+    "companyInfoHeading": "Company Information",
+    "companyNameLabel": "公司名称",
+    "companyNameValue": "株式会社DoSee Group",
+    "foundedLabel": "成立时间",
+    "foundedValue": "2026年4月",
+    "addressLabel": "地址",
+    "addressValue": "东京都涩谷区道玄坂1丁目10番8号\n涩谷道玄坂东急大楼2F-C",
+    "businessLabel": "业务内容",
+    "businessValue": "健康产品企划、制造与销售",
+    "contactLabel": "联系方式",
+    "backButton": "← 返回首页"
+  },
+  "contactPage": {
+    "eyebrow": "CONTACT",
+    "heading": "联系我们",
+    "subheading": "如有关于 DoSee Wellness 的问题或咨询，欢迎通过以下表单随时联系我们。",
+    "otherContact": {
+      "heading": "其他联系方式",
+      "instagram": "Instagram"
+    },
+    "faqPromo": {
+      "text": "也可查阅常见问题解答",
+      "link": "查看 FAQ →"
+    },
+    "form": {
+      "name": {
+        "label": "姓名",
+        "placeholder": "张三"
+      },
+      "email": {
+        "label": "电子邮件地址",
+        "placeholder": "example@email.com"
+      },
+      "subject": {
+        "label": "咨询内容",
+        "placeholder": "请选择",
+        "options": {
+          "product": "关于产品",
+          "order": "关于订单与配送",
+          "wholesale": "关于批发与合作",
+          "media": "关于媒体报道与采访",
+          "other": "其他"
+        }
+      },
+      "message": {
+        "label": "留言内容",
+        "placeholder": "请填写您的咨询内容"
+      },
+      "submitButton": {
+        "idle": "发送",
+        "sending": "发送中..."
+      },
+      "successMessage": "✓ 您的咨询已收到。\n我们的工作人员将尽快与您联系。",
+      "errorMessage": "✗ 发送失败。\n请稍后再试，或直接通过电子邮件与我们联系。",
+      "privacyNotice": "提交即表示您同意我们的<link>隐私政策</link>。",
+      "validation": {
+        "nameRequired": "请输入姓名",
+        "emailInvalid": "请输入有效的电子邮件地址",
+        "subjectRequired": "请选择咨询类别",
+        "messageMinLength": "留言内容请至少输入10个字符"
+      }
+    }
+  },
+  "doseePage": {
+    "hero": {
+      "category": "BRAND / DOSEE",
+      "title": "让每一天都积极向前的，\n小小一杯。",
+      "subtitle": "DoSee 是一款无负担、易于坚持的浓缩型健康系列。为那些「想好好调养身体，却时间与精力都有限」的每一天而生——一口饮尽，温柔地推动身体与心情向前。",
+      "tag1": "Ginger & Botanical Wellness",
+      "tag2": "Daily small ritual",
+      "tag3": "Shot style, easy to keep"
+    },
+    "story": {
+      "label": "STORY",
+      "heading": "在「想好好调养」\n与「坚持不下去」之间。",
+      "body": "明明有那么多保健品和健康食品，到头来还是没能坚持下去——。DoSee 所关注的，正是这种「坚持不下去」的本质。\n在忙碌的日常中，不想把身体健康一再搁置。但每天都坚持做复杂的事情，实在没有余裕。DoSee 就是为了回应这份心情而诞生的「浓缩型」健康系列。\n在将所需精华浓缩的同时，它也不只是一饮而尽了事，而是希望成为那种能留下「今天也为自己做了一件事」这份小小实感的存在。"
+    },
+    "gingerShot": {
+      "label": "7-DAY GINGER SHOT",
+      "heading": "轻轻一饮，\n唤醒身体与精神。",
+      "body": "将生姜的暖意与柑橘的清爽感相结合的浓缩饮品。可作为清晨的提神饮料，也可作为午后的重置时刻。无需依赖过多糖分或咖啡因，温柔地为身体本来的节律助力。",
+      "concept": {
+        "title": "CONCEPT",
+        "body": "我们追求的不是「不得不喝」，而是「想好好为自己喝一杯」的分量与口感。作为一种即使不勉强自己也能好好照顾自己的选择。"
+      },
+      "scenes": {
+        "heading": "推荐场景",
+        "item1": "· 想用早晨的一杯，以积极的心态开启新的一天",
+        "item2": "· 想减少咖啡或功能性饮料的摄入",
+        "item3": "· 饮食过量的次日，或想在一周开始时重置身体状态时"
+      },
+      "status": {
+        "badge": "COMING SOON",
+        "body": "7-Day Ginger Shot 目前正在进行配方、口味及产品阵容的开发。一旦确定上市时间，将在本页面及官方网站上发布通知。"
+      }
+    },
+    "ritual": {
+      "label": "FUTURE RITUAL",
+      "heading": "将「今日重置的一杯」，\n变得更加轻松便捷。",
+      "body": "最终规格可能有所调整，但 DoSee 姜射饮品的理念十分简单：\n\"从冰箱取出，直接饮用\"\n就是这么简单。",
+      "step1": "清晨刷牙后，轻轻来上一杯。",
+      "step2": "或在午后感到疲惫、想要重置状态时。",
+      "step3": "坚持一周，感受身体「轻盈感」的设计目标。",
+      "philosophy": {
+        "lead": "DoSee 的浓缩饮品，是为了「习惯」而生，而非靠「意志力」坚持。",
+        "body": "即使再忙碌，也希望你能为自己保留这「一个小小的行动」。为此，我们将持续探索最简单、最易于坚持的形式。"
+      }
+    },
+    "backButton": "← 返回首页"
+  },
+  "faqPage": {
+    "hero": {
+      "eyebrow": "SUPPORT",
+      "heading": "常见问题",
+      "subtitle": "关于 DoSee Wellness 产品与服务的\n常见问题解答。"
+    },
+    "categories": {
+      "all": "全部",
+      "wellcha": "WellCha",
+      "dosee": "DoSee",
+      "general": "综合"
+    },
+    "items": {
+      "wellcha-1": {
+        "q": "WellCha 应该怎么喝？",
+        "a": "可溶于热水或牛奶中饮用，作为早晨咖啡的替代、工作或学习前的提神饮品，或夜晚的放松时光。建议热水冲泡时，150–200ml 热水中加入1–2茶匙；牛奶冲泡时，溶于150–200ml 温热牛奶中饮用。"
+      },
+      "wellcha-2": {
+        "q": "Matcha Latte 和 Hojicha Latte 有什么区别？",
+        "a": "Matcha Latte 以绿茶粉末制成，含有适量咖啡因，以提升专注力和抗氧化作用为特点。Hojicha Latte 以焙制绿茶制成，咖啡因含量较低，香气醇厚，更适合放松心情。"
+      },
+      "wellcha-3": {
+        "q": "咖啡因含量是多少？",
+        "a": "Matcha Latte 每杯约含20–30mg 咖啡因（约为咖啡的三分之一）。Hojicha Latte 每杯约含10–15mg，咖啡因较少。与茶氨酸的协同作用，带来与咖啡不同的平和专注感。"
+      },
+      "wellcha-4": {
+        "q": "孕期或哺乳期可以饮用吗？",
+        "a": "由于含有咖啡因，孕期或哺乳期女性请在咨询医生后适量饮用。一般建议孕期每日咖啡因摄入量不超过200mg。Hojicha Latte 的咖啡因含量相对较低。"
+      },
+      "wellcha-5": {
+        "q": "每天建议饮用多少杯？",
+        "a": "建议每天1–2杯为宜。Matcha Latte 适合早晨或需要集中注意力的午后，Hojicha Latte 则适合夜晚的放松时光或睡前饮用。"
+      },
+      "wellcha-6": {
+        "q": "请问保存方法和保质期是怎样的？",
+        "a": "未开封状态下，自生产日起可保存一年。开封后请避免直射阳光，存放于阴凉干燥处，建议在1–2个月内饮用完毕。为防受潮，推荐使用密封容器存放。"
+      },
+      "wellcha-7": {
+        "q": "产品是否含有过敏原？",
+        "a": "产品含有乳制品成分（椰奶粉）。其他过敏原请参阅商品页面上的成分表。如有过敏症状，请务必在确认所有成分后再购买。"
+      },
+      "wellcha-8": {
+        "q": "儿童可以饮用吗？",
+        "a": "由于含有咖啡因，不建议年幼儿童饮用。对咖啡因不敏感的10岁以上儿童，可从少量开始尝试。Hojicha Latte 咖啡因含量较低，是相对温和的选择。"
+      },
+      "dosee-1": {
+        "q": "DoSee（姜汁浓缩饮品）何时发售？",
+        "a": "目前正在开发中。配方与口味的最终调整完成后，将在官方网站和社交媒体上第一时间公布发售时间。"
+      },
+      "dosee-2": {
+        "q": "如何才能收到发售通知？",
+        "a": "订阅官方网站的电子报，即可第一时间获取新品上市信息。我们也在 Instagram 和 Twitter 上持续发布最新资讯。"
+      },
+      "dosee-3": {
+        "q": "姜汁浓缩饮品有什么功效？",
+        "a": "将生姜的暖身效果与柑橘的清爽感相结合。以温柔助推身体本来节律为设计目标，适合作为清晨的提神饮品、午后的重置时刻，或需要补充活力时饮用。"
+      },
+      "dosee-4": {
+        "q": "WellCha 和 DoSee 有什么区别？",
+        "a": "WellCha 是以日本茶为基础的拿铁，专为日常饮用的健康习惯而设计。DoSee 是浓缩饮品系列，可随时一饮而尽，旨在积极推动身体与心情向前。请根据使用场景和个人喜好选择适合自己的产品。"
+      },
+      "general-1": {
+        "q": "在哪里可以购买？",
+        "a": "可在官方 Shopify 商店（shop.doseewellness.com）购买。目前仅提供线上销售。"
+      },
+      "general-2": {
+        "q": "需要支付运费吗？",
+        "a": "运费因配送地址和订单金额而异。详情请在商品页面或购物车中查看。满足一定金额后可享受免运费活动，具体以不定期促销为准。"
+      },
+      "general-3": {
+        "q": "可以退货或换货吗？",
+        "a": "如商品存在瑕疵，或收到的商品与订单不符，请在商品到达后7天内联系我们。我们将承担费用为您安排换货或退款。因个人原因申请退货，仅接受未开封、未使用的商品（退货运费由顾客承担）。"
+      },
+      "general-4": {
+        "q": "支持哪些付款方式？",
+        "a": "支持信用卡（Visa、Mastercard、American Express、JCB）、Apple Pay、Google Pay 及 Shop Pay。"
+      },
+      "general-5": {
+        "q": "配送需要多长时间？",
+        "a": "下单后通常3–5个工作日内送达（部分地区除外）。可使用追踪号查询配送状态。"
+      },
+      "general-6": {
+        "q": "是否支持海外配送？",
+        "a": "目前仅限日本国内配送。我们正在考虑未来拓展海外市场，有新进展将及时公告。"
+      },
+      "general-7": {
+        "q": "可以订阅定期购买吗？",
+        "a": "目前仅支持单次购买，但正在研究引入定期购买服务。订阅电子报即可在服务开启时收到通知。"
+      },
+      "general-8": {
+        "q": "DoSee Wellness 的理念是什么？",
+        "a": "我们的目标是在忙碌的日常中，为您送上一份不出于义务、而发自内心「想好好爱护自己」的小小一杯。将日本茶文化与现代健康需求相结合，重视「易于坚持」与「舒适愉悦」之间的平衡。"
+      },
+      "general-9": {
+        "q": "如何联系你们？",
+        "a": "请通过电子邮件（info@dosee-wellness.com）与我们联系。通常会在1–2个工作日内回复。"
+      }
+    },
+    "contact": {
+      "heading": "仍未解决？",
+      "body": "如果找不到您需要的信息，\n欢迎随时与我们联系。",
+      "cta": "联系我们"
+    },
+    "backToTop": "← 返回首页"
+  },
+  "legal": {
+    "referenceNotice": "本页面为参考译文，正式文本以日语版本为准。",
+    "backToTop": "← 返回首页",
+    "privacy": {
+      "title": "隐私政策",
+      "lastUpdated": "最终更新日：2025年1月1日",
+      "section1Title": "1. 个人信息的获取",
+      "section1Intro": "DoSee Wellness株式会社（以下简称「本公司」）将出于以下目的获取个人信息：",
+      "section1Item1": "商品的发货及服务的提供",
+      "section1Item2": "回应顾客咨询",
+      "section1Item3": "新产品及服务的通知",
+      "section1Item4": "问卷调查及活动的通知",
+      "section2Title": "2. 个人信息的使用目的",
+      "section2Intro": "本公司将把从顾客处获取的个人信息用于以下目的：",
+      "section2Item1": "商品及服务的提供、合同的履行",
+      "section2Item2": "回应顾客咨询与商谈",
+      "section2Item3": "有关商品及服务的信息提供、营销活动",
+      "section2Item4": "售后服务、满意度调查",
+      "section2Item5": "统计数据的制作（以无法识别个人的形式）",
+      "section3Title": "3. 个人信息的第三方提供",
+      "section3Intro": "除以下情形外，本公司不会向第三方提供顾客的个人信息：",
+      "section3Item1": "取得顾客同意的情形",
+      "section3Item2": "依据法律法规的情形",
+      "section3Item3": "为保护他人生命、身体或财产安全而必要的情形",
+      "section3Item4": "在服务提供所必要的范围内，向配送公司等业务委托方提供的情形",
+      "section4Title": "4. 个人信息的管理",
+      "section4Body": "本公司将保持顾客个人信息的准确性与最新状态，并采取维护安全系统、完善管理体制、彻底进行员工教育等必要措施，防止对个人信息的非法访问、丢失、损坏、篡改、泄露等，严格管理个人信息。",
+      "section5Title": "5. Cookie的使用",
+      "section5Body": "本公司网站为提供更优质的服务而使用 Cookie。Cookie 的使用可以识别顾客的浏览器，但无法识别个人身份。如不希望使用 Cookie，可在浏览器设置中将其关闭。",
+      "section6Title": "6. 顾客的权利",
+      "section6Intro": "顾客对本公司所持有的个人信息享有以下权利：",
+      "section6Item1": "查阅请求",
+      "section6Item2": "更正、补充、删除请求",
+      "section6Item3": "停止使用、消除请求",
+      "section6Item4": "停止向第三方提供请求",
+      "section6Outro": "如需行使上述权利，请通过以下联系方式与我们联系。",
+      "section7Title": "7. 隐私政策的变更",
+      "section7Body": "本公司将遵守有关个人信息的法律法规及其他规范，适时审查并改善本政策内容。如有修订，将在本网站上予以公告。",
+      "section8Title": "8. 咨询窗口",
+      "section8Intro": "如有关于个人信息处理方式的咨询，请联系以下地址："
+    },
+    "terms": {
+      "title": "服务条款",
+      "lastUpdated": "最终更新日：2025年1月1日",
+      "article1Title": "第1条（适用）",
+      "article1Body": "本条款规定了使用 DoSee Wellness（以下简称「本公司」）所提供的网站及在线商店（以下简称「本服务」）的相关条件。请用户在同意本条款的前提下使用本服务。",
+      "article2Title": "第2条（用户注册）",
+      "article2P1": "希望使用本服务的用户，须在同意本条款的前提下，按照本公司规定的方式申请注册，经本公司批准后，注册方告完成。",
+      "article2P2Intro": "若本公司判断注册申请者存在以下情形，可拒绝批准注册申请，且对拒绝理由不承担任何披露义务：",
+      "article2P2Item1": "在注册申请时提供虚假信息",
+      "article2P2Item2": "申请者曾违反本条款",
+      "article2P2Item3": "本公司认为注册申请不适当的其他情形",
+      "article3Title": "第3条（商品的购买与配送）",
+      "article3P1": "用户可通过本服务购买本公司的商品。",
+      "article3P2": "商品由本公司指定的配送公司负责配送。配送费用因配送地址和订单金额而异。",
+      "article3P3": "商品所有权在商品货款支付完成、商品交付给用户时，由本公司转移至用户。",
+      "article4Title": "第4条（退货与换货）",
+      "article4P1": "如商品存在瑕疵，或收到的商品与订单不符，请在商品到达后7天内联系我们。本公司将承担费用为您安排换货或退款。",
+      "article4P2": "因顾客个人原因申请退货或换货，仅接受商品到达后7天内、未开封且未使用的商品。此情况下，退货运费由顾客承担。",
+      "article4P3": "因食品特性，开封后的商品不接受退货或换货。",
+      "article5Title": "第5条（禁止行为）",
+      "article5Intro": "用户在使用本服务时，不得从事以下行为：",
+      "article5Item1": "违反法律法规或公序良俗的行为",
+      "article5Item2": "与犯罪行为相关的行为",
+      "article5Item3": "侵害本公司、本服务其他用户或第三方的知识产权、肖像权、隐私权、名誉及其他权利或利益的行为",
+      "article5Item4": "对本服务的网络或系统等造成过度负荷的行为",
+      "article5Item5": "有可能妨碍本服务运营的行为",
+      "article5Item6": "进行或尝试非法访问的行为",
+      "article5Item7": "收集或积累其他用户个人信息的行为",
+      "article5Item8": "以不正当目的使用本服务的行为",
+      "article5Item9": "给本服务其他用户或第三方造成不利、损害或不适的行为",
+      "article5Item10": "与本公司服务相关，直接或间接向反社会势力提供利益的行为",
+      "article5Item11": "其他本公司认为不适当的行为",
+      "article6Title": "第6条（本服务的停止等）",
+      "article6P1Intro": "当本公司判断存在以下任一情形时，可不提前通知用户，停止或中断本服务的全部或部分提供：",
+      "article6P1Item1": "对本服务相关计算机系统进行维护检修或更新时",
+      "article6P1Item2": "因地震、雷击、火灾、停电或自然灾害等不可抗力导致本服务难以提供时",
+      "article6P1Item3": "因事故导致计算机或通信线路等停止时",
+      "article6P1Item4": "本公司判断本服务难以提供的其他情形",
+      "article6P2": "因本服务的停止或中断，用户或第三方所遭受的任何不利或损害，本公司概不承担责任。",
+      "article7Title": "第7条（免责事项）",
+      "article7P1": "对于本服务相关的用户与其他用户或第三方之间发生的交易、联络或纠纷等，本公司概不承担责任。",
+      "article7P2": "因本服务导致用户产生的任何损害，本公司概不承担责任。但若本公司与用户之间就本服务签订的合同属于《消费者合同法》规定的消费者合同，则本免责条款不适用。",
+      "article8Title": "第8条（服务内容的变更等）",
+      "article8Body": "本公司可在不通知用户的情况下变更本服务内容，或停止提供本服务，对由此给用户造成的损害概不承担责任。",
+      "article9Title": "第9条（服务条款的变更）",
+      "article9Body": "本公司在认为必要时，可随时在不通知用户的情况下变更本条款。变更后的条款自发布于本网站之时起生效。",
+      "article10Title": "第10条（准据法·裁判管辖）",
+      "article10P1": "本条款的解释以日本法律为准据法。",
+      "article10P2": "如因本服务发生纠纷，以本公司总公司所在地有管辖权的法院作为专属合意管辖法院。",
+      "contactTitle": "咨询",
+      "contactIntro": "如有关于本条款的咨询，请联系以下地址："
+    },
+    "commerce": {
+      "title": "特定商业交易法相关说明",
+      "lastUpdated": "最终更新日：2026年1月1日",
+      "sellerHeading": "销售业者",
+      "sellerLabel": "销售业者",
+      "managerLabel": "运营负责人",
+      "managerValue": "代表取締役",
+      "addressHeading": "地址",
+      "addressLabel": "总部地址",
+      "addressNote": "※如有需求，将及时告知详细地址。",
+      "contactHeading": "联系方式",
+      "emailLabel": "电子邮件地址",
+      "contactNote": "※不接受电话咨询，请通过电子邮件联系我们。",
+      "pricesHeading": "销售价格",
+      "pricesNote": "各商品价格显示于对应的商品页面。所示价格均含消费税。",
+      "additionalFeesHeading": "商品货款以外的必要费用",
+      "shippingSubheading": "运费",
+      "shippingNote": "因配送地区而异，详情在下单时显示。",
+      "shippingItem1": "全国统一：800円",
+      "shippingItem2": "订单满5,000円免运费",
+      "paymentFeeSubheading": "支付手续费",
+      "paymentFeeNote": "信用卡支付不收取手续费。",
+      "paymentMethodHeading": "支付方式",
+      "paymentMethodIntro": "以下支付方式均可使用：",
+      "paymentItem1": "信用卡（Visa、Mastercard、American Express、JCB）",
+      "paymentItem2": "Apple Pay",
+      "paymentItem3": "Google Pay",
+      "paymentItem4": "Shop Pay",
+      "paymentNote": "※支付通过 Shopify Payments 处理，本公司不保存卡片信息。",
+      "paymentTimingHeading": "支付时间",
+      "paymentTimingBody": "依各信用卡公司的扣款日为准。商品下单时即完成支付。",
+      "deliveryHeading": "商品交付时间",
+      "deliveryBody": "订单确认后，通常在3〜7个工作日内发货。因配送情况可能有所延迟。发货完成后，将通过电子邮件告知追踪号码。",
+      "returnsHeading": "退货与换货",
+      "defectSubheading": "商品瑕疵或误发的情况",
+      "defectNote": "请在商品到达后7天内通过电子邮件联系我们。本公司将承担费用为您安排换货或退款。",
+      "defectItem1": "商品存在瑕疵（缺陷）",
+      "defectItem2": "收到的商品与订单不符",
+      "defectItem3": "配送途中发生损坏",
+      "customerReturnSubheading": "顾客个人原因申请退货",
+      "customerReturnIntro": "满足以下条件时，接受退货申请：",
+      "customerReturnItem1": "商品到达后7天以内",
+      "customerReturnItem2": "未开封、未使用的商品",
+      "customerReturnItem3": "商品标签及包装完整",
+      "customerReturnNote": "退货运费由顾客承担。因食品特性，开封后的商品不接受退货或换货。",
+      "noReturnSubheading": "不可退货的商品",
+      "noReturnItem1": "已开封或已使用的商品",
+      "noReturnItem2": "因顾客原因造成污损或破损的商品",
+      "noReturnItem3": "商品到达后超过8天的商品",
+      "refundHeading": "退款",
+      "refundBody": "确认收到退货后，将在5〜10个工作日内退款至购买时所使用的支付方式。",
+      "specialConditionsHeading": "特别销售条件或提供条件",
+      "specialConditionsBody": "暂无。",
+      "privacyHeading": "个人信息的处理",
+      "privacyBodyPrefix": "顾客的个人信息将依据本公司的",
+      "privacyPolicyLinkText": "隐私政策",
+      "privacyBodySuffix": "进行严格管理。"
+    }
+  },
+  "shopPage": {
+    "eyebrow": "Products",
+    "heading": "所有商品",
+    "productCount": "共{count}件商品",
+    "empty": "暂无商品。"
+  },
+  "wellchaPage": {
+    "hero": {
+      "title": "借日本茶的温柔，\n让每天更从容。",
+      "subtitle": "一杯同时呵护身心与肌肤。\nWellCha 的抹茶与焙茶，从专注、美容、放松三个方向守护您。"
+    },
+    "backButton": "← 返回首页",
+    "matcha": {
+      "heroCopy": "为忙碌的每一天，\n奉上一杯\n「全方位呵护」",
+      "introLead": "在忙碌的日常中，\n一杯同时呵护身心与肌肤。\n\nDoSee Wellness 的抹茶，\n从专注、美容、放松三个方向守护您。\n\n调养现代人身心的全新抹茶习惯。\n源自延续数百年的日本茶文化，堪称「可饮用的健康」。\n\nDoSee Wellness 将抹茶\n重新设计为「即使在忙碌现代也能坚持的形式」。",
+      "feature1": {
+        "title": "🍃 平和的专注力",
+        "text": "儿茶素 × 茶氨酸\n不急不躁，静静延续的专注",
+        "note": "※与咖啡不同的温和清醒感。"
+      },
+      "feature2": {
+        "title": "✨ 可饮用的护肤",
+        "text": "抗氧化 × 维生素\n由内而外，焕发通透与光泽",
+        "note": "※适合日常身体状态的调养。"
+      },
+      "feature3": {
+        "title": "🌙 深度放松",
+        "text": "茶氨酸的放松作用，\n让身心进入舒缓模式",
+        "note": "※适合一天结束时的那一杯。"
+      },
+      "ctaLeft": "今天的一杯，\n何不换成抹茶呢？",
+      "ctaRight": "这小小一杯的习惯，\n将静静改变您的专注力、身体状态与心情。\n\n以 DoSee Wellness 的抹茶，\n开启属于您的\n「从容调养时光」。",
+      "ctaButton": "购买 Matcha Latte"
+    },
+    "hojicha": {
+      "heroTitle": "全新的焙茶习惯",
+      "heroSub": "在忙碌的现代生活中，放松身心。\n体验焙茶带来的温柔魅力。",
+      "messageText": "在忙碌的每一天，\n一杯温柔地舒缓\n身心与呼吸。\n\nDoSee Wellness 的焙茶，\n以温暖的香气与深沉的平静，\n轻轻将您包围。",
+      "habitTitle": "全新的焙茶习惯",
+      "habitLead": "焙茶是将绿茶慢慢焙制而成的\n「可饮用的健康」。\n香气醇厚、易于入口，咖啡因含量低。\n\nDoSee Wellness 将其\n重新设计为「即使再忙也能每天坚持的形式」。",
+      "checklistAriaLabel": "推荐饮用时机",
+      "checklist": {
+        "morning": "早晨，咖啡之前",
+        "noon": "午间小憩时",
+        "night": "晚饭后，睡前的放松时光",
+        "latte": "做成拿铁，温柔的香气轻轻弥漫开来"
+      },
+      "benefit1": {
+        "title": "天然的温柔力量",
+        "text": "矿物质与多酚\n守护每日的身体状态。\n「恰到好处的清醒感」。"
+      },
+      "benefit2": {
+        "title": "无负担的温暖",
+        "text": "焙制的醇厚香气，\n与由内而外散发的暖意。\n有助于改善手脚冰凉与肠胃护理。"
+      },
+      "benefit3": {
+        "title": "深度放松",
+        "text": "茶氨酸 + 低咖啡因。\n最适合夜晚深呼吸的放松时光。"
+      },
+      "ctaAriaLabel": "立即购买",
+      "finalCtaTitle": "Join us on your wellness journey today!",
+      "finalCtaSub": "立即迈出健康生活的第一步。\n从今天起，开启更美好的每一天。",
+      "ctaButton": "购买 Hojicha Latte"
+    }
+  }
+}
