@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { ShoppingCart, Check, Minus, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Product } from "@/types/product";
@@ -11,6 +12,7 @@ interface AddToCartButtonProps {
 }
 
 export default function AddToCartButton({ product }: AddToCartButtonProps) {
+  const t = useTranslations("commerce.product");
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
   const { addItem, openCart } = useCartStore();
@@ -28,13 +30,13 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
     <div className="flex flex-col gap-3">
       {/* Quantity selector */}
       <div className="flex items-center gap-3">
-        <span className="text-sm text-muted-foreground">数量</span>
+        <span className="text-sm text-muted-foreground">{t("quantity")}</span>
         <div className="flex items-center gap-2">
           <Button
             variant="outline"
             size="icon-sm"
             onClick={() => setQuantity(Math.max(1, quantity - 1))}
-            aria-label="数量を減らす"
+            aria-label={t("decrease")}
           >
             <Minus className="h-3.5 w-3.5" />
           </Button>
@@ -43,7 +45,7 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
             variant="outline"
             size="icon-sm"
             onClick={() => setQuantity(quantity + 1)}
-            aria-label="数量を増やす"
+            aria-label={t("increase")}
           >
             <Plus className="h-3.5 w-3.5" />
           </Button>
@@ -64,12 +66,12 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
         {added ? (
           <>
             <Check className="h-5 w-5" />
-            カートに追加しました
+            {t("added")}
           </>
         ) : (
           <>
             <ShoppingCart className="h-5 w-5" />
-            {product.inStock ? "カートに追加" : "在庫切れ"}
+            {product.inStock ? t("addToCart") : t("outOfStock")}
           </>
         )}
       </Button>

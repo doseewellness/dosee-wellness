@@ -534,5 +534,104 @@
       "finalCtaSub": "Faites votre premier pas vers le bien-être, dès maintenant.\nVers de meilleures journées, à partir d'aujourd'hui.",
       "ctaButton": "Acheter le Hojicha Latte"
     }
+  },
+  "meta": {
+    "homeTitle": "DoSee Wellness - Un bien-être que l'on peut maintenir même dans le quotidien chargé",
+    "homeDescription": "Marque de bien-être née au Japon. Avec WellCha à base de thé japonais et DoSee de type shot, des habitudes qui apaisent doucement cœur, corps et peau. Un bien-être sans contrainte, au quotidien."
+  },
+  "blog": {
+    "eyebrow": "DOSEE WELLNESS NOTE",
+    "title": "Journal",
+    "subtitle": "La culture du thé japonais et des conseils de bien-être faciles à maintenir.",
+    "readingTime": "Lecture en {minutes} min environ",
+    "readingTimeShort": "{minutes} min env.",
+    "backToTop": "← Retour à la page d'accueil",
+    "backToList": "← Retour à la liste des articles",
+    "breadcrumbHome": "Accueil",
+    "breadcrumbBlog": "Journal",
+    "metaTitle": "DoSee Wellness Note - Lectures autour du thé japonais et du bien-être",
+    "metaDescription": "Des lectures qui transmettent la culture et les composants du matcha et du hojicha, ainsi que des conseils de bien-être faciles à maintenir. Nous évoquons avec douceur le « temps de l'apaisement » cher à DoSee Wellness.",
+    "notFoundTitle": "Article introuvable"
+  },
+  "commerce": {
+    "product": {
+      "backToList": "Retour à la liste des produits",
+      "reviewCount": "{count} avis",
+      "freeShipping": "Livraison offerte dès ¥5,000 d'achat",
+      "moneyBack": "Garantie de remboursement de 30 jours",
+      "features": "Les caractéristiques de ce produit",
+      "howToUse": "Mode de préparation",
+      "ingredients": "Ingrédients",
+      "nutrition": "Valeurs nutritionnelles",
+      "quantity": "Quantité",
+      "addToCart": "Ajouter au panier",
+      "added": "Ajouté au panier",
+      "outOfStock": "Rupture de stock",
+      "decrease": "Diminuer la quantité",
+      "increase": "Augmenter la quantité"
+    },
+    "nutritionLabels": {
+      "servingSize": "Par portion",
+      "calories": "Calories",
+      "protein": "Protéines",
+      "fat": "Lipides",
+      "carbohydrates": "Glucides",
+      "caffeine": "Caféine"
+    },
+    "cart": {
+      "emptyTitle": "Votre panier est vide",
+      "emptyBody": "Ajoutez vos produits favoris au panier.",
+      "toProducts": "Vers la liste des produits",
+      "title": "Panier",
+      "itemCount": "{count} article(s)",
+      "clearAll": "Tout supprimer",
+      "remove": "Supprimer",
+      "unitPrice": "Prix unitaire",
+      "decrease": "Diminuer la quantité",
+      "increase": "Augmenter la quantité",
+      "continueShopping": "Continuer mes achats",
+      "summary": "Récapitulatif de la commande",
+      "remainingForFreeShipping": "Plus que <b>¥{amount}</b> pour la livraison offerte",
+      "subtotal": "Sous-total ({count} article(s))",
+      "shipping": "Livraison",
+      "free": "Offerte",
+      "totalWithTax": "Total (TTC)",
+      "securePayment": "Paiement sécurisé par Stripe"
+    },
+    "sheet": {
+      "title": "Panier",
+      "emptyBody": "Aucun produit dans le panier",
+      "viewProducts": "Voir les produits",
+      "remainingForFreeShipping": "Plus que <b>¥{amount}</b> pour la livraison offerte !",
+      "freeShippingApplied": "La livraison offerte est appliquée",
+      "subtotal": "Sous-total ({count} article(s))",
+      "shipping": "Livraison",
+      "free": "Offerte",
+      "total": "Total",
+      "continueShopping": "Continuer mes achats",
+      "decrease": "Diminuer la quantité",
+      "increase": "Augmenter la quantité",
+      "remove": "Supprimer"
+    },
+    "checkout": {
+      "proceed": "Passer à la caisse",
+      "processing": "Traitement en cours...",
+      "error": "Erreur de paiement",
+      "genericError": "Une erreur est survenue"
+    },
+    "success": {
+      "title": "Merci pour votre commande !",
+      "body": "Votre commande est confirmée. Nous vous enverrons un e-mail de confirmation.",
+      "shippingTitle": "À propos de l'expédition",
+      "shippingBody": "Nous expédions généralement sous 1 à 3 jours ouvrés. Après l'expédition, nous vous enverrons le numéro de suivi par e-mail.",
+      "continueShopping": "Continuer mes achats",
+      "toTop": "Retour à l'accueil"
+    },
+    "cancel": {
+      "title": "Le paiement a été annulé",
+      "body": "Le contenu de votre panier est conservé. Vous pouvez poursuivre votre achat.",
+      "toCart": "Retour au panier",
+      "continueShopping": "Continuer mes achats"
+    }
   }
 }

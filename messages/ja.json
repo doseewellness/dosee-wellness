@@ -534,5 +534,104 @@
       "finalCtaSub": "今すぐ、ウェルネスの一歩を。\n今日から、よりよい毎日へ。",
       "ctaButton": "ほうじ茶ラテを購入する"
     }
+  },
+  "meta": {
+    "homeTitle": "DoSee Wellness - 忙しい毎日でも続けられるウェルネス",
+    "homeDescription": "日本発のウェルネスブランド。日本茶ベースのWellChaと、ショット系DoSeeで、こころ・からだ・肌をやさしく整える習慣を。無理のないウェルネスを毎日に。"
+  },
+  "blog": {
+    "eyebrow": "DOSEE WELLNESS NOTE",
+    "title": "読みもの",
+    "subtitle": "日本茶の文化と、続けやすいウェルネスのヒントを。",
+    "readingTime": "約{minutes}分で読めます",
+    "readingTimeShort": "約{minutes}分",
+    "backToTop": "← トップページに戻る",
+    "backToList": "← 読みもの一覧に戻る",
+    "breadcrumbHome": "ホーム",
+    "breadcrumbBlog": "読みもの",
+    "metaTitle": "DoSee Wellness Note - 日本茶とウェルネスの読みもの",
+    "metaDescription": "抹茶・ほうじ茶の文化や成分、続けやすいウェルネス習慣のヒントを届ける読みもの。DoSee Wellness が大切にする「整える時間」をやさしく綴ります。",
+    "notFoundTitle": "記事が見つかりません"
+  },
+  "commerce": {
+    "product": {
+      "backToList": "商品一覧に戻る",
+      "reviewCount": "{count}件のレビュー",
+      "freeShipping": "¥5,000以上のご購入で送料無料",
+      "moneyBack": "30日間返金保証",
+      "features": "この商品の特徴",
+      "howToUse": "お召し上がり方",
+      "ingredients": "原材料",
+      "nutrition": "栄養成分表示",
+      "quantity": "数量",
+      "addToCart": "カートに追加",
+      "added": "カートに追加しました",
+      "outOfStock": "在庫切れ",
+      "decrease": "数量を減らす",
+      "increase": "数量を増やす"
+    },
+    "nutritionLabels": {
+      "servingSize": "1食あたり",
+      "calories": "カロリー",
+      "protein": "たんぱく質",
+      "fat": "脂質",
+      "carbohydrates": "炭水化物",
+      "caffeine": "カフェイン"
+    },
+    "cart": {
+      "emptyTitle": "カートは空です",
+      "emptyBody": "お気に入りの商品をカートに追加してください。",
+      "toProducts": "商品一覧へ",
+      "title": "ショッピングカート",
+      "itemCount": "{count}点の商品",
+      "clearAll": "すべて削除",
+      "remove": "削除",
+      "unitPrice": "単価",
+      "decrease": "数量を減らす",
+      "increase": "数量を増やす",
+      "continueShopping": "買い物を続ける",
+      "summary": "注文サマリー",
+      "remainingForFreeShipping": "あと <b>¥{amount}</b> で送料無料",
+      "subtotal": "小計 ({count}点)",
+      "shipping": "送料",
+      "free": "無料",
+      "totalWithTax": "合計（税込）",
+      "securePayment": "Stripeによる安全な決済"
+    },
+    "sheet": {
+      "title": "カート",
+      "emptyBody": "カートに商品がありません",
+      "viewProducts": "商品を見る",
+      "remainingForFreeShipping": "あと <b>¥{amount}</b> で送料無料！",
+      "freeShippingApplied": "送料無料が適用されています",
+      "subtotal": "小計 ({count}点)",
+      "shipping": "送料",
+      "free": "無料",
+      "total": "合計",
+      "continueShopping": "買い物を続ける",
+      "decrease": "数量を減らす",
+      "increase": "数量を増やす",
+      "remove": "削除"
+    },
+    "checkout": {
+      "proceed": "レジに進む",
+      "processing": "処理中...",
+      "error": "決済エラー",
+      "genericError": "エラーが発生しました"
+    },
+    "success": {
+      "title": "ご注文ありがとうございます！",
+      "body": "ご注文が確定しました。確認メールをお送りします。",
+      "shippingTitle": "発送について",
+      "shippingBody": "通常1〜3営業日以内に発送いたします。発送後に追跡番号をメールでお送りします。",
+      "continueShopping": "買い物を続ける",
+      "toTop": "トップへ戻る"
+    },
+    "cancel": {
+      "title": "決済がキャンセルされました",
+      "body": "カートの内容は保持されています。引き続きご購入いただけます。",
+      "toCart": "カートに戻る",
+      "continueShopping": "買い物を続ける"
+    }
   }
 }

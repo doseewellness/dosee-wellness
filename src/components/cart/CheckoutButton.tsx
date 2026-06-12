@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCartStore } from "@/store/cart";
 
 export default function CheckoutButton() {
+  const t = useTranslations("commerce.checkout");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const items = useCartStore((s) => s.items);
@@ -21,12 +23,12 @@ export default function CheckoutButton() {
       });
 
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error ?? "決済エラー");
+      if (!res.ok) throw new Error(data.error ?? t("error"));
 
       // Stripe Hosted Checkout にリダイレクト
       window.location.href = data.url;
     } catch (err) {
-      setError(err instanceof Error ? err.message : "エラーが発生しました");
+      setError(err instanceof Error ? err.message : t("genericError"));
       setLoading(false);
     }
   }
@@ -42,11 +44,11 @@ export default function CheckoutButton() {
         {loading ? (
           <>
             <Loader2 className="h-4 w-4 animate-spin" />
-            処理中...
+            {t("processing")}
           </>
         ) : (
           <>
-            レジに進む
+            {t("proceed")}
             <ArrowRight className="h-4 w-4" />
           </>
         )}

@@ -534,5 +534,104 @@
       "finalCtaSub": "Da tu primer paso hacia el bienestar, ahora mismo.\nHacia días mejores, a partir de hoy.",
       "ctaButton": "Comprar Hojicha Latte"
     }
+  },
+  "meta": {
+    "homeTitle": "DoSee Wellness - Bienestar que puedes mantener incluso en los días más ocupados",
+    "homeDescription": "Marca de bienestar japonesa. Con WellCha, basado en té japonés, y los wellness shots DoSee, ofrecemos hábitos que cuidan con suavidad la mente, el cuerpo y la piel. Bienestar sin esfuerzo, cada día."
+  },
+  "blog": {
+    "eyebrow": "DOSEE WELLNESS NOTE",
+    "title": "Diario",
+    "subtitle": "Sobre la cultura del té japonés y hábitos de bienestar fáciles de mantener.",
+    "readingTime": "Lectura de unos {minutes} min",
+    "readingTimeShort": "Unos {minutes} min",
+    "backToTop": "← Volver al inicio",
+    "backToList": "← Volver al diario",
+    "breadcrumbHome": "Inicio",
+    "breadcrumbBlog": "Diario",
+    "metaTitle": "DoSee Wellness Note - Lecturas sobre té japonés y bienestar",
+    "metaDescription": "Lecturas sobre la cultura y los componentes del matcha y el hojicha, y consejos de hábitos de bienestar fáciles de mantener. Relatamos con suavidad el «tiempo para recogerse» que DoSee Wellness valora.",
+    "notFoundTitle": "Artículo no encontrado"
+  },
+  "commerce": {
+    "product": {
+      "backToList": "Volver a todos los productos",
+      "reviewCount": "{count} reseñas",
+      "freeShipping": "Envío gratuito en pedidos de ¥5,000 o más",
+      "moneyBack": "Garantía de reembolso de 30 días",
+      "features": "Características de este producto",
+      "howToUse": "Modo de preparación",
+      "ingredients": "Ingredientes",
+      "nutrition": "Información nutricional",
+      "quantity": "Cantidad",
+      "addToCart": "Añadir al carrito",
+      "added": "Añadido al carrito",
+      "outOfStock": "Agotado",
+      "decrease": "Reducir cantidad",
+      "increase": "Aumentar cantidad"
+    },
+    "nutritionLabels": {
+      "servingSize": "Por porción",
+      "calories": "Calorías",
+      "protein": "Proteínas",
+      "fat": "Grasas",
+      "carbohydrates": "Carbohidratos",
+      "caffeine": "Cafeína"
+    },
+    "cart": {
+      "emptyTitle": "Tu carrito está vacío",
+      "emptyBody": "Añade tus productos favoritos al carrito.",
+      "toProducts": "Ver productos",
+      "title": "Carrito de compras",
+      "itemCount": "{count} productos",
+      "clearAll": "Eliminar todo",
+      "remove": "Eliminar",
+      "unitPrice": "Precio unitario",
+      "decrease": "Reducir cantidad",
+      "increase": "Aumentar cantidad",
+      "continueShopping": "Seguir comprando",
+      "summary": "Resumen del pedido",
+      "remainingForFreeShipping": "Te faltan <b>¥{amount}</b> para el envío gratuito",
+      "subtotal": "Subtotal ({count} productos)",
+      "shipping": "Envío",
+      "free": "Gratis",
+      "totalWithTax": "Total (impuestos incluidos)",
+      "securePayment": "Pago seguro con Stripe"
+    },
+    "sheet": {
+      "title": "Carrito",
+      "emptyBody": "No hay productos en el carrito",
+      "viewProducts": "Ver productos",
+      "remainingForFreeShipping": "¡Te faltan <b>¥{amount}</b> para el envío gratuito!",
+      "freeShippingApplied": "Se ha aplicado el envío gratuito",
+      "subtotal": "Subtotal ({count} productos)",
+      "shipping": "Envío",
+      "free": "Gratis",
+      "total": "Total",
+      "continueShopping": "Seguir comprando",
+      "decrease": "Reducir cantidad",
+      "increase": "Aumentar cantidad",
+      "remove": "Eliminar"
+    },
+    "checkout": {
+      "proceed": "Ir a pagar",
+      "processing": "Procesando...",
+      "error": "Error de pago",
+      "genericError": "Se ha producido un error"
+    },
+    "success": {
+      "title": "¡Gracias por tu pedido!",
+      "body": "Tu pedido se ha confirmado. Te enviaremos un correo de confirmación.",
+      "shippingTitle": "Sobre el envío",
+      "shippingBody": "Normalmente enviamos dentro de 1 a 3 días hábiles. Te enviaremos el número de seguimiento por correo electrónico tras el envío.",
+      "continueShopping": "Seguir comprando",
+      "toTop": "Volver al inicio"
+    },
+    "cancel": {
+      "title": "El pago ha sido cancelado",
+      "body": "El contenido de tu carrito se ha conservado. Puedes continuar con tu compra.",
+      "toCart": "Volver al carrito",
+      "continueShopping": "Seguir comprando"
+    }
   }
 }

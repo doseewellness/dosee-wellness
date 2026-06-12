@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
 import { Star, ArrowLeft, Shield, Truck } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -9,7 +11,7 @@ import productsData from "@/data/products.json";
 import AddToCartButton from "@/components/products/AddToCartButton";
 
 interface ProductDetailPageProps {
-  params: Promise<{ id: string }>;
+  params: Promise<{ locale: Locale; id: string }>;
 }
 
 type RichProduct = {
@@ -28,13 +30,13 @@ type RichProduct = {
   };
 };
 
-const NUTRITION_LABELS: { key: keyof NonNullable<RichProduct["nutritionFacts"]>; label: string }[] = [
-  { key: "servingSize", label: "1食あたり" },
-  { key: "calories", label: "カロリー" },
-  { key: "protein", label: "たんぱく質" },
-  { key: "fat", label: "脂質" },
-  { key: "carbohydrates", label: "炭水化物" },
-  { key: "caffeine", label: "カフェイン" },
+const NUTRITION_KEYS: (keyof NonNullable<RichProduct["nutritionFacts"]>)[] = [
+  "servingSize",
+  "calories",
+  "protein",
+  "fat",
+  "carbohydrates",
+  "caffeine",
 ];
 
 export const dynamic = "force-dynamic";
@@ -42,7 +44,10 @@ export const dynamic = "force-dynamic";
 export default async function ProductDetailPage({
   params,
 }: ProductDetailPageProps) {
-  const { id } = await params;
+  const { locale, id } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("commerce.product");
+  const tn = await getTranslations("commerce.nutritionLabels");
   const product = await getProductById(id);
 
   if (!product) notFound();
@@ -50,7 +55,7 @@ export default async function ProductDetailPage({
   const rich = (productsData as RichProduct[]).find((p) => p.id === id);
   const nutrition = rich?.nutritionFacts;
   const nutritionRows = nutrition
-    ? NUTRITION_LABELS.filter(({ key }) => nutrition[key] != null)
+    ? NUTRITION_KEYS.filter((key) => nutrition[key] != null)
     : [];
 
   const discountPercent = product.originalPrice
@@ -64,7 +69,7 @@ export default async function ProductDetailPage({
         className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors"
       >
         <ArrowLeft className="h-4 w-4" />
-        商品一覧に戻る
+        {t("backToList")}
       </Link>
 
       <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
@@ -111,7 +116,7 @@ export default async function ProductDetailPage({
             ))}
             <span className="text-sm font-medium">{product.rating}</span>
             <span className="text-sm text-muted-foreground">
-              ({product.reviewCount}件のレビュー)
+              ({t("reviewCount", { count: product.reviewCount })})
             </span>
           </div>
 
@@ -142,11 +147,11 @@ export default async function ProductDetailPage({
           <div className="flex flex-col gap-3 bg-muted/40 rounded-xl p-4">
             <div className="flex items-center gap-3 text-sm">
               <Truck className="h-4 w-4 text-brand shrink-0" />
-              <span>¥5,000以上のご購入で送料無料</span>
+              <span>{t("freeShipping")}</span>
             </div>
             <div className="flex items-center gap-3 text-sm">
               <Shield className="h-4 w-4 text-brand shrink-0" />
-              <span>30日間返金保証</span>
+              <span>{t("moneyBack")}</span>
             </div>
           </div>
         </div>
@@ -157,7 +162,7 @@ export default async function ProductDetailPage({
         <div className="mt-16 max-w-3xl mx-auto flex flex-col gap-12">
           {rich.benefits && rich.benefits.length > 0 && (
             <section>
-              <h2 className="text-xl font-bold mb-6">この商品の特徴</h2>
+              <h2 className="text-xl font-bold mb-6">{t("features")}</h2>
               <div className="grid gap-5 sm:grid-cols-3">
                 {rich.benefits.map((b) => (
                   <div
@@ -176,7 +181,7 @@ export default async function ProductDetailPage({
 
           {rich.howToUse && rich.howToUse.length > 0 && (
             <section>
-              <h2 className="text-xl font-bold mb-4">お召し上がり方</h2>
+              <h2 className="text-xl font-bold mb-4">{t("howToUse")}</h2>
               <ul className="flex flex-col gap-2">
                 {rich.howToUse.map((step) => (
                   <li key={step} className="flex gap-3 text-sm text-muted-foreground">
@@ -190,7 +195,7 @@ export default async function ProductDetailPage({
 
           {rich.ingredients && rich.ingredients.length > 0 && (
             <section>
-              <h2 className="text-xl font-bold mb-4">原材料</h2>
+              <h2 className="text-xl font-bold mb-4">{t("ingredients")}</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {rich.ingredients.join("、")}
               </p>
@@ -199,16 +204,16 @@ export default async function ProductDetailPage({
 
           {nutritionRows.length > 0 && (
             <section>
-              <h2 className="text-xl font-bold mb-4">栄養成分表示</h2>
+              <h2 className="text-xl font-bold mb-4">{t("nutrition")}</h2>
               <dl className="rounded-xl border border-border/60 overflow-hidden">
-                {nutritionRows.map(({ key, label }, i) => (
+                {nutritionRows.map((key, i) => (
                   <div
                     key={key}
                     className={`flex justify-between px-4 py-3 text-sm ${
                       i % 2 === 0 ? "bg-muted/30" : ""
                     }`}
                   >
-                    <dt className="text-muted-foreground">{label}</dt>
+                    <dt className="text-muted-foreground">{tn(key)}</dt>
                     <dd className="font-medium">{String(nutrition?.[key])}</dd>
                   </div>
                 ))}

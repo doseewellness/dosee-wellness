@@ -534,5 +534,104 @@
       "finalCtaSub": "Take your first step toward wellness, right now.\nToward better days, starting today.",
       "ctaButton": "Shop Hojicha Latte"
     }
+  },
+  "meta": {
+    "homeTitle": "DoSee Wellness - Wellness you can keep up with, even on busy days",
+    "homeDescription": "A Japanese wellness brand. With WellCha, based on Japanese tea, and the DoSee shot line, we offer gentle daily habits to soothe your mind, body, and skin. Effortless wellness, every day."
+  },
+  "blog": {
+    "eyebrow": "DOSEE WELLNESS NOTE",
+    "title": "Journal",
+    "subtitle": "On the culture of Japanese tea, and wellness habits easy to keep.",
+    "readingTime": "About a {minutes}-minute read",
+    "readingTimeShort": "About {minutes} min",
+    "backToTop": "← Back to Home",
+    "backToList": "← Back to the journal",
+    "breadcrumbHome": "Home",
+    "breadcrumbBlog": "Journal",
+    "metaTitle": "DoSee Wellness Note - Stories on Japanese tea and wellness",
+    "metaDescription": "A journal sharing the culture and components of matcha and hojicha, along with tips for wellness habits easy to keep. We gently write about the \"time for settling\" that DoSee Wellness holds dear.",
+    "notFoundTitle": "Article not found"
+  },
+  "commerce": {
+    "product": {
+      "backToList": "Back to all products",
+      "reviewCount": "{count} reviews",
+      "freeShipping": "Free shipping on orders of ¥5,000 or more",
+      "moneyBack": "30-day money-back guarantee",
+      "features": "Product features",
+      "howToUse": "How to enjoy",
+      "ingredients": "Ingredients",
+      "nutrition": "Nutrition facts",
+      "quantity": "Quantity",
+      "addToCart": "Add to cart",
+      "added": "Added to cart",
+      "outOfStock": "Out of stock",
+      "decrease": "Decrease quantity",
+      "increase": "Increase quantity"
+    },
+    "nutritionLabels": {
+      "servingSize": "Per serving",
+      "calories": "Calories",
+      "protein": "Protein",
+      "fat": "Fat",
+      "carbohydrates": "Carbohydrates",
+      "caffeine": "Caffeine"
+    },
+    "cart": {
+      "emptyTitle": "Your cart is empty",
+      "emptyBody": "Add your favorite products to the cart.",
+      "toProducts": "To products",
+      "title": "Shopping Cart",
+      "itemCount": "{count} items",
+      "clearAll": "Remove all",
+      "remove": "Remove",
+      "unitPrice": "Unit price",
+      "decrease": "Decrease quantity",
+      "increase": "Increase quantity",
+      "continueShopping": "Continue shopping",
+      "summary": "Order summary",
+      "remainingForFreeShipping": "<b>¥{amount}</b> more for free shipping",
+      "subtotal": "Subtotal ({count} items)",
+      "shipping": "Shipping",
+      "free": "Free",
+      "totalWithTax": "Total (incl. tax)",
+      "securePayment": "Secure payment by Stripe"
+    },
+    "sheet": {
+      "title": "Cart",
+      "emptyBody": "There are no items in your cart",
+      "viewProducts": "View products",
+      "remainingForFreeShipping": "<b>¥{amount}</b> more for free shipping!",
+      "freeShippingApplied": "Free shipping has been applied",
+      "subtotal": "Subtotal ({count} items)",
+      "shipping": "Shipping",
+      "free": "Free",
+      "total": "Total",
+      "continueShopping": "Continue shopping",
+      "decrease": "Decrease quantity",
+      "increase": "Increase quantity",
+      "remove": "Remove"
+    },
+    "checkout": {
+      "proceed": "Proceed to checkout",
+      "processing": "Processing...",
+      "error": "Payment error",
+      "genericError": "An error occurred"
+    },
+    "success": {
+      "title": "Thank you for your order!",
+      "body": "Your order has been confirmed. We'll send you a confirmation email.",
+      "shippingTitle": "About shipping",
+      "shippingBody": "Orders are usually shipped within 1–3 business days. We'll email you a tracking number after shipment.",
+      "continueShopping": "Continue shopping",
+      "toTop": "Back to Top"
+    },
+    "cancel": {
+      "title": "Payment was cancelled",
+      "body": "The contents of your cart have been saved. You can continue your purchase.",
+      "toCart": "Back to cart",
+      "continueShopping": "Continue shopping"
+    }
   }
 }

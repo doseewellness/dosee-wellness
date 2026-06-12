@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Minus, Plus, Trash2, ShoppingBag, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -17,6 +18,7 @@ import { useCartStore } from "@/store/cart";
 import CheckoutButton from "@/components/cart/CheckoutButton";
 
 export default function CartSheet() {
+  const t = useTranslations("commerce.sheet");
   const { items, totalItems, totalPrice } = useCart();
   const { isOpen, closeCart, removeItem, updateQuantity } = useCartStore();
 
@@ -29,7 +31,7 @@ export default function CartSheet() {
         <SheetHeader className="px-6 py-4 border-b">
           <SheetTitle className="flex items-center gap-2 text-base font-semibold">
             <ShoppingBag className="h-5 w-5 text-brand" />
-            カート
+            {t("title")}
             {totalItems > 0 && (
               <span className="ml-1 bg-brand text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                 {totalItems}
@@ -41,13 +43,13 @@ export default function CartSheet() {
         {items.length === 0 ? (
           <div className="flex flex-col items-center justify-center flex-1 gap-4 text-center px-6">
             <ShoppingBag className="h-16 w-16 text-muted-foreground/30" />
-            <p className="text-muted-foreground text-sm">カートに商品がありません</p>
+            <p className="text-muted-foreground text-sm">{t("emptyBody")}</p>
             <Link
               href="/shop"
               onClick={closeCart}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand hover:bg-brand-dark text-white text-sm font-medium transition-colors mt-2"
             >
-              商品を見る
+              {t("viewProducts")}
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -57,7 +59,10 @@ export default function CartSheet() {
             {remainingForFreeShipping > 0 && (
               <div className="px-6 py-3 bg-brand-soft border-b">
                 <p className="text-xs text-brand-dark">
-                  あと <span className="font-bold">¥{remainingForFreeShipping.toLocaleString()}</span> で送料無料！
+                  {t.rich("remainingForFreeShipping", {
+                    amount: remainingForFreeShipping.toLocaleString(),
+                    b: (chunks) => <span className="font-bold">{chunks}</span>,
+                  })}
                 </p>
                 <div className="mt-1.5 h-1.5 rounded-full bg-brand/20 overflow-hidden">
                   <div
@@ -71,7 +76,7 @@ export default function CartSheet() {
             )}
             {remainingForFreeShipping <= 0 && (
               <div className="px-6 py-2.5 bg-brand-soft border-b">
-                <p className="text-xs text-brand-dark font-medium">送料無料が適用されています</p>
+                <p className="text-xs text-brand-dark font-medium">{t("freeShippingApplied")}</p>
               </div>
             )}
 
@@ -103,7 +108,7 @@ export default function CartSheet() {
                             variant="outline"
                             size="icon-xs"
                             onClick={() => updateQuantity(product.id, quantity - 1)}
-                            aria-label="数量を減らす"
+                            aria-label={t("decrease")}
                           >
                             <Minus className="h-3 w-3" />
                           </Button>
@@ -114,7 +119,7 @@ export default function CartSheet() {
                             variant="outline"
                             size="icon-xs"
                             onClick={() => updateQuantity(product.id, quantity + 1)}
-                            aria-label="数量を増やす"
+                            aria-label={t("increase")}
                           >
                             <Plus className="h-3 w-3" />
                           </Button>
@@ -125,7 +130,7 @@ export default function CartSheet() {
                           size="icon-xs"
                           className="text-muted-foreground hover:text-destructive"
                           onClick={() => removeItem(product.id)}
-                          aria-label="削除"
+                          aria-label={t("remove")}
                         >
                           <Trash2 className="h-3.5 w-3.5" />
                         </Button>
@@ -140,16 +145,16 @@ export default function CartSheet() {
             <div className="border-t px-6 py-5 space-y-4">
               <div className="space-y-1.5 text-sm">
                 <div className="flex justify-between text-muted-foreground">
-                  <span>小計 ({totalItems}点)</span>
+                  <span>{t("subtotal", { count: totalItems })}</span>
                   <span>¥{totalPrice.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between text-muted-foreground">
-                  <span>送料</span>
-                  <span>{totalPrice >= shippingThreshold ? "無料" : "¥500"}</span>
+                  <span>{t("shipping")}</span>
+                  <span>{totalPrice >= shippingThreshold ? t("free") : "¥500"}</span>
                 </div>
                 <Separator className="my-2" />
                 <div className="flex justify-between font-bold text-base">
-                  <span>合計</span>
+                  <span>{t("total")}</span>
                   <span>
                     ¥{(totalPrice + (totalPrice >= shippingThreshold ? 0 : 500)).toLocaleString()}
                   </span>
@@ -161,7 +166,7 @@ export default function CartSheet() {
                 className="w-full"
                 onClick={closeCart}
               >
-                買い物を続ける
+                {t("continueShopping")}
               </Button>
             </div>
           </>

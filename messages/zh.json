@@ -534,5 +534,104 @@
       "finalCtaSub": "立即迈出健康生活的第一步。\n从今天起，开启更美好的每一天。",
       "ctaButton": "购买 Hojicha Latte"
     }
+  },
+  "meta": {
+    "homeTitle": "DoSee Wellness - 即使在忙碌的每一天也能坚持的健康生活",
+    "homeDescription": "源自日本的健康品牌。以日本茶为基础的 WellCha，与浓缩型 DoSee，为您送上温柔滋养身心与肌肤的习惯。把无负担的健康融入每一天。"
+  },
+  "blog": {
+    "eyebrow": "DOSEE WELLNESS NOTE",
+    "title": "阅读文章",
+    "subtitle": "关于日本茶文化，以及易于坚持的健康生活小贴士。",
+    "readingTime": "约{minutes}分钟读完",
+    "readingTimeShort": "约{minutes}分钟",
+    "backToTop": "← 返回首页",
+    "backToList": "← 返回文章列表",
+    "breadcrumbHome": "首页",
+    "breadcrumbBlog": "阅读文章",
+    "metaTitle": "DoSee Wellness Note - 关于日本茶与健康的阅读文章",
+    "metaDescription": "为您送上关于抹茶、焙茶的文化与成分，以及易于坚持的健康习惯小贴士的阅读文章。温柔记录 DoSee Wellness 所珍视的「调适时光」。",
+    "notFoundTitle": "未找到文章"
+  },
+  "commerce": {
+    "product": {
+      "backToList": "返回商品列表",
+      "reviewCount": "{count}条评价",
+      "freeShipping": "购物满¥5,000免运费",
+      "moneyBack": "30天退款保证",
+      "features": "本商品的特点",
+      "howToUse": "饮用方法",
+      "ingredients": "原材料",
+      "nutrition": "营养成分表",
+      "quantity": "数量",
+      "addToCart": "加入购物车",
+      "added": "已加入购物车",
+      "outOfStock": "缺货",
+      "decrease": "减少数量",
+      "increase": "增加数量"
+    },
+    "nutritionLabels": {
+      "servingSize": "每份",
+      "calories": "热量",
+      "protein": "蛋白质",
+      "fat": "脂肪",
+      "carbohydrates": "碳水化合物",
+      "caffeine": "咖啡因"
+    },
+    "cart": {
+      "emptyTitle": "购物车是空的",
+      "emptyBody": "请将您喜爱的商品加入购物车。",
+      "toProducts": "前往商品列表",
+      "title": "购物车",
+      "itemCount": "{count}件商品",
+      "clearAll": "全部删除",
+      "remove": "删除",
+      "unitPrice": "单价",
+      "decrease": "减少数量",
+      "increase": "增加数量",
+      "continueShopping": "继续购物",
+      "summary": "订单摘要",
+      "remainingForFreeShipping": "再买 <b>¥{amount}</b> 即可免运费",
+      "subtotal": "小计（{count}件）",
+      "shipping": "运费",
+      "free": "免费",
+      "totalWithTax": "合计（含税）",
+      "securePayment": "由 Stripe 提供的安全支付"
+    },
+    "sheet": {
+      "title": "购物车",
+      "emptyBody": "购物车中没有商品",
+      "viewProducts": "查看商品",
+      "remainingForFreeShipping": "再买 <b>¥{amount}</b> 即可免运费！",
+      "freeShippingApplied": "已享受免运费",
+      "subtotal": "小计（{count}件）",
+      "shipping": "运费",
+      "free": "免费",
+      "total": "合计",
+      "continueShopping": "继续购物",
+      "decrease": "减少数量",
+      "increase": "增加数量",
+      "remove": "删除"
+    },
+    "checkout": {
+      "proceed": "前往结算",
+      "processing": "处理中...",
+      "error": "支付错误",
+      "genericError": "发生了错误"
+    },
+    "success": {
+      "title": "感谢您的订购！",
+      "body": "您的订单已确认。我们将向您发送确认邮件。",
+      "shippingTitle": "关于发货",
+      "shippingBody": "通常在1〜3个工作日内发货。发货后将通过电子邮件向您发送追踪号码。",
+      "continueShopping": "继续购物",
+      "toTop": "返回首页"
+    },
+    "cancel": {
+      "title": "支付已取消",
+      "body": "购物车中的内容已保留。您可以继续购买。",
+      "toCart": "返回购物车",
+      "continueShopping": "继续购物"
+    }
   }
 }

@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Minus, Plus, Trash2, ShoppingBag, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -10,6 +11,7 @@ import { useCartStore } from "@/store/cart";
 import CheckoutButton from "@/components/cart/CheckoutButton";
 
 export default function CartPageClient() {
+  const t = useTranslations("commerce.cart");
   const { items, totalItems, totalPrice } = useCart();
   const { removeItem, updateQuantity, clearCart } = useCartStore();
 
@@ -21,16 +23,16 @@ export default function CartPageClient() {
     return (
       <main className="container mx-auto px-4 py-20 flex flex-col items-center text-center">
         <ShoppingBag className="h-20 w-20 text-muted-foreground/30 mb-6" />
-        <h1 className="text-2xl font-bold mb-2">カートは空です</h1>
+        <h1 className="text-2xl font-bold mb-2">{t("emptyTitle")}</h1>
         <p className="text-muted-foreground mb-8">
-          お気に入りの商品をカートに追加してください。
+          {t("emptyBody")}
         </p>
         <Link
           href="/shop"
           className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand hover:bg-brand-dark text-white text-sm font-medium transition-colors"
         >
           <ArrowLeft className="h-4 w-4" />
-          商品一覧へ
+          {t("toProducts")}
         </Link>
       </main>
     );
@@ -39,8 +41,8 @@ export default function CartPageClient() {
   return (
     <main className="container mx-auto px-4 py-10">
       <div className="flex items-center justify-between mb-8">
-        <h1 className="text-3xl font-bold">ショッピングカート</h1>
-        <span className="text-sm text-muted-foreground">{totalItems}点の商品</span>
+        <h1 className="text-3xl font-bold">{t("title")}</h1>
+        <span className="text-sm text-muted-foreground">{t("itemCount", { count: totalItems })}</span>
       </div>
 
       <div className="grid lg:grid-cols-3 gap-8">
@@ -51,7 +53,7 @@ export default function CartPageClient() {
               className="text-xs text-muted-foreground hover:text-destructive transition-colors"
               onClick={clearCart}
             >
-              すべて削除
+              {t("clearAll")}
             </button>
           </div>
 
@@ -81,13 +83,13 @@ export default function CartPageClient() {
                       size="icon-xs"
                       className="shrink-0 text-muted-foreground hover:text-destructive"
                       onClick={() => removeItem(product.id)}
-                      aria-label="削除"
+                      aria-label={t("remove")}
                     >
                       <Trash2 className="h-3.5 w-3.5" />
                     </Button>
                   </div>
                   <p className="text-xs text-muted-foreground mb-3">
-                    単価: ¥{product.price.toLocaleString()}
+                    {t("unitPrice")}: ¥{product.price.toLocaleString()}
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -95,7 +97,7 @@ export default function CartPageClient() {
                         variant="outline"
                         size="icon-xs"
                         onClick={() => updateQuantity(product.id, quantity - 1)}
-                        aria-label="数量を減らす"
+                        aria-label={t("decrease")}
                       >
                         <Minus className="h-3 w-3" />
                       </Button>
@@ -106,7 +108,7 @@ export default function CartPageClient() {
                         variant="outline"
                         size="icon-xs"
                         onClick={() => updateQuantity(product.id, quantity + 1)}
-                        aria-label="数量を増やす"
+                        aria-label={t("increase")}
                       >
                         <Plus className="h-3 w-3" />
                       </Button>
@@ -126,7 +128,7 @@ export default function CartPageClient() {
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              買い物を続ける
+              {t("continueShopping")}
             </Link>
           </div>
         </div>
@@ -134,13 +136,16 @@ export default function CartPageClient() {
         {/* Order Summary */}
         <div className="lg:col-span-1">
           <div className="rounded-xl border bg-card p-6 sticky top-24">
-            <h2 className="font-bold text-base mb-4">注文サマリー</h2>
+            <h2 className="font-bold text-base mb-4">{t("summary")}</h2>
 
             {/* 送料無料バー */}
             {shipping > 0 && (
               <div className="mb-4 p-3 bg-brand-soft rounded-lg">
                 <p className="text-xs text-brand-dark mb-1.5">
-                  あと <span className="font-bold">¥{(shippingThreshold - totalPrice).toLocaleString()}</span> で送料無料
+                  {t.rich("remainingForFreeShipping", {
+                    amount: (shippingThreshold - totalPrice).toLocaleString(),
+                    b: (chunks) => <span className="font-bold">{chunks}</span>,
+                  })}
                 </p>
                 <div className="h-1.5 rounded-full bg-brand/20 overflow-hidden">
                   <div
@@ -153,18 +158,18 @@ export default function CartPageClient() {
 
             <div className="space-y-2 text-sm">
               <div className="flex justify-between text-muted-foreground">
-                <span>小計 ({totalItems}点)</span>
+                <span>{t("subtotal", { count: totalItems })}</span>
                 <span>¥{totalPrice.toLocaleString()}</span>
               </div>
               <div className="flex justify-between text-muted-foreground">
-                <span>送料</span>
+                <span>{t("shipping")}</span>
                 <span className={shipping === 0 ? "text-brand font-medium" : ""}>
-                  {shipping === 0 ? "無料" : `¥${shipping.toLocaleString()}`}
+                  {shipping === 0 ? t("free") : `¥${shipping.toLocaleString()}`}
                 </span>
               </div>
               <Separator className="my-2" />
               <div className="flex justify-between font-bold text-base">
-                <span>合計（税込）</span>
+                <span>{t("totalWithTax")}</span>
                 <span>¥{grandTotal.toLocaleString()}</span>
               </div>
             </div>
@@ -174,7 +179,7 @@ export default function CartPageClient() {
             </div>
 
             <p className="text-xs text-center text-muted-foreground mt-3">
-              Stripeによる安全な決済
+              {t("securePayment")}
             </p>
           </div>
         </div>

@@ -1,13 +1,19 @@
-import Link from "next/link";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
 import { CheckCircle2, ArrowRight, Package } from "lucide-react";
 import { stripe } from "@/lib/stripe/server";
 import ClearCartOnMount from "@/components/cart/ClearCartOnMount";
 
 interface SuccessPageProps {
+  params: Promise<{ locale: Locale }>;
   searchParams: Promise<{ session_id?: string }>;
 }
 
-export default async function CheckoutSuccessPage({ searchParams }: SuccessPageProps) {
+export default async function CheckoutSuccessPage({ params, searchParams }: SuccessPageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("commerce.success");
   const { session_id } = await searchParams;
 
   let email = "";
@@ -30,8 +36,8 @@ export default async function CheckoutSuccessPage({ searchParams }: SuccessPageP
         <div className="h-20 w-20 rounded-full bg-brand-soft flex items-center justify-center mb-6">
           <CheckCircle2 className="h-10 w-10 text-brand" />
         </div>
-        <h1 className="text-3xl font-bold mb-3">ご注文ありがとうございます！</h1>
-        <p className="text-muted-foreground mb-2">ご注文が確定しました。確認メールをお送りします。</p>
+        <h1 className="text-3xl font-bold mb-3">{t("title")}</h1>
+        <p className="text-muted-foreground mb-2">{t("body")}</p>
         {email && <p className="text-sm font-medium mb-2">{email}</p>}
         {orderAmount > 0 && (
           <p className="text-2xl font-bold text-brand mb-6">
@@ -42,9 +48,9 @@ export default async function CheckoutSuccessPage({ searchParams }: SuccessPageP
           <div className="flex items-start gap-3">
             <Package className="h-5 w-5 text-brand mt-0.5 shrink-0" />
             <div>
-              <p className="text-sm font-medium">発送について</p>
+              <p className="text-sm font-medium">{t("shippingTitle")}</p>
               <p className="text-xs text-muted-foreground mt-0.5">
-                通常1〜3営業日以内に発送いたします。発送後に追跡番号をメールでお送りします。
+                {t("shippingBody")}
               </p>
             </div>
           </div>
@@ -54,14 +60,14 @@ export default async function CheckoutSuccessPage({ searchParams }: SuccessPageP
             href="/shop"
             className="flex-1 inline-flex items-center justify-center gap-2 h-9 px-4 rounded-lg bg-brand hover:bg-brand-dark text-white text-sm font-medium transition-colors"
           >
-            買い物を続ける
+            {t("continueShopping")}
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
             href="/"
             className="flex-1 inline-flex items-center justify-center gap-2 h-9 px-4 rounded-lg border border-border bg-background hover:bg-muted text-sm font-medium transition-colors"
           >
-            トップへ戻る
+            {t("toTop")}
           </Link>
         </div>
       </main>

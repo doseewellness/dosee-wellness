@@ -1,24 +1,31 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { setRequestLocale, getTranslations } from 'next-intl/server'
+import { Link } from '@/i18n/navigation'
+import { routing, type Locale } from '@/i18n/routing'
 import Navigation from '../../../../components/Navigation'
 import Footer from '../../../../components/Footer'
 import { USE_SHOPIFY } from '@/lib/constants/shop'
 import { blogPosts, getPostBySlug, getProductUrlForPost, type BlogBlock } from '@/lib/blog/posts'
+import { localizePost } from '@/lib/blog/i18n'
 import '../../../../styles/pages.css'
 
 export function generateStaticParams() {
-  return blogPosts.map((p) => ({ slug: p.slug }))
+  return routing.locales.flatMap((locale) =>
+    blogPosts.map((p) => ({ locale, slug: p.slug }))
+  )
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ locale: Locale; slug: string }>
 }): Promise<Metadata> {
-  const { slug } = await params
-  const post = getPostBySlug(slug)
-  if (!post) return { title: '記事が見つかりません | DoSee Wellness Note' }
+  const { locale, slug } = await params
+  const t = await getTranslations({ locale, namespace: 'blog' })
+  const base = getPostBySlug(slug)
+  if (!base) return { title: `${t('notFoundTitle')} | DoSee Wellness Note` }
+  const post = localizePost(base, locale)
 
   const url = `https://doseewellness.com/blog/${post.slug}`
   return {
@@ -37,8 +44,8 @@ export async function generateMetadata({
   }
 }
 
-const formatDate = (iso: string) =>
-  new Date(iso).toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })
+const formatDate = (iso: string, locale: Locale) =>
+  new Date(iso).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
 
 function Block({ block }: { block: BlogBlock }) {
   switch (block.type) {
@@ -71,11 +78,15 @@ function Block({ block }: { block: BlogBlock }) {
 export default async function BlogPostPage({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ locale: Locale; slug: string }>
 }) {
-  const { slug } = await params
-  const post = getPostBySlug(slug)
-  if (!post) notFound()
+  const { locale, slug } = await params
+  setRequestLocale(locale)
+  const t = await getTranslations({ locale, namespace: 'blog' })
+
+  const base = getPostBySlug(slug)
+  if (!base) notFound()
+  const post = localizePost(base, locale)
 
   const productUrl = getProductUrlForPost(post)
 
@@ -101,8 +112,8 @@ export default async function BlogPostPage({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://doseewellness.com' },
-      { '@type': 'ListItem', position: 2, name: '読みもの', item: 'https://doseewellness.com/blog' },
+      { '@type': 'ListItem', position: 1, name: t('breadcrumbHome'), item: 'https://doseewellness.com' },
+      { '@type': 'ListItem', position: 2, name: t('breadcrumbBlog'), item: 'https://doseewellness.com/blog' },
       {
         '@type': 'ListItem',
         position: 3,
@@ -139,8 +150,8 @@ export default async function BlogPostPage({
             <h1>{post.title}</h1>
             <p className="blog-article-subtitle">{post.subtitle}</p>
             <div className="blog-meta blog-meta-light">
-              <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
-              <span>・約{post.readingMinutes}分で読めます</span>
+              <time dateTime={post.publishedAt}>{formatDate(post.publishedAt, locale)}</time>
+              <span>・{t('readingTime', { minutes: post.readingMinutes })}</span>
             </div>
           </div>
         </header>
@@ -170,7 +181,7 @@ export default async function BlogPostPage({
       <section className="content-section" style={{ paddingTop: '2rem', paddingBottom: '4rem' }}>
         <div className="section-wrapper text-center">
           <Link href="/blog" className="back-button">
-            ← 読みもの一覧に戻る
+            {t('backToList')}
           </Link>
         </div>
       </section>
