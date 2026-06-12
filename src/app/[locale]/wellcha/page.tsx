@@ -1,27 +1,33 @@
 'use client'
 
 import { Link } from '@/i18n/navigation'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import { multiline } from '@/components/MultiLine'
 import productsData from '../../../data/products.json'
 import { getPurchaseUrl, USE_SHOPIFY } from '../../../lib/constants/shop'
+import { localizeProductCopy } from '@/lib/products/i18n'
+import type { Locale } from '@/i18n/routing'
 import '../../../styles/pages.css'
 
 export default function WellChaPage() {
   const t = useTranslations('wellchaPage')
+  const tb = useTranslations('blog')
+  const locale = useLocale() as Locale
 
   // 商品データを取得
   const matchaLatte = productsData.find((p) => p.id === 'matcha-latte')
   const hojichaLatte = productsData.find((p) => p.id === 'hojicha-latte')
+  const matchaCopy = localizeProductCopy('matcha-latte', locale)
+  const hojichaCopy = localizeProductCopy('hojicha-latte', locale)
 
   // 構造化データ - 商品情報（抹茶ラテ）
   const matchaProductJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: matchaLatte?.name || 'WellCha 抹茶ラテ',
-    description: matchaLatte?.longDescription || '日本茶の力で心・からだ・肌を整える抹茶ラテ。',
+    name: matchaLatte?.name || 'WellCha Matcha Latte',
+    description: matchaCopy.longDescription || matchaLatte?.longDescription || '',
     brand: { '@type': 'Brand', name: 'DoSee Wellness' },
     category: 'Health & Wellness > Tea',
     offers: {
@@ -56,8 +62,8 @@ export default function WellChaPage() {
   const hojichaProductJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: hojichaLatte?.name || 'WellCha ほうじ茶ラテ',
-    description: hojichaLatte?.longDescription || '心・からだ・呼吸をほどく、新しいほうじ茶習慣。',
+    name: hojichaLatte?.name || 'WellCha Hojicha Latte',
+    description: hojichaCopy.longDescription || hojichaLatte?.longDescription || '',
     brand: { '@type': 'Brand', name: 'DoSee Wellness' },
     category: 'Health & Wellness > Tea',
     offers: {
@@ -83,7 +89,7 @@ export default function WellChaPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://doseewellness.com' },
+      { '@type': 'ListItem', position: 1, name: tb('breadcrumbHome'), item: 'https://doseewellness.com' },
       { '@type': 'ListItem', position: 2, name: 'WellCha', item: 'https://doseewellness.com/wellcha' },
     ],
   }

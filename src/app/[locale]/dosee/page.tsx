@@ -1,25 +1,30 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import { multiline, paragraphs } from '@/components/MultiLine'
 import productsData from '../../../data/products.json'
+import { localizeProductCopy } from '@/lib/products/i18n'
+import type { Locale } from '@/i18n/routing'
 import '../../../styles/pages.css'
 
 export default function DoSeePage() {
   const t = useTranslations('doseePage')
+  const tb = useTranslations('blog')
+  const locale = useLocale() as Locale
 
   // 商品データを取得
   const gingerShot = productsData.find(p => p.id === 'ginger-shot')
+  const gingerCopy = localizeProductCopy('ginger-shot', locale)
 
   // 構造化データ - 商品情報（ジンジャーショット）
   const gingerShotJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: gingerShot?.name || 'DoSee 7-Day Ginger Shot',
-    description: gingerShot?.longDescription || '1日を前向きにする、小さな一杯。負担なく続けられるショット系ウェルネスライン。',
+    description: gingerCopy.longDescription || gingerShot?.longDescription || '',
     brand: {
       '@type': 'Brand',
       name: 'DoSee Wellness',
@@ -47,7 +52,7 @@ export default function DoSeePage() {
       {
         '@type': 'ListItem',
         position: 1,
-        name: 'ホーム',
+        name: tb('breadcrumbHome'),
         item: 'https://doseewellness.com',
       },
       {
