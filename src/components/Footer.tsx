@@ -16,7 +16,6 @@ const Footer = () => {
         <div className="footer-section">
           <h3>{t('productsTitle')}</h3>
           <Link href="/wellcha">{t('wellcha')}</Link>
-          <Link href="/dosee">{t('dosee')}</Link>
         </div>
 
         <div className="footer-section">

@@ -107,46 +107,5 @@
     "inStock": true,
     "rating": 4.8,
     "reviewCount": 0
-  },
-  {
-    "id": "ginger-shot",
-    "name": "7-Day Ginger Shot",
-    "line": "DoSee",
-    "slug": "ginger-shot",
-    "price": 2980,
-    "currency": "JPY",
-    "description": "キュッと一杯で、からだと気分をオンにする。",
-    "longDescription": "ジンジャーの温かさと、柑橘のすっきり感を組み合わせたショット。朝いちばんの目覚ましとして、または午後のリセットとして。糖分やカフェインに頼りすぎず、からだ本来のリズムをやさしく後押しします。",
-    "benefits": [
-      {
-        "title": "1日を前向きにスタート",
-        "description": "朝の一杯で、からだと気分をやさしく前に進める。"
-      },
-      {
-        "title": "続けやすい習慣",
-        "description": "「飲まなきゃいけない」ではなく、「飲んであげたい」と思える量と味わい。"
-      }
-    ],
-    "ingredients": [
-      "有機ジンジャーエキス",
-      "有機レモン果汁",
-      "有機ターメリック",
-      "天然甘味料"
-    ],
-    "howToUse": [
-      "朝、歯磨きのあとにキュッと一杯",
-      "または午後のだるさをリセットしたいタイミングで",
-      "一週間続けることで、からだの「軽さ」を実感"
-    ],
-    "shopifyUrl": "",
-    "images": {
-      "hero": "/images/products/ginger-shot/hero.jpg",
-      "thumbnail": "/images/products/ginger-shot/thumb.jpg"
-    },
-    "category": "dosee",
-    "tags": ["ginger", "shot", "wellness", "energy", "boost"],
-    "inStock": false,
-    "comingSoon": true,
-    "expectedLaunch": "2025 Q2"
   }
 ]

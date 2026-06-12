@@ -15,7 +15,6 @@
     "tagline": "こころ・からだ・肌を整える、\n日々の一杯を。",
     "productsTitle": "Products",
     "wellcha": "WellCha",
-    "dosee": "DoSee",
     "companyTitle": "Company",
     "about": "会社概要",
     "note": "読みもの",
@@ -28,61 +27,85 @@
   },
   "home": {
     "hero": {
-      "highlight": "Balance, Redefined",
-      "subtitle": "整う余白を、日常に。",
-      "subtitle2": "DoSee Wellness は、忙しい毎日の中で\n「こころ・からだ・肌」、自然に整っていく時間を\nやさしく支えるウェルネスブランドです。",
-      "badgeMind": "Mind — 静かな集中と落ち着き",
-      "badgeBody": "Body — 日々のコンディションケア",
-      "badgeSkin": "Skin — 内側から満ちる透明感",
-      "scroll": "SCROLL"
+      "eyebrow": "JAPANESE TEA WELLNESS",
+      "title": "DoSee Wellness",
+      "tagline": "整う余白を、日常に。",
+      "intro": "忙しい毎日の中で、「こころ・からだ・肌」が\n自然に整っていく時間を、やさしく支える\n日本茶ベースのウェルネスブランド。",
+      "cta": "商品を見る",
+      "scroll": "Scroll"
     },
-    "philosophy": {
-      "label": "OUR PHILOSOPHY",
-      "title": "整う余白を、日常に。",
-      "lead": "無理なルールも、頑張る習慣もいらない。\n日常の中の、ほんのひとつの余白が、\n心・からだ・肌を\n静かに、確かに、整えていきます。"
-    },
-    "circles": {
-      "mind": "思考の緊張をほどき、\n静けさの中で、\n自然な集中へ。",
-      "body": "深い呼吸のように、\nからだのリズムを、\nやさしく整える。",
-      "skin": "うるおいが満ちて、\n素肌が本来の\nやわらかさへ。"
-    },
-    "parallax": {
-      "title": "日本茶の静けさを、\nそのまま一杯に。",
-      "lead": "茶畑で育った茶葉の力を、\n忙しい毎日でも続けられるラテのかたちに。"
-    },
-    "products": {
-      "label": "PRODUCT LINES",
-      "title": "DoSee Wellness Lineup",
-      "wellchaName": "WellCha",
-      "doseeName": "DoSee",
-      "description": "日本茶ベースの WellCha と、\nショット系ウェルネス DoSee。\n忙しい日々でも続けやすい形で、こころ・からだのケアを届けます。",
-      "wellchaTitle": "日本茶のやさしさで、\n毎日をしなやかに整える。",
-      "wellchaHighlight": "抹茶とほうじ茶の自然なエネルギーで、\n忙しい日々に落ち着きと集中を。",
-      "actionLabel": "購入はこちら:",
-      "matcha": "Matcha Latte",
-      "hojicha": "Hojicha Latte",
-      "doseeTitle": "1日を前向きにする、\n小さな一杯。",
-      "doseeDescription": "ショット系ウェルネスライン。\nからだと気分をやさしく前に。",
-      "doseeTag": "7-Day Ginger Shot",
-      "comingSoon": "Coming soon"
-    },
-    "about": {
-      "label": "ABOUT\nDOSEE WELLNESS",
-      "title": "Wellness,\ndesigned to fit into everyday life.",
-      "description": "DoSee Wellness は、\n「整えるために頑張る」のではなく、\n忙しい日常の中で、自然に整っていくことを\n大切にしたウェルネスブランドです。\n時間がない日も、余裕がない日も。\nほんのひととき、\n自分に立ち戻るための、\n小さく、やさしい習慣を届けます。",
-      "keyword1Title": "No pressure*",
+    "story": {
+      "eyebrow": "OUR STORY",
+      "title": "整えるために頑張らない。\n自然に整っていく毎日を。",
+      "body": "DoSee Wellness は、「整えるために頑張る」のではなく、忙しい日常の中で、自然に整っていくことを大切にしたウェルネスブランドです。時間がない日も、余裕がない日も。ほんのひととき、自分に立ち戻るための、小さく、やさしい習慣を届けます。",
+      "keyword1Title": "No pressure",
       "keyword1Body": "難しいルールではなく、\n続けやすい習慣として。",
-      "keyword2Title": "Routine*",
+      "keyword2Title": "Routine",
       "keyword2Body": "忙しい日でも、\nさっと取り入れられる形で。",
-      "keyword3Title": "With Care*",
+      "keyword3Title": "With Care",
       "keyword3Body": "からだと心に、\nやさしく寄りそって。"
     },
-    "poetry": {
-      "left": "「整えなきゃ」と力むのではなく、\nふと一息つきたいときに、\nそっと寄り添う存在でありたい。",
-      "right": "DoSee Wellness を選ぶ時間が、\nあなたの日常に、\n静かな余白と、前向きなエネルギーを\nやさしくもたらしますように。"
+    "product": {
+      "eyebrow": "PRODUCT",
+      "title": "WellCha",
+      "subtitle": "日本茶のやさしさで、\n毎日をしなやかに整える。",
+      "description": "抹茶とほうじ茶の自然なエネルギーで、忙しい日々に落ち着きと集中を。続けやすいラテスタイルで、こころ・からだのケアを一杯に。",
+      "matchaName": "Matcha Latte",
+      "matchaCopy": "落ち着いた集中と、飲むスキンケアを一杯に。",
+      "hojichaName": "Hojicha Latte",
+      "hojichaCopy": "心・からだ・呼吸をほどく、新しいほうじ茶習慣。",
+      "cta": "WellCha を見る"
+    },
+    "why": {
+      "eyebrow": "WHY DOSEE",
+      "title": "整う余白を、日常に。",
+      "lead": "無理なルールも、頑張る習慣もいらない。\n日常の中の、ほんのひとつの余白が、\n心・からだ・肌を、静かに、確かに、整えていきます。",
+      "mind": "思考の緊張をほどき、\n静けさの中で、自然な集中へ。",
+      "body": "深い呼吸のように、\nからだのリズムを、やさしく整える。",
+      "skin": "うるおいが満ちて、\n素肌が本来のやわらかさへ。"
+    },
+    "lifestyle": {
+      "eyebrow": "LIFESTYLE",
+      "title": "日本茶の静けさを、\nそのまま一杯に。",
+      "lead": "茶畑で育った茶葉の力を、\n忙しい毎日でも続けられるラテのかたちに。",
+      "poemLeft": "「整えなきゃ」と力むのではなく、\nふと一息つきたいときに、\nそっと寄り添う存在でありたい。",
+      "poemRight": "DoSee Wellness を選ぶ時間が、\nあなたの日常に、静かな余白と\n前向きなエネルギーをもたらしますように。"
+    },
+    "reviews": {
+      "eyebrow": "VOICES",
+      "title": "続けている人の声",
+      "items": [
+        {
+          "body": "朝のコーヒーを抹茶ラテに替えてから、午前中の集中が穏やかに続くように。香りだけでも気持ちが落ち着きます。",
+          "name": "A.K.",
+          "role": "デザイナー / 32"
+        },
+        {
+          "body": "夜のほうじ茶ラテが、一日を区切るスイッチに。スマホを置いて深呼吸する時間が習慣になりました。",
+          "name": "M.S.",
+          "role": "会社員 / 28"
+        },
+        {
+          "body": "「頑張らなくていい」感じが続けやすい理由。無理なく毎日の中に溶け込んでいます。",
+          "name": "Y.T.",
+          "role": "ヨガインストラクター / 41"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "よくあるご質問",
+      "body": "飲み方や成分、配送についてのご質問にお答えしています。",
+      "cta": "FAQ を見る"
+    },
+    "order": {
+      "eyebrow": "ORDER",
+      "title": "今日の一杯から、はじめる。",
+      "body": "整えるためではなく、自分をいたわるための一杯を。\nDoSee Wellness のある毎日を、今日から。",
+      "cta": "ショップで購入"
     },
     "note": {
-      "label": "DOSEE WELLNESS NOTE",
+      "eyebrow": "DOSEE WELLNESS NOTE",
       "title": "読みもの",
       "description": "日本茶の文化と、続けやすいウェルネスのヒントを。",
       "more": "読みものをもっと見る →"
@@ -166,53 +189,6 @@
       }
     }
   },
-  "doseePage": {
-    "hero": {
-      "category": "BRAND / DOSEE",
-      "title": "1日を前向きにする、\n小さな一杯。",
-      "subtitle": "DoSee は、負担なく続けられるショット系ウェルネスライン。「ちゃんと整えたいけれど、時間も気力も限られている」そんな毎日のために、さっと飲めて、からだと気分をやさしく前に進める一杯を目指しています。",
-      "tag1": "Ginger & Botanical Wellness",
-      "tag2": "Daily small ritual",
-      "tag3": "Shot style, easy to keep"
-    },
-    "story": {
-      "label": "STORY",
-      "heading": "「ちゃんと整えたい」と\n「続けられない」のあいだで。",
-      "body": "サプリメントや健康食品はたくさんあるのに、結局はどれも続かなかった——。DoSee が見つめたのは、その「続かなさ」そのものです。\n忙しい日々のなかで、からだのことを後回しにしたくない。けれど、難しいことを毎日続ける余裕はない。DoSee は、そんな気持ちに寄り添うために生まれた、\"ショット系\" のウェルネスラインです。\n必要なものをぎゅっと凝縮しながらも、一気飲みして終わりではなく、「今日もひとつ、自分のために何かをしてあげられた」という小さな実感を残せる存在でありたいと考えています。"
-    },
-    "gingerShot": {
-      "label": "7-DAY GINGER SHOT",
-      "heading": "キュッと一杯で、\nからだと気分をオンにする。",
-      "body": "ジンジャーの温かさと、柑橘のすっきり感を組み合わせたショット。朝いちばんの目覚ましとして、または午後のリセットとして。糖分やカフェインに頼りすぎず、からだ本来のリズムをやさしく後押しします。",
-      "concept": {
-        "title": "CONCEPT",
-        "body": "「飲まなきゃいけない」ではなく、「飲んであげたい」と思える量と味わいを目指しています。がんばりすぎなくても、自分をケアできる選択肢として。"
-      },
-      "scenes": {
-        "heading": "こんなシーンにおすすめ",
-        "item1": "・ 朝の一杯で、1日を前向きにスタートしたいとき",
-        "item2": "・ コーヒーやエナジードリンクを減らしたいとき",
-        "item3": "・ 食べ過ぎた日や、からだをリセットしたい一週間のはじまりに"
-      },
-      "status": {
-        "badge": "COMING SOON",
-        "body": "7-Day Ginger Shot は現在、レシピ・フレーバー・ラインナップ構成を開発中です。リリース時期が決まり次第、このページと公式サイトでお知らせします。"
-      }
-    },
-    "ritual": {
-      "label": "FUTURE RITUAL",
-      "heading": "「今日をリセットする一杯」を、\nもっと手軽に。",
-      "body": "最終的な仕様は変更になる可能性がありますが、DoSee のジンジャーショットは、\n\"冷蔵庫から取り出して、そのまま一杯\"\nをイメージしています。",
-      "step1": "朝、歯磨きのあとにキュッと一杯。",
-      "step2": "または午後のだるさをリセットしたいタイミングで。",
-      "step3": "一週間続けることで、からだの「軽さ」を実感できる設計を目指します。",
-      "philosophy": {
-        "lead": "DoSee のショットは、「気合い」ではなく「習慣」で続けるためのもの。",
-        "body": "忙しくても、自分を気づかう「1アクション」だけは残しておきたい。そのための、一番ささやかで、一番続けやすい形を、これからも探し続けていきます。"
-      }
-    },
-    "backButton": "← トップページに戻る"
-  },
   "faqPage": {
     "hero": {
       "eyebrow": "SUPPORT",
@@ -222,7 +198,6 @@
     "categories": {
       "all": "すべて",
       "wellcha": "WellCha",
-      "dosee": "DoSee",
       "general": "一般"
     },
     "items": {
@@ -257,22 +232,6 @@
       "wellcha-8": {
         "q": "子どもでも飲めますか？",
         "a": "カフェインが含まれているため、小さなお子様への使用は推奨していません。カフェインに敏感でない10歳以上のお子様であれば、少量から試していただけます。ほうじ茶ラテの方がカフェインが控えめです。"
-      },
-      "dosee-1": {
-        "q": "DoSee（ジンジャーショット）はいつ発売されますか？",
-        "a": "現在開発中です。レシピとフレーバーの最終調整を行っており、リリース時期が決まり次第、公式サイトとSNSでお知らせいたします。"
-      },
-      "dosee-2": {
-        "q": "発売の通知を受け取るにはどうすれば良いですか？",
-        "a": "公式サイトのニュースレターにご登録いただくと、新商品の発売情報をいち早くお届けします。InstagramやTwitterでも最新情報を発信しています。"
-      },
-      "dosee-3": {
-        "q": "ジンジャーショットはどのような効果がありますか？",
-        "a": "ジンジャーの温め効果と、柑橘のすっきり感を組み合わせたショットです。朝の目覚ましや、午後のリセット、からだ本来のリズムをやさしく後押しする設計を目指しています。"
-      },
-      "dosee-4": {
-        "q": "WellChaとDoSeeの違いは何ですか？",
-        "a": "WellChaは日本茶ベースのラテで、日常的に飲むウェルネス習慣として設計されています。DoSeeはショット系で、さっと飲めて、からだと気分を前向きにする一杯を目指しています。用途や好みに合わせてお選びください。"
       },
       "general-1": {
         "q": "どこで購入できますか？",
@@ -540,8 +499,6 @@
     "homeDescription": "日本発のウェルネスブランド。日本茶ベースのWellChaと、ショット系DoSeeで、こころ・からだ・肌をやさしく整える習慣を。無理のないウェルネスを毎日に。",
     "wellchaTitle": "WellCha - 抹茶・ほうじ茶ラテ | DoSee Wellness",
     "wellchaDescription": "日本茶の力で心・からだ・肌を整える。抹茶ラテは集中力と美容を、ほうじ茶ラテは深いリラックスをサポート。続けやすいラテスタイルで毎日のウェルネス習慣を。",
-    "doseeTitle": "DoSee - 7-Day Ginger Shot（準備中）| DoSee Wellness",
-    "doseeDescription": "1日を前向きにする、小さな一杯。ジンジャー×柑橘のショット系ウェルネス。負担なく続けられる新習慣を準備中。発売通知を受け取る。",
     "aboutTitle": "DoSee Wellness について - 私たちのストーリー",
     "aboutDescription": "忙しい現代でも続けられるウェルネスをテーマに、WellChaとDoSeeの2つのラインを展開。日本の伝統知識と現代ライフスタイルを掛け合わせた、新しいウェルネス習慣を提案します。",
     "faqTitle": "よくあるご質問（FAQ）| DoSee Wellness",

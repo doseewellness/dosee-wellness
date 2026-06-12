@@ -62,29 +62,4 @@ export const productTranslationsEs: ProductTranslations = {
       "Después de la cena, en el momento de relajación antes de dormir",
     ],
   },
-  "ginger-shot": {
-    description: "Una taza vigorizante para activar el cuerpo y el ánimo.",
-    longDescription: "Un shot que combina la calidez del jengibre con la frescura del cítrico. Como despertador a primera hora de la mañana o como reinicio de la tarde. Sin depender en exceso del azúcar ni de la cafeína, impulsa con suavidad el ritmo natural del cuerpo.",
-    benefits: [
-      {
-        title: "Empieza el día con buena energía",
-        description: "Con una taza por la mañana, impulsa con suavidad el cuerpo y el ánimo hacia adelante.",
-      },
-      {
-        title: "Un hábito fácil de mantener",
-        description: "Una cantidad y un sabor que no se sienten como un \"tengo que beberlo\", sino como un \"quiero dártelo\".",
-      },
-    ],
-    ingredients: [
-      "Extracto de jengibre orgánico",
-      "Zumo de limón orgánico",
-      "Cúrcuma orgánica",
-      "Edulcorante natural",
-    ],
-    howToUse: [
-      "Por la mañana, una taza vigorizante después de cepillarte los dientes",
-      "O cuando quieras reiniciar el cansancio de la tarde",
-      "Al mantenerlo durante una semana, sientes la \"ligereza\" del cuerpo",
-    ],
-  },
 }

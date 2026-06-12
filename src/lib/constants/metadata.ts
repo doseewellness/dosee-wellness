@@ -26,12 +26,6 @@ export const pageMetadata = {
     keywords: ['抹茶ラテ', 'ほうじ茶ラテ', 'WellCha', '日本茶', 'テアニン', 'カフェイン', 'リラックス', '集中力', 'スキンケア'],
   },
   
-  dosee: {
-    title: 'DoSee - 7-Day Ginger Shot（準備中）| DoSee Wellness',
-    description: '1日を前向きにする、小さな一杯。ジンジャー×柑橘のショット系ウェルネス。負担なく続けられる新習慣を2025年夏リリース予定。発売通知を受け取る。',
-    keywords: ['ジンジャーショット', 'DoSee', 'ウェルネスショット', 'ジンジャー', '健康習慣', '発売予定'],
-  },
-  
   about: {
     title: 'DoSee Wellness について - 私たちのストーリー',
     description: '忙しい現代でも続けられるウェルネスをテーマに、WellChaとDoSeeの2つのラインを展開。日本の伝統知識と現代ライフスタイルを掛け合わせた、新しいウェルネス習慣を提案します。',
@@ -74,7 +68,6 @@ export const pageMetadata = {
 export const ogImages = {
   default: '/og-image.jpg',
   wellcha: '/wellcha-og.jpg',
-  dosee: '/dosee-og.jpg',
 }
 
 // JSON-LD構造化データのベース

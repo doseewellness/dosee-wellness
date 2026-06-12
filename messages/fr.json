@@ -15,7 +15,6 @@
     "tagline": "Une tasse quotidienne pour apaiser\ncœur, corps et peau.",
     "productsTitle": "Products",
     "wellcha": "WellCha",
-    "dosee": "DoSee",
     "companyTitle": "Entreprise",
     "about": "À propos",
     "note": "Journal",
@@ -28,63 +27,87 @@
   },
   "home": {
     "hero": {
-      "highlight": "Balance, Redefined",
-      "subtitle": "Un espace de ressourcement, au quotidien.",
-      "subtitle2": "DoSee Wellness est une marque de bien-être qui accompagne en douceur\nles moments où l'esprit, le corps et la peau\ntrouvent naturellement leur équilibre, même dans les journées les plus chargées.",
-      "badgeMind": "Mind — Concentration calme et sérénité",
-      "badgeBody": "Body — Soin du corps au quotidien",
-      "badgeSkin": "Skin — Un éclat qui rayonne de l'intérieur",
-      "scroll": "SCROLL"
+      "eyebrow": "JAPANESE TEA WELLNESS",
+      "title": "DoSee Wellness",
+      "tagline": "Un espace de ressourcement, au quotidien.",
+      "intro": "Une marque de bien-être à base de thé japonais\nqui accompagne en douceur les moments où l'esprit, le corps\net la peau trouvent naturellement leur équilibre, au cœur des journées chargées.",
+      "cta": "Voir les produits",
+      "scroll": "Scroll"
     },
-    "philosophy": {
-      "label": "OUR PHILOSOPHY",
-      "title": "Un espace de ressourcement, au quotidien.",
-      "lead": "Pas de règles strictes, pas d'habitudes à s'imposer.\nJuste une petite pause dans votre journée,\nqui apaise doucement et sûrement\nvotre esprit, votre corps et votre peau."
-    },
-    "circles": {
-      "mind": "Relâchant la tension des pensées,\ntrouvant une concentration naturelle\nau cœur du silence.",
-      "body": "Comme une respiration profonde,\nrééquilibrant en douceur\nle rythme de votre corps.",
-      "skin": "Nourrie d'hydratation,\nla peau retrouve\nsa douceur naturelle."
-    },
-    "parallax": {
-      "title": "La sérénité du thé japonais,\ndans une seule tasse.",
-      "lead": "La force des feuilles cultivées dans les jardins de thé,\ndans un latte que l'on peut savourer même les jours les plus chargés."
-    },
-    "products": {
-      "label": "PRODUCT LINES",
-      "title": "DoSee Wellness Lineup",
-      "wellchaName": "WellCha",
-      "doseeName": "DoSee",
-      "description": "WellCha, à base de thé japonais,\net DoSee, nos shots de bien-être.\nUn soin doux pour l'esprit et le corps, dans une forme adaptée à chaque journée.",
-      "wellchaTitle": "Retrouvez l'équilibre chaque jour,\ngrâce à la douceur du thé japonais.",
-      "wellchaHighlight": "L'énergie naturelle de la matcha et du hojicha\napporte calme et concentration aux journées bien remplies.",
-      "actionLabel": "Acheter ici :",
-      "matcha": "Matcha Latte",
-      "hojicha": "Hojicha Latte",
-      "doseeTitle": "Une petite tasse\npour illuminer votre journée.",
-      "doseeDescription": "Notre gamme de shots bien-être.\nPour avancer en douceur, corps et esprit.",
-      "doseeTag": "7-Day Ginger Shot",
-      "comingSoon": "Coming soon"
-    },
-    "about": {
-      "label": "ABOUT\nDOSEE WELLNESS",
-      "title": "Wellness,\ndesigned to fit into everyday life.",
-      "description": "DoSee Wellness est une marque fondée\nnon pas sur l'effort d'aller mieux,\nmais sur l'idée de retrouver naturellement l'équilibre\nau cœur d'un quotidien bien rempli.\nLes jours sans temps, les jours sans énergie,\nnous proposons de petites habitudes douces\npour juste un court instant\nde retour à soi.",
-      "keyword1Title": "No pressure*",
+    "story": {
+      "eyebrow": "OUR STORY",
+      "title": "Pas besoin de s'efforcer pour aller mieux.\nUn quotidien qui retrouve naturellement son équilibre.",
+      "body": "DoSee Wellness est une marque de bien-être fondée non pas sur l'effort d'aller mieux, mais sur l'idée de retrouver naturellement l'équilibre au cœur d'un quotidien bien rempli. Les jours sans temps comme les jours sans énergie. Le temps d'un court instant, nous proposons de petites habitudes douces pour revenir à soi.",
+      "keyword1Title": "No pressure",
       "keyword1Body": "Pas une règle difficile,\nmais une habitude facile à tenir.",
-      "keyword2Title": "Routine*",
+      "keyword2Title": "Routine",
       "keyword2Body": "Dans une forme que l'on peut intégrer\nrapidement, même les jours chargés.",
-      "keyword3Title": "With Care*",
+      "keyword3Title": "With Care",
       "keyword3Body": "En s'approchant avec douceur\ndu corps et de l'esprit."
     },
-    "poetry": {
-      "left": "Sans se forcer à « tout gérer »,\nmais en s'approchant doucement\nquand l'envie de souffler se fait sentir.",
-      "right": "Puisse le temps passé avec DoSee Wellness\napporter dans votre quotidien\nun espace de sérénité\net une énergie bienveillante et tournée vers l'avenir."
+    "product": {
+      "eyebrow": "PRODUCT",
+      "title": "WellCha",
+      "subtitle": "Retrouvez l'équilibre chaque jour,\navec la douceur du thé japonais.",
+      "description": "L'énergie naturelle de la matcha et du hojicha apporte calme et concentration aux journées bien remplies. Dans un format latte facile à adopter, prenez soin de votre esprit et de votre corps en une seule tasse.",
+      "matchaName": "Matcha Latte",
+      "matchaCopy": "Une concentration sereine et un soin de la peau à savourer, en une tasse.",
+      "hojichaName": "Hojicha Latte",
+      "hojichaCopy": "Une nouvelle habitude hojicha qui dénoue l'esprit, le corps et la respiration.",
+      "cta": "Voir WellCha"
+    },
+    "why": {
+      "eyebrow": "WHY DOSEE",
+      "title": "Un espace de ressourcement, au quotidien.",
+      "lead": "Pas de règles strictes, pas d'habitudes à s'imposer.\nJuste un petit espace de répit dans la journée,\nqui apaise doucement et sûrement l'esprit, le corps et la peau.",
+      "mind": "Relâchant la tension des pensées,\nvers une concentration naturelle au cœur du silence.",
+      "body": "Comme une respiration profonde,\nrééquilibrant en douceur le rythme du corps.",
+      "skin": "Nourrie d'hydratation,\nla peau retrouve sa douceur naturelle."
+    },
+    "lifestyle": {
+      "eyebrow": "LIFESTYLE",
+      "title": "La sérénité du thé japonais,\ntelle quelle, en une tasse.",
+      "lead": "La force des feuilles cultivées dans les jardins de thé,\ndans un latte que l'on peut savourer même les jours les plus chargés.",
+      "poemLeft": "Sans se forcer à « tout gérer »,\nmais en s'approchant doucement\nquand l'envie de souffler se fait sentir.",
+      "poemRight": "Puisse le temps passé avec DoSee Wellness\napporter dans votre quotidien un espace de sérénité\net une énergie bienveillante et tournée vers l'avenir."
+    },
+    "reviews": {
+      "eyebrow": "VOICES",
+      "title": "Témoignages de ceux qui continuent",
+      "items": [
+        {
+          "body": "Depuis que j'ai remplacé mon café du matin par un matcha latte, ma concentration de la matinée se prolonge tout en douceur. Rien que son parfum apaise déjà l'esprit.",
+          "name": "A.K.",
+          "role": "Designer / 32"
+        },
+        {
+          "body": "Le hojicha latte du soir est devenu mon interrupteur pour clore la journée. Poser le téléphone et respirer profondément est devenu une habitude.",
+          "name": "M.S.",
+          "role": "Employé de bureau / 28"
+        },
+        {
+          "body": "Ce sentiment de « ne pas avoir à se forcer » est ce qui le rend facile à tenir. Il s'intègre naturellement dans le quotidien, sans effort.",
+          "name": "Y.T.",
+          "role": "Professeur de yoga / 41"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Questions fréquentes",
+      "body": "Nous répondons à vos questions sur la préparation, les ingrédients et la livraison.",
+      "cta": "Voir la FAQ"
+    },
+    "order": {
+      "eyebrow": "ORDER",
+      "title": "Commencez par une tasse, aujourd'hui.",
+      "body": "Non pas une tasse pour aller mieux, mais une tasse pour prendre soin de soi.\nUn quotidien avec DoSee Wellness, dès aujourd'hui.",
+      "cta": "Acheter en boutique"
     },
     "note": {
-      "label": "DOSEE WELLNESS NOTE",
+      "eyebrow": "DOSEE WELLNESS NOTE",
       "title": "Journal",
-      "description": "Sur la culture du thé japonais et les habitudes de bien-être faciles à maintenir.",
+      "description": "Sur la culture du thé japonais et les conseils de bien-être faciles à maintenir.",
       "more": "Lire plus d'articles →"
     }
   },
@@ -166,53 +189,6 @@
       }
     }
   },
-  "doseePage": {
-    "hero": {
-      "category": "BRAND / DOSEE",
-      "title": "Un petit shot\npour bien commencer la journée.",
-      "subtitle": "DoSee est une gamme de bien-être en format shot conçue pour s'intégrer même dans les journées les plus chargées. Pour ceux qui souhaitent prendre soin d'eux sans avoir le temps ni l'énergie de se compliquer la vie — une simple gorgée, pour faire avancer doucement corps et humeur.",
-      "tag1": "Ginger & Botanical Wellness",
-      "tag2": "Daily small ritual",
-      "tag3": "Shot style, easy to keep"
-    },
-    "story": {
-      "label": "STORY",
-      "heading": "Entre l'envie d'aller mieux\net la difficulté de s'y tenir.",
-      "body": "Les compléments alimentaires et produits de santé ne manquent pas — et pourtant, la plupart finissent oubliés. DoSee est né d'un regard honnête sur ce problème : la difficulté à persévérer.\nAu cœur d'une vie bien remplie, vous ne voulez pas mettre votre corps de côté. Mais vous ne pouvez pas non plus vous engager dans quelque chose de compliqué chaque jour. DoSee a été créé pour vous rejoindre là où vous en êtes — une gamme de bien-être en format shot, fondée sur la simplicité.\nChaque flacon concentre ce dont vous avez besoin, mais il ne s'agit pas de l'avaler et de passer à autre chose. Il s'agit de ce petit sentiment tranquille en fin de journée : « J'ai fait quelque chose pour moi aujourd'hui. »"
-    },
-    "gingerShot": {
-      "label": "7-DAY GINGER SHOT",
-      "heading": "Un shot rapide pour\nréveiller corps et esprit.",
-      "body": "Un mélange lumineux de gingembre réchauffant et d'agrumes rafraîchissants. Parfait comme coup de fouet matinal ou pour se remettre d'aplomb l'après-midi. Conçu pour soutenir en douceur le rythme naturel de votre corps — sans dépendre du sucre ni de la caféine.",
-      "concept": {
-        "title": "CONCEPT",
-        "body": "Notre objectif n'est pas quelque chose que vous vous sentez obligé de boire — nous voulons que ce soit quelque chose dont vous ayez vraiment envie. Une façon simple et agréable de prendre soin de vous, sans pression."
-      },
-      "scenes": {
-        "heading": "Idéal dans ces moments",
-        "item1": "· Commencer sa matinée avec intention et un état d'esprit positif",
-        "item2": "· Réduire sa consommation de café ou de boissons énergisantes",
-        "item3": "· Après un repas copieux, ou pour se remettre à zéro en début de semaine"
-      },
-      "status": {
-        "badge": "COMING SOON",
-        "body": "Le 7-Day Ginger Shot est actuellement en développement — nous peaufinons la recette, les saveurs et la gamme. Nous partagerons les mises à jour ici et sur notre site officiel dès qu'une date de lancement sera confirmée."
-      }
-    },
-    "ritual": {
-      "label": "FUTURE RITUAL",
-      "heading": "Votre remise à zéro quotidienne,\nsimple comme bonjour.",
-      "body": "Les détails finaux peuvent changer, mais la vision du shot de gingembre DoSee est simple :\n« Sortez-le du réfrigérateur et buvez. »\nC'est tout.",
-      "step1": "Le matin, un petit shot rapide juste après le brossage des dents.",
-      "step2": "Ou quand ce coup de mou de l'après-midi arrive et que vous avez besoin de repartir.",
-      "step3": "Tenez-y une semaine, et vous pourrez commencer à ressentir une légèreté dans votre corps.",
-      "philosophy": {
-        "lead": "Les shots DoSee sont pensés pour l'habitude — pas la volonté.",
-        "body": "Même dans les journées les plus chargées, nous voulons que vous gardiez ce petit geste de soin pour vous-même. Nous nous engageons à trouver la forme la plus simple et la plus durable qui le rende possible — et nous continuerons à chercher."
-      }
-    },
-    "backButton": "← Retour à l'accueil"
-  },
   "faqPage": {
     "hero": {
       "eyebrow": "SUPPORT",
@@ -222,7 +198,6 @@
     "categories": {
       "all": "Tout",
       "wellcha": "WellCha",
-      "dosee": "DoSee",
       "general": "Général"
     },
     "items": {
@@ -257,22 +232,6 @@
       "wellcha-8": {
         "q": "Les enfants peuvent-ils consommer WellCha ?",
         "a": "WellCha contenant de la caféine, nous ne le recommandons pas aux jeunes enfants. Pour les enfants de 10 ans et plus qui ne sont pas sensibles à la caféine, commencer par une petite quantité peut convenir. Le Hojicha Latte contient moins de caféine et peut être une option plus douce."
-      },
-      "dosee-1": {
-        "q": "Quand le DoSee (Ginger Shot) sera-t-il disponible ?",
-        "a": "DoSee est actuellement en développement. Nous finalisons la recette et les saveurs, et annoncerons la date de lancement sur notre site officiel et nos réseaux sociaux dès qu'elle sera confirmée."
-      },
-      "dosee-2": {
-        "q": "Comment être notifié du lancement de DoSee ?",
-        "a": "Inscrivez-vous à notre newsletter sur le site officiel pour recevoir les annonces de nouveaux produits dès leur publication. Nous partageons également les dernières actualités sur Instagram et Twitter."
-      },
-      "dosee-3": {
-        "q": "À quoi sert le Ginger Shot ?",
-        "a": "DoSee associe la chaleur du gingembre à la note lumineuse et fraîche des agrumes. Il est conçu comme une douce impulsion pour le rythme naturel de votre corps — idéal comme réveil matinal, remise à zéro de l'après-midi, ou quand vous avez besoin d'un coup de pouce rapide."
-      },
-      "dosee-4": {
-        "q": "Quelle est la différence entre WellCha et DoSee ?",
-        "a": "WellCha est un latte à base de thé japonais conçu comme une habitude de bien-être quotidienne à savourer. DoSee est un format shot pensé pour les moments où vous souhaitez un boost rapide et positif pour votre corps et votre humeur. Choisissez celui qui correspond le mieux à votre routine et vos préférences."
       },
       "general-1": {
         "q": "Où puis-je acheter les produits DoSee Wellness ?",
@@ -540,8 +499,6 @@
     "homeDescription": "Marque de bien-être née au Japon. Avec WellCha à base de thé japonais et DoSee de type shot, des habitudes qui apaisent doucement cœur, corps et peau. Un bien-être sans contrainte, au quotidien.",
     "wellchaTitle": "WellCha - Matcha Latte et Hojicha Latte | DoSee Wellness",
     "wellchaDescription": "La force du thé japonais pour apaiser cœur, corps et peau. Le Matcha Latte accompagne la concentration et la beauté, le Hojicha Latte invite à une détente profonde. Une habitude bien-être au quotidien, dans un format latte facile à maintenir.",
-    "doseeTitle": "DoSee - 7-Day Ginger Shot (Bientôt disponible) | DoSee Wellness",
-    "doseeDescription": "Une petite gorgée pour aborder la journée avec entrain. Un shot bien-être au gingembre et aux agrumes. Une nouvelle habitude facile à maintenir, en préparation. Recevez la notification de lancement.",
     "aboutTitle": "À propos de DoSee Wellness - Notre histoire",
     "aboutDescription": "Un bien-être que l'on peut maintenir même dans le quotidien chargé : deux gammes, WellCha et DoSee. En alliant le savoir traditionnel japonais au mode de vie contemporain, nous proposons une nouvelle habitude bien-être.",
     "faqTitle": "Foire aux questions (FAQ) | DoSee Wellness",

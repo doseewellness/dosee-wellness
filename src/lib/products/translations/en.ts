@@ -62,29 +62,4 @@ export const productTranslationsEn: ProductTranslations = {
       "Mineral Blend",
     ],
   },
-  "ginger-shot": {
-    description: "One quick cup to switch your body and mood on.",
-    longDescription: "A shot that combines the warmth of ginger with the refreshing brightness of citrus. As a first-thing wake-up in the morning, or as an afternoon reset. Without leaning too heavily on sugar or caffeine, it gently supports your body's natural rhythm.",
-    benefits: [
-      {
-        title: "Start Your Day on a Positive Note",
-        description: "A morning cup that gently moves your body and mood forward.",
-      },
-      {
-        title: "An Easy Habit to Keep",
-        description: "An amount and flavor that feel less like \"something you have to drink\" and more like \"something you want to give yourself.\"",
-      },
-    ],
-    howToUse: [
-      "A quick cup in the morning after brushing your teeth",
-      "Or whenever you want to reset that afternoon sluggishness",
-      "Keep it up for a week to feel a new \"lightness\" in your body",
-    ],
-    ingredients: [
-      "Organic Ginger Extract",
-      "Organic Lemon Juice",
-      "Organic Turmeric",
-      "Natural Sweetener",
-    ],
-  },
 }

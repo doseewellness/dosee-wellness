@@ -62,29 +62,4 @@ export const productTranslationsFr: ProductTranslations = {
       "Après le dîner, pour le moment de détente avant de dormir",
     ],
   },
-  "ginger-shot": {
-    description: "Une gorgée vive pour mettre corps et esprit en route.",
-    longDescription: "Un shot qui associe la chaleur du gingembre à la fraîcheur des agrumes. Comme réveil du tout matin, ou comme remise à zéro de l'après-midi. Sans trop dépendre du sucre ni de la caféine, il accompagne en douceur le rythme naturel de votre corps.",
-    benefits: [
-      {
-        title: "Aborder la journée avec entrain",
-        description: "Une gorgée le matin pour faire avancer en douceur le corps et l'humeur.",
-      },
-      {
-        title: "Une habitude facile à maintenir",
-        description: "Non pas « quelque chose qu'il faut boire », mais une quantité et un goût qui donnent envie de prendre soin de soi.",
-      },
-    ],
-    ingredients: [
-      "Extrait de gingembre biologique",
-      "Jus de citron biologique",
-      "Curcuma biologique",
-      "Édulcorant naturel",
-    ],
-    howToUse: [
-      "Une gorgée vive le matin, après le brossage des dents",
-      "Ou lorsque vous souhaitez chasser la fatigue de l'après-midi",
-      "En le maintenant une semaine, ressentez la « légèreté » du corps",
-    ],
-  },
 }

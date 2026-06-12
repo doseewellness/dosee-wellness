@@ -17,7 +17,6 @@ interface FAQItem {
 
 interface FAQData {
   wellcha: FAQItem[]
-  dosee: FAQItem[]
   general: FAQItem[]
 }
 
@@ -25,7 +24,7 @@ const typedFaqData = faqData as FAQData
 
 export default function FAQPage() {
   const t = useTranslations('faqPage')
-  const [activeCategory, setActiveCategory] = useState<'all' | 'wellcha' | 'dosee' | 'general'>('all')
+  const [activeCategory, setActiveCategory] = useState<'all' | 'wellcha' | 'general'>('all')
   const [openItems, setOpenItems] = useState<Set<string>>(new Set())
 
   const toggleItem = (id: string) => {
@@ -51,14 +50,6 @@ export default function FAQPage() {
           text: item.answer,
         },
       })),
-      ...typedFaqData.dosee.map((item) => ({
-        '@type': 'Question',
-        name: item.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: item.answer,
-        },
-      })),
       ...typedFaqData.general.map((item) => ({
         '@type': 'Question',
         name: item.question,
@@ -73,7 +64,6 @@ export default function FAQPage() {
   const categories = [
     { id: 'all' as const, label: t('categories.all') },
     { id: 'wellcha' as const, label: t('categories.wellcha') },
-    { id: 'dosee' as const, label: t('categories.dosee') },
     { id: 'general' as const, label: t('categories.general') },
   ]
 
@@ -81,7 +71,6 @@ export default function FAQPage() {
     if (activeCategory === 'all') {
       return [
         ...typedFaqData.wellcha,
-        ...typedFaqData.dosee,
         ...typedFaqData.general,
       ]
     }

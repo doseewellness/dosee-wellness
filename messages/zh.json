@@ -15,7 +15,6 @@
     "tagline": "呵护身心与肌肤，\n从每日一杯开始。",
     "productsTitle": "Products",
     "wellcha": "WellCha",
-    "dosee": "DoSee",
     "companyTitle": "Company",
     "about": "关于我们",
     "note": "阅读文章",
@@ -28,61 +27,85 @@
   },
   "home": {
     "hero": {
-      "highlight": "Balance, Redefined",
-      "subtitle": "为日常留一片舒缓的空间。",
-      "subtitle2": "DoSee Wellness 是一个温柔守护的健康品牌，\n在忙碌的每一天里，\n让身心与肌肤自然而然地得到舒缓与平衡。",
-      "badgeMind": "Mind — 宁静的专注与平和",
-      "badgeBody": "Body — 日常身体状态的呵护",
-      "badgeSkin": "Skin — 由内而外焕发的通透感",
-      "scroll": "SCROLL"
+      "eyebrow": "JAPANESE TEA WELLNESS",
+      "title": "DoSee Wellness",
+      "tagline": "为日常留一片舒缓的空间。",
+      "intro": "在忙碌的每一天里，温柔守护\n让「心灵・身体・肌肤」自然舒缓的时光，\n以日本茶为基础的健康品牌。",
+      "cta": "查看产品",
+      "scroll": "Scroll"
     },
-    "philosophy": {
-      "label": "OUR PHILOSOPHY",
-      "title": "为日常留一片舒缓的空间。",
-      "lead": "无需严苛的规则，也无需刻意坚持的习惯。\n只是日常中那一小片喘息的空间，\n静静地、确实地\n滋养着心灵、身体与肌肤。"
-    },
-    "circles": {
-      "mind": "解开思绪的紧绷，\n在宁静之中，\n回归自然的专注。",
-      "body": "如同深呼吸一般，\n轻柔地调整\n身体的节律。",
-      "skin": "水润充盈，\n素颜重现\n本来的柔软光泽。"
-    },
-    "parallax": {
-      "title": "日本茶的宁静，\n就在这一杯之中。",
-      "lead": "茶园孕育的茶叶之力，\n化作忙碌日常中也能坚持的拿铁形式。"
-    },
-    "products": {
-      "label": "PRODUCT LINES",
-      "title": "DoSee Wellness Lineup",
-      "wellchaName": "WellCha",
-      "doseeName": "DoSee",
-      "description": "以日本茶为基础的 WellCha，\n以及浓缩健康的 DoSee 系列。\n以便于坚持的形式，守护忙碌日常中的身心。",
-      "wellchaTitle": "借日本茶的温柔，\n让每天更从容。",
-      "wellchaHighlight": "抹茶与焙茶的天然能量，\n为忙碌的日子带来平静与专注。",
-      "actionLabel": "立即购买：",
-      "matcha": "Matcha Latte",
-      "hojicha": "Hojicha Latte",
-      "doseeTitle": "让每一天都积极向前的\n小小一杯。",
-      "doseeDescription": "浓缩型健康系列。\n轻柔地推动身体与心情向前。",
-      "doseeTag": "7-Day Ginger Shot",
-      "comingSoon": "Coming soon"
-    },
-    "about": {
-      "label": "ABOUT\nDOSEE WELLNESS",
-      "title": "Wellness,\ndesigned to fit into everyday life.",
-      "description": "DoSee Wellness 是一个\n不追求「努力调整」，\n而是让身体在忙碌日常中\n自然得到舒缓的健康品牌。\n无论是没有时间的日子，还是没有余裕的日子，\n都为你送上片刻\n回归自我的\n细小而温柔的习惯。",
-      "keyword1Title": "No pressure*",
-      "keyword1Body": "不是难以坚持的规则，\n而是轻松延续的日常习惯。",
-      "keyword2Title": "Routine*",
-      "keyword3Title": "With Care*",
-      "keyword2Body": "即便在忙碌的日子里，\n也能随手融入生活。",
+    "story": {
+      "eyebrow": "OUR STORY",
+      "title": "不为调整而勉强自己。\n让每一天自然而然地舒缓。",
+      "body": "DoSee Wellness 是一个健康品牌，它珍视的不是「为调整而努力」，而是在忙碌的日常中让一切自然而然地舒缓下来。无论是没有时间的日子，还是没有余裕的日子。我们为你送上一份细小而温柔的习惯，让你在片刻之间回归自我。",
+      "keyword1Title": "No pressure",
+      "keyword1Body": "不是难以执行的规则，\n而是轻松延续的日常习惯。",
+      "keyword2Title": "Routine",
+      "keyword2Body": "即便在忙碌的日子里，\n也能随手融入。",
+      "keyword3Title": "With Care",
       "keyword3Body": "温柔地贴近\n身体与内心。"
     },
-    "poetry": {
-      "left": "不是用力「整理好自己」，\n而是在想喘口气的时候，\n悄悄陪伴在你身边。",
-      "right": "愿你选择 DoSee Wellness 的每一刻，\n都为你的日常\n带来宁静的余白与\n温柔向前的能量。"
+    "product": {
+      "eyebrow": "PRODUCT",
+      "title": "WellCha",
+      "subtitle": "借日本茶的温柔，\n让每天更柔韧从容。",
+      "description": "以抹茶与焙茶的天然能量，为忙碌的日子带来平静与专注。以便于坚持的拿铁形式，将心灵与身体的呵护浓缩于一杯之中。",
+      "matchaName": "Matcha Latte",
+      "matchaCopy": "将沉静的专注与可饮用的护肤体验，浓缩于一杯。",
+      "hojichaName": "Hojicha Latte",
+      "hojichaCopy": "舒展心灵・身体・呼吸的全新焙茶习惯。",
+      "cta": "查看 WellCha"
+    },
+    "why": {
+      "eyebrow": "WHY DOSEE",
+      "title": "为日常留一片舒缓的空间。",
+      "lead": "无需勉强的规则，也无需刻意坚持的习惯。\n日常中那一小片喘息的空间，\n静静地、确实地，舒缓着心灵・身体・肌肤。",
+      "mind": "解开思绪的紧绷，\n在宁静之中，回归自然的专注。",
+      "body": "如同深呼吸一般，\n轻柔地调整身体的节律。",
+      "skin": "水润充盈，\n让素颜重现本来的柔软。"
+    },
+    "lifestyle": {
+      "eyebrow": "LIFESTYLE",
+      "title": "将日本茶的宁静，\n原原本本地融入一杯。",
+      "lead": "把茶园孕育的茶叶之力，\n化作忙碌日常中也能坚持的拿铁形式。",
+      "poemLeft": "不是用力「必须调整好自己」，\n而是在想喘口气的时候，\n悄悄陪伴在你身边。",
+      "poemRight": "愿你选择 DoSee Wellness 的时光，\n为你的日常带来宁静的余白与\n温柔向前的能量。"
+    },
+    "reviews": {
+      "eyebrow": "VOICES",
+      "title": "坚持者的心声",
+      "items": [
+        {
+          "body": "把早晨的咖啡换成抹茶拿铁后，上午的专注变得平和而持久。光是香气就足以让心情平静下来。",
+          "name": "A.K.",
+          "role": "设计师 / 32"
+        },
+        {
+          "body": "夜晚的焙茶拿铁，成了为一天画上句点的开关。放下手机、深呼吸的时光，渐渐成了习惯。",
+          "name": "M.S.",
+          "role": "公司职员 / 28"
+        },
+        {
+          "body": "「不必勉强」的感觉，正是能够坚持的理由。它毫无负担地融入了每一天的生活。",
+          "name": "Y.T.",
+          "role": "瑜伽教练 / 41"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "常见问题",
+      "body": "为您解答关于饮用方式、成分与配送的疑问。",
+      "cta": "查看 FAQ"
+    },
+    "order": {
+      "eyebrow": "ORDER",
+      "title": "从今天的一杯开始。",
+      "body": "不是为了调整，而是为了好好爱护自己的一杯。\n从今天起，开启有 DoSee Wellness 相伴的每一天。",
+      "cta": "前往商店购买"
     },
     "note": {
-      "label": "DOSEE WELLNESS NOTE",
+      "eyebrow": "DOSEE WELLNESS NOTE",
       "title": "阅读文章",
       "description": "关于日本茶文化，以及易于坚持的健康生活小贴士。",
       "more": "查看更多文章 →"
@@ -166,53 +189,6 @@
       }
     }
   },
-  "doseePage": {
-    "hero": {
-      "category": "BRAND / DOSEE",
-      "title": "让每一天都积极向前的，\n小小一杯。",
-      "subtitle": "DoSee 是一款无负担、易于坚持的浓缩型健康系列。为那些「想好好调养身体，却时间与精力都有限」的每一天而生——一口饮尽，温柔地推动身体与心情向前。",
-      "tag1": "Ginger & Botanical Wellness",
-      "tag2": "Daily small ritual",
-      "tag3": "Shot style, easy to keep"
-    },
-    "story": {
-      "label": "STORY",
-      "heading": "在「想好好调养」\n与「坚持不下去」之间。",
-      "body": "明明有那么多保健品和健康食品，到头来还是没能坚持下去——。DoSee 所关注的，正是这种「坚持不下去」的本质。\n在忙碌的日常中，不想把身体健康一再搁置。但每天都坚持做复杂的事情，实在没有余裕。DoSee 就是为了回应这份心情而诞生的「浓缩型」健康系列。\n在将所需精华浓缩的同时，它也不只是一饮而尽了事，而是希望成为那种能留下「今天也为自己做了一件事」这份小小实感的存在。"
-    },
-    "gingerShot": {
-      "label": "7-DAY GINGER SHOT",
-      "heading": "轻轻一饮，\n唤醒身体与精神。",
-      "body": "将生姜的暖意与柑橘的清爽感相结合的浓缩饮品。可作为清晨的提神饮料，也可作为午后的重置时刻。无需依赖过多糖分或咖啡因，温柔地为身体本来的节律助力。",
-      "concept": {
-        "title": "CONCEPT",
-        "body": "我们追求的不是「不得不喝」，而是「想好好为自己喝一杯」的分量与口感。作为一种即使不勉强自己也能好好照顾自己的选择。"
-      },
-      "scenes": {
-        "heading": "推荐场景",
-        "item1": "· 想用早晨的一杯，以积极的心态开启新的一天",
-        "item2": "· 想减少咖啡或功能性饮料的摄入",
-        "item3": "· 饮食过量的次日，或想在一周开始时重置身体状态时"
-      },
-      "status": {
-        "badge": "COMING SOON",
-        "body": "7-Day Ginger Shot 目前正在进行配方、口味及产品阵容的开发。一旦确定上市时间，将在本页面及官方网站上发布通知。"
-      }
-    },
-    "ritual": {
-      "label": "FUTURE RITUAL",
-      "heading": "将「今日重置的一杯」，\n变得更加轻松便捷。",
-      "body": "最终规格可能有所调整，但 DoSee 姜射饮品的理念十分简单：\n\"从冰箱取出，直接饮用\"\n就是这么简单。",
-      "step1": "清晨刷牙后，轻轻来上一杯。",
-      "step2": "或在午后感到疲惫、想要重置状态时。",
-      "step3": "坚持一周，感受身体「轻盈感」的设计目标。",
-      "philosophy": {
-        "lead": "DoSee 的浓缩饮品，是为了「习惯」而生，而非靠「意志力」坚持。",
-        "body": "即使再忙碌，也希望你能为自己保留这「一个小小的行动」。为此，我们将持续探索最简单、最易于坚持的形式。"
-      }
-    },
-    "backButton": "← 返回首页"
-  },
   "faqPage": {
     "hero": {
       "eyebrow": "SUPPORT",
@@ -222,7 +198,6 @@
     "categories": {
       "all": "全部",
       "wellcha": "WellCha",
-      "dosee": "DoSee",
       "general": "综合"
     },
     "items": {
@@ -257,22 +232,6 @@
       "wellcha-8": {
         "q": "儿童可以饮用吗？",
         "a": "由于含有咖啡因，不建议年幼儿童饮用。对咖啡因不敏感的10岁以上儿童，可从少量开始尝试。Hojicha Latte 咖啡因含量较低，是相对温和的选择。"
-      },
-      "dosee-1": {
-        "q": "DoSee（姜汁浓缩饮品）何时发售？",
-        "a": "目前正在开发中。配方与口味的最终调整完成后，将在官方网站和社交媒体上第一时间公布发售时间。"
-      },
-      "dosee-2": {
-        "q": "如何才能收到发售通知？",
-        "a": "订阅官方网站的电子报，即可第一时间获取新品上市信息。我们也在 Instagram 和 Twitter 上持续发布最新资讯。"
-      },
-      "dosee-3": {
-        "q": "姜汁浓缩饮品有什么功效？",
-        "a": "将生姜的暖身效果与柑橘的清爽感相结合。以温柔助推身体本来节律为设计目标，适合作为清晨的提神饮品、午后的重置时刻，或需要补充活力时饮用。"
-      },
-      "dosee-4": {
-        "q": "WellCha 和 DoSee 有什么区别？",
-        "a": "WellCha 是以日本茶为基础的拿铁，专为日常饮用的健康习惯而设计。DoSee 是浓缩饮品系列，可随时一饮而尽，旨在积极推动身体与心情向前。请根据使用场景和个人喜好选择适合自己的产品。"
       },
       "general-1": {
         "q": "在哪里可以购买？",
@@ -540,8 +499,6 @@
     "homeDescription": "源自日本的健康品牌。以日本茶为基础的 WellCha，与浓缩型 DoSee，为您送上温柔滋养身心与肌肤的习惯。把无负担的健康融入每一天。",
     "wellchaTitle": "WellCha - 抹茶・焙茶拿铁 | DoSee Wellness",
     "wellchaDescription": "以日本茶的力量呵护身心与肌肤。Matcha Latte 助力专注与美容，Hojicha Latte 带来深度放松。以易于坚持的拿铁形式，开启每日的健康习惯。",
-    "doseeTitle": "DoSee - 7-Day Ginger Shot（即将上市）| DoSee Wellness",
-    "doseeDescription": "让每一天都积极向前的小小一杯。生姜×柑橘的浓缩型健康饮品。一种无负担、易于坚持的全新习惯正在筹备中。订阅以接收上市通知。",
     "aboutTitle": "关于 DoSee Wellness - 我们的故事",
     "aboutDescription": "以即使在忙碌的现代生活中也能坚持的健康为主题，推出 WellCha 与 DoSee 两条产品线。将日本传统智慧与现代生活方式相结合，为您提供全新的健康习惯。",
     "faqTitle": "常见问题（FAQ）| DoSee Wellness",
