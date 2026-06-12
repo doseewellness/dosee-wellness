@@ -8,6 +8,7 @@ import Footer from '../../../../components/Footer'
 import { USE_SHOPIFY } from '@/lib/constants/shop'
 import { blogPosts, getPostBySlug, getProductUrlForPost, type BlogBlock } from '@/lib/blog/posts'
 import { localizePost } from '@/lib/blog/i18n'
+import { buildAlternates } from '@/lib/i18n/alternates'
 import '../../../../styles/pages.css'
 
 export function generateStaticParams() {
@@ -32,7 +33,7 @@ export async function generateMetadata({
     title: `${post.title} | DoSee Wellness Note`,
     description: post.excerpt,
     keywords: post.keywords,
-    alternates: { canonical: url },
+    alternates: buildAlternates(locale, `/blog/${post.slug}`),
     openGraph: {
       title: post.title,
       description: post.excerpt,

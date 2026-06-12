@@ -6,6 +6,7 @@ import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import { getAllPosts } from '@/lib/blog/posts'
 import { localizePost } from '@/lib/blog/i18n'
+import { buildAlternates } from '@/lib/i18n/alternates'
 import '../../../styles/pages.css'
 
 export function generateStaticParams() {
@@ -22,7 +23,7 @@ export async function generateMetadata({
   return {
     title: t('metaTitle'),
     description: t('metaDescription'),
-    alternates: { canonical: 'https://doseewellness.com/blog' },
+    alternates: buildAlternates(locale, '/blog'),
     openGraph: {
       title: t('metaTitle'),
       description: t('metaDescription'),

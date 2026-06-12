@@ -537,7 +537,23 @@
   },
   "meta": {
     "homeTitle": "DoSee Wellness - Wellness you can keep up with, even on busy days",
-    "homeDescription": "A Japanese wellness brand. With WellCha, based on Japanese tea, and the DoSee shot line, we offer gentle daily habits to soothe your mind, body, and skin. Effortless wellness, every day."
+    "homeDescription": "A Japanese wellness brand. With WellCha, based on Japanese tea, and the DoSee shot line, we offer gentle daily habits to soothe your mind, body, and skin. Effortless wellness, every day.",
+    "wellchaTitle": "WellCha - Matcha & Hojicha Latte | DoSee Wellness",
+    "wellchaDescription": "Soothe your mind, body, and skin with the power of Japanese tea. Matcha Latte supports focus and beauty, while Hojicha Latte invites deep relaxation. An easy latte-style habit to bring wellness into every day.",
+    "doseeTitle": "DoSee - 7-Day Ginger Shot (Coming Soon) | DoSee Wellness",
+    "doseeDescription": "A little cup to set a positive tone for your day. A shot-style wellness blend of ginger and citrus. A new habit you can keep up with effortlessly, coming soon. Sign up for launch updates.",
+    "aboutTitle": "About DoSee Wellness - Our Story",
+    "aboutDescription": "Wellness you can keep up with even in busy modern life, across two lines: WellCha and DoSee. We blend Japan's traditional wisdom with the modern lifestyle to offer a new kind of wellness habit.",
+    "faqTitle": "Frequently Asked Questions (FAQ) | DoSee Wellness",
+    "faqDescription": "Common questions about WellCha (Matcha & Hojicha Latte) and DoSee (Ginger Shot). We answer how to enjoy them, ingredients, how to purchase, and shipping.",
+    "privacyTitle": "Privacy Policy | DoSee Wellness",
+    "privacyDescription": "The privacy policy of DoSee Wellness. We explain how we handle personal information, our use of cookies, and your rights as a customer.",
+    "termsTitle": "Terms of Service | DoSee Wellness",
+    "termsDescription": "The terms of service of DoSee Wellness. We set out the conditions of service use, product purchases, returns and exchanges, and prohibited conduct.",
+    "commerceTitle": "Commercial Transactions Act Notice | DoSee Wellness",
+    "commerceDescription": "The Commercial Transactions Act Notice of DoSee Wellness. We provide business information, selling prices, payment methods, and shipping and returns.",
+    "contactTitle": "Contact | DoSee Wellness",
+    "contactDescription": "Get in touch with DoSee Wellness here. Feel free to reach out with any questions about our products, orders, or transactions."
   },
   "blog": {
     "eyebrow": "DOSEE WELLNESS NOTE",

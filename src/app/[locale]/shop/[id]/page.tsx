@@ -8,10 +8,27 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { getProductById } from "@/lib/data";
 import productsData from "@/data/products.json";
+import { localizeProductCopy } from "@/lib/products/i18n";
+import { buildAlternates } from "@/lib/i18n/alternates";
 import AddToCartButton from "@/components/products/AddToCartButton";
+import type { Metadata } from "next";
 
 interface ProductDetailPageProps {
   params: Promise<{ locale: Locale; id: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: ProductDetailPageProps): Promise<Metadata> {
+  const { locale, id } = await params;
+  const product = await getProductById(id);
+  if (!product) return {};
+  const copy = localizeProductCopy(id, locale);
+  return {
+    title: `${product.name} | DoSee Wellness`,
+    description: copy.description ?? product.description,
+    alternates: buildAlternates(locale, `/shop/${id}`),
+  };
 }
 
 type RichProduct = {
@@ -53,6 +70,7 @@ export default async function ProductDetailPage({
   if (!product) notFound();
 
   const rich = (productsData as RichProduct[]).find((p) => p.id === id);
+  const copy = localizeProductCopy(id, locale);
   const nutrition = rich?.nutritionFacts;
   const nutritionRows = nutrition
     ? NUTRITION_KEYS.filter((key) => nutrition[key] != null)
@@ -135,7 +153,7 @@ export default async function ProductDetailPage({
           </div>
 
           <p className="text-muted-foreground leading-relaxed mb-8">
-            {rich?.longDescription ?? product.description}
+            {copy.longDescription ?? copy.description ?? product.description}
           </p>
 
           {/* CTA */}
@@ -160,11 +178,11 @@ export default async function ProductDetailPage({
       {/* 詳細情報 */}
       {rich && (
         <div className="mt-16 max-w-3xl mx-auto flex flex-col gap-12">
-          {rich.benefits && rich.benefits.length > 0 && (
+          {copy.benefits && copy.benefits.length > 0 && (
             <section>
               <h2 className="text-xl font-bold mb-6">{t("features")}</h2>
               <div className="grid gap-5 sm:grid-cols-3">
-                {rich.benefits.map((b) => (
+                {copy.benefits.map((b) => (
                   <div
                     key={b.title}
                     className="rounded-xl border border-border/60 bg-muted/30 p-5"
@@ -179,11 +197,11 @@ export default async function ProductDetailPage({
             </section>
           )}
 
-          {rich.howToUse && rich.howToUse.length > 0 && (
+          {copy.howToUse && copy.howToUse.length > 0 && (
             <section>
               <h2 className="text-xl font-bold mb-4">{t("howToUse")}</h2>
               <ul className="flex flex-col gap-2">
-                {rich.howToUse.map((step) => (
+                {copy.howToUse.map((step) => (
                   <li key={step} className="flex gap-3 text-sm text-muted-foreground">
                     <span className="text-brand shrink-0">・</span>
                     <span className="leading-relaxed">{step}</span>
@@ -193,11 +211,11 @@ export default async function ProductDetailPage({
             </section>
           )}
 
-          {rich.ingredients && rich.ingredients.length > 0 && (
+          {copy.ingredients && copy.ingredients.length > 0 && (
             <section>
               <h2 className="text-xl font-bold mb-4">{t("ingredients")}</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                {rich.ingredients.join("、")}
+                {copy.ingredients.join(locale === "ja" ? "、" : ", ")}
               </p>
             </section>
           )}

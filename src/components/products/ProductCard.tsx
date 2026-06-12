@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Star, ShoppingCart, Check } from "lucide-react";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -17,6 +18,7 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   const [added, setAdded] = useState(false);
   const { addItem, openCart } = useCartStore();
+  const t = useTranslations("commerce.product");
 
   const discountPercent = product.originalPrice
     ? Math.round((1 - product.price / product.originalPrice) * 100)
@@ -52,7 +54,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           )}
           {!product.inStock && (
             <div className="absolute inset-0 bg-background/70 flex items-center justify-center">
-              <span className="text-sm font-medium text-muted-foreground">在庫切れ</span>
+              <span className="text-sm font-medium text-muted-foreground">{t("outOfStock")}</span>
             </div>
           )}
         </div>
@@ -93,12 +95,12 @@ export default function ProductCard({ product }: ProductCardProps) {
           {added ? (
             <>
               <Check className="h-4 w-4" />
-              追加しました
+              {t("added")}
             </>
           ) : (
             <>
               <ShoppingCart className="h-4 w-4" />
-              {product.inStock ? "カートに追加" : "在庫切れ"}
+              {product.inStock ? t("addToCart") : t("outOfStock")}
             </>
           )}
         </Button>

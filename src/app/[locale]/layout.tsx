@@ -5,6 +5,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { Playfair_Display, Geist } from 'next/font/google'
 import { pageMetadata, siteConfig } from '../../lib/constants/metadata'
 import { routing, type Locale } from '../../i18n/routing'
+import { buildAlternates } from '../../lib/i18n/alternates'
 import '../../styles/globals.css'
 import GoogleAnalytics from '../../components/GoogleAnalytics'
 import { cn } from "@/lib/utils";
@@ -47,6 +48,8 @@ export async function generateMetadata({
     title,
     description,
     keywords: pageMetadata.home.keywords,
+    metadataBase: new URL(siteConfig.url),
+    alternates: buildAlternates(locale, ''),
 
     // ファビコン設定
     icons: {
@@ -118,9 +121,6 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={cn("font-sans", geist.variable)}>
-      <head>
-        <link rel="canonical" href={siteConfig.url} />
-      </head>
       <body className={playfair.className}>
         <NextIntlClientProvider>
           <GoogleAnalytics />

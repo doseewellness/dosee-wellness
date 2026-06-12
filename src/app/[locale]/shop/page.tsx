@@ -1,12 +1,19 @@
 import { Suspense } from "react";
 import { useTranslations } from "next-intl";
+import { getLocale } from "next-intl/server";
 import ProductCard from "@/components/products/ProductCard";
 import { getProducts } from "@/lib/data";
+import { localizeProductCopy } from "@/lib/products/i18n";
+import type { Locale } from "@/i18n/routing";
 
 export const dynamic = "force-dynamic";
 
 export default async function ShopPage() {
-  const products = await getProducts();
+  const locale = (await getLocale()) as Locale;
+  const products = (await getProducts()).map((p) => ({
+    ...p,
+    description: localizeProductCopy(p.id, locale).description ?? p.description,
+  }));
   const t = useTranslations("shopPage");
 
   return (

@@ -537,7 +537,23 @@
   },
   "meta": {
     "homeTitle": "DoSee Wellness - Un bien-être que l'on peut maintenir même dans le quotidien chargé",
-    "homeDescription": "Marque de bien-être née au Japon. Avec WellCha à base de thé japonais et DoSee de type shot, des habitudes qui apaisent doucement cœur, corps et peau. Un bien-être sans contrainte, au quotidien."
+    "homeDescription": "Marque de bien-être née au Japon. Avec WellCha à base de thé japonais et DoSee de type shot, des habitudes qui apaisent doucement cœur, corps et peau. Un bien-être sans contrainte, au quotidien.",
+    "wellchaTitle": "WellCha - Matcha Latte et Hojicha Latte | DoSee Wellness",
+    "wellchaDescription": "La force du thé japonais pour apaiser cœur, corps et peau. Le Matcha Latte accompagne la concentration et la beauté, le Hojicha Latte invite à une détente profonde. Une habitude bien-être au quotidien, dans un format latte facile à maintenir.",
+    "doseeTitle": "DoSee - 7-Day Ginger Shot (Bientôt disponible) | DoSee Wellness",
+    "doseeDescription": "Une petite gorgée pour aborder la journée avec entrain. Un shot bien-être au gingembre et aux agrumes. Une nouvelle habitude facile à maintenir, en préparation. Recevez la notification de lancement.",
+    "aboutTitle": "À propos de DoSee Wellness - Notre histoire",
+    "aboutDescription": "Un bien-être que l'on peut maintenir même dans le quotidien chargé : deux gammes, WellCha et DoSee. En alliant le savoir traditionnel japonais au mode de vie contemporain, nous proposons une nouvelle habitude bien-être.",
+    "faqTitle": "Foire aux questions (FAQ) | DoSee Wellness",
+    "faqDescription": "Questions fréquentes sur WellCha (Matcha Latte et Hojicha Latte) et DoSee (Ginger Shot). Nous répondons à vos questions sur la préparation, les ingrédients, l'achat et la livraison.",
+    "privacyTitle": "Politique de confidentialité | DoSee Wellness",
+    "privacyDescription": "Politique de confidentialité de DoSee Wellness Inc. Nous expliquons le traitement des données personnelles, l'utilisation des cookies et les droits des clients.",
+    "termsTitle": "Conditions d'utilisation | DoSee Wellness",
+    "termsDescription": "Conditions d'utilisation de DoSee Wellness Inc. Nous définissons les conditions d'utilisation du service, l'achat de produits, les retours et échanges ainsi que les comportements interdits.",
+    "commerceTitle": "Mentions légales (loi sur les transactions commerciales) | DoSee Wellness",
+    "commerceDescription": "Mentions légales de DoSee Wellness Inc. au titre de la loi sur les transactions commerciales. Nous y indiquons les informations sur l'entreprise, les prix de vente, les modes de paiement, la livraison et les retours.",
+    "contactTitle": "Contact | DoSee Wellness",
+    "contactDescription": "Contactez DoSee Wellness ici. N'hésitez pas à nous écrire pour toute question concernant nos produits, vos commandes ou vos transactions."
   },
   "blog": {
     "eyebrow": "DOSEE WELLNESS NOTE",

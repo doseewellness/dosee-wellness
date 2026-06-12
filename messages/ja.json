@@ -537,7 +537,23 @@
   },
   "meta": {
     "homeTitle": "DoSee Wellness - 忙しい毎日でも続けられるウェルネス",
-    "homeDescription": "日本発のウェルネスブランド。日本茶ベースのWellChaと、ショット系DoSeeで、こころ・からだ・肌をやさしく整える習慣を。無理のないウェルネスを毎日に。"
+    "homeDescription": "日本発のウェルネスブランド。日本茶ベースのWellChaと、ショット系DoSeeで、こころ・からだ・肌をやさしく整える習慣を。無理のないウェルネスを毎日に。",
+    "wellchaTitle": "WellCha - 抹茶・ほうじ茶ラテ | DoSee Wellness",
+    "wellchaDescription": "日本茶の力で心・からだ・肌を整える。抹茶ラテは集中力と美容を、ほうじ茶ラテは深いリラックスをサポート。続けやすいラテスタイルで毎日のウェルネス習慣を。",
+    "doseeTitle": "DoSee - 7-Day Ginger Shot（準備中）| DoSee Wellness",
+    "doseeDescription": "1日を前向きにする、小さな一杯。ジンジャー×柑橘のショット系ウェルネス。負担なく続けられる新習慣を準備中。発売通知を受け取る。",
+    "aboutTitle": "DoSee Wellness について - 私たちのストーリー",
+    "aboutDescription": "忙しい現代でも続けられるウェルネスをテーマに、WellChaとDoSeeの2つのラインを展開。日本の伝統知識と現代ライフスタイルを掛け合わせた、新しいウェルネス習慣を提案します。",
+    "faqTitle": "よくあるご質問（FAQ）| DoSee Wellness",
+    "faqDescription": "WellCha（抹茶・ほうじ茶ラテ）とDoSee（ジンジャーショット）に関するよくある質問。飲み方、成分、購入方法、配送についてお答えします。",
+    "privacyTitle": "プライバシーポリシー | DoSee Wellness",
+    "privacyDescription": "DoSee Wellness株式会社のプライバシーポリシー。個人情報の取り扱い、Cookie使用、お客様の権利について説明します。",
+    "termsTitle": "利用規約 | DoSee Wellness",
+    "termsDescription": "DoSee Wellness株式会社の利用規約。サービス利用条件、商品購入、返品・交換、禁止事項について定めています。",
+    "commerceTitle": "特定商取引法に基づく表記 | DoSee Wellness",
+    "commerceDescription": "DoSee Wellness株式会社の特定商取引法に基づく表記。事業者情報、販売価格、支払方法、配送・返品について記載しています。",
+    "contactTitle": "お問い合わせ | DoSee Wellness",
+    "contactDescription": "DoSee Wellness へのお問い合わせはこちらから。商品・注文・取引に関するご質問など、お気軽にご連絡ください。"
   },
   "blog": {
     "eyebrow": "DOSEE WELLNESS NOTE",
