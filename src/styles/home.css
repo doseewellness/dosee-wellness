@@ -103,6 +103,8 @@
   text-align: center;
   overflow: hidden;
   color: var(--cream);
+  box-sizing: border-box;
+  padding: clamp(120px, 16vh, 170px) 24px clamp(96px, 13vh, 130px);
 }
 
 .home-v2 .ed-hero-bg {
