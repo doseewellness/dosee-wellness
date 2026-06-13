@@ -366,12 +366,18 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(20, 19, 16, 0.58);
+  background: linear-gradient(
+    180deg,
+    rgba(20, 19, 16, 0.58) 0%,
+    rgba(20, 19, 16, 0.74) 50%,
+    rgba(20, 19, 16, 0.62) 100%
+  );
 }
 
 .home-v2 .ed-lifestyle .ed-wrap {
   position: relative;
   z-index: 2;
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.5);
 }
 
 .home-v2 .ed-lifestyle .ed-eyebrow {
@@ -386,7 +392,7 @@
   font-size: clamp(1rem, 1.3vw, 1.18rem);
   line-height: 2;
   font-weight: 300;
-  color: rgba(245, 241, 232, 0.88);
+  color: rgba(245, 241, 232, 0.94);
   max-width: 42ch;
   margin: 0 auto 3rem;
   white-space: pre-line;
