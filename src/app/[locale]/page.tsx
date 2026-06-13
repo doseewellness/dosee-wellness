@@ -8,6 +8,8 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import { getPurchaseUrl, USE_SHOPIFY } from '../../lib/constants/shop'
 import { getAllPosts } from '../../lib/blog/posts'
+import { localizePost } from '../../lib/blog/i18n'
+import type { Locale } from '@/i18n/routing'
 import { shipporiMincho } from './fonts'
 import '../../styles/home.css'
 
@@ -21,7 +23,9 @@ export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
   const t = useTranslations('home')
   const locale = useLocale()
-  const latestPosts = getAllPosts().slice(0, 3)
+  const latestPosts = getAllPosts()
+    .slice(0, 3)
+    .map((p) => localizePost(p, locale as Locale))
   const reviews = t.raw('reviews.items') as Review[]
   const formatDate = (iso: string) =>
     new Date(iso).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
