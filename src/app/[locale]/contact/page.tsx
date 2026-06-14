@@ -38,7 +38,7 @@ export default function ContactPage() {
             <div className="flex flex-wrap justify-center gap-6">
               <a
                 href="mailto:doseewellness.com"
-                className="text-green-700 hover:text-green-800 transition-colors"
+                className="text-brand hover:text-brand-dark transition-colors"
               >
                 📧 info@dosee-wellness.com
               </a>
@@ -46,7 +46,7 @@ export default function ContactPage() {
                 href="https://www.instagram.com/wellchamatcha"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-700 hover:text-green-800 transition-colors"
+                className="text-brand hover:text-brand-dark transition-colors"
               >
                 📱 {t('otherContact.instagram')}
               </a>
@@ -54,13 +54,13 @@ export default function ContactPage() {
           </div>
 
           {/* FAQへのリンク */}
-          <div className="mt-12 p-6 bg-green-50 rounded-2xl text-center">
+          <div className="mt-12 p-6 bg-brand-soft rounded-2xl text-center">
             <p className="text-stone-700 mb-4">
               {t('faqPromo.text')}
             </p>
             <Link
               href="/faq"
-              className="inline-flex items-center text-green-700 hover:text-green-800 font-medium transition-colors"
+              className="inline-flex items-center text-brand hover:text-brand-dark font-medium transition-colors"
             >
               {t('faqPromo.link')}
             </Link>

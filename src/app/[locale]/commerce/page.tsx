@@ -130,7 +130,7 @@ export default function CommercePage() {
           <h2>{t('commerce.privacyHeading')}</h2>
           <p>
             {t('commerce.privacyBodyPrefix')}
-            <Link href="/privacy" style={{ color: '#2c5f2d', textDecoration: 'underline' }}>
+            <Link href="/privacy" style={{ color: '#1b1a17', textDecoration: 'underline' }}>
               {t('commerce.privacyPolicyLinkText')}
             </Link>
             {t('commerce.privacyBodySuffix')}

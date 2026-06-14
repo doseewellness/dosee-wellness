@@ -22,14 +22,14 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
             href="/"
-            className="inline-flex items-center justify-center px-8 py-3 bg-green-700 text-white rounded-full hover:bg-green-800 transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center justify-center px-8 py-3 bg-brand text-white rounded-full hover:bg-brand-dark transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             ← トップページへ戻る
           </Link>
           
           <Link 
             href="/wellcha"
-            className="inline-flex items-center justify-center px-8 py-3 bg-white text-green-700 border-2 border-green-700 rounded-full hover:bg-green-50 transition-all duration-300"
+            className="inline-flex items-center justify-center px-8 py-3 bg-white text-brand border-2 border-brand rounded-full hover:bg-brand-soft transition-all duration-300"
           >
             WellCha を見る
           </Link>
@@ -39,15 +39,15 @@ export default function NotFound() {
         <div className="mt-12 text-stone-400 text-sm">
           <p>または、以下のページをお探しですか？</p>
           <div className="flex flex-wrap justify-center gap-4 mt-4">
-            <Link href="/about" className="hover:text-green-700 transition-colors">
+            <Link href="/about" className="hover:text-brand transition-colors">
               会社概要
             </Link>
             <span className="text-stone-300">|</span>
-            <Link href="/faq" className="hover:text-green-700 transition-colors">
+            <Link href="/faq" className="hover:text-brand transition-colors">
               よくある質問
             </Link>
             <span className="text-stone-300">|</span>
-            <Link href="/contact" className="hover:text-green-700 transition-colors">
+            <Link href="/contact" className="hover:text-brand transition-colors">
               お問い合わせ
             </Link>
           </div>

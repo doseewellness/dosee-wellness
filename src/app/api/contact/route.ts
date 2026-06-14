@@ -41,11 +41,11 @@ export async function POST(request: NextRequest) {
             <style>
               body { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', sans-serif; line-height: 1.6; color: #333; }
               .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { background: linear-gradient(135deg, #2c5f2d 0%, #4c814d 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+              .header { background: linear-gradient(135deg, #1b1a17 0%, #2e2a23 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
               .content { background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; }
               .field { margin-bottom: 20px; }
-              .label { font-weight: bold; color: #2c5f2d; margin-bottom: 5px; }
-              .value { background: white; padding: 15px; border-radius: 5px; border-left: 3px solid #2c5f2d; }
+              .label { font-weight: bold; color: #9a7b3f; margin-bottom: 5px; }
+              .value { background: white; padding: 15px; border-radius: 5px; border-left: 3px solid #9a7b3f; }
               .footer { text-align: center; margin-top: 30px; color: #999; font-size: 12px; }
             </style>
           </head>
@@ -100,11 +100,11 @@ export async function POST(request: NextRequest) {
             <style>
               body { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', sans-serif; line-height: 1.8; color: #333; }
               .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { background: linear-gradient(135deg, #2c5f2d 0%, #4c814d 100%); color: white; padding: 40px 30px; text-align: center; border-radius: 10px 10px 0 0; }
+              .header { background: linear-gradient(135deg, #1b1a17 0%, #2e2a23 100%); color: white; padding: 40px 30px; text-align: center; border-radius: 10px 10px 0 0; }
               .content { background: #f9f9f9; padding: 40px 30px; border-radius: 0 0 10px 10px; }
-              .message-box { background: white; padding: 20px; border-radius: 5px; border-left: 4px solid #2c5f2d; margin: 20px 0; }
+              .message-box { background: white; padding: 20px; border-radius: 5px; border-left: 4px solid #9a7b3f; margin: 20px 0; }
               .info-section { margin: 30px 0; }
-              .info-title { font-weight: bold; color: #2c5f2d; font-size: 16px; margin-bottom: 10px; }
+              .info-title { font-weight: bold; color: #9a7b3f; font-size: 16px; margin-bottom: 10px; }
               .info-content { background: white; padding: 15px; border-radius: 5px; }
               .footer { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 13px; }
               .signature { margin-top: 30px; padding: 20px; background: white; border-radius: 5px; }
@@ -134,7 +134,7 @@ export async function POST(request: NextRequest) {
                 </div>
                 
                 <div class="message-box">
-                  <p style="margin: 0; font-weight: bold; color: #2c5f2d;">📧 ご返信について</p>
+                  <p style="margin: 0; font-weight: bold; color: #9a7b3f;">📧 ご返信について</p>
                   <p style="margin: 10px 0 0;">
                     お問い合わせ内容を確認の上、2〜3営業日以内にご返信させていただきます。<br>
                     お急ぎの場合は、お手数ですが再度ご連絡ください。
@@ -142,9 +142,9 @@ export async function POST(request: NextRequest) {
                 </div>
                 
                 <div class="signature">
-                  <p style="margin: 0; font-weight: bold; color: #2c5f2d;">DoSee Wellness</p>
+                  <p style="margin: 0; font-weight: bold; color: #9a7b3f;">DoSee Wellness</p>
                   <p style="margin: 5px 0 0; font-size: 14px; color: #666;">
-                    ウェブサイト: <a href="https://doseewellness.com" style="color: #2c5f2d;">https://doseewellness.com</a><br>
+                    ウェブサイト: <a href="https://doseewellness.com" style="color: #9a7b3f;">https://doseewellness.com</a><br>
                     メール: doseewellness@gmail.com
                   </p>
                 </div>

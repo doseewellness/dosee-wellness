@@ -94,9 +94,10 @@ a {
 }
 
 .nav.scrolled {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(250, 248, 242, 0.95);
   padding: 20px 60px;
   backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(27, 26, 23, 0.1);
 }
 
 .nav .logo {
@@ -110,7 +111,7 @@ a {
 }
 
 .nav.scrolled .logo {
-  color: #2c5f2d;
+  color: #1b1a17;
 }
 
 .nav ul {
@@ -129,7 +130,7 @@ a {
 }
 
 .nav.scrolled a {
-  color: #333;
+  color: #1b1a17;
 }
 
 /* デスクトップメニュー */
@@ -165,7 +166,7 @@ a {
   transition: color 0.5s, opacity 0.2s;
 }
 .nav.scrolled .lang-trigger {
-  color: #333;
+  color: #1b1a17;
 }
 .lang-trigger:hover {
   opacity: 0.7;
@@ -198,10 +199,10 @@ a {
   list-style: none;
   margin: 0;
   padding: 6px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #faf8f2;
+  border: 1px solid rgba(27, 26, 23, 0.12);
   border-radius: 12px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 12px 32px rgba(27, 26, 23, 0.16);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-6px);
@@ -228,14 +229,14 @@ a {
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 0.04em;
-  color: #333;
+  color: #1b1a17;
   transition: background-color 0.18s ease, color 0.18s ease;
 }
 .lang-menu-option:hover {
-  background: #eef3ee;
+  background: #ece6d8;
 }
 .lang-menu-option.active {
-  color: #2c5f2d;
+  color: #9a7b3f;
   font-weight: 600;
 }
 
@@ -277,7 +278,7 @@ a {
 }
 
 .nav.scrolled .hamburger-line {
-  background-color: #2c5f2d;
+  background-color: #1b1a17;
 }
 
 .hamburger-line.open:nth-child(1) {
@@ -455,8 +456,8 @@ a {
 .menu-panel {
   position: absolute;
   inset: 0;
-  background: #ffffff;
-  color: #111;
+  background: #faf8f2;
+  color: #1b1a17;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 
@@ -476,7 +477,7 @@ a {
   align-items: center;
   height: 84px;
   padding: calc(10px + env(safe-area-inset-top)) 16px 10px;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(27,26,23,0.1);
 }
 
 .menu-close {
@@ -486,7 +487,7 @@ a {
   background: transparent;
   font-size: 34px;
   line-height: 1;
-  color: #111;
+  color: #1b1a17;
   cursor: pointer;
 }
 
@@ -508,7 +509,7 @@ a {
 }
 
 .menu-links li {
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(27,26,23,0.08);
 }
 
 .menu-links li:last-child {
@@ -519,14 +520,14 @@ a {
   display: block;
   padding: 18px 20px;
   text-decoration: none;
-  color: #111;
+  color: #1b1a17;
   font-size: 26px;
   font-weight: 400;
   letter-spacing: 0.01em;
 }
 
 .menu-links a:active {
-  background: rgba(0,0,0,0.04);
+  background: rgba(27,26,23,0.04);
 }
 
 .menu-footer {
@@ -534,13 +535,13 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #fff;
-  border-top: 1px solid rgba(0,0,0,0.08);
+  background: #faf8f2;
+  border-top: 1px solid rgba(27,26,23,0.1);
   padding: 18px 20px calc(22px + env(safe-area-inset-bottom));
 }
 .menu-footer-link {
   text-decoration: none;
-  color: #111;
+  color: #1b1a17;
   font-size: 16px;
   letter-spacing: 0.08em;
   opacity: 0.8;
@@ -559,7 +560,7 @@ a {
   cursor: pointer;
   font-size: 14px;
   letter-spacing: 0.06em;
-  color: #111;
+  color: #1b1a17;
   opacity: 0.55;
   transition: opacity 0.2s ease;
 }
@@ -597,7 +598,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(44, 95, 45, 0.6) 0%, rgba(76, 129, 77, 0.35) 100%),
+  background: linear-gradient(135deg, rgba(27, 26, 23, 0.6) 0%, rgba(46, 42, 35, 0.35) 100%),
               url("/images/bg/tea-field-parallax.jpg") center/cover;
   animation: slowZoom 20s ease-in-out infinite alternate;
 }
@@ -797,7 +798,7 @@ a {
 }
 
 .highlight {
-  color: #2c5f2d;
+  color: #9a7b3f;
   font-weight: 400;
 }
 
@@ -823,8 +824,8 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-              rgba(44, 95, 45, 0.15) 0%, 
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+              rgba(154, 123, 63, 0.15) 0%,
               transparent 50%);
   pointer-events: none;
 }
@@ -1185,8 +1186,8 @@ a {
 }
 
 .product-description-highlight {
-  color: #2c5f2d;        /* DoSeeのグリーン */
-  opacity: 0.95;         /* 強すぎ防止 */
+  color: #9a7b3f;
+  opacity: 0.95;
 }
 
 .product-card-bg {
@@ -1237,7 +1238,7 @@ a {
   display: inline-block;
   padding: 8px 20px;
   background: rgba(255, 255, 255, 0.95);
-  color: #2c5f2d;
+  color: #9a7b3f;
   border-radius: 20px;
   font-size: 0.75rem;
   font-weight: 700;
@@ -1248,7 +1249,7 @@ a {
 }
 
 .product-badge-orange-v2 {
-  color: #ea580c;
+  color: #9a7b3f;
 }
 
 .product-card-v2-content h3 {
@@ -1290,8 +1291,8 @@ a {
 }
 
 .product-tag-orange-v2 {
-  background: rgba(249, 115, 22, 0.3);
-  border-color: rgba(249, 115, 22, 0.5);
+  background: rgba(154, 123, 63, 0.3);
+  border-color: rgba(154, 123, 63, 0.5);
 }
 
 .product-tag-status-v2 {
@@ -1403,7 +1404,7 @@ a {
 .about-keyword h3 {
   font-size: 2.0rem;
   font-weight: 400;
-  color: #2c5f2d;
+  color: #1b1a17;
   letter-spacing: 0.08em;
   margin-bottom: 0.8rem;
 }
@@ -1519,8 +1520,8 @@ a {
    Footer
    ========================================== */
 footer {
-  background: #1a1a1a;
-  color: #999;
+  background: #1b1a17;
+  color: rgba(245, 241, 232, 0.62);
   padding: 80px 60px;
 }
 
@@ -1533,13 +1534,13 @@ footer {
 }
 
 .footer-section h3 {
-  color: white;
+  color: #f5f1e8;
   margin-bottom: 20px;
   font-weight: 300;
 }
 
 .footer-section a {
-  color: #999;
+  color: rgba(245, 241, 232, 0.62);
   text-decoration: none;
   display: block;
   margin-bottom: 12px;
@@ -1547,11 +1548,11 @@ footer {
 }
 
 .footer-section a:hover {
-  color: white;
+  color: #c9a86a;
 }
 
 .footer-section p {
-  color: #999;
+  color: rgba(245, 241, 232, 0.62);
   line-height: 1.8;
   font-size: 0.95rem;
 }
@@ -1560,7 +1561,7 @@ footer {
   text-align: center;
   margin-top: 60px;
   padding-top: 40px;
-  border-top: 1px solid #333;
+  border-top: 1px solid rgba(245, 241, 232, 0.16);
   font-size: 0.9rem;
 }
 
@@ -1692,9 +1693,9 @@ footer {
 @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
-  --color-brand: #2c5f2d;
-  --color-brand-dark: #234a24;
-  --color-brand-soft: #eef3ee;
+  --color-brand: #1b1a17;
+  --color-brand-dark: #2e2a23;
+  --color-brand-soft: #ece6d8;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -1742,7 +1743,7 @@ footer {
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.44 0.085 150);
+  --primary: oklch(0.21 0.004 75);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -1753,7 +1754,7 @@ footer {
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: oklch(0.44 0.085 150);
+  --ring: oklch(0.21 0.004 75);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -1834,7 +1835,7 @@ footer {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 2.2rem;
   font-weight: 500;
-  color: #234a24;
+  color: #1b1a17;
   margin: 0.5rem 0 1rem;
 }
 
@@ -1889,8 +1890,8 @@ footer {
   align-self: flex-start;
   font-size: 0.68rem;
   letter-spacing: 0.14em;
-  color: #2c5f2d;
-  border: 1px solid rgba(44, 95, 45, 0.4);
+  color: #9a7b3f;
+  border: 1px solid rgba(154, 123, 63, 0.4);
   border-radius: 999px;
   padding: 0.22rem 0.8rem;
 }
@@ -1898,7 +1899,7 @@ footer {
 .home-note-card-body h3 {
   font-size: 1.1rem;
   font-weight: 500;
-  color: #234a24;
+  color: #1b1a17;
   line-height: 1.5;
   margin: 0;
   flex: 1;
@@ -1917,16 +1918,16 @@ footer {
 .home-note-more {
   display: inline-block;
   padding: 0.9rem 2.2rem;
-  border: 1px solid #2c5f2d;
+  border: 1px solid #1b1a17;
   border-radius: 999px;
-  color: #2c5f2d;
+  color: #1b1a17;
   font-size: 0.95rem;
   text-decoration: none;
   transition: background 0.25s ease, color 0.25s ease;
 }
 
 .home-note-more:hover {
-  background: #2c5f2d;
+  background: #1b1a17;
   color: #fff;
 }
 

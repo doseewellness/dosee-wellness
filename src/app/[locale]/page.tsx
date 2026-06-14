@@ -95,7 +95,7 @@ export default function Home() {
       </header>
 
       {/* STORY */}
-      <section className="ed-section ed-story">
+      <section id="story" className="ed-section ed-story">
         <div className="ed-wrap">
           <div className="ed-story-grid">
             <div>

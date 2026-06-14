@@ -1,6 +1,5 @@
 import { Suspense } from "react";
-import { useTranslations } from "next-intl";
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import ProductCard from "@/components/products/ProductCard";
 import { getProducts } from "@/lib/data";
 import { localizeProductCopy } from "@/lib/products/i18n";
@@ -14,7 +13,7 @@ export default async function ShopPage() {
     ...p,
     description: localizeProductCopy(p.id, locale).description ?? p.description,
   }));
-  const t = useTranslations("shopPage");
+  const t = await getTranslations("shopPage");
 
   return (
     <main className="container mx-auto px-4 py-12">

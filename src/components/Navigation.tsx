@@ -34,10 +34,10 @@ export default function Navigation({ isScrolled = false }: NavigationProps) {
   const INSTAGRAM_URL = 'https://www.instagram.com/wellchamatcha'
 
   const menuItems: MenuItem[] = [
-    { label: t('philosophy'), href: '#philosophy', type: 'anchor' },
-    { label: t('products'), href: '#products', type: 'anchor' },
+    { label: t('philosophy'), href: '#story', type: 'anchor' },
+    { label: t('products'), href: '#product', type: 'anchor' },
     { label: t('note'), href: '/blog', type: 'route' },
-    { label: t('about'), href: '#about', type: 'anchor' },
+    { label: t('about'), href: '/about', type: 'route' },
     { label: t('contact'), href: '/contact', type: 'route' },
   ]
 

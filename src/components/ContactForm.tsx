@@ -78,7 +78,7 @@ export default function ContactForm() {
           id="name"
           type="text"
           {...register('name')}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all ${
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent transition-all ${
             errors.name ? 'border-red-500' : 'border-stone-300'
           }`}
           placeholder={t('form.name.placeholder')}
@@ -97,7 +97,7 @@ export default function ContactForm() {
           id="email"
           type="email"
           {...register('email')}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all ${
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent transition-all ${
             errors.email ? 'border-red-500' : 'border-stone-300'
           }`}
           placeholder={t('form.email.placeholder')}
@@ -115,7 +115,7 @@ export default function ContactForm() {
         <select
           id="subject"
           {...register('subject')}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all ${
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent transition-all ${
             errors.subject ? 'border-red-500' : 'border-stone-300'
           }`}
         >
@@ -140,7 +140,7 @@ export default function ContactForm() {
           id="message"
           {...register('message')}
           rows={6}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all resize-none ${
+          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent transition-all resize-none ${
             errors.message ? 'border-red-500' : 'border-stone-300'
           }`}
           placeholder={t('form.message.placeholder')}
@@ -158,7 +158,7 @@ export default function ContactForm() {
           className={`w-full py-4 px-8 rounded-full font-medium text-white transition-all duration-300 ${
             isSubmitting
               ? 'bg-stone-400 cursor-not-allowed'
-              : 'bg-green-700 hover:bg-green-800 hover:shadow-lg'
+              : 'bg-brand hover:bg-brand-dark hover:shadow-lg'
           }`}
         >
           {isSubmitting ? t('form.submitButton.sending') : t('form.submitButton.idle')}
@@ -167,8 +167,8 @@ export default function ContactForm() {
 
       {/* 送信結果メッセージ */}
       {submitStatus === 'success' && (
-        <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-          <p className="text-green-800 text-center">
+        <div className="p-4 bg-brand-soft border border-brand-soft rounded-lg">
+          <p className="text-brand-dark text-center">
             {t('form.successMessage')}
           </p>
         </div>
@@ -186,7 +186,7 @@ export default function ContactForm() {
       <p className="text-xs text-stone-500 text-center">
         {t.rich('form.privacyNotice', {
           link: (chunks) => (
-            <a href="/privacy" className="text-green-700 hover:underline">
+            <a href="/privacy" className="text-brand hover:underline">
               {chunks}
             </a>
           ),
