@@ -1,11 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import ProductImageSlider from '../../components/ProductImageSlider'
 import { getPurchaseUrl, USE_SHOPIFY } from '../../lib/constants/shop'
 import { getAllPosts } from '../../lib/blog/posts'
 import { localizePost } from '../../lib/blog/i18n'
@@ -133,11 +133,13 @@ export default function Home() {
           <div className="ed-product-cards">
             <a href={getPurchaseUrl('matchaLatte')} {...externalProps} className="ed-pcard">
               <div className="ed-pcard-img">
-                <Image
-                  src="/images/wellcha/matcha-hero.png"
+                <ProductImageSlider
+                  images={[
+                    '/images/products/wellcha-matcha-1.jpg',
+                    '/images/products/wellcha-matcha-2.jpg',
+                  ]}
                   alt={t('product.matchaName')}
-                  fill
-                  sizes="(max-width: 860px) 100vw, 50vw"
+                  priority
                 />
               </div>
               <div className="ed-pcard-body">
@@ -148,11 +150,13 @@ export default function Home() {
 
             <a href={getPurchaseUrl('hojichaLatte')} {...externalProps} className="ed-pcard">
               <div className="ed-pcard-img">
-                <Image
-                  src="/images/wellcha/hojicha-hero.png"
+                <ProductImageSlider
+                  images={[
+                    '/images/products/wellcha-hojicha-1.jpg',
+                    '/images/products/wellcha-hojicha-2.jpg',
+                  ]}
                   alt={t('product.hojichaName')}
-                  fill
-                  sizes="(max-width: 860px) 100vw, 50vw"
+                  delay={2250}
                 />
               </div>
               <div className="ed-pcard-body">

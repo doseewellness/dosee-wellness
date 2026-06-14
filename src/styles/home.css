@@ -272,6 +272,15 @@
   object-fit: cover;
 }
 
+.home-v2 .ed-pcard-img .ed-pcard-slide {
+  opacity: 0;
+  transition: opacity 1.1s ease;
+}
+
+.home-v2 .ed-pcard-img .ed-pcard-slide.is-active {
+  opacity: 1;
+}
+
 .home-v2 .ed-pcard-body {
   padding: 1.6rem 1.8rem 2rem;
 }
