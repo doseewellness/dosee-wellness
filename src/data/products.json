@@ -45,8 +45,8 @@
     },
     "shopifyUrl": "https://shop.doseewellness.com/products/matcha-latte",
     "images": {
-      "hero": "/images/wellcha/matcha-hero.png",
-      "thumbnail": "/images/wellcha/matcha-hero.png"
+      "hero": "/images/wellcha/matchacartpic.PNG",
+      "thumbnail": "/images/wellcha/matchacartpic.PNG"
     },
     "category": "wellcha",
     "tags": ["matcha", "latte", "wellness", "focus", "skincare"],
