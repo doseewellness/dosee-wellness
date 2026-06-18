@@ -1615,7 +1615,9 @@ footer {
     padding: 30px 20px;
   }
 
-  .footer-content { grid-template-columns: 1fr; }
+  footer { padding: 56px 28px; }
+  .footer-content { grid-template-columns: 1fr; gap: 36px; }
+  .footer-bottom { margin-top: 40px; padding-top: 28px; }
   .nav { padding: 20px 30px; }
   .section { padding: 80px 30px; }
 }
