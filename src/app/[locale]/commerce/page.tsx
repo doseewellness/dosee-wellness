@@ -48,7 +48,7 @@ export default function CommercePage() {
           <div className="info-row">
             <span className="info-label">{t('commerce.emailLabel')}</span>
             <span className="info-value">
-              <a href="mailto:info@dosee-wellness.com">info@dosee-wellness.com</a>
+              <a href="mailto:info@doseegroup.com">info@doseegroup.com</a>
             </span>
           </div>
           <p style={{ fontSize: '0.9rem', color: '#666', marginTop: '0.5rem' }}>

@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     // 1. お店側への通知メール
     const adminEmail = await resend.emails.send({
       from: 'DoSee Wellness <noreply@doseewellness.com>',
-      to: ['doseewellness@gmail.com'],
+      to: ['info@doseegroup.com'],
       replyTo: email,
       subject: `【お問い合わせ】${subjectText} - ${name}様より`,
       html: `
@@ -145,7 +145,7 @@ export async function POST(request: NextRequest) {
                   <p style="margin: 0; font-weight: bold; color: #9a7b3f;">DoSee Wellness</p>
                   <p style="margin: 5px 0 0; font-size: 14px; color: #666;">
                     ウェブサイト: <a href="https://doseewellness.com" style="color: #9a7b3f;">https://doseewellness.com</a><br>
-                    メール: doseewellness@gmail.com
+                    メール: info@doseegroup.com
                   </p>
                 </div>
                 

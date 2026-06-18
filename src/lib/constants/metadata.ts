@@ -8,7 +8,7 @@ export const siteConfig = {
   ogImage: 'https://doseewellness.com/og-image.jpg',
   links: {
     instagram: 'https://www.instagram.com/wellchamatcha',
-    email: 'info@dosee-wellness.com',
+    email: 'info@doseegroup.com',
   },
 }
 
@@ -79,7 +79,7 @@ export const organizationSchema = {
   logo: 'https://doseewellness.com/logo.png',
   contactPoint: {
     '@type': 'ContactPoint',
-    email: 'info@dosee-wellness.com',
+    email: 'info@doseegroup.com',
     contactType: 'Customer Service',
     availableLanguage: ['Japanese', 'English'],
   },

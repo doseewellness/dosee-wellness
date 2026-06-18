@@ -150,7 +150,7 @@ export default function FAQPage() {
               {multiline(t('contact.body'))}
             </p>
             <a
-              href="mailto:info@dosee-wellness.com"
+              href="mailto:info@doseegroup.com"
               className="contact-button"
             >
               {t('contact.cta')}

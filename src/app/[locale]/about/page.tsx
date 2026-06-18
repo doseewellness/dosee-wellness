@@ -19,7 +19,7 @@ export default function AboutPage() {
     url: 'https://doseewellness.com',
     logo: 'https://doseewellness.com/logo.png',
     description: '忙しい現代でも続けられるウェルネスをテーマにした日本発のブランド。「整えなきゃ」という義務感ではなく、自分を大切にしたいという気持ちから始まる、無理のないウェルネス習慣を提供します。',
-    foundingDate: '2026-04',
+    foundingDate: '2026-04-22',
     contactPoint: {
       '@type': 'ContactPoint',
       email: 'info@doseegroup.com',
@@ -29,6 +29,7 @@ export default function AboutPage() {
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'JP',
+      postalCode: '150-0043',
       addressRegion: '東京都',
       addressLocality: '渋谷区',
       streetAddress: '道玄坂1丁目10番8号 渋谷道玄坂東急ビル2F-C',

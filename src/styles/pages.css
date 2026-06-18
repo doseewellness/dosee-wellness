@@ -1588,6 +1588,14 @@
 .shop-button--hojicha:hover{
   filter: brightness(0.95);
 }
+.shop-button--soon{
+  background: #9b9890 !important;
+  cursor: default;
+  pointer-events: none;
+}
+.shop-button--soon:hover{
+  filter: none;
+}
 
 /* レスポンシブ：抹茶と同じ考え */
 @media (max-width: 720px){

@@ -127,7 +127,7 @@ export default function WellChaPage() {
       <WellChaImageLP productUrl={getPurchaseUrl('matchaLatte')} />
 
       {/* 3) ほうじ茶LP（画像の縦長デザイン風に置き換え） */}
-      <HojichaImageLP productUrl={getPurchaseUrl('hojichaLatte')} />
+      <HojichaImageLP />
 
       {/* 戻る */}
       <section className="content-section" style={{ paddingTop: '2rem', paddingBottom: '4rem' }}>
@@ -229,7 +229,7 @@ function WellChaImageLP({ productUrl }: { productUrl: string }) {
  * ほうじ茶：画像LP（あなたの添付デザイン風）
  * 画像はあなたが用意する前提で、パスだけ仮置きしてあります。
  */
-function HojichaImageLP({ productUrl }: { productUrl: string }) {
+function HojichaImageLP() {
   const t = useTranslations('wellchaPage')
 
   return (
@@ -314,13 +314,12 @@ function HojichaImageLP({ productUrl }: { productUrl: string }) {
             </p>
 
             <div className="hojichaFinalActions">
-              <a
-                href={productUrl}
-                {...(USE_SHOPIFY ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                className="shop-button shop-button--hojicha"
+              <span
+                className="shop-button shop-button--hojicha shop-button--soon"
+                aria-disabled="true"
               >
-                {t('hojicha.ctaButton')}
-              </a>
+                {t('hojicha.comingSoon')}
+              </span>
             </div>
 
             <div className="hojichaFinalBrand">DoSee Wellness</div>

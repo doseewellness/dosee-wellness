@@ -54,6 +54,7 @@
       "matchaCopy": "将沉静的专注与可饮用的护肤体验，浓缩于一杯。",
       "hojichaName": "Hojicha Latte",
       "hojichaCopy": "舒展心灵・身体・呼吸的全新焙茶习惯。",
+      "comingSoon": "敬请期待",
       "cta": "查看 WellCha"
     },
     "why": {
@@ -130,9 +131,9 @@
     "companyNameLabel": "公司名称",
     "companyNameValue": "株式会社DoSee Group",
     "foundedLabel": "成立时间",
-    "foundedValue": "2026年4月",
+    "foundedValue": "2026年4月22日",
     "addressLabel": "地址",
-    "addressValue": "东京都涩谷区道玄坂1丁目10番8号\n涩谷道玄坂东急大楼2F-C",
+    "addressValue": "〒150-0043 东京都涩谷区道玄坂1丁目10番8号\n涩谷道玄坂东急大楼2F-C",
     "businessLabel": "业务内容",
     "businessValue": "健康产品企划、制造与销售",
     "contactLabel": "联系方式",
@@ -267,7 +268,7 @@
       },
       "general-9": {
         "q": "如何联系你们？",
-        "a": "请通过电子邮件（info@dosee-wellness.com）与我们联系。通常会在1–2个工作日内回复。"
+        "a": "请通过电子邮件（info@doseegroup.com）与我们联系。通常会在1–2个工作日内回复。"
       }
     },
     "contact": {
@@ -491,7 +492,8 @@
       "ctaAriaLabel": "立即购买",
       "finalCtaTitle": "Join us on your wellness journey today!",
       "finalCtaSub": "立即迈出健康生活的第一步。\n从今天起，开启更美好的每一天。",
-      "ctaButton": "购买 Hojicha Latte"
+      "ctaButton": "购买 Hojicha Latte",
+      "comingSoon": "敬请期待"
     }
   },
   "meta": {

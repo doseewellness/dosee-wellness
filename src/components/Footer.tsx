@@ -22,7 +22,7 @@ const Footer = () => {
           <h3>{t('companyTitle')}</h3>
           <Link href="/about">{t('about')}</Link>
           <Link href="/blog">{t('note')}</Link>
-          <a href="mailto:doseewellness@gmail.com">{t('contact')}</a>
+          <a href="mailto:info@doseegroup.com">{t('contact')}</a>
         </div>
 
         <div className="footer-section">

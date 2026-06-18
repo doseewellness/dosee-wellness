@@ -54,6 +54,7 @@
       "matchaCopy": "Concentración serena y skincare para beber, en una sola taza.",
       "hojichaName": "Hojicha Latte",
       "hojichaCopy": "Un nuevo hábito de hojicha que relaja la mente, el cuerpo y la respiración.",
+      "comingSoon": "Próximamente",
       "cta": "Ver WellCha"
     },
     "why": {
@@ -130,9 +131,9 @@
     "companyNameLabel": "Empresa",
     "companyNameValue": "DoSee Group Inc.",
     "foundedLabel": "Fundación",
-    "foundedValue": "Abril de 2026",
+    "foundedValue": "22 de abril de 2026",
     "addressLabel": "Dirección",
-    "addressValue": "Shibuya Dogenzaka Tokyu Bldg. 2F-C\n1-10-8 Dogenzaka, Shibuya, Tokyo, Japan",
+    "addressValue": "Shibuya Dogenzaka Tokyu Bldg. 2F-C\n1-10-8 Dogenzaka, Shibuya, Tokyo 150-0043, Japan",
     "businessLabel": "Actividad",
     "businessValue": "Planificación, fabricación y venta de productos de bienestar",
     "contactLabel": "Contacto",
@@ -267,7 +268,7 @@
       },
       "general-9": {
         "q": "¿Cómo puedo ponerme en contacto?",
-        "a": "Puedes escribirnos a info@dosee-wellness.com. Normalmente respondemos en un plazo de 1–2 días hábiles."
+        "a": "Puedes escribirnos a info@doseegroup.com. Normalmente respondemos en un plazo de 1–2 días hábiles."
       }
     },
     "contact": {
@@ -491,7 +492,8 @@
       "ctaAriaLabel": "Comprar",
       "finalCtaTitle": "Join us on your wellness journey today!",
       "finalCtaSub": "Da tu primer paso hacia el bienestar, ahora mismo.\nHacia días mejores, a partir de hoy.",
-      "ctaButton": "Comprar Hojicha Latte"
+      "ctaButton": "Comprar Hojicha Latte",
+      "comingSoon": "Próximamente"
     }
   },
   "meta": {

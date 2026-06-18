@@ -261,6 +261,34 @@
   box-shadow: 0 24px 50px rgba(27, 26, 23, 0.12);
 }
 
+.home-v2 .ed-pcard--soon {
+  cursor: default;
+}
+
+.home-v2 .ed-pcard--soon:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.home-v2 .ed-pcard--soon .ed-pcard-img img,
+.home-v2 .ed-pcard--soon .ed-pcard-img {
+  filter: grayscale(0.25);
+}
+
+.home-v2 .ed-pcard-badge {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  z-index: 2;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  color: var(--paper);
+  background: rgba(27, 26, 23, 0.78);
+  border-radius: 999px;
+}
+
 .home-v2 .ed-pcard-img {
   position: relative;
   width: 100%;

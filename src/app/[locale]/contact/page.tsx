@@ -40,7 +40,7 @@ export default function ContactPage() {
                 href="mailto:doseewellness.com"
                 className="text-brand hover:text-brand-dark transition-colors"
               >
-                📧 info@dosee-wellness.com
+                📧 info@doseegroup.com
               </a>
               <a
                 href="https://www.instagram.com/wellchamatcha"

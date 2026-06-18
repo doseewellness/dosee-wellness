@@ -50,7 +50,7 @@ export default function Home() {
     sameAs: ['https://www.instagram.com/wellchamatcha'],
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'info@dosee-wellness.com',
+      email: 'info@doseegroup.com',
       contactType: 'Customer Service',
     },
   }
@@ -148,8 +148,9 @@ export default function Home() {
               </div>
             </a>
 
-            <a href={getPurchaseUrl('hojichaLatte')} {...externalProps} className="ed-pcard">
+            <div className="ed-pcard ed-pcard--soon" aria-disabled="true">
               <div className="ed-pcard-img">
+                <span className="ed-pcard-badge">{t('product.comingSoon')}</span>
                 <ProductImageSlider
                   images={[
                     '/images/products/wellcha-hojicha-1.jpg',
@@ -163,7 +164,7 @@ export default function Home() {
                 <h3 className="serif">{t('product.hojichaName')}</h3>
                 <p>{t('product.hojichaCopy')}</p>
               </div>
-            </a>
+            </div>
           </div>
 
           <Link href="/wellcha" className="ed-btn">{t('product.cta')}</Link>
