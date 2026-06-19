@@ -106,7 +106,7 @@ export default function TermsPage() {
           <h2>{t('terms.contactTitle')}</h2>
           <p>{t('terms.contactIntro')}</p>
           <div className="contact-info">
-            <p><strong>DoSee Wellness株式会社</strong></p>
+            <p><strong>株式会社DoSee Group</strong></p>
             <p>Email: <a href="mailto:info@doseegroup.com">info@doseegroup.com</a></p>
           </div>
         </div>

@@ -46,19 +46,19 @@ export const pageMetadata = {
   
   privacy: {
     title: 'プライバシーポリシー | DoSee Wellness',
-    description: 'DoSee Wellness株式会社のプライバシーポリシー。個人情報の取り扱い、Cookie使用、お客様の権利について説明します。',
+    description: '株式会社DoSee Groupのプライバシーポリシー。個人情報の取り扱い、Cookie使用、お客様の権利について説明します。',
     keywords: ['プライバシーポリシー', '個人情報保護', 'Cookie'],
   },
   
   terms: {
     title: '利用規約 | DoSee Wellness',
-    description: 'DoSee Wellness株式会社の利用規約。サービス利用条件、商品購入、返品・交換、禁止事項について定めています。',
+    description: '株式会社DoSee Groupの利用規約。サービス利用条件、商品購入、返品・交換、禁止事項について定めています。',
     keywords: ['利用規約', '返品', '交換', 'サービス利用'],
   },
   
   commerce: {
     title: '特定商取引法に基づく表記 | DoSee Wellness',
-    description: 'DoSee Wellness株式会社の特定商取引法に基づく表記。事業者情報、販売価格、支払方法、配送・返品について記載しています。',
+    description: '株式会社DoSee Groupの特定商取引法に基づく表記。事業者情報、販売価格、支払方法、配送・返品について記載しています。',
     keywords: ['特定商取引法', '事業者情報', '返品条件'],
   },
   // 既存のpageMetadataオブジェクトに以下を追加

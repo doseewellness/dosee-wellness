@@ -28,7 +28,7 @@ export default function CommercePage() {
           <h2>{t('commerce.sellerHeading')}</h2>
           <div className="info-row">
             <span className="info-label">{t('commerce.sellerLabel')}</span>
-            <span className="info-value">DoSee Wellness株式会社</span>
+            <span className="info-value">株式会社DoSee Group</span>
           </div>
           <div className="info-row">
             <span className="info-label">{t('commerce.managerLabel')}</span>

@@ -75,7 +75,7 @@ export default function PrivacyPage() {
           <h2>{t('privacy.section8Title')}</h2>
           <p>{t('privacy.section8Intro')}</p>
           <div className="contact-info">
-            <p><strong>DoSee Wellness株式会社</strong></p>
+            <p><strong>株式会社DoSee Group</strong></p>
             <p>Email: <a href="mailto:info@doseegroup.com">info@doseegroup.com</a></p>
           </div>
         </div>
