@@ -236,7 +236,7 @@
       },
       "general-1": {
         "q": "在哪里可以购买？",
-        "a": "可在官方 Shopify 商店（shop.doseewellness.com）购买。目前仅提供线上销售。"
+        "a": "可在官方在线商店（doseewellness.com）购买。目前仅提供线上销售。"
       },
       "general-2": {
         "q": "需要支付运费吗？",
@@ -248,7 +248,7 @@
       },
       "general-4": {
         "q": "支持哪些付款方式？",
-        "a": "支持信用卡（Visa、Mastercard、American Express、JCB）、Apple Pay、Google Pay 及 Shop Pay。"
+        "a": "支持信用卡（Visa、Mastercard、American Express、JCB）、Apple Pay、Google Pay。"
       },
       "general-5": {
         "q": "配送需要多长时间？",
@@ -398,8 +398,7 @@
       "paymentItem1": "信用卡（Visa、Mastercard、American Express、JCB）",
       "paymentItem2": "Apple Pay",
       "paymentItem3": "Google Pay",
-      "paymentItem4": "Shop Pay",
-      "paymentNote": "※支付通过 Shopify Payments 处理，本公司不保存卡片信息。",
+      "paymentNote": "※支付通过 Stripe 处理，本公司不保存卡片信息。",
       "paymentTimingHeading": "支付时间",
       "paymentTimingBody": "依各信用卡公司的扣款日为准。商品下单时即完成支付。",
       "deliveryHeading": "商品交付时间",

@@ -83,7 +83,6 @@ export default function CommercePage() {
             <li>{t('commerce.paymentItem1')}</li>
             <li>{t('commerce.paymentItem2')}</li>
             <li>{t('commerce.paymentItem3')}</li>
-            <li>{t('commerce.paymentItem4')}</li>
           </ul>
           <p style={{ fontSize: '0.9rem', color: '#666', marginTop: '1rem' }}>
             {t('commerce.paymentNote')}

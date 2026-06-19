@@ -224,7 +224,7 @@
       },
       "general-1": {
         "q": "Where can I buy DoSee Wellness products?",
-        "a": "Products are available through our official Shopify store at shop.doseewellness.com. We currently sell online only."
+        "a": "Products are available through our official online store at doseewellness.com. We currently sell online only."
       },
       "general-2": {
         "q": "Are there shipping fees?",
@@ -236,7 +236,7 @@
       },
       "general-4": {
         "q": "What payment methods are accepted?",
-        "a": "We accept credit cards (Visa, Mastercard, American Express, JCB), Apple Pay, Google Pay, and Shop Pay."
+        "a": "We accept credit cards (Visa, Mastercard, American Express, JCB), Apple Pay, and Google Pay."
       },
       "general-5": {
         "q": "How long does delivery take?",
@@ -386,8 +386,7 @@
       "paymentItem1": "Credit cards (Visa, Mastercard, American Express, JCB)",
       "paymentItem2": "Apple Pay",
       "paymentItem3": "Google Pay",
-      "paymentItem4": "Shop Pay",
-      "paymentNote": "* Payments are processed via Shopify Payments; card information is not stored by the Company.",
+      "paymentNote": "* Payments are processed via Stripe; card information is not stored by the Company.",
       "paymentTimingHeading": "Payment Timing",
       "paymentTimingBody": "Payment follows the billing date of each credit card company. Payment is completed at the time the product is ordered.",
       "deliveryHeading": "Product Delivery Timing",

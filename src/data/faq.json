@@ -45,7 +45,7 @@
     {
       "id": "general-1",
       "question": "どこで購入できますか？",
-      "answer": "公式Shopifyストア（shop.doseewellness.com）でご購入いただけます。現在、オンライン販売のみとなっております。"
+      "answer": "公式オンラインストア（doseewellness.com）でご購入いただけます。現在、オンライン販売のみとなっております。"
     },
     {
       "id": "general-2",
@@ -60,7 +60,7 @@
     {
       "id": "general-4",
       "question": "支払い方法は何がありますか？",
-      "answer": "クレジットカード（Visa、Mastercard、American Express、JCB）、Apple Pay、Google Pay、Shop Payがご利用いただけます。"
+      "answer": "クレジットカード（Visa、Mastercard、American Express、JCB）、Apple Pay、Google Pay がご利用いただけます。"
     },
     {
       "id": "general-5",

@@ -236,7 +236,7 @@
       },
       "general-1": {
         "q": "どこで購入できますか？",
-        "a": "公式Shopifyストア（shop.doseewellness.com）でご購入いただけます。現在、オンライン販売のみとなっております。"
+        "a": "公式オンラインストア（doseewellness.com）でご購入いただけます。現在、オンライン販売のみとなっております。"
       },
       "general-2": {
         "q": "送料はかかりますか？",
@@ -248,7 +248,7 @@
       },
       "general-4": {
         "q": "支払い方法は何がありますか？",
-        "a": "クレジットカード（Visa、Mastercard、American Express、JCB）、Apple Pay、Google Pay、Shop Payがご利用いただけます。"
+        "a": "クレジットカード（Visa、Mastercard、American Express、JCB）、Apple Pay、Google Pay がご利用いただけます。"
       },
       "general-5": {
         "q": "配送にはどれくらいかかりますか？",
@@ -398,8 +398,7 @@
       "paymentItem1": "クレジットカード（Visa、Mastercard、American Express、JCB）",
       "paymentItem2": "Apple Pay",
       "paymentItem3": "Google Pay",
-      "paymentItem4": "Shop Pay",
-      "paymentNote": "※決済はShopify Paymentsを利用しており、カード情報は当社では保持しません。",
+      "paymentNote": "※決済はStripeを利用しており、カード情報は当社では保持しません。",
       "paymentTimingHeading": "支払時期",
       "paymentTimingBody": "各クレジットカード会社の引き落とし日に準じます。商品注文時に決済が完了いたします。",
       "deliveryHeading": "商品の引渡時期",
