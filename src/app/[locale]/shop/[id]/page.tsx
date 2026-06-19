@@ -110,7 +110,7 @@ export default async function ProductDetailPage({
         "@type": "OfferShippingDetails",
         shippingRate: {
           "@type": "MonetaryAmount",
-          value: "0",
+          value: "500",
           currency: "JPY",
         },
         shippingDestination: {
