@@ -442,6 +442,7 @@
       "subtitle": "忙しい毎日の中で、「心・からだ・肌」をまとめて整える一杯を。\nWellCha の抹茶とほうじ茶が、集中・美容・リラックスの三方向からあなたを支えます。"
     },
     "backButton": "← トップページに戻る",
+    "learnMoreTitle": "WellCha をもっと知る",
     "matcha": {
       "heroCopy": "忙しい毎日に、\n\"まとめて整える\"\n一杯を",
       "introLead": "忙しい毎日の中で、\n心・からだ・肌をまとめて整える一杯を。\n\nDoSee Wellness の抹茶は、\n集中・美容・リラックスの三方向からあなたを支えます。\n\n現代人のコンディションを整える、新しい抹茶習慣。\n何百年も続く日本の茶文化から生まれた、いわば「飲むウェルネス」。\n\nDoSee Wellness は、その抹茶を\n「忙しい現代でも続けられるかたち」にデザインしました。",
@@ -522,6 +523,9 @@
     "subtitle": "日本茶の文化と、続けやすいウェルネスのヒントを。",
     "readingTime": "約{minutes}分で読めます",
     "readingTimeShort": "約{minutes}分",
+    "shopCtaTitle": "読みながら、WellChaを試してみませんか",
+    "shopCtaShop": "商品を見る",
+    "shopCtaWellcha": "WellChaについて",
     "backToTop": "← トップページに戻る",
     "backToList": "← 読みもの一覧に戻る",
     "breadcrumbHome": "ホーム",
@@ -540,6 +544,7 @@
       "howToUse": "お召し上がり方",
       "ingredients": "原材料",
       "nutrition": "栄養成分表示",
+      "relatedArticles": "この商品にまつわる読みもの",
       "quantity": "数量",
       "addToCart": "カートに追加",
       "added": "カートに追加しました",

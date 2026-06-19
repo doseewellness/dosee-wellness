@@ -123,7 +123,23 @@ export default async function BlogIndexPage({
         </div>
       </section>
 
-      <section className="content-section" style={{ paddingTop: '2rem', paddingBottom: '4rem' }}>
+      <section className="content-section" style={{ paddingTop: '1rem', paddingBottom: '2rem' }}>
+        <div className="section-wrapper">
+          <div className="blog-shop-cta">
+            <h2 className="blog-shop-cta-title">{t('shopCtaTitle')}</h2>
+            <div className="blog-shop-cta-actions">
+              <Link href="/shop" className="blog-shop-cta-primary">
+                {t('shopCtaShop')}
+              </Link>
+              <Link href="/wellcha" className="blog-shop-cta-secondary">
+                {t('shopCtaWellcha')}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="content-section" style={{ paddingTop: '1rem', paddingBottom: '4rem' }}>
         <div className="section-wrapper text-center">
           <Link href="/" className="back-button">
             {t('backToTop')}

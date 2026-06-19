@@ -41,6 +41,11 @@ const INTERNAL_PRODUCT_SLUGS: Record<keyof typeof SHOP_URLS.products, string> = 
   hojichaLatte: 'hojicha-latte',
 }
 
+/** ProductKey → 内部ショップのスラッグ（/shop/[id]）。対応がなければ null。 */
+export function productKeyToSlug(product: ProductKey): string {
+  return INTERNAL_PRODUCT_SLUGS[product]
+}
+
 /**
  * Helper function to get full product URL
  */

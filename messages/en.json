@@ -430,6 +430,7 @@
       "subtitle": "One cup to nurture your mind, body, and skin — all at once.\nWellCha's matcha and hojicha support your focus, beauty, and relaxation from three directions."
     },
     "backButton": "← Back to Top",
+    "learnMoreTitle": "Learn more about WellCha",
     "matcha": {
       "heroCopy": "For your busy days,\na cup that does\nit all.",
       "introLead": "In the rush of everyday life,\none cup to care for your mind, body, and skin — all at once.\n\nDoSee Wellness matcha\nsupports your focus, beauty, and relaxation from three directions.\n\nA new matcha ritual for modern wellbeing.\nBorn from centuries of Japanese tea culture — a cup of wellness you can drink.\n\nDoSee Wellness has reimagined matcha\ninto a form you can keep up with, even on your busiest days.",
@@ -510,6 +511,9 @@
     "subtitle": "On the culture of Japanese tea, and wellness habits easy to keep.",
     "readingTime": "About a {minutes}-minute read",
     "readingTimeShort": "About {minutes} min",
+    "shopCtaTitle": "Enjoy the read — why not try WellCha?",
+    "shopCtaShop": "Shop products",
+    "shopCtaWellcha": "About WellCha",
     "backToTop": "← Back to Home",
     "backToList": "← Back to the journal",
     "breadcrumbHome": "Home",
@@ -528,6 +532,7 @@
       "howToUse": "How to enjoy",
       "ingredients": "Ingredients",
       "nutrition": "Nutrition facts",
+      "relatedArticles": "Stories about this product",
       "quantity": "Quantity",
       "addToCart": "Add to cart",
       "added": "Added to cart",

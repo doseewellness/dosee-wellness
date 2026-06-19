@@ -335,6 +335,117 @@
   transform: translateY(-2px);
 }
 
+.wellcha-learn-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1b1a17;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.wellcha-learn-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .wellcha-learn-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.wellcha-learn-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(27, 26, 23, 0.15);
+  border-radius: 14px;
+  background: rgba(245, 241, 232, 0.4);
+  text-decoration: none;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.wellcha-learn-card:hover {
+  border-color: rgba(27, 26, 23, 0.45);
+  transform: translateY(-2px);
+}
+
+.wellcha-learn-cat {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6b7257;
+  font-weight: 600;
+}
+
+.wellcha-learn-heading {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1b1a17;
+  line-height: 1.5;
+}
+
+.blog-shop-cta {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(236, 230, 216, 0.7) 0%, rgba(245, 241, 232, 0.6) 100%);
+  text-align: center;
+}
+
+.blog-shop-cta-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1b1a17;
+  margin-bottom: 1.5rem;
+}
+
+.blog-shop-cta-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.blog-shop-cta-primary,
+.blog-shop-cta-secondary {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.blog-shop-cta-primary {
+  background: #1b1a17;
+  color: #f5f1e8;
+  border: 1px solid #1b1a17;
+}
+
+.blog-shop-cta-primary:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.blog-shop-cta-secondary {
+  background: transparent;
+  color: #1b1a17;
+  border: 1px solid #1b1a17;
+}
+
+.blog-shop-cta-secondary:hover {
+  background: #1b1a17;
+  color: #f5f1e8;
+  transform: translateY(-2px);
+}
+
 .static-page-hero {
   background: linear-gradient(135deg, rgba(236, 230, 216, 0.6) 0%, rgba(245, 241, 232, 0.55) 100%);
   padding: 160px 60px 80px;

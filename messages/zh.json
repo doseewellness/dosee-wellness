@@ -442,6 +442,7 @@
       "subtitle": "一杯同时呵护身心与肌肤。\nWellCha 的抹茶与焙茶，从专注、美容、放松三个方向守护您。"
     },
     "backButton": "← 返回首页",
+    "learnMoreTitle": "进一步了解 WellCha",
     "matcha": {
       "heroCopy": "为忙碌的每一天，\n奉上一杯\n「全方位呵护」",
       "introLead": "在忙碌的日常中，\n一杯同时呵护身心与肌肤。\n\nDoSee Wellness 的抹茶，\n从专注、美容、放松三个方向守护您。\n\n调养现代人身心的全新抹茶习惯。\n源自延续数百年的日本茶文化，堪称「可饮用的健康」。\n\nDoSee Wellness 将抹茶\n重新设计为「即使在忙碌现代也能坚持的形式」。",
@@ -522,6 +523,9 @@
     "subtitle": "关于日本茶文化，以及易于坚持的健康生活小贴士。",
     "readingTime": "约{minutes}分钟读完",
     "readingTimeShort": "约{minutes}分钟",
+    "shopCtaTitle": "边读边试试 WellCha 吧",
+    "shopCtaShop": "查看商品",
+    "shopCtaWellcha": "关于 WellCha",
     "backToTop": "← 返回首页",
     "backToList": "← 返回文章列表",
     "breadcrumbHome": "首页",
@@ -540,6 +544,7 @@
       "howToUse": "饮用方法",
       "ingredients": "原材料",
       "nutrition": "营养成分表",
+      "relatedArticles": "与本商品相关的文章",
       "quantity": "数量",
       "addToCart": "加入购物车",
       "added": "已加入购物车",

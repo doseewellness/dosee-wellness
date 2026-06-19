@@ -7,6 +7,7 @@ import { Star, ArrowLeft, Shield, Truck } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { getProductById } from "@/lib/data";
+import { getPostsForProduct } from "@/lib/blog/related";
 import productsData from "@/data/products.json";
 import { localizeProductCopy } from "@/lib/products/i18n";
 import { buildAlternates } from "@/lib/i18n/alternates";
@@ -71,6 +72,7 @@ export default async function ProductDetailPage({
   if (!product) notFound();
 
   const rich = (productsData as RichProduct[]).find((p) => p.id === id);
+  const relatedPosts = getPostsForProduct(id);
   const copy = localizeProductCopy(id, locale);
   const nutrition = rich?.nutritionFacts;
   const nutritionRows = nutrition
@@ -281,6 +283,26 @@ export default async function ProductDetailPage({
             </section>
           )}
         </div>
+      )}
+
+      {relatedPosts.length > 0 && (
+        <section className="mt-16 max-w-3xl mx-auto">
+          <h2 className="text-xl font-bold mb-6">{t("relatedArticles")}</h2>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {relatedPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="rounded-xl border border-border/60 bg-muted/30 p-5 transition-colors hover:border-brand/50 hover:bg-muted/50"
+              >
+                <p className="text-xs text-brand font-medium mb-2 uppercase tracking-wide">
+                  {post.category}
+                </p>
+                <h3 className="font-medium leading-snug">{post.title}</h3>
+              </Link>
+            ))}
+          </div>
+        </section>
       )}
       </main>
     </>

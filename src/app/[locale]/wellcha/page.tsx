@@ -6,6 +6,7 @@ import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import { multiline } from '@/components/MultiLine'
 import productsData from '../../../data/products.json'
+import { getPostsForProduct } from '@/lib/blog/related'
 import { getPurchaseUrl, USE_SHOPIFY } from '../../../lib/constants/shop'
 import { localizeProductCopy } from '@/lib/products/i18n'
 import type { Locale } from '@/i18n/routing'
@@ -21,6 +22,7 @@ export default function WellChaPage() {
   const hojichaLatte = productsData.find((p) => p.id === 'hojicha-latte')
   const matchaCopy = localizeProductCopy('matcha-latte', locale)
   const hojichaCopy = localizeProductCopy('hojicha-latte', locale)
+  const relatedPosts = getPostsForProduct('matcha-latte', 3)
 
   // 構造化データ - 商品情報（抹茶ラテ）
   const matchaProductJsonLd = {
@@ -128,6 +130,27 @@ export default function WellChaPage() {
 
       {/* 3) ほうじ茶LP（画像の縦長デザイン風に置き換え） */}
       <HojichaImageLP />
+
+      {/* もっと知る（ブログ導線） */}
+      {relatedPosts.length > 0 && (
+        <section className="content-section" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
+          <div className="section-wrapper">
+            <h2 className="wellcha-learn-title">{t('learnMoreTitle')}</h2>
+            <div className="wellcha-learn-grid">
+              {relatedPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="wellcha-learn-card"
+                >
+                  <span className="wellcha-learn-cat">{post.category}</span>
+                  <span className="wellcha-learn-heading">{post.title}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 戻る */}
       <section className="content-section" style={{ paddingTop: '2rem', paddingBottom: '4rem' }}>

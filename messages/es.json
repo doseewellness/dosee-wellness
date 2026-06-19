@@ -442,6 +442,7 @@
       "subtitle": "Una taza para nutrir tu mente, cuerpo y piel — todo a la vez.\nEl matcha y el hojicha de WellCha te apoyan en la concentración, la belleza y la relajación desde tres frentes."
     },
     "backButton": "← Volver al inicio",
+    "learnMoreTitle": "Conoce más sobre WellCha",
     "matcha": {
       "heroCopy": "Para tus días agitados,\nuna taza que lo\ncuida todo.",
       "introLead": "En el ajetreo de la vida cotidiana,\nuna taza para cuidar tu mente, cuerpo y piel — todo a la vez.\n\nEl matcha de DoSee Wellness\nte apoya en la concentración, la belleza y la relajación desde tres frentes.\n\nUn nuevo ritual de matcha para el bienestar moderno.\nNacido de siglos de cultura del té japonés — una taza de bienestar que puedes beber.\n\nDoSee Wellness ha reinventado el matcha\nen una forma que puedes mantener, incluso en tus días más ocupados.",
@@ -522,6 +523,9 @@
     "subtitle": "Sobre la cultura del té japonés y hábitos de bienestar fáciles de mantener.",
     "readingTime": "Lectura de unos {minutes} min",
     "readingTimeShort": "Unos {minutes} min",
+    "shopCtaTitle": "¿Y si pruebas WellCha mientras lees?",
+    "shopCtaShop": "Ver productos",
+    "shopCtaWellcha": "Sobre WellCha",
     "backToTop": "← Volver al inicio",
     "backToList": "← Volver al diario",
     "breadcrumbHome": "Inicio",
@@ -540,6 +544,7 @@
       "howToUse": "Modo de preparación",
       "ingredients": "Ingredientes",
       "nutrition": "Información nutricional",
+      "relatedArticles": "Artículos sobre este producto",
       "quantity": "Cantidad",
       "addToCart": "Añadir al carrito",
       "added": "Añadido al carrito",
