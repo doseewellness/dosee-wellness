@@ -70,6 +70,13 @@ export default function Home() {
 
   return (
     <div className={`home-v2 ${shipporiMincho.className}`}>
+      {/* LCP: ヒーロー背景画像を先読みして表示を早める */}
+      <link
+        rel="preload"
+        as="image"
+        href="/images/bg/tea-field-parallax.jpg"
+        fetchPriority="high"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
