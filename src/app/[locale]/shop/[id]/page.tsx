@@ -10,6 +10,7 @@ import { getProductById } from "@/lib/data";
 import productsData from "@/data/products.json";
 import { localizeProductCopy } from "@/lib/products/i18n";
 import { buildAlternates } from "@/lib/i18n/alternates";
+import { siteConfig } from "@/lib/constants/metadata";
 import AddToCartButton from "@/components/products/AddToCartButton";
 import type { Metadata } from "next";
 
@@ -80,8 +81,49 @@ export default async function ProductDetailPage({
     ? Math.round((1 - product.price / product.originalPrice) * 100)
     : null;
 
+  const productImageUrl = product.image.startsWith("http")
+    ? product.image
+    : `${siteConfig.url}${product.image}`;
+
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: copy.longDescription ?? copy.description ?? product.description,
+    image: productImageUrl,
+    brand: { "@type": "Brand", name: "DoSee Wellness" },
+    category: "Health & Wellness > Tea",
+    offers: {
+      "@type": "Offer",
+      url: `${siteConfig.url}/shop/${id}`,
+      priceCurrency: "JPY",
+      price: product.price,
+      availability: product.inStock
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
+      priceValidUntil: `${new Date().getFullYear() + 1}-12-31`,
+      seller: { "@type": "Organization", name: "DoSee Wellness" },
+    },
+    ...(product.reviewCount > 0
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: product.rating,
+            reviewCount: product.reviewCount,
+            bestRating: "5",
+            worstRating: "1",
+          },
+        }
+      : {}),
+  };
+
   return (
-    <main className="container mx-auto px-4 py-10">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
+      <main className="container mx-auto px-4 py-10">
       <Link
         href="/shop"
         className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors"
@@ -240,6 +282,7 @@ export default async function ProductDetailPage({
           )}
         </div>
       )}
-    </main>
+      </main>
+    </>
   );
 }
