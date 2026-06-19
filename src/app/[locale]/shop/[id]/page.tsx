@@ -95,6 +95,7 @@ export default async function ProductDetailPage({
     image: productImageUrl,
     brand: { "@type": "Brand", name: "DoSee Wellness" },
     category: "Health & Wellness > Tea",
+    sku: id,
     offers: {
       "@type": "Offer",
       url: `${siteConfig.url}/shop/${id}`,
@@ -105,18 +106,43 @@ export default async function ProductDetailPage({
         : "https://schema.org/OutOfStock",
       priceValidUntil: `${new Date().getFullYear() + 1}-12-31`,
       seller: { "@type": "Organization", name: "DoSee Wellness" },
-    },
-    ...(product.reviewCount > 0
-      ? {
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: product.rating,
-            reviewCount: product.reviewCount,
-            bestRating: "5",
-            worstRating: "1",
+      shippingDetails: {
+        "@type": "OfferShippingDetails",
+        shippingRate: {
+          "@type": "MonetaryAmount",
+          value: "0",
+          currency: "JPY",
+        },
+        shippingDestination: {
+          "@type": "DefinedRegion",
+          addressCountry: "JP",
+        },
+        deliveryTime: {
+          "@type": "ShippingDeliveryTime",
+          handlingTime: {
+            "@type": "QuantitativeValue",
+            minValue: 1,
+            maxValue: 2,
+            unitCode: "DAY",
           },
-        }
-      : {}),
+          transitTime: {
+            "@type": "QuantitativeValue",
+            minValue: 2,
+            maxValue: 5,
+            unitCode: "DAY",
+          },
+        },
+      },
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        applicableCountry: "JP",
+        returnPolicyCategory:
+          "https://schema.org/MerchantReturnFiniteReturnWindow",
+        merchantReturnDays: 30,
+        returnMethod: "https://schema.org/ReturnByMail",
+        returnFees: "https://schema.org/ReturnShippingFees",
+      },
+    },
   };
 
   return (
