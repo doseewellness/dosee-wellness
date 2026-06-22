@@ -10,7 +10,6 @@ import '../../styles/globals.css'
 import GoogleAnalytics from '../../components/GoogleAnalytics'
 import { cn } from "@/lib/utils";
 import CartSheet from '@/components/cart/CartSheet';
-import CustomCursor from '@/components/CustomCursor';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
@@ -124,7 +123,6 @@ export default async function RootLayout({
       <body className={playfair.className}>
         <NextIntlClientProvider>
           <GoogleAnalytics />
-          <CustomCursor />
           {children}
           <CartSheet />
         </NextIntlClientProvider>

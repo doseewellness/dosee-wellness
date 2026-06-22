@@ -20,7 +20,6 @@ body {
 
 body {
   font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
-  cursor: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -34,35 +33,6 @@ a {
   html {
     color-scheme: dark;
   }
-}
-
-/* ==========================================
-   Custom Cursor
-   ========================================== */
-.custom-cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 10000;
-  mix-blend-mode: difference;
-  transition: transform 0.1s;
-  transform: translate(-50%, -50%);
-}
-
-.cursor-follower {
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transition: all 0.15s;
-  transform: translate(-50%, -50%);
 }
 
 /* ==========================================
@@ -1569,9 +1539,6 @@ footer {
    Mobile Responsive Styles
    ========================================== */
 @media (max-width: 768px) {
-  body { cursor: auto; }
-  .custom-cursor, .cursor-follower { display: none; }
-
   .hero h1 { font-size: 2.5rem; }
   .hero-badges {
     flex-direction: column;
