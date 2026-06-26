@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { stripe } from "@/lib/stripe/server";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { sendOrderEmails, type OrderShipping } from "@/lib/email/order-confirmation";
 import type { OrderStatus } from "@/types/database";
 
 export async function POST(req: NextRequest) {
@@ -124,4 +125,36 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
   }
 
   console.log("[Webhook] 注文保存完了:", order.id, "| session:", session.id);
+
+  // 注文確認メール送信。失敗しても注文記録は確定済みなので握りつぶす。
+  try {
+    const ship = session.collected_information?.shipping_details ?? null;
+    const shipping: OrderShipping | null = ship
+      ? {
+          name: ship.name ?? "",
+          postalCode: ship.address.postal_code ?? "",
+          state: ship.address.state ?? "",
+          city: ship.address.city ?? "",
+          line1: ship.address.line1 ?? "",
+          line2: ship.address.line2 ?? "",
+          phone: session.customer_details?.phone ?? "",
+        }
+      : null;
+
+    await sendOrderEmails({
+      orderId: order.id,
+      customerEmail,
+      items: cartItems.map((item) => ({
+        product_name: item.product_name,
+        price: item.price,
+        quantity: item.quantity,
+      })),
+      shippingAmount,
+      totalAmount,
+      shipping,
+    });
+    console.log("[Webhook] 確認メール送信完了:", order.id);
+  } catch (mailErr) {
+    console.error("[Webhook] 確認メール送信失敗（注文は保存済み）:", mailErr);
+  }
 }
