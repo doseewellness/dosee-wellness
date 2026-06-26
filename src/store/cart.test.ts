@@ -8,7 +8,7 @@ function makeProduct(overrides: Partial<Product> = {}): Product {
     id: "matcha-latte",
     name: "Matcha Latte",
     description: "test",
-    price: 3980,
+    price: 3480,
     image: "/x.png",
     category: "wellcha",
     rating: 5,

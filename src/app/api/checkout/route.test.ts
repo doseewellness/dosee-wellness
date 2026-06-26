@@ -46,27 +46,31 @@ describe("POST /api/checkout", () => {
     expect(create).not.toHaveBeenCalled();
   });
 
-  it("adds a shipping line item below the free-shipping threshold", async () => {
-    const res = await POST(makeRequest({ items: [makeItem("a", 3980, 1)] }));
+  it("offers paid shipping options below the free-shipping threshold", async () => {
+    const res = await POST(makeRequest({ items: [makeItem("a", 3480, 1)] }));
     expect(res.status).toBe(200);
 
     const arg = create.mock.calls[0][0];
-    expect(arg.line_items).toHaveLength(2); // product + shipping
-    expect(arg.line_items[1].price_data.unit_amount).toBe(500);
-    expect(arg.metadata.shipping_amount).toBe("500");
+    expect(arg.line_items).toHaveLength(1); // product only; 送料は shipping_options
+    const amounts = arg.shipping_options.map(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (o: any) => o.shipping_rate_data.fixed_amount.amount
+    );
+    expect(amounts).toEqual([500, 1000]); // 通常 / 北海道・沖縄
+    expect(arg.allow_promotion_codes).toBe(true);
   });
 
-  it("waives shipping at or above the threshold", async () => {
-    const res = await POST(makeRequest({ items: [makeItem("a", 3980, 2)] }));
+  it("offers free shipping at or above the threshold", async () => {
+    const res = await POST(makeRequest({ items: [makeItem("a", 3480, 2)] }));
     expect(res.status).toBe(200);
 
     const arg = create.mock.calls[0][0];
-    expect(arg.line_items).toHaveLength(1); // product only, no shipping
-    expect(arg.metadata.shipping_amount).toBe("0");
+    expect(arg.shipping_options).toHaveLength(1);
+    expect(arg.shipping_options[0].shipping_rate_data.fixed_amount.amount).toBe(0);
   });
 
   it("returns the Stripe session url", async () => {
-    const res = await POST(makeRequest({ items: [makeItem("a", 3980, 1)] }));
+    const res = await POST(makeRequest({ items: [makeItem("a", 3480, 1)] }));
     const json = await res.json();
     expect(json.url).toBe("https://stripe.test/checkout");
   });

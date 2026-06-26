@@ -4,6 +4,7 @@ import { CartItem } from "@/store/cart";
 
 const SHIPPING_THRESHOLD = 5000;
 const SHIPPING_FEE = 500;
+const SHIPPING_REMOTE_FEE = 1000;
 
 export async function POST(req: NextRequest) {
   try {
@@ -26,7 +27,7 @@ export async function POST(req: NextRequest) {
       (sum, item) => sum + item.product.price * item.quantity,
       0
     );
-    const shipping = subtotal >= SHIPPING_THRESHOLD ? 0 : SHIPPING_FEE;
+    const freeShipping = subtotal >= SHIPPING_THRESHOLD;
 
     // 商品の line_items を構築
     const productLineItems = items.map((item) => {
@@ -46,24 +47,26 @@ export async function POST(req: NextRequest) {
       };
     });
 
-    // 送料を別行で追加
-    const shippingLineItem =
-      shipping > 0
-        ? [
-            {
-              price_data: {
-                currency: "jpy" as const,
-                product_data: { name: "送料" },
-                unit_amount: shipping,
-              },
-              quantity: 1,
-            },
-          ]
-        : [];
+    // 送料は決済画面でお客様が選択する shipping_options で提示。
+    // 小計が無料ライン以上なら¥0の単一オプション、未満なら通常¥500／北海道・沖縄¥1,000。
+    const fixedRate = (amount: number, label: string) => ({
+      shipping_rate_data: {
+        type: "fixed_amount" as const,
+        display_name: label,
+        fixed_amount: { amount, currency: "jpy" as const },
+      },
+    });
+
+    const shippingOptions = freeShipping
+      ? [fixedRate(0, "送料無料")]
+      : [
+          fixedRate(SHIPPING_FEE, "通常配送（全国）"),
+          fixedRate(SHIPPING_REMOTE_FEE, "北海道・沖縄・離島"),
+        ];
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
-      line_items: [...productLineItems, ...shippingLineItem],
+      line_items: productLineItems,
       success_url: `${appUrl}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${appUrl}/cart`,
       metadata: {
@@ -76,11 +79,12 @@ export async function POST(req: NextRequest) {
             quantity: item.quantity,
           }))
         ),
-        shipping_amount: String(shipping),
       },
       locale: "ja",
       billing_address_collection: "required",
       shipping_address_collection: { allowed_countries: ["JP"] },
+      shipping_options: shippingOptions,
+      allow_promotion_codes: true,
       payment_method_types: ["card"],
       phone_number_collection: { enabled: true },
     });

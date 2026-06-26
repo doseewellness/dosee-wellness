@@ -174,6 +174,10 @@ export default function CartPageClient() {
               </div>
             </div>
 
+            <p className="text-[11px] leading-relaxed text-muted-foreground mt-3">
+              {t("shippingNote")}
+            </p>
+
             <div className="mt-6">
               <CheckoutButton />
             </div>

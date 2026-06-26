@@ -59,11 +59,11 @@ export default function CommercePage() {
           <p>{t('commerce.pricesNote')}</p>
           <div className="info-row">
             <span className="info-label">WellCha 抹茶ラテ</span>
-            <span className="info-value">¥3,980（税込）</span>
+            <span className="info-value">¥3,480（税込）</span>
           </div>
           <div className="info-row">
             <span className="info-label">WellCha ほうじ茶ラテ</span>
-            <span className="info-value">¥3,980（税込）</span>
+            <span className="info-value">¥3,480（税込）</span>
           </div>
 
           <h2>{t('commerce.additionalFeesHeading')}</h2>

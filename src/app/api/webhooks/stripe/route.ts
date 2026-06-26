@@ -43,7 +43,12 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
 
   // メタデータからカートアイテムを復元
   const cartItemsRaw = session.metadata?.cart_items;
-  const shippingAmount = Number(session.metadata?.shipping_amount ?? 0);
+  // 送料・割引は決済画面で確定するため、セッションの実値から取得する。
+  const shippingAmount =
+    session.shipping_cost?.amount_total ??
+    session.total_details?.amount_shipping ??
+    0;
+  const discountAmount = session.total_details?.amount_discount ?? 0;
 
   if (!cartItemsRaw) {
     console.error("[Webhook] cart_items metadata が見つかりません", session.id);
@@ -141,6 +146,11 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
         }
       : null;
 
+    const subtotalAmount = cartItems.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
+
     await sendOrderEmails({
       orderId: order.id,
       customerEmail,
@@ -149,6 +159,8 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
         price: item.price,
         quantity: item.quantity,
       })),
+      subtotalAmount,
+      discountAmount,
       shippingAmount,
       totalAmount,
       shipping,

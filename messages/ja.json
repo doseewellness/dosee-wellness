@@ -577,6 +577,7 @@
       "shipping": "送料",
       "free": "無料",
       "totalWithTax": "合計（税込）",
+      "shippingNote": "※北海道・沖縄・離島は送料¥1,000。クーポンコードは決済画面で入力できます。",
       "securePayment": "Stripeによる安全な決済"
     },
     "sheet": {

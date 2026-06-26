@@ -577,6 +577,7 @@
       "shipping": "运费",
       "free": "免费",
       "totalWithTax": "合计（含税）",
+      "shippingNote": "*北海道、冲绳及离岛运费为¥1,000。优惠码可在结账页面输入。",
       "securePayment": "由 Stripe 提供的安全支付"
     },
     "sheet": {

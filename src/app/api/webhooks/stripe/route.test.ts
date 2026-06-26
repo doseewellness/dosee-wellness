@@ -13,6 +13,10 @@ vi.mock("@/lib/supabase/admin", () => ({
   createAdminClient: () => createAdminClient(),
 }));
 
+vi.mock("@/lib/email/order-confirmation", () => ({
+  sendOrderEmails: vi.fn().mockResolvedValue(undefined),
+}));
+
 import { POST } from "./route";
 
 /**
@@ -79,17 +83,18 @@ function completedEvent() {
     data: {
       object: {
         id: "cs_test_1",
-        amount_total: 4480,
+        amount_total: 3980,
         customer_details: { email: "buyer@example.com" },
         payment_intent: "pi_1",
+        shipping_cost: { amount_total: 500 },
+        total_details: { amount_discount: 0, amount_shipping: 500 },
         metadata: {
-          shipping_amount: "500",
           cart_items: JSON.stringify([
             {
               product_id: "matcha-latte",
               product_name: "Matcha Latte",
               product_image_url: "/x.png",
-              price: 3980,
+              price: 3480,
               quantity: 1,
             },
           ]),
@@ -129,7 +134,7 @@ describe("POST /api/webhooks/stripe", () => {
     expect(calls.insertOrders).toMatchObject({
       stripe_session_id: "cs_test_1",
       status: "paid",
-      total_amount: 4480,
+      total_amount: 3980,
       shipping_amount: 500,
     });
     expect(calls.insertItems).toHaveLength(1);

@@ -25,6 +25,8 @@ export type OrderEmailParams = {
   orderId: string;
   customerEmail: string;
   items: OrderEmailItem[];
+  subtotalAmount: number;
+  discountAmount: number;
   shippingAmount: number;
   totalAmount: number;
   shipping: OrderShipping | null;
@@ -75,18 +77,35 @@ const baseStyle = `
 `;
 
 export async function sendOrderEmails(params: OrderEmailParams): Promise<void> {
-  const { orderId, customerEmail, items, shippingAmount, totalAmount, shipping } =
-    params;
-  const subtotal = totalAmount - shippingAmount;
+  const {
+    orderId,
+    customerEmail,
+    items,
+    subtotalAmount,
+    discountAmount,
+    shippingAmount,
+    totalAmount,
+    shipping,
+  } = params;
   const ref = orderRef(orderId);
+
+  const discountRow =
+    discountAmount > 0
+      ? `
+      <tr>
+        <td>割引（クーポン）</td>
+        <td style="text-align:right;color:#9a7b3f;">−${yen(discountAmount)}</td>
+      </tr>`
+      : "";
 
   const summaryTable = `
     <table>
       ${itemRows(items)}
       <tr>
         <td style="padding-top:12px;">小計</td>
-        <td style="padding-top:12px;text-align:right;">${yen(subtotal)}</td>
+        <td style="padding-top:12px;text-align:right;">${yen(subtotalAmount)}</td>
       </tr>
+      ${discountRow}
       <tr>
         <td>送料</td>
         <td style="text-align:right;">${shippingAmount === 0 ? "無料" : yen(shippingAmount)}</td>

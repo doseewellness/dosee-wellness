@@ -577,6 +577,7 @@
       "shipping": "Livraison",
       "free": "Offerte",
       "totalWithTax": "Total (TTC)",
+      "shippingNote": "*Frais de port de ¥1,000 pour Hokkaido, Okinawa et les îles éloignées. Saisissez les codes promo au paiement.",
       "securePayment": "Paiement sécurisé par Stripe"
     },
     "sheet": {

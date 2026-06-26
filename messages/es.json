@@ -577,6 +577,7 @@
       "shipping": "Envío",
       "free": "Gratis",
       "totalWithTax": "Total (impuestos incluidos)",
+      "shippingNote": "*El envío es de ¥1,000 para Hokkaido, Okinawa e islas remotas. Introduce los códigos de cupón al pagar.",
       "securePayment": "Pago seguro con Stripe"
     },
     "sheet": {
