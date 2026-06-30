@@ -8,7 +8,8 @@ import productsData from "@/data/products.json";
 // 確実な離島対応は Merchant Center 側の配送設定で補う。
 const SHIPPING_FEE = 500;
 const SHIPPING_REMOTE_FEE = 1000;
-const REMOTE_REGIONS = ["JP-01", "JP-47"]; // 北海道, 沖縄
+// Google の shipping region は国コード接頭辞なしの ISO 3166-2 サブディビジョンコード。
+const REMOTE_REGIONS = ["01", "47"]; // 北海道, 沖縄
 const GOOGLE_PRODUCT_CATEGORY = "Food, Beverages & Tobacco > Beverages > Tea & Infusions";
 
 type FeedProduct = {
