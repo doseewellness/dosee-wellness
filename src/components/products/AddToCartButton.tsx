@@ -6,6 +6,7 @@ import { ShoppingCart, Check, Minus, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Product } from "@/types/product";
 import { useCartStore } from "@/store/cart";
+import { trackAddToCart } from "@/lib/analytics/ecommerce";
 
 interface AddToCartButtonProps {
   product: Product;
@@ -21,6 +22,7 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
     for (let i = 0; i < quantity; i++) {
       addItem(product);
     }
+    trackAddToCart(product, quantity);
     setAdded(true);
     openCart();
     setTimeout(() => setAdded(false), 2000);

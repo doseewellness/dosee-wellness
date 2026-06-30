@@ -4,6 +4,7 @@ import type { Locale } from "@/i18n/routing";
 import { CheckCircle2, ArrowRight, Package } from "lucide-react";
 import { stripe } from "@/lib/stripe/server";
 import ClearCartOnMount from "@/components/cart/ClearCartOnMount";
+import PurchaseTracker from "@/components/analytics/PurchaseTracker";
 
 interface SuccessPageProps {
   params: Promise<{ locale: Locale }>;
@@ -32,6 +33,9 @@ export default async function CheckoutSuccessPage({ params, searchParams }: Succ
   return (
     <>
       <ClearCartOnMount />
+      {session_id && orderAmount > 0 && (
+        <PurchaseTracker transactionId={session_id} value={orderAmount} />
+      )}
       <main className="container mx-auto px-4 py-20 flex flex-col items-center text-center max-w-lg">
         <div className="h-20 w-20 rounded-full bg-brand-soft flex items-center justify-center mb-6">
           <CheckCircle2 className="h-10 w-10 text-brand" />

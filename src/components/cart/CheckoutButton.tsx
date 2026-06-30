@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCartStore } from "@/store/cart";
+import { trackBeginCheckout } from "@/lib/analytics/ecommerce";
 
 export default function CheckoutButton() {
   const t = useTranslations("commerce.checkout");
@@ -15,6 +16,7 @@ export default function CheckoutButton() {
   async function handleCheckout() {
     setLoading(true);
     setError(null);
+    trackBeginCheckout(items);
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
