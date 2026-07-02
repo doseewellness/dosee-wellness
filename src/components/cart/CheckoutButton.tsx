@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCartStore } from "@/store/cart";
@@ -9,6 +9,7 @@ import { trackBeginCheckout } from "@/lib/analytics/ecommerce";
 
 export default function CheckoutButton() {
   const t = useTranslations("commerce.checkout");
+  const locale = useLocale();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const items = useCartStore((s) => s.items);
@@ -21,7 +22,7 @@ export default function CheckoutButton() {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ items }),
+        body: JSON.stringify({ items, locale }),
       });
 
       const data = await res.json();
