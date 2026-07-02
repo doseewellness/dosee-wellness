@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import { pageMetadata, siteConfig } from '../../../lib/constants/metadata'
+import { pageMetadata, siteConfig, ogImages } from '../../../lib/constants/metadata'
 import { buildAlternates } from '../../../lib/i18n/alternates'
 import type { Locale } from '../../../i18n/routing'
 
@@ -22,6 +22,15 @@ export async function generateMetadata({
       title,
       description,
       url: `${siteConfig.url}/faq`,
+      siteName: siteConfig.name,
+      type: 'website',
+      images: [{ url: `${siteConfig.url}${ogImages.default}`, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [`${siteConfig.url}${ogImages.default}`],
     },
   }
 }

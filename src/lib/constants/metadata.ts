@@ -5,7 +5,7 @@ export const siteConfig = {
   title: 'DoSee Wellness - 忙しい毎日でも続けられるウェルネス',
   description: '日本発のウェルネスブランド。日本茶ベースのWellChaと、ショット系DoSeeで、こころ・からだ・肌をやさしく整える習慣を提案します。',
   url: 'https://doseewellness.com',
-  ogImage: 'https://doseewellness.com/og-image.jpg',
+  ogImage: 'https://doseewellness.com/images/og/home-og.jpg',
   links: {
     instagram: 'https://www.instagram.com/wellchamatcha',
     email: 'info@doseegroup.com',
@@ -72,8 +72,8 @@ export const pageMetadata = {
 
 // OGP画像のパス
 export const ogImages = {
-  default: '/og-image.jpg',
-  wellcha: '/wellcha-og.jpg',
+  default: '/images/og/home-og.jpg',
+  wellcha: '/images/og/wellcha-og.jpg',
 }
 
 // JSON-LD構造化データのベース

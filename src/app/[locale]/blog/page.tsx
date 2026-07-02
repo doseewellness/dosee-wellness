@@ -7,6 +7,7 @@ import Footer from '../../../components/Footer'
 import { getAllPosts } from '@/lib/blog/posts'
 import { localizePost } from '@/lib/blog/i18n'
 import { buildAlternates } from '@/lib/i18n/alternates'
+import { siteConfig, ogImages } from '@/lib/constants/metadata'
 import '../../../styles/pages.css'
 
 export function generateStaticParams() {
@@ -28,7 +29,15 @@ export async function generateMetadata({
       title: t('metaTitle'),
       description: t('metaDescription'),
       url: 'https://doseewellness.com/blog',
+      siteName: siteConfig.name,
       type: 'website',
+      images: [{ url: `${siteConfig.url}${ogImages.default}`, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('metaTitle'),
+      description: t('metaDescription'),
+      images: [`${siteConfig.url}${ogImages.default}`],
     },
   }
 }

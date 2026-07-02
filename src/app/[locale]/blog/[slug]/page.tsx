@@ -29,6 +29,7 @@ export async function generateMetadata({
   const post = localizePost(base, locale)
 
   const url = `https://doseewellness.com/blog/${post.slug}`
+  const imageUrl = `https://doseewellness.com${post.heroImage}`
   return {
     title: `${post.title} | DoSee Wellness Note`,
     description: post.excerpt,
@@ -38,9 +39,16 @@ export async function generateMetadata({
       title: post.title,
       description: post.excerpt,
       url,
+      siteName: 'DoSee Wellness',
       type: 'article',
       publishedTime: post.publishedAt,
-      images: [{ url: `https://doseewellness.com${post.heroImage}`, alt: post.heroAlt }],
+      images: [{ url: imageUrl, alt: post.heroAlt }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [imageUrl],
     },
   }
 }
