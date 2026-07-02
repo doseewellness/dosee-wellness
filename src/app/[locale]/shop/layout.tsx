@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { pageMetadata, siteConfig } from '../../../lib/constants/metadata'
@@ -29,7 +29,18 @@ export async function generateMetadata({
   }
 }
 
-export default function ShopLayout({ children }: { children: React.ReactNode }) {
+export default async function ShopLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode
+  params: Promise<{ locale: string }>
+}) {
+  // Footer等がサーバー側でuseTranslationsを使うため、ここでロケールを
+  // 確定させないとheaders()参照となり静的生成（ISR）が効かなくなる。
+  const { locale } = await params
+  setRequestLocale(locale)
+
   return (
     <div className="page-container">
       <Navigation isScrolled={true} />

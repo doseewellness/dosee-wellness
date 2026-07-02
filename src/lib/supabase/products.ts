@@ -1,6 +1,16 @@
-import { createClient } from "@/lib/supabase/server";
+import { createClient as createSupabaseClient } from "@supabase/supabase-js";
 import { Product } from "@/types/product";
-import { ProductRow } from "@/types/database";
+import { Database, ProductRow } from "@/types/database";
+
+// 商品・カテゴリは公開データなのでクッキー（認証）不要の匿名クライアントで読む。
+// cookies() に依存しないことで /shop の静的生成（ISR）を可能にする。
+async function createClient() {
+  return createSupabaseClient<Database>(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    { auth: { persistSession: false } }
+  );
+}
 
 function toProduct(row: ProductRow): Product {
   return {

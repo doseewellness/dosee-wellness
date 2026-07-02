@@ -6,7 +6,7 @@ import type { Locale } from "@/i18n/routing";
 import { Star, ArrowLeft, Shield, Truck } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { getProductById } from "@/lib/data";
+import { getProductById, getProducts } from "@/lib/data";
 import { getPostsForProduct } from "@/lib/blog/related";
 import productsData from "@/data/products.json";
 import { localizeProductCopy } from "@/lib/products/i18n";
@@ -58,7 +58,14 @@ const NUTRITION_KEYS: (keyof NonNullable<RichProduct["nutritionFacts"]>)[] = [
   "caffeine",
 ];
 
-export const dynamic = "force-dynamic";
+// ISR: 商品詳細は60秒ごとに再生成（Supabase更新は最大60秒遅れで反映）
+export const revalidate = 60;
+
+// ビルド時に既知の商品を各ロケールで事前生成。未知のidは初回アクセス時に生成される。
+export async function generateStaticParams() {
+  const products = await getProducts();
+  return products.map((p) => ({ id: p.id }));
+}
 
 export default async function ProductDetailPage({
   params,

@@ -1,14 +1,20 @@
 import { Suspense } from "react";
-import { getLocale, getTranslations } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import ProductCard from "@/components/products/ProductCard";
 import { getProducts } from "@/lib/data";
 import { localizeProductCopy } from "@/lib/products/i18n";
 import type { Locale } from "@/i18n/routing";
 
-export const dynamic = "force-dynamic";
+// ISR: 商品カタログは60秒ごとに再生成（Supabase更新は最大60秒遅れで反映）
+export const revalidate = 60;
 
-export default async function ShopPage() {
-  const locale = (await getLocale()) as Locale;
+export default async function ShopPage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const products = (await getProducts()).map((p) => ({
     ...p,
     description: localizeProductCopy(p.id, locale).description ?? p.description,
