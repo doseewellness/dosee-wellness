@@ -38,7 +38,7 @@ export default function WellChaPage() {
       priceCurrency: 'JPY',
       price: matchaLatte?.price || '3480',
       availability: matchaLatte?.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
-      priceValidUntil: '2025-12-31',
+      priceValidUntil: `${new Date().getFullYear() + 1}-12-31`,
       seller: { '@type': 'Organization', name: 'DoSee Wellness' },
     },
     aggregateRating: {
@@ -74,7 +74,7 @@ export default function WellChaPage() {
       priceCurrency: 'JPY',
       price: hojichaLatte?.price || '3480',
       availability: hojichaLatte?.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
-      priceValidUntil: '2025-12-31',
+      priceValidUntil: `${new Date().getFullYear() + 1}-12-31`,
       seller: { '@type': 'Organization', name: 'DoSee Wellness' },
     },
     aggregateRating: {
