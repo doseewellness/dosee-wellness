@@ -1,9 +1,6 @@
-'use client'
-
-import { useState, useEffect } from 'react'
-import { useTranslations, useLocale } from 'next-intl'
+import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
-import Navigation from '../../components/Navigation'
+import HomeNavigation from '../../components/HomeNavigation'
 import Footer from '../../components/Footer'
 import ProductImageSlider from '../../components/ProductImageSlider'
 import { getPurchaseUrl, USE_SHOPIFY } from '../../lib/constants/shop'
@@ -19,22 +16,20 @@ interface Review {
   role: string
 }
 
-export default function Home() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const t = useTranslations('home')
-  const locale = useLocale()
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>
+}) {
+  const { locale } = await params
+  setRequestLocale(locale)
+  const t = await getTranslations('home')
   const latestPosts = getAllPosts()
     .slice(0, 3)
-    .map((p) => localizePost(p, locale as Locale))
+    .map((p) => localizePost(p, locale))
   const reviews = t.raw('reviews.items') as Review[]
   const formatDate = (iso: string) =>
     new Date(iso).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 100)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   const externalProps = USE_SHOPIFY
     ? { target: '_blank' as const, rel: 'noopener noreferrer' }
@@ -86,7 +81,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <Navigation isScrolled={isScrolled} />
+      <HomeNavigation />
 
       {/* HERO */}
       <header className="ed-hero">
