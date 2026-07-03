@@ -28,7 +28,7 @@ export const pageMetadata = {
 
   shop: {
     title: 'ショップ - 抹茶・ほうじ茶ラテを購入 | DoSee Wellness',
-    description: 'DoSee Wellnessのオンラインショップ。日本茶ベースのWellCha（抹茶ラテ・ほうじ茶ラテ）を販売。送料無料・30日返金保証で、毎日のウェルネス習慣を気軽に始められます。',
+    description: 'DoSee Wellnessのオンラインショップ。日本茶ベースのWellCha（抹茶ラテ・ほうじ茶ラテ）を販売。送料無料・30日返品保証（未開封）で、毎日のウェルネス習慣を気軽に始められます。',
     keywords: ['抹茶ラテ 通販', 'ほうじ茶ラテ 通販', 'WellCha 購入', '日本茶 オンラインショップ', 'ウェルネスドリンク'],
   },
   

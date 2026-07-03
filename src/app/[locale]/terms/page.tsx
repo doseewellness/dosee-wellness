@@ -25,18 +25,25 @@ export default function TermsPage() {
         <div className="section-wrapper legal-content">
           <p className="legal-reference-notice">{t('referenceNotice')}</p>
 
+          <p>{t('terms.intro')}</p>
+
           <h2>{t('terms.article1Title')}</h2>
-          <p>{t('terms.article1Body')}</p>
+          <ol>
+            <li>{t('terms.article1P1')}</li>
+            <li>{t('terms.article1P2')}</li>
+          </ol>
 
           <h2>{t('terms.article2Title')}</h2>
           <ol>
             <li>{t('terms.article2P1')}</li>
+            <li>{t('terms.article2P2')}</li>
             <li>
-              {t('terms.article2P2Intro')}
+              {t('terms.article2P3Intro')}
               <ul>
-                <li>{t('terms.article2P2Item1')}</li>
-                <li>{t('terms.article2P2Item2')}</li>
-                <li>{t('terms.article2P2Item3')}</li>
+                <li>{t('terms.article2P3Item1')}</li>
+                <li>{t('terms.article2P3Item2')}</li>
+                <li>{t('terms.article2P3Item3')}</li>
+                <li>{t('terms.article2P3Item4')}</li>
               </ul>
             </li>
           </ol>
@@ -56,43 +63,41 @@ export default function TermsPage() {
           </ol>
 
           <h2>{t('terms.article5Title')}</h2>
-          <p>{t('terms.article5Intro')}</p>
-          <ul>
-            <li>{t('terms.article5Item1')}</li>
-            <li>{t('terms.article5Item2')}</li>
-            <li>{t('terms.article5Item3')}</li>
-            <li>{t('terms.article5Item4')}</li>
-            <li>{t('terms.article5Item5')}</li>
-            <li>{t('terms.article5Item6')}</li>
-            <li>{t('terms.article5Item7')}</li>
-            <li>{t('terms.article5Item8')}</li>
-            <li>{t('terms.article5Item9')}</li>
-            <li>{t('terms.article5Item10')}</li>
-            <li>{t('terms.article5Item11')}</li>
-          </ul>
+          <ol>
+            <li>{t('terms.article5P1')}</li>
+            <li>{t('terms.article5P2')}</li>
+            <li>{t('terms.article5P3')}</li>
+          </ol>
+          <p>
+            <Link href="/commerce">{t('terms.commerceLinkText')}</Link>
+          </p>
 
           <h2>{t('terms.article6Title')}</h2>
-          <ol>
-            <li>
-              {t('terms.article6P1Intro')}
-              <ul>
-                <li>{t('terms.article6P1Item1')}</li>
-                <li>{t('terms.article6P1Item2')}</li>
-                <li>{t('terms.article6P1Item3')}</li>
-                <li>{t('terms.article6P1Item4')}</li>
-              </ul>
-            </li>
-            <li>{t('terms.article6P2')}</li>
-          </ol>
+          <p>{t('terms.article6Intro')}</p>
+          <ul>
+            <li>{t('terms.article6Item1')}</li>
+            <li>{t('terms.article6Item2')}</li>
+            <li>{t('terms.article6Item3')}</li>
+            <li>{t('terms.article6Item4')}</li>
+            <li>{t('terms.article6Item5')}</li>
+            <li>{t('terms.article6Item6')}</li>
+            <li>{t('terms.article6Item7')}</li>
+            <li>{t('terms.article6Item8')}</li>
+            <li>{t('terms.article6Item9')}</li>
+            <li>{t('terms.article6Item10')}</li>
+            <li>{t('terms.article6Item11')}</li>
+          </ul>
 
           <h2>{t('terms.article7Title')}</h2>
-          <ol>
-            <li>{t('terms.article7P1')}</li>
-            <li>{t('terms.article7P2')}</li>
-          </ol>
+          <p>{t('terms.article7Body')}</p>
 
           <h2>{t('terms.article8Title')}</h2>
-          <p>{t('terms.article8Body')}</p>
+          <ol>
+            <li>{t('terms.article8P1')}</li>
+            <li>{t('terms.article8P2')}</li>
+            <li>{t('terms.article8P3')}</li>
+            <li>{t('terms.article8P4')}</li>
+          </ol>
 
           <h2>{t('terms.article9Title')}</h2>
           <p>{t('terms.article9Body')}</p>
@@ -101,6 +106,12 @@ export default function TermsPage() {
           <ol>
             <li>{t('terms.article10P1')}</li>
             <li>{t('terms.article10P2')}</li>
+          </ol>
+
+          <h2>{t('terms.article11Title')}</h2>
+          <ol>
+            <li>{t('terms.article11P1')}</li>
+            <li>{t('terms.article11P2')}</li>
           </ol>
 
           <h2>{t('terms.contactTitle')}</h2>
