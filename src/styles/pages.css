@@ -82,7 +82,7 @@
 
 .content-section {
   padding: 80px 60px;
-  background: white;
+  background: #fdfcf8;
 }
 
 .section-wrapper {
@@ -101,6 +101,39 @@
 .text-content {
   max-width: 800px;
   margin-bottom: 3rem;
+}
+
+/* About：本文ブロックを中央に寄せて余白のバランスを取る */
+.about-page .section-wrapper > h2 {
+  position: relative;
+  text-align: center;
+  padding-bottom: 1.1rem;
+}
+
+.about-page .section-wrapper > h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 1px;
+  background: rgba(154, 123, 63, 0.6);
+}
+
+.about-page .text-content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-page .company-info {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fbf9f3;
+  border: 1px solid rgba(27, 26, 23, 0.08);
+  border-radius: 12px;
+  padding: 32px 40px;
 }
 
 .text-content p {
@@ -491,11 +524,12 @@
 }
 
 .contact-info {
-  background: rgba(27, 26, 23, 0.05);
-  border-left: 4px solid #1b1a17;
-  padding: 20px;
+  background: linear-gradient(135deg, rgba(154, 123, 63, 0.07) 0%, rgba(236, 230, 216, 0.4) 100%);
+  border: 1px solid rgba(154, 123, 63, 0.22);
+  border-left: 3px solid #9a7b3f;
+  padding: 24px 28px;
   margin: 2rem 0;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .contact-info p {
@@ -633,26 +667,28 @@
 }
 
 .category-button {
-  padding: 10px 24px;
-  background: white;
-  border: 2px solid #e5e5e5;
-  border-radius: 25px;
-  font-size: 0.95rem;
+  padding: 10px 26px;
+  background: #fdfcf8;
+  border: 1px solid rgba(27, 26, 23, 0.16);
+  border-radius: 999px;
+  font-size: 0.92rem;
   font-weight: 500;
-  color: #666;
+  letter-spacing: 0.04em;
+  color: #6b675e;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .category-button:hover {
-  border-color: #1b1a17;
+  border-color: #9a7b3f;
   color: #1b1a17;
 }
 
 .category-button.active {
   background: #1b1a17;
   border-color: #1b1a17;
-  color: white;
+  color: #f5f1e8;
+  box-shadow: 0 8px 20px rgba(27, 26, 23, 0.18);
 }
 
 .faq-list {
@@ -661,16 +697,17 @@
 }
 
 .faq-item {
-  background: white;
-  border: 1px solid #e5e5e5;
-  border-radius: 15px;
+  background: #fdfcf8;
+  border: 1px solid rgba(27, 26, 23, 0.1);
+  border-radius: 14px;
   margin-bottom: 16px;
   overflow: hidden;
-  transition: all 0.3s;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .faq-item:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: rgba(154, 123, 63, 0.45);
+  box-shadow: 0 10px 30px rgba(27, 26, 23, 0.07);
 }
 
 .faq-question {
@@ -696,8 +733,8 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  background: #1b1a17;
-  color: white;
+  background: #35523a;
+  color: #f5f1e8;
   border-radius: 50%;
   font-weight: 700;
   font-size: 0.9rem;
@@ -766,10 +803,10 @@
 .faq-contact-box {
   max-width: 600px;
   margin: 4rem auto 0;
-  padding: 40px;
-  background: linear-gradient(135deg, rgba(27, 26, 23, 0.05) 0%, rgba(154, 123, 63, 0.05) 100%);
-  border: 2px solid rgba(27, 26, 23, 0.1);
-  border-radius: 20px;
+  padding: 44px 40px;
+  background: linear-gradient(160deg, rgba(154, 123, 63, 0.08) 0%, rgba(236, 230, 216, 0.45) 100%);
+  border: 1px solid rgba(154, 123, 63, 0.25);
+  border-radius: 18px;
   text-align: center;
 }
 
@@ -863,8 +900,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 120px 60px 80px;
-  background: linear-gradient(135deg, rgba(27, 26, 23, 0.05) 0%, rgba(27, 26, 23, 0.05) 100%);
+  padding: 130px 60px 84px;
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(154, 123, 63, 0.1) 0%, rgba(154, 123, 63, 0) 55%),
+    linear-gradient(180deg, #f1ece1 0%, #f7f4ec 100%);
+}
+
+.static-page-hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 1px;
+  background: rgba(154, 123, 63, 0.55);
 }
 
 .static-page-content {
@@ -875,7 +925,7 @@
 
 .static-page-section {
   padding: 80px 60px;
-  background: white;
+  background: #fdfcf8;
 }
 
 .legal-content {
@@ -884,13 +934,25 @@
 }
 
 .legal-content h2 {
-  font-size: 2rem;
+  position: relative;
+  font-size: 1.9rem;
   font-weight: 500;
+  letter-spacing: 0.01em;
   color: #1b1a17;
-  margin-top: 3rem;
+  margin-top: 3.2rem;
   margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid rgba(27, 26, 23, 0.2);
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid rgba(27, 26, 23, 0.12);
+}
+
+.legal-content h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 44px;
+  height: 1px;
+  background: #9a7b3f;
 }
 
 .legal-content h2:first-child {
@@ -979,10 +1041,17 @@
 }
 
 .value-card {
-  background: rgba(27, 26, 23, 0.05);
-  border-left: 4px solid #1b1a17;
-  border-radius: 10px;
+  background: #fbf9f3;
+  border: 1px solid rgba(27, 26, 23, 0.08);
+  border-top: 2px solid #9a7b3f;
+  border-radius: 12px;
   padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(27, 26, 23, 0.08);
 }
 
 .value-card h3 {
@@ -1802,7 +1871,9 @@
    DoSee Wellness Note（ブログ）
    ============================================ */
 .blog-page .blog-hero {
-  background: linear-gradient(135deg, rgba(27, 26, 23, 0.08) 0%, rgba(27, 26, 23, 0.05) 100%);
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(154, 123, 63, 0.1) 0%, rgba(154, 123, 63, 0) 55%),
+    linear-gradient(180deg, #f1ece1 0%, #f7f4ec 100%);
 }
 
 .blog-page .blog-hero .product-category {
@@ -1870,6 +1941,11 @@
   background-size: cover;
   background-position: center;
   background-color: #ece6d8;
+  transition: transform 0.6s ease;
+}
+
+.blog-featured:hover .blog-featured-image {
+  transform: scale(1.03);
 }
 
 .blog-featured-body {
@@ -1921,6 +1997,11 @@
   background-size: cover;
   background-position: center;
   background-color: #ece6d8;
+  transition: transform 0.6s ease;
+}
+
+.blog-card:hover .blog-card-image {
+  transform: scale(1.04);
 }
 
 .blog-card-body {

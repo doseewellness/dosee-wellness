@@ -204,7 +204,7 @@ export default async function ProductDetailPage({
                 key={i}
                 className={`h-4 w-4 ${
                   i < Math.floor(product.rating)
-                    ? "fill-amber-400 text-amber-400"
+                    ? "fill-gold text-gold"
                     : "text-muted-foreground"
                 }`}
               />
